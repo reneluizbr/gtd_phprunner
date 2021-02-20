@@ -236,7 +236,7 @@ CREATE TABLE tb_atividade
    ,lista_id        INTEGER                           --comment 'ID da lista, caso atividade pertença a alguma lista'
    ,stat_id         INTEGER      not null             --comment 'Status da atividade'
    ,ativ_fl_ativo   INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_fl_ativo IN (0, 1))'
-   ,ativ_prioridade VARCHAR (1)  not null DEFAULT "B" --comment 'CHECK (ativ_prioridade IN ("B","M","A"))'
+   ,ativ_prioridade VARCHAR (1)  not null DEFAULT "BAIXA" --comment 'CHECK (ativ_prioridade IN ("BAIXA","MEDIA","ALTA"))'
    ,ativ_concluida  INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_concluida IN (0, 1))'
    ,ativ_dt_ini     DATETIME                          --comment 'Data início da atividade'
    ,ativ_dt_fim     DATETIME                          --comment 'Data fim da atividade'

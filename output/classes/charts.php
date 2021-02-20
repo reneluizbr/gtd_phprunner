@@ -522,6 +522,8 @@ class Chart
 			return true;
 		if("tb_parametros" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

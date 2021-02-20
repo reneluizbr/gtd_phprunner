@@ -78,6 +78,13 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
 			$lookupTableLinks["tb_clientes"] = array();
 		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["tb_status_atividades.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["tb_status_atividades.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["tb_status_atividades.clie_id"]["edit"] = array("table" => "tb_status_atividades", "field" => "clie_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
 		if( !isset( $lookupTableLinks["tb_clientes"]["tb_usuarios.clie_id"] )) {
 			$lookupTableLinks["tb_clientes"]["tb_usuarios.clie_id"] = array();
 		}

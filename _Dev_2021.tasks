@@ -8,9 +8,9 @@ Roteiro principal do GTD:
         ☐ Planos
         ☐ Planos_valores
         ☐ Clientes_planos
-        ☐ Status_atividades
-        ☐ Lista_atividades (Grid de Listas de Atividades com Atividades)
-        ☐ Atividade (Grid de Tarefas com imagens circulo verde, amarelo e vermelho)
+        ✔ Status_atividades @high @started(2021-02-20 15:00) @done(2021-02-20 15:38) @lasted(38m29s)
+        ✔ Lista_atividades @high  (Grid de Listas de Atividades com Atividades) @done(2021-02-20 16:51)
+        ☐ Atividade (Grid de Tarefas com imagens circulo verde, amarelo e vermelho) @started(2021-02-20 16:52)
     Códigos em geral:
         ✔ EVENT_BEFOREEDIT // Rene: Guarda log antes de incluir ou alterar um registro @done(2021-02-19 15:14)
         ✔ EVENT_BEFOREADD  // Rene: Guarda log antes de incluir ou alterar um registro @done(2021-02-19 15:14)
@@ -28,7 +28,7 @@ Roteiro principal do GTD:
         ☐ Dashboard Painél Principal Contadores
         ☐ Dashboard Painél Principal com Gráficos de Barras
         ☐ Dashboard Painél Principal com Gráficos de Colunas
-        ☐ Dashboard Tarefas Recentes com Grids pai-filho
+        ☐ Dashboard Tarefas Recentes com Grids pai-filho @started(2021-02-20 15:20)
     Graficos:
         ☐ Vendas por Clientes
         ☐ Vendas Clientes Qtde

@@ -587,7 +587,7 @@ $globalSettings["LandingPageId"] = "menu";
 
 $globalSettings["ProjectLogo"] = array();
 $globalSettings["ProjectLogo"]["English"] = "<img src=\"../images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
-$globalSettings["ProjectLogo"]["Portuguese(Brazil)"] = "<img src=\"../images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
+$globalSettings["ProjectLogo"]["Portuguese(Brazil)"] = "<img src=\"..XXX/images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
 $globalSettings["ProjectLogo"]["Spanish"] = "<img src=\"../images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
 
 $globalSettings["CookieBanner"] = array();
@@ -694,9 +694,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "431_1613698925";
+$projectBuildKey = "457_1613698925";
 $wizardBuildKey = "33793";
-$projectBuildNumber = "431";
+$projectBuildNumber = "457";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -735,6 +735,7 @@ $tableCaptions["English"]["log_audit"] = "Log Audit";
 $tableCaptions["English"]["Gr_fico_Atividades_por_Lista"] = "Gráfico Atividades por Lista";
 $tableCaptions["English"]["proc_limpar_tarefas_de_lista"] = "Proc Limpar Tarefas De Lista";
 $tableCaptions["English"]["tb_parametros"] = "Tb Parametros";
+$tableCaptions["English"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["tb_atividade"] = "Tarefas";
@@ -753,6 +754,7 @@ $tableCaptions["Portuguese(Brazil)"]["log_audit"] = "Log Audit";
 $tableCaptions["Portuguese(Brazil)"]["Gr_fico_Atividades_por_Lista"] = "Gráfico Atividades por Lista";
 $tableCaptions["Portuguese(Brazil)"]["proc_limpar_tarefas_de_lista"] = "Proc Limpar Tarefas De Lista";
 $tableCaptions["Portuguese(Brazil)"]["tb_parametros"] = "Tb Parametros";
+$tableCaptions["Portuguese(Brazil)"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
 $tableCaptions["Spanish"] = array();
 $tableCaptions["Spanish"][""] = "";
 $tableCaptions["Spanish"]["tb_atividade"] = "Tareas";
@@ -771,6 +773,7 @@ $tableCaptions["Spanish"]["log_audit"] = "Log Audit";
 $tableCaptions["Spanish"]["Gr_fico_Atividades_por_Lista"] = "Gráfico Atividades por Lista";
 $tableCaptions["Spanish"]["proc_limpar_tarefas_de_lista"] = "Proc Limpar Tarefas De Lista";
 $tableCaptions["Spanish"]["tb_parametros"] = "Tb Parametros";
+$tableCaptions["Spanish"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
 
 
 $globalEvents = new class_GlobalEvents;

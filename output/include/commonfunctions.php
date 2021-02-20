@@ -237,6 +237,8 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("tb_parametros" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
+	if ("dashboard_lista_e_tarefas" == $shortTName && ($type===false || ($type!==false && $type == 4)))
+		return true;
 	return false;
 }
 
@@ -431,6 +433,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="tb_parametros";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Dashboard_Lista_e_Tarefas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Dashboard_Lista_e_Tarefas";
+	}
 	return $arr;
 }
 
@@ -456,6 +467,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Gráfico Atividades por Lista";
 	$arr[]="proc_limpar_tarefas_de_lista";
 	$arr[]="tb_parametros";
+	$arr[]="Dashboard_Lista_e_Tarefas";
 	return $arr;
 }
 
@@ -1310,6 +1322,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="tb_parametros" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Dashboard_Lista_e_Tarefas" )
 	{
 //	default permissions
 		// grant all by default

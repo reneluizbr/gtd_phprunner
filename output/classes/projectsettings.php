@@ -3083,6 +3083,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "proc_limpar_tarefas_de_lista" ] = "proc_limpar_tarefas_de_lista";
 	$projectEntities[ "tb_parametros" ] = array( "url" => "tb_parametros", "type" => 0 );
 	$projectEntitiesReverse[ "tb_parametros" ] = "tb_parametros";
+	$projectEntities[ "Dashboard_Lista_e_Tarefas" ] = array( "url" => "dashboard_lista_e_tarefas", "type" => 4 );
+	$projectEntitiesReverse[ "dashboard_lista_e_tarefas" ] = "Dashboard_Lista_e_Tarefas";
 }
 
 function findTable( $table ) {

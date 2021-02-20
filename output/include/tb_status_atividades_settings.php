@@ -66,7 +66,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["stat_id"] = "ID";
 	$fieldToolTipstb_status_atividades["Portuguese(Brazil)"]["stat_id"] = "";
 	$placeHolderstb_status_atividades["Portuguese(Brazil)"]["stat_id"] = "";
-	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["clie_id"] = "ID do Cliente";
+	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipstb_status_atividades["Portuguese(Brazil)"]["clie_id"] = "";
 	$placeHolderstb_status_atividades["Portuguese(Brazil)"]["clie_id"] = "";
 	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["stat_nm"] = "Nome";
@@ -84,10 +84,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_status_atividades["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_status_atividades["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_status_atividades["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_status_atividades["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_status_atividades["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_status_atividades["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_status_atividades["Portuguese(Brazil)"]["alter_login"] = "";
 	if (count($fieldToolTipstb_status_atividades["Portuguese(Brazil)"]))
@@ -530,7 +530,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -540,6 +540,34 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tb_clientes";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "clie_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "clie_nm_reduzido";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "clie_nm_reduzido";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -556,17 +584,14 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -587,7 +612,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -801,7 +826,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -825,11 +850,11 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 	
 	
 	
-	
-			$edata["HTML5InuptType"] = "text";
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
 
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -909,7 +934,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Checkbox");
 
 	
 	
@@ -923,8 +948,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -935,7 +959,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Checkbox");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -947,7 +971,8 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -960,18 +985,16 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -990,7 +1013,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1178,7 +1201,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1206,8 +1229,9 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1227,7 +1251,7 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1269,7 +1293,8 @@ $tdatatb_status_atividades[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "domi_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;

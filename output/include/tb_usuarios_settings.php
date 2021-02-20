@@ -72,7 +72,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["usua_id"] = "ID";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["usua_id"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["usua_id"] = "";
-	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "ID do Cliente";
+	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "";
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["usua_domi_status"] = "Domi Status";
@@ -96,10 +96,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "";
 	if (count($fieldToolTipstb_usuarios["Portuguese(Brazil)"]))

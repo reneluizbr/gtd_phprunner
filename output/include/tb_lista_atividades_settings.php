@@ -9,10 +9,10 @@ $tdatatb_lista_atividades[".OwnerID"] = "clie_id";
 $tdatatb_lista_atividades[".OriginalTable"] = "tb_lista_atividades";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"remover_tarefas_da_lista\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_lista_atividades[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"remover_tarefas_da_lista\",\"view\"]}" );
-$tdatatb_lista_atividades[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"remover_tarefas_da_lista\",\"view\"]}" ) );
+$tdatatb_lista_atividades[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\",\"remover_tarefas_da_lista\"]}" );
+$tdatatb_lista_atividades[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\",\"remover_tarefas_da_lista\"]}" ) );
 $tdatatb_lista_atividades[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -73,10 +73,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_lista_atividades["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_lista_atividades["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_lista_atividades["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_lista_atividades["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_lista_atividades["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_lista_atividades["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_lista_atividades["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_lista_atividades["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_lista_atividades["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_lista_atividades["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_lista_atividades["Portuguese(Brazil)"]["alter_login"] = "";
 	$pageTitlestb_lista_atividades["Portuguese(Brazil)"]["remover_tarefas_da_lista"] = "Remover atividades da lista {%lista_id} - {%lista_nm}";

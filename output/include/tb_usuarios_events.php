@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeEdit"]=true;
 
+		$this->events["BeforeAdd"]=true;
+
 
 	}
 
@@ -43,15 +45,83 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, &
 {
 
 		
+// Rene: Guarda dados de log antes de incluir ou alterar um registro
+fctConfigura_Usuario($values['alter_login'], $values['alter_dt']);
 
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-$values['usua_senha'] = getPasswordHash( $values["usua_senha"] );
 return true;
 ;		
 } // function BeforeEdit
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record added
+function BeforeAdd(&$values, &$message, $inline, &$pageObject)
+{
+
+		
+// Rene: Guarda dados de log antes de incluir ou alterar um registro
+fctConfigura_Usuario($values['inclu_login'], $values['inclu_dt']);
+
+return true;
+;		
+} // function BeforeAdd
+
+		
+		
+		
+		
+		
+		
 		
 		
 		

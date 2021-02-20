@@ -11,8 +11,8 @@ $tdatatb_atividade[".OriginalTable"] = "tb_atividade";
 
 $defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_atividade[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_atividade[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_atividade[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatatb_atividade[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatatb_atividade[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -120,10 +120,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_atividade["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_atividade["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_atividade["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_atividade["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_atividade["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_atividade["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_atividade["Portuguese(Brazil)"]["alter_login"] = "";
 	if (count($fieldToolTipstb_atividade["Portuguese(Brazil)"]))
@@ -1058,7 +1058,7 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "lista_nm";
 
 	
 	
@@ -1802,7 +1802,7 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 
 	
 	
-		$edata["DateEditType"] = 5;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1917,7 +1917,7 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1937,7 +1937,7 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -2185,8 +2185,9 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -2206,7 +2207,7 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -2248,7 +2249,8 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "domi_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2518,7 +2520,8 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "domi_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;

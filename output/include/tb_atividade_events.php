@@ -41,13 +41,8 @@ function BeforeAdd(&$values, &$message, $inline, &$pageObject)
 {
 
 		
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-// Rene: Guarda dados de log antes de incluir um registro
-$values['inclu_id'] = $_SESSION['usua_id'];
-$values['inclu_dt'] = strftime("%Y-%m-%d %H:%M:%S"); //strftime('Y-m-d H:i:S'); Ex: '2020-05-19 19:19:19'
+// Rene: Guarda dados de log antes de incluir ou alterar um registro
+fctConfigura_Usuario($values['inclu_login'], $values['inclu_dt']);
 
 return true;
 ;		
@@ -122,13 +117,8 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, &
 {
 
 		
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-// Rene: Guarda dados de log antes de alterar um registro
-$values['alter_id'] = $_SESSION['usua_id'];
-$values['alter_dt'] = strftime("%Y-%m-%d %H:%M:%S");  //strftime('%Y-%m-%d %H:%M:%S','now') //strftime('Y-m-d H:i:S'); Ex: '2020-05-19 19:19:19'
+// Rene: Guarda dados de log antes de incluir ou alterar um registro
+fctConfigura_Usuario($values['alter_login'], $values['alter_dt']);
 
 return true;
 ;		

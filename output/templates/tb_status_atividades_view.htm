@@ -28,7 +28,7 @@
 		>
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
-		data-v-width="4"
+		data-v-width="6"
 	data-v-margin="1"
 	
 >		
@@ -46,7 +46,7 @@
 {END top_block}
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
-		data-v-width="4"
+		data-v-width="6"
 	data-v-margin="1"
 	
 >		
@@ -64,9 +64,9 @@
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
-		data-form-width="1"
+		data-form-width="2"
 		
-		data-v-width="4"
+		data-v-width="6"
 	>
 	<tbody>
 										<tr>
@@ -77,10 +77,9 @@
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
-				data-fullwidth
-		
+			
 			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="4"
+		data-v-cell="3"
 		
 >
 	<div edit-form-cell class="clearfix">
@@ -88,14 +87,14 @@
 {BEGIN stat_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_id}  r-vertical-field" data-fieldname="stat_id" data-signal-error-for="stat_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="stat_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_id}  form-horizontal clearfix" data-fieldname="stat_id" data-signal-error-for="stat_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="stat_id" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_stat_id}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_stat_id}">
 		
 		{BEGIN stat_id_label}{$label tb_status_atividades stat_id }{END stat_id_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-8" >
 		{$stat_id_value}	</div>
 
 		
@@ -104,36 +103,17 @@
 
 {END stat_id_fieldblock}
 											
-{BEGIN clie_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  r-vertical-field" data-fieldname="clie_id" data-signal-error-for="clie_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_clie_id}">
-		
-		{BEGIN clie_id_label}{$label tb_status_atividades clie_id }{END clie_id_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$clie_id_value}	</div>
-
-		
-</div>
-
-
-{END clie_id_fieldblock}
-											
 {BEGIN stat_nm_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_nm}  r-vertical-field" data-fieldname="stat_nm" data-signal-error-for="stat_nm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="stat_nm" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_nm}  form-horizontal clearfix" data-fieldname="stat_nm" data-signal-error-for="stat_nm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="stat_nm" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_stat_nm}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_stat_nm}">
 		
 		{BEGIN stat_nm_label}{$label tb_status_atividades stat_nm }{END stat_nm_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-8" >
 		{$stat_nm_value}	</div>
 
 		
@@ -145,14 +125,14 @@
 {BEGIN stat_ds_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_ds}  r-vertical-field" data-fieldname="stat_ds" data-signal-error-for="stat_ds{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="stat_ds" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_ds}  form-horizontal clearfix" data-fieldname="stat_ds" data-signal-error-for="stat_ds{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="stat_ds" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_stat_ds}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_stat_ds}">
 		
 		{BEGIN stat_ds_label}{$label tb_status_atividades stat_ds }{END stat_ds_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-8" >
 		{$stat_ds_value}	</div>
 
 		
@@ -160,18 +140,54 @@
 
 
 {END stat_ds_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="3"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN clie_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  form-horizontal clearfix" data-fieldname="clie_id" data-signal-error-for="clie_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
+
+	
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_clie_id}">
+		
+		{BEGIN clie_id_label}{$label tb_status_atividades clie_id }{END clie_id_label}
+	</label>
+	<div class="col-md-8" >
+		{$clie_id_value}	</div>
+
+		
+</div>
+
+
+{END clie_id_fieldblock}
 											
 {BEGIN stat_fl_ativo_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_fl_ativo}  r-vertical-field" data-fieldname="stat_fl_ativo" data-signal-error-for="stat_fl_ativo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="stat_fl_ativo" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stat_fl_ativo}  form-horizontal clearfix" data-fieldname="stat_fl_ativo" data-signal-error-for="stat_fl_ativo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="stat_fl_ativo" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_stat_fl_ativo}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_stat_fl_ativo}">
 		
 		{BEGIN stat_fl_ativo_label}{$label tb_status_atividades stat_fl_ativo }{END stat_fl_ativo_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-8" >
 		{$stat_fl_ativo_value}	</div>
 
 		
@@ -179,56 +195,38 @@
 
 
 {END stat_fl_ativo_fieldblock}
-											
-{BEGIN inclu_dt_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  r-vertical-field" data-fieldname="inclu_dt" data-signal-error-for="inclu_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="inclu_dt" >
-
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_inclu_dt}">
-		
-		{BEGIN inclu_dt_label}{$label tb_status_atividades inclu_dt }{END inclu_dt_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$inclu_dt_value}	</div>
+								</td>
+			{END cellblock_grid_c}
+								</tr>
+	 
+	 
+														<tr>
+										
 
-		
-</div>
-
-
-{END inclu_dt_fieldblock}
-											
-{BEGIN alter_dt_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  r-vertical-field" data-fieldname="alter_dt" data-signal-error-for="alter_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="alter_dt" >
-
+{BEGIN cellblock_grid_c4}
+<td
+	{$cell_grid_c4}
+	class=" r-ori-vert"
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_alter_dt}">
+			
+			data-cellId="grid_c4" data-pageid="{$pageid}"
+		data-v-cell="3"
 		
-		{BEGIN alter_dt_label}{$label tb_status_atividades alter_dt }{END alter_dt_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$alter_dt_value}	</div>
-
-		
-</div>
-
-
-{END alter_dt_fieldblock}
-											
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN inclu_login_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  r-vertical-field" data-fieldname="inclu_login" data-signal-error-for="inclu_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="inclu_login" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  form-horizontal clearfix" data-fieldname="inclu_login" data-signal-error-for="inclu_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="inclu_login" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_inclu_login}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_inclu_login}">
 		
 		{BEGIN inclu_login_label}{$label tb_status_atividades inclu_login }{END inclu_login_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-8" >
 		{$inclu_login_value}	</div>
 
 		
@@ -237,17 +235,53 @@
 
 {END inclu_login_fieldblock}
 											
+{BEGIN inclu_dt_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  form-horizontal clearfix" data-fieldname="inclu_dt" data-signal-error-for="inclu_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="inclu_dt" >
+
+	
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_inclu_dt}">
+		
+		{BEGIN inclu_dt_label}{$label tb_status_atividades inclu_dt }{END inclu_dt_label}
+	</label>
+	<div class="col-md-8" >
+		{$inclu_dt_value}	</div>
+
+		
+</div>
+
+
+{END inclu_dt_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c4}
+			 
+																
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="3"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN alter_login_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  r-vertical-field" data-fieldname="alter_login" data-signal-error-for="alter_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="alter_login" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  form-horizontal clearfix" data-fieldname="alter_login" data-signal-error-for="alter_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="alter_login" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_alter_login}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_alter_login}">
 		
 		{BEGIN alter_login_label}{$label tb_status_atividades alter_login }{END alter_login_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-8" >
 		{$alter_login_value}	</div>
 
 		
@@ -255,15 +289,34 @@
 
 
 {END alter_login_fieldblock}
+											
+{BEGIN alter_dt_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  form-horizontal clearfix" data-fieldname="alter_dt" data-signal-error-for="alter_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="alter_dt" >
+
+	
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_alter_dt}">
+		
+		{BEGIN alter_dt_label}{$label tb_status_atividades alter_dt }{END alter_dt_label}
+	</label>
+	<div class="col-md-8" >
+		{$alter_dt_value}	</div>
+
+		
+</div>
+
+
+{END alter_dt_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c3}
+			{END cellblock_grid_c5}
 								</tr>
 			</tbody></table>
 {END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
-		data-v-width="4"
+		data-v-width="6"
 	data-v-margin="1"
 	
 >		

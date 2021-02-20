@@ -419,6 +419,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Dashboard_Lista_e_Tarefas")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -841,6 +845,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="tb_parametros")
+		{
+			return false;
+		}
+		if($table=="Dashboard_Lista_e_Tarefas")
 		{
 			return false;
 		}

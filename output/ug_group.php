@@ -28,6 +28,7 @@ $nonAdminTablesArr[] = "log_audit";
 $nonAdminTablesArr[] = "Gráfico Atividades por Lista";
 $nonAdminTablesArr[] = "proc_limpar_tarefas_de_lista";
 $nonAdminTablesArr[] = "tb_parametros";
+$nonAdminTablesArr[] = "Dashboard_Lista_e_Tarefas";
 
 $ug_connection = $cman->getForUserGroups();
 

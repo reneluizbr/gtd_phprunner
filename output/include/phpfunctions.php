@@ -949,17 +949,29 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="tb_atividade" && $field=="stat_id")
+	{
+		return 0;
+	}
 				if($table=="tb_atividade" && $field=="ativ_fl_ativo")
 	{
 		return 1;
 	}
 				if($table=="tb_atividade" && $field=="ativ_prioridade")
 	{
-		return 'M';
+		return MEDIA;
 	}
 				if($table=="tb_atividade" && $field=="ativ_concluida")
 	{
 		return 0;
+	}
+				if($table=="tb_atividade" && $field=="ativ_dt_ini")
+	{
+		return now();
+	}
+				if($table=="tb_status_atividades" && $field=="stat_fl_ativo")
+	{
+		return 1;
 	}
 				if($table=="proc_limpar_tarefas_de_lista" && $field=="SomenteComDataConclusao")
 	{

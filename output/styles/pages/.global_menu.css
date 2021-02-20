@@ -37,5 +37,8 @@
 [data-page=".global_menu"][data-itemid="welcome_item12"] > .bs-welcome-header {
   background-color: #BC8F8F;
 }
+[data-page=".global_menu"][data-itemid="welcome_item13"] > .bs-welcome-header {
+  background-color: #6493EA;
+}
 
 
