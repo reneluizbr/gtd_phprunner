@@ -5,13 +5,67 @@ body.function-login {
 	background-size:cover;
 }
 
-.rodape_centralizado {
-	text-align: center;
-}
-
 .rodape {
 	text-shadow: #474747 3px 5px 2px, 1px 1px 4px rgba(82,120,152,0);
 	color: #FFFFFF;
 	text-align: center;
 	background: #527898;
+}
+
+.rodape_centralizado {
+	text-align: center;
+	color: blue;
+}
+
+/* Estilo para o Dashboard Painel Principal, como na ajuda do PHPRunner */
+.panel-heading{
+   --display:none;
+}
+.panel-body{
+   padding:0px !important;
+}
+.panel-primary {
+ border-color: white !important;
+}
+.panel {
+  margin-bottom: 0px !important;
+   border: 0px !important;
+}
+.info-box{
+      display: block;
+    min-height: 90px;
+    width: 100%;
+    border-radius: 2px;
+}
+.info-img{
+    display: block;
+    float: left;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 70px;
+      color:white;
+}
+.img_bgcolor_red{
+   background-color:#dd4b39 !important;
+}
+.img_bgcolor_green{
+   background-color:#19a15f !important;
+}
+.img_bgcolor_black{
+   background-color:#3e3f3a !important;
+}
+.img_bgcolor_blue{
+   background-color:#0000ff !important;
+}
+.dashtext{
+    border-radius: 2px;  
+    border: 1px solid #e6e6e6;
+    min-height: 91px;
+    padding:7px;
+    padding-left:97px;
+    line-height: 1.6em;
+    background-color:#f5f5f5;
+	  font-size:28px;
 }

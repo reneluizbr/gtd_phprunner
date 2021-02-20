@@ -223,7 +223,9 @@ Runner.lang.customlabels = {
 	CUSTOM_LABEL_CUSTOM2: 'Activity Status Registration',
 	CUSTOM_LABEL_CUSTOM3: 'User Registration',
 	CUSTOM_LABEL_MARCA_REGISTRADA: 'Copyright, 2020 © GTDTasks',
-	CUSTOM_LABEL_VERSAO_SISTEMA: 'GTD Build 2020.07.26 (en)',
+	CUSTOM_LABEL_VERSAO_SISTEMA: 'GTDTasks © - Build 2021.02.19 (en)',
 	CUSTOM_LABEL_EMAIL__VALUE__J__CADASTRADO: 'Email %value% already exists',
-	CUSTOM_LABEL_THE_VALUE_IS_INVALID: 'The value is invalid'
+	CUSTOM_LABEL_THE_VALUE_IS_INVALID: 'The value is invalid',
+	CUSTOM_LABEL_VERSAO_SISTEMA02: 'GTDTasks © - Build 2020.09.07.(10.3)',
+	CUSTOM_LABEL_VERSAO_SISTEMA03: 'GTD Build 2020.07.26 (en)'
 };

@@ -8,7 +8,7 @@ Roteiro principal do GTD:
         ☐ Planos
         ☐ Planos_valores
         ☐ Clientes_planos
-        ☐ Status_atividades;
+        ☐ Status_atividades
         ☐ Lista_atividades (Grid de Listas de Atividades com Atividades)
         ☐ Atividade (Grid de Tarefas com imagens circulo verde, amarelo e vermelho)
     Códigos em geral:
@@ -21,8 +21,8 @@ Roteiro principal do GTD:
             // Rene: Configuração do Timezone para Brasil, sem horario de verao
             date_default_timezone_set('america/Recife');
         ✔ funcoes_rene.php:  function fctConfigura_Usuario( &$usuarioLogin = NULL, &$dataHoraAtual = NULL) @done(2021-02-19 14:42)
-        ☐ Rodape customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\include\footer.php
-        ☐ CSS customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\styles\custom\custom.css
+        ✔ Rodape customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\include\footer.php @done(2021-02-19 22:02)
+        ✔ CSS customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\styles\custom\custom.css @done(2021-02-19 22:03)
     ☐ Painél de Filtro em paginas Atividades, Usuarios
     Dashboards:
         ☐ Dashboard Painél Principal Contadores
