@@ -1,3 +1,17 @@
+# 2021-02-19 21:18, Fri - Criacao do repositorio dos fontes no GitHub
+    echo "# gtd_phprunner" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/reneluizbr/gtd_phprunner.git
+    git push -u origin main
+
+    vscode://vscode.github-authentication/did-authenticate?windowid=1&code=aa9ea7e1e8ac3f3652ae&state=fbecb261-3968-4b50-af44-a9c1c8563b86
+
+    Erro que aconteceu no primeiro commit com o GMaster:
+    git error user cancelled certificate check:
+
 # 2020-07-29 16:30, Wed -
     Responsividade
     I18N (Internationalization) multi-idioma
