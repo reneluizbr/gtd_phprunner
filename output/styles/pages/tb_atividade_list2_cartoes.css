@@ -1,0 +1,186 @@
+[data-cellid="above-grid_c"][data-page="tb_atividade_list2_cartoes"][data-cellid="above-grid_c"][data-page="tb_atividade_list2_cartoes"][data-cellid="above-grid_c"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: normal;
+}
+[data-cellid="grid_footcell_field"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field1"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field1"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field1"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field2"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field2"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field2"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field3"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field3"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field3"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field4"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field4"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field4"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field5"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field5"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field5"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field6"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field6"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field6"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field7"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field7"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_footcell_field7"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_headcell_checkbox"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_headcell_checkbox"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_headcell_checkbox"][data-page="tb_atividade_list2_cartoes"] {
+  width: 30px;
+}
+[data-cellid="grid_headcell_icons"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_headcell_icons"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_headcell_icons"][data-page="tb_atividade_list2_cartoes"] {
+  width: 30px;
+}
+[data-cellid="grid_cell_icons"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_cell_icons"][data-page="tb_atividade_list2_cartoes"][data-cellid="grid_cell_icons"][data-page="tb_atividade_list2_cartoes"] {
+  white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="tb_atividade_list2_cartoes"][data-itemid="snippet"] {
+  color: red;
+}
+
+* {
+	margin: 5;
+	padding: 5;
+	box-sizing: border-box;
+}
+
+/* body {
+  margin: 0;
+} */
+
+/*
+body {
+	background-color: #ebe835;
+	font-family: 'Roboto', Helvetica, sans-serif;
+}*/
+
+#id_posicao {
+  color: blue;
+}
+
+#id_posicao.cls_posicao_alterada {
+  color: red;
+}
+
+.app {
+	display: flex;
+	flex-flow: column;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+
+.cls_listas {
+  display: flex;
+  flex: 1;
+  width: 90%;
+  overflow-x: auto;
+}
+
+
+.cls_listas .cls_raia {
+	display: flex;
+	flex-flow: column;
+	flex: 1;
+
+	width: 100%;
+	min-width: 250px;
+	max-width: 350px;
+	height: 90%;
+	min-height: 150px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+	margin: 0 15px;
+	padding: 8px;
+	transition: all 0.2s linear;
+}
+
+.cls_listas .cls_raia .list-item {
+	background-color: #F3F3F3;
+	border-radius: 8px;
+	padding: 15px 20px;
+	text-align: center;
+	margin: 4px 0px;
+}
+
+.cls_raiaXXX {
+  /* -- Rene: inicio do teste de layout */
+  /* display: inline-block; */
+  display: flex;
+  flex: 1;
+
+  flex-flow: column;
+	/* overflow-x: scroll; */
+
+
+  /* OK */
+  width: 100%;
+	min-width: 250px;
+	max-width: 350px;
+  /* top: 5px; */
+  /* left: 5px; */
+
+
+  height: 90%;
+  min-height: 250px;
+  /* -- Rene: fim do teste de layout */
+
+  background-color: rgb(18, 27, 148);
+  /* padding: 1rem; */
+  /* margin-top: 1rem; */
+
+  margin: 0 15px;
+  padding: 8px;
+  transition: all 0.2s linear;
+
+	border-radius: 8px;
+	padding: 15px 20px;
+	text-align: center;
+	margin: 4px 0px;
+}
+
+.cls_draggable {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+  margin-top: 5px;
+  border-radius: 8px;
+}
+
+.cls_raia_titulo {
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  color: rgb(240, 217, 217);
+  background-color: rgb(14, 71, 195);
+  font-family: 'Roboto', Helvetica, sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Classe arrastavel com seu atributo ".dragging" */
+.cls_draggable.dragging {
+  opacity: 0.9;
+}
+
+/* Para sobrescrever os textos dos cartoes dentro do PHPRUnner */
+.panel-primary .panel-heading {
+    color: #3d4068;
+}
+
+.r-form {
+    margin-bottom: 10px;
+    background-color: #ebeef1;
+}
+

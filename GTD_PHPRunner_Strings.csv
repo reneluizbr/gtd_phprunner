@@ -1,0 +1,148 @@
+﻿Table;Field;English;Portuguese(Brazil);Spanish;"English Tooltips";"Portuguese(Brazil) Tooltips";"Spanish Tooltips";"English Placeholders";"Portuguese(Brazil) Placeholders";"Spanish Placeholders"
+tb_atividade;;Tasks;Tarefas;Tareas;;;;;;
+tb_atividade;ativ_id;ID;ID;ID;;;;;;
+tb_atividade;clie_id;Client;Cliente;Cliente;;;;;;
+tb_atividade;ativ_nm;Name;Nome;Nombre;;;;"Task Name...";"Nome da Tarefa...";
+tb_atividade;ativ_ds;Description;Descrição;Descripción;;;;"Task details...";"Detalhes da Atividade...";
+tb_atividade;lista_id;List;Lista;Lista;;;;;;
+tb_atividade;stat_id;Status;Status;Estado;;;;;;
+tb_atividade;ativ_fl_ativo;Active?;Ativo?;¿Activo?;;;;;;
+tb_atividade;ativ_prioridade;Priority;Prioridade;Prioridad;;;;;;
+tb_atividade;ativ_concluida;Completed;Concluída;Terminado;;;;;;
+tb_atividade;ativ_dt_ini;"Start date";"Data Início";"Fecha de inicio";;;;;;
+tb_atividade;ativ_dt_fim;"End Date";"Data Fim";"Fecha final";;;;;;
+tb_atividade;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_atividade;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_atividade;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_atividade;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_clientes;;Customers;Clientes;Clientes;;;;;;
+tb_clientes;clie_id;ID;ID;ID;;;;;;
+tb_clientes;clie_nm_reduzido;Name;Nome;Nombre;;;;;;
+tb_clientes;clie_email;Email;Email;"Correo electrónico";;;;;;
+tb_clientes;clie_endereco;Address;Endereço;"Habla a";;;;;;
+tb_clientes;clie_pais;Parents;País;Padres;;;;;;
+tb_clientes;clie_domi_status;"Domain Status";"Status do Domínio";"Estado del dominio";;;;;;
+tb_clientes;clie_nm_completo;"Full name";"Nome Completo";"Nombre completo";;;;;;
+tb_clientes;clie_fones_contato;"Contact Headphones";"Fones de Contato";"Auriculares de contacto";;;;;;
+tb_clientes;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_clientes;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_clientes;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_clientes;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_clientes_planos;;"Customer Plans";"Planos de Clientes";"Planes de clientes";;;;;;
+tb_clientes_planos;clipla_id;ID;ID;ID;;;;;;
+tb_clientes_planos;clie_id;"Customer ID";"ID Cliente";"Identificación del cliente";;;;;;
+tb_clientes_planos;plan_id;"Flat ID";"ID Plano";"ID plana";;;;;;
+tb_clientes_planos;clipla_dt_vigenc_ini;"Effective Date Start";"Data Vigência Início";"Fecha de inicio efectiva";;;;;;
+tb_clientes_planos;clipla_dt_vigenc_fim;"Final Effective Date";"Data Vigência Final";"Fecha de vigencia final";;;;;;
+tb_clientes_planos;clipla_vl;"Plan Amount";"Valor do Plano";"Cantidad del plan";;;;;;
+tb_clientes_planos;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_clientes_planos;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_clientes_planos;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_clientes_planos;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_dominios;;Domains;Domínios;Dominios;;;;;;
+tb_dominios;domi_id;ID;ID;ID;;;;;;
+tb_dominios;domi_grupo;Group;Grupo;Grupo;;;;;;
+tb_dominios;domi_ordem;Order;Ordem;Orden;;;;;;
+tb_dominios;domi_valor;Value;Valor;Valor;;;;;;
+tb_dominios;domi_exibe;Exhibition;Exibição;Exposición;;;;;;
+tb_dominios;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_dominios;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_dominios;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_dominios;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_lista_atividades;;"Activities list";"Lista de Atividades";"Lista de actividades";;;;;;
+tb_lista_atividades;lista_id;ID;ID;ID;;;;;;
+tb_lista_atividades;clie_id;Client;Cliente;Cliente;;;;;;
+tb_lista_atividades;lista_nm;Name;Nome;Nombre;;;;;;
+tb_lista_atividades;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_lista_atividades;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_lista_atividades;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_lista_atividades;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_lista_atividades;lista_ds;Description;Descrição;Descripción;;;;;;
+tb_planos;;"Access Plans";"Planos de Acesso";"Planes de acceso";;;;;;
+tb_planos;plan_id;ID;ID;ID;;;;;;
+tb_planos;domi_valor_plano;"Domi Valor Plano";"Domi Valor Plano";"Domi Valor Plano";;;;;;
+tb_planos;plan_nm;"Plan Name";"Nome do Plano";"Nombre del plan";;;;;;
+tb_planos;plan_ds;Description;Descrição;Descripción;;;;;;
+tb_planos;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_planos;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_planos;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_planos;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_planos_valores;;"Plan Values";"Valores de Planos";"Plan de valores";;;;;;
+tb_planos_valores;plva_id;ID;ID;ID;;;;;;
+tb_planos_valores;plan_id;"Plan ID";"ID do Plano";"ID del plan";;;;;;
+tb_planos_valores;plva_dt_vigenc_ini;"Effective Date Start";"Data Vigência Início";"Fecha de inicio efectiva";;;;;;
+tb_planos_valores;plva_dt_vigenc_fim;"Final Effective Date";"Data Vigência Final";"Fecha de vigencia final";;;;;;
+tb_planos_valores;plva_vl;"Plan Amount";"Valor do Plano";"Cantidad del plan";;;;;;
+tb_planos_valores;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_planos_valores;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_planos_valores;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_planos_valores;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_status_atividades;;"Activity Status";"Status de Atividades";"Estado de actividad";;;;;;
+tb_status_atividades;stat_id;ID;ID;ID;;;;;;
+tb_status_atividades;clie_id;"Customer ID";"ID do Cliente";"Identificación del cliente";;;;;;
+tb_status_atividades;stat_fl_pago;"Paid out?";Pago?;¿Pagado?;;;;;;
+tb_status_atividades;stat_nm;Name;Nome;Nombre;;;;;;
+tb_status_atividades;stat_ds;Description;Descrição;Descripción;;;;;;
+tb_status_atividades;stat_fl_ativo;Active?;Ativo?;¿Activo?;;;;;;
+tb_status_atividades;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_status_atividades;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_status_atividades;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_status_atividades;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+tb_usuarios;;Users;Usuários;"Los usuarios";;;;;;
+tb_usuarios;usua_id;ID;ID;ID;;;;;;
+tb_usuarios;clie_id;"Customer ID";"ID do Cliente";"Identificación del cliente";;;;;;
+tb_usuarios;usua_email;Email;Email;"Correo electrónico";;;;;;
+tb_usuarios;usua_username;Username;Username;"Nombre de usuario";;;;;;
+tb_usuarios;usua_nome_completo;"Full name";"Nome Completo";"Nombre completo";;;;;;
+tb_usuarios;usua_senha;Password;Senha;Contraseña;;;;;;
+tb_usuarios;usua_domi_status;"Domi Status";"Domi Status";"Domi Status";;;;;;
+tb_usuarios;usua_login_ulti;"Last Login";"Último Login";"Último acceso";;;;;;
+tb_usuarios;inclu_id;"Included by";"Incluído por";"Incluido por";;;;;;
+tb_usuarios;inclu_dt;"Included in";"Incluído em";"Incluido en";;;;;;
+tb_usuarios;alter_id;"Changed by";"Alterado por";"Cambiado por";;;;;;
+tb_usuarios;alter_dt;"Changed on";"Alterado em";"Cambiado en";;;;;;
+admin_rights;;"Admin Rights";"Admin Rights";"Admin Rights";;;;;;
+admin_rights;TableName;"Table Name";"Table Name";"Table Name";;;;;;
+admin_rights;GroupID;"Group ID";"Group ID";"Group ID";;;;;;
+admin_rights;AccessMask;"Access Mask";"Access Mask";"Access Mask";;;;;;
+admin_rights;Page;Page;Page;Page;;;;;;
+admin_members;;"Admin Members";"Admin Members";"Admin Members";;;;;;
+admin_members;usua_id;"Usua Id";"Usua Id";"Usua Id";;;;;;
+admin_members;clie_id;"Clie Id";"Clie Id";"Clie Id";;;;;;
+admin_members;usua_email;"Usua Email";"Usua Email";"Usua Email";;;;;;
+admin_members;usua_username;"Usua Username";"Usua Username";"Usua Username";;;;;;
+admin_members;usua_nome_completo;"Usua Nome Completo";"Usua Nome Completo";"Usua Nome Completo";;;;;;
+admin_members;usua_senha;"Usua Senha";"Usua Senha";"Usua Senha";;;;;;
+admin_members;usua_domi_status;"Usua Domi Status";"Usua Domi Status";"Usua Domi Status";;;;;;
+admin_members;usua_login_ulti;"Usua Login Ulti";"Usua Login Ulti";"Usua Login Ulti";;;;;;
+admin_members;inclu_id;"Inclu Id";"Inclu Id";"Inclu Id";;;;;;
+admin_members;inclu_dt;"Inclu Dt";"Inclu Dt";"Inclu Dt";;;;;;
+admin_members;alter_id;"Alter Id";"Alter Id";"Alter Id";;;;;;
+admin_members;alter_dt;"Alter Dt";"Alter Dt";"Alter Dt";;;;;;
+admin_users;;"Add/Edit users";"Add/Edit users";"Add/Edit users";;;;;;
+admin_users;usua_id;"Usua Id";"Usua Id";"Usua Id";;;;;;
+admin_users;clie_id;"Clie Id";"Clie Id";"Clie Id";;;;;;
+admin_users;usua_email;"Usua Email";"Usua Email";"Usua Email";;;;;;
+admin_users;usua_username;"Usua Username";"Usua Username";"Usua Username";;;;;;
+admin_users;usua_nome_completo;"Usua Nome Completo";"Usua Nome Completo";"Usua Nome Completo";;;;;;
+admin_users;usua_senha;"Usua Senha";"Usua Senha";"Usua Senha";;;;;;
+admin_users;usua_domi_status;"Usua Domi Status";"Usua Domi Status";"Usua Domi Status";;;;;;
+admin_users;usua_login_ulti;"Usua Login Ulti";"Usua Login Ulti";"Usua Login Ulti";;;;;;
+admin_users;inclu_id;"Inclu Id";"Inclu Id";"Inclu Id";;;;;;
+admin_users;inclu_dt;"Inclu Dt";"Inclu Dt";"Inclu Dt";;;;;;
+admin_users;alter_id;"Alter Id";"Alter Id";"Alter Id";;;;;;
+admin_users;alter_dt;"Alter Dt";"Alter Dt";"Alter Dt";;;;;;
+;CUSTOM;"Registration of Access Plans";"Cadastramento de Planos de Acesso";"Registro de planes de acceso"
+;CUSTOM1;"Registration of Plan Values";"Cadastramento de Valores de Planos";"Registro de valores del plan"
+;CUSTOM2;"Activity Status Registration";"Cadastramento de Status de Atividades";"Registro de estado de actividad"
+;CUSTOM3;"User Registration";"Cadastramento de Usuários";"Registro de usuario"
+;TASKS;Activities;Atividades;Actividades
+;TB_ATIVIDADE_DESCRIPTION;"Registration of Activities or Tasks";"Cadastramento de Atividades ou Tarefas";"Registro de actividades o tareas"
+;TB_CLIENTES_DESCRIPTION;"Customer Registration";"Cadastramento de Clientes";"Registro de cliente"
+;TB_CLIENTES_PLANOS_DESCRIPTION;"Registration of Customer Plans";"Cadastramento de Planos de Clientes";"Registro de planes de clientes"
+;TB_DOMINIOS_DESCRIPTION;"Domain Registration";"Cadastramento de Domínios";"Registro de Dominio"
+;TB_LISTA_ATIVIDADES_DESCRIPTION;"Registration of Activities List";"Cadastramento de Lista de Atividades";"Lista de registro de actividades"
+;MARCA_REGISTRADA;"Copyright, 2020 © GTDTasks";"Direitos Autorais, 2020 © GTDTasks ";"Copyright, 2020 © GTDTasks"
+;VERSAO_SISTEMA;"GTD Build 2020.05.25 (en)";"GTD Build 2020.05.25 (pt)";"GTD Build 2020.05.25 (es)"
+;;"GTD 2020";GTD_PHPRunner;"GTD 2020";"GTD 2020"
+;cookie_banner:;"This website uses cookies to improve user experience";"Diese Website benutzt Cookies Benutzerfreundlichkeit zu verbessern";"Este site usa cookies para melhorar a experiência do usuário";"Este sitio web utiliza cookies para mejorar la experiencia del usuario"

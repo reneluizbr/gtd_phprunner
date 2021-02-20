@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Drag And Drop 02</title>
+</head>
+
+<body>
+  <div class="app">
+    <header>
+        <h1>Teste 02 de Drag and Drop.</h1>
+    </header>
+    <div class="cls_listas">
+        <div id="raia_01" class="cls_raia">
+            <span class="cls_raia_titulo">Raia 01 - Em Análise</span>
+            <div id="cartao_01" class="cls_draggable" draggable="true">
+                <p>Nome: <b>Renê Luiz</b>
+                    <a href="http://source.unsplash.com/random/150x150">alterar</a>
+                </p>
+                <p>Item posição: <b>1</b></p>
+                <img src="http://source.unsplash.com/random/149x149" alt="" srcset="">
+                <p id="id_posicao">Cartão não movimentado ainda...</p>
+            </div>
+            <div id="cartao_02" class="cls_draggable" draggable="true">
+                <p>Nome: <b>Clayton Eduardo</b></p>
+                <p>Item posição: <b>2</b></p>
+                <img src="http://source.unsplash.com/random/150x150" alt="" srcset="">
+                <p id="id_posicao">Cartão não movimentado ainda...</p>
+            </div>
+        </div>
+        <div id="raia_02" class="cls_raia">
+            <span class="cls_raia_titulo">Raia 02 - Desenvolvimento</span>
+            <div id="cartao_03" class="cls_draggable" draggable="true">Item posição: 3
+                <p id="id_posicao">Cartão não movimentado ainda...</p>
+            </div>
+            <div id="cartao_04" class="cls_draggable" draggable="true">Item posição: 4
+                <p id="id_posicao">Cartão não movimentado ainda...</p>
+            </div>
+        </div>
+        <div id="raia_03" class="cls_raia">
+            <span class="cls_raia_titulo">Raia 03 - Concluído</span>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

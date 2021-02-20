@@ -1,0 +1,316 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel proc_limpar_tarefas_de_lista search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN ID_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ID}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="ID" 
+	
+	data-signal-error-for="ID{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="ID" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ID}">
+		{$label proc_limpar_tarefas_de_lista ID }	</label>
+	<div class="r-search-option">
+		{$searchtype_ID}
+	</div>
+	<div class="r-search-field">
+		{$ID_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ID_editcontrol1}
+	</div>
+	
+</div>
+
+{END ID_fieldblock}
+											
+{BEGIN DataHora_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DataHora}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="DataHora" 
+	
+	data-signal-error-for="DataHora{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="DataHora" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_DataHora}">
+		{$label proc_limpar_tarefas_de_lista DataHora }	</label>
+	<div class="r-search-option">
+		{$searchtype_DataHora}
+	</div>
+	<div class="r-search-field">
+		{$DataHora_editcontrol}	</div>
+	<div class="r-search-field">
+		{$DataHora_editcontrol1}
+	</div>
+	
+</div>
+
+{END DataHora_fieldblock}
+											
+{BEGIN AnterioresAData_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AnterioresAData}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="AnterioresAData" 
+	
+	data-signal-error-for="AnterioresAData{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="AnterioresAData" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_AnterioresAData}">
+		{$label proc_limpar_tarefas_de_lista AnterioresAData }	</label>
+	<div class="r-search-option">
+		{$searchtype_AnterioresAData}
+	</div>
+	<div class="r-search-field">
+		{$AnterioresAData_editcontrol}	</div>
+	<div class="r-search-field">
+		{$AnterioresAData_editcontrol1}
+	</div>
+	
+</div>
+
+{END AnterioresAData_fieldblock}
+											
+{BEGIN SomenteComDataConclusao_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SomenteComDataConclusao}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="SomenteComDataConclusao" 
+	
+	data-signal-error-for="SomenteComDataConclusao{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="SomenteComDataConclusao" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SomenteComDataConclusao}">
+		{$label proc_limpar_tarefas_de_lista SomenteComDataConclusao }	</label>
+	<div class="r-search-option">
+		{$searchtype_SomenteComDataConclusao}
+	</div>
+	<div class="r-search-field">
+		{$SomenteComDataConclusao_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SomenteComDataConclusao_editcontrol1}
+	</div>
+	
+</div>
+
+{END SomenteComDataConclusao_fieldblock}
+											
+{BEGIN SomenteSemComentarios_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SomenteSemComentarios}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="SomenteSemComentarios" 
+	
+	data-signal-error-for="SomenteSemComentarios{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="SomenteSemComentarios" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SomenteSemComentarios}">
+		{$label proc_limpar_tarefas_de_lista SomenteSemComentarios }	</label>
+	<div class="r-search-option">
+		{$searchtype_SomenteSemComentarios}
+	</div>
+	<div class="r-search-field">
+		{$SomenteSemComentarios_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SomenteSemComentarios_editcontrol1}
+	</div>
+	
+</div>
+
+{END SomenteSemComentarios_fieldblock}
+											
+{BEGIN SomenteDoStatus_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SomenteDoStatus}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="SomenteDoStatus" 
+	
+	data-signal-error-for="SomenteDoStatus{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="SomenteDoStatus" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SomenteDoStatus}">
+		{$label proc_limpar_tarefas_de_lista SomenteDoStatus }	</label>
+	<div class="r-search-option">
+		{$searchtype_SomenteDoStatus}
+	</div>
+	<div class="r-search-field">
+		{$SomenteDoStatus_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SomenteDoStatus_editcontrol1}
+	</div>
+	
+</div>
+
+{END SomenteDoStatus_fieldblock}
+											
+{BEGIN lista_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_lista_id}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="lista_id" 
+	
+	data-signal-error-for="lista_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="lista_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_lista_id}">
+		{$label proc_limpar_tarefas_de_lista lista_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_lista_id}
+	</div>
+	<div class="r-search-field">
+		{$lista_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$lista_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END lista_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							{mlang_message SEARCH}			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							{mlang_message RESET}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

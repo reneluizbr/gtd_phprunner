@@ -1,0 +1,517 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+		body: [
+				
+					
+		[
+												
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel tb_atividade view}","hidden":"{$item_hide_view_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+											],
+					]
+	}
+}
+,
+		
+								
+''
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+												{BEGIN col_grid_1}
+						"*", 
+							{END col_grid_1}
+					 ],	
+		
+		body: [
+				
+					{BEGIN row_grid_0}
+				
+		[
+												{BEGIN cellblock_grid_c3}
+
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","text":[{"text":"{$jslabel tb_atividade ativ_id }","bold":true}," ",{$ativ_id_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","text":[{"text":"{$jslabel tb_atividade ativ_nm }","bold":true}," ",{$ativ_nm_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","text":[{"text":"{$jslabel tb_atividade lista_id }","bold":true}," ",{$lista_id_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","text":[{"text":"{$jslabel tb_atividade ativ_fl_ativo }","bold":true}," ",{$ativ_fl_ativo_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","text":[{"text":"{$jslabel tb_atividade ativ_concluida }","bold":true}," ",{$ativ_concluida_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c3}
+																			{BEGIN cellblock_grid_c}
+
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","text":[{"text":"{$jslabel tb_atividade clie_id }","bold":true}," ",{$clie_id_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","text":[{"text":"{$jslabel tb_atividade ativ_ds }","bold":true}," ",{$ativ_ds_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","text":[{"text":"{$jslabel tb_atividade stat_id }","bold":true}," ",{$stat_id_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","text":[{"text":"{$jslabel tb_atividade ativ_prioridade }","bold":true}," ",{$ativ_prioridade_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c}
+											],
+				{END row_grid_0}
+								{BEGIN row_grid_1}
+				
+		[
+												{BEGIN cellblock_grid_c4}
+
+{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c4}
+			colSpan: {$colspan_grid_c4},
+			{END colspan_grid_c4}
+		
+			
+	
+	
+			"stack": [
+		
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section2',
+			widths: ['*'],
+			body: [
+				[{text: 'Datas da Atividade', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+							 
+								{BEGIN col_section2_0}
+								'*', 
+								{END col_section2_0}
+							 
+								{BEGIN col_section2_1}
+								'*', 
+								{END col_section2_1}
+													],
+						body: [
+								
+					{BEGIN row_section2_0}
+				
+		[
+												{BEGIN cellblock_section2_c1}
+
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","text":[{"text":"{$jslabel tb_atividade ativ_dt_ini }","bold":true}," ",{$ativ_dt_ini_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_section2_c1}
+																			{BEGIN cellblock_section2_c}
+
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","text":[{"text":"{$jslabel tb_atividade ativ_dt_fim }","bold":true}," ",{$ativ_dt_fim_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_section2_c}
+											],
+				{END row_section2_0}
+									]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+						 
+		{
+		layout: 'panel',
+		
+		table: {
+			tableForm: true,
+			location: 'section3',
+			widths: ['*'],
+			body: [
+				[{text: 'Controle de Alterações', style: 'tableHeader'}],
+				[{
+					table: {
+						tableForm: true,
+						widths: [
+							 
+								{BEGIN col_section3_0}
+								'*', 
+								{END col_section3_0}
+							 
+								{BEGIN col_section3_1}
+								'*', 
+								{END col_section3_1}
+													],
+						body: [
+								
+					{BEGIN row_section3_0}
+				
+		[
+												{BEGIN cellblock_section3_c1}
+
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field12}","text":[{"text":"{$jslabel tb_atividade inclu_dt }","bold":true}," ",{$inclu_dt_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_section3_c1}
+																			{BEGIN cellblock_section3_c}
+
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","text":[{"text":"{$jslabel tb_atividade alter_dt }","bold":true}," ",{$alter_dt_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_section3_c}
+											],
+				{END row_section3_0}
+									]
+					}
+				}]
+
+			]
+		},
+		margin: [0,0,0,15],
+	},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c4}
+																			{ 
+					cellId: 'c4',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_1}
+								{BEGIN row_grid_2}
+				
+		[
+												{BEGIN cellblock_grid_c5}
+
+{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","text":[{"text":"{$jslabel tb_atividade inclu_login }","bold":true}," ",{$inclu_login_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c5}
+																			{BEGIN cellblock_grid_c6}
+
+{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","text":[{"text":"{$jslabel tb_atividade alter_login }","bold":true}," ",{$alter_login_pdfvalue}]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c6}
+											],
+				{END row_grid_2}
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+		body: [
+				
+					
+		[
+												
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_view_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_view_close}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+																			
+{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+											],
+					]
+	}
+}
+,
+			]
+}
+  

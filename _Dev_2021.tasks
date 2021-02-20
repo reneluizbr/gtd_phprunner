@@ -1,0 +1,36 @@
+# Tarefas (ver como .todo ou .tasks)
+Roteiro principal do GTD:
+    Páginas de Tabelas:
+        ✔ Dominios @done(2021-02-18 21:58)
+        ✔ Parâmetros @started(2021-02-19 11:43) @done(2021-02-19 15:14) @lasted(3h31m16s)
+        ☐ Usuarios
+        ☐ Clientes
+        ☐ Planos
+        ☐ Planos_valores
+        ☐ Clientes_planos
+        ☐ Status_atividades;
+        ☐ Lista_atividades (Grid de Listas de Atividades com Atividades)
+        ☐ Atividade (Grid de Tarefas com imagens circulo verde, amarelo e vermelho)
+    Códigos em geral:
+        ✔ EVENT_BEFOREEDIT // Rene: Guarda log antes de incluir ou alterar um registro @done(2021-02-19 15:14)
+        ✔ EVENT_BEFOREADD  // Rene: Guarda log antes de incluir ou alterar um registro @done(2021-02-19 15:14)
+        ✘ EVENT_AFTEREDIT // Rene: Busca a soma total de todos os itens desta venda para TOTALIZACAO NA VENDA @cancelled(2021-02-19 15:14)
+        ✔ EVENT_INIT_APP @done(2021-02-19 14:44)
+            // Rene: Importacao do arquivo de rotinas e funcoes customizadas
+            require_once('./funcoes_rene.php');
+            // Rene: Configuração do Timezone para Brasil, sem horario de verao
+            date_default_timezone_set('america/Recife');
+        ✔ funcoes_rene.php:  function fctConfigura_Usuario( &$usuarioLogin = NULL, &$dataHoraAtual = NULL) @done(2021-02-19 14:42)
+        ☐ Rodape customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\include\footer.php
+        ☐ CSS customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\styles\custom\custom.css
+    ☐ Painél de Filtro em paginas Atividades, Usuarios
+    Dashboards:
+        ☐ Dashboard Painél Principal Contadores
+        ☐ Dashboard Painél Principal com Gráficos de Barras
+        ☐ Dashboard Painél Principal com Gráficos de Colunas
+        ☐ Dashboard Tarefas Recentes com Grids pai-filho
+    Graficos:
+        ☐ Vendas por Clientes
+        ☐ Vendas Clientes Qtde
+        ☐ Vendas por Clientes Grupo 2
+        ☐ Vendas por Clientes Grupo

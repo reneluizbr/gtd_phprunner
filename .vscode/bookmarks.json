@@ -1,0 +1,37 @@
+[
+	{
+		"path": "$ROOTPATH$\\_queries\\gtd_202102.sql",
+		"bookmarks": [
+			{
+				"line": 82,
+				"column": 20,
+				"label": "clie_domi_status"
+			},
+			{
+				"line": 203,
+				"column": 16,
+				"label": "stat_fl_pago"
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\_queries\\gtd_202102_dados.sql",
+		"bookmarks": [
+			{
+				"line": 35,
+				"column": 10,
+				"label": "INTO tb_usuarios"
+			},
+			{
+				"line": 37,
+				"column": 39,
+				"label": "root@email_fake.com"
+			},
+			{
+				"line": 47,
+				"column": 10,
+				"label": "INTO tb_dominios"
+			}
+		]
+	}
+]
