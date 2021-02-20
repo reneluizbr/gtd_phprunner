@@ -10,7 +10,9 @@
     vscode://vscode.github-authentication/did-authenticate?windowid=1&code=aa9ea7e1e8ac3f3652ae&state=fbecb261-3968-4b50-af44-a9c1c8563b86
 
     Erro que aconteceu no primeiro commit com o GMaster:
-    git error user cancelled certificate check:
+        git error user cancelled certificate check
+    Estou usando o GitAhead para evitar o erro acima
+    "C:\Program Files\GitAhead\GitAhead.exe"
 
 # 2020-07-29 16:30, Wed -
     Responsividade
