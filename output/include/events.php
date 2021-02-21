@@ -58,6 +58,17 @@ $_SESSION["clie_id"] = $data["clie_id"];
 $_SESSION["usua_id"] = $data["usua_id"];
 $_SESSION["usua_nome_completo"] = $data["usua_nome_completo"];
 $_SESSION["usua_domi_status"] = $data["usua_domi_status"];
+
+// Rene: Atualiza a data de Ultimo Login
+$wlDadoAlterar = array();
+$wlDadoAlterar["usua_login_ulti"] = strftime("%Y-%m-%d %H:%M:%S"); // Ex: '2021-02-21 20:17:17';
+
+// Chave dos registros que serão alterados na tabela
+$wlChaves["usua_id"] = $data["usua_id"];
+
+// Rene: Realiza a alteracao (update) na tabela
+DB::Update("tb_usuarios", $wlDadoAlterar, $wlChaves);
+//DB::Insert("cars", $data );
 ;		
 } // function AfterSuccessfulLogin
 

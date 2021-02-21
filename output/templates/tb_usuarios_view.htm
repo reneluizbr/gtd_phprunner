@@ -28,8 +28,8 @@
 		>
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
-		data-v-width="4"
-	data-v-margin="0"
+		data-v-width="6"
+	data-v-margin="1"
 	
 >		
 	 
@@ -46,8 +46,8 @@
 {END top_block}
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
-		data-v-width="4"
-	data-v-margin="0"
+		data-v-width="6"
+	data-v-margin="1"
 	
 >		
 	</div>		
@@ -66,7 +66,7 @@
 	{$grid_hiddenattr} 
 		data-form-width="2"
 		
-		data-v-width="4"
+		data-v-width="6"
 	>
 	<tbody>
 										<tr>
@@ -79,7 +79,7 @@
 	
 			
 			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="2"
+		data-v-cell="3"
 		
 >
 	<div edit-form-cell class="clearfix">
@@ -87,81 +87,73 @@
 {BEGIN usua_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_id}  r-vertical-field" data-fieldname="usua_id" data-signal-error-for="usua_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="usua_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_id}  form-horizontal clearfix" data-fieldname="usua_id" data-signal-error-for="usua_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="usua_id" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_usua_id}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_usua_id}">
 		
 		{BEGIN usua_id_label}{$label tb_usuarios usua_id }{END usua_id_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$usua_id_value}	</div>
 
-		</div>
 		
 </div>
 
 
 {END usua_id_fieldblock}
 											
+{BEGIN usua_domi_status_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_domi_status}  form-horizontal clearfix" data-fieldname="usua_domi_status" data-signal-error-for="usua_domi_status{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="usua_domi_status" >
+
+	
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_usua_domi_status}">
+		
+		{BEGIN usua_domi_status_label}{$label tb_usuarios usua_domi_status }{END usua_domi_status_label}
+	</label>
+	<div class="col-md-8" >
+		{$usua_domi_status_value}	</div>
+
+		
+</div>
+
+
+{END usua_domi_status_fieldblock}
+											
 {BEGIN usua_username_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_username}  r-vertical-field" data-fieldname="usua_username" data-signal-error-for="usua_username{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="usua_username" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_username}  form-horizontal clearfix" data-fieldname="usua_username" data-signal-error-for="usua_username{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="usua_username" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_usua_username}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_usua_username}">
 		
 		{BEGIN usua_username_label}{$label tb_usuarios usua_username }{END usua_username_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$usua_username_value}	</div>
 
-		</div>
 		
 </div>
 
 
 {END usua_username_fieldblock}
 											
-{BEGIN usua_email_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_email}  r-vertical-field" data-fieldname="usua_email" data-signal-error-for="usua_email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="usua_email" >
-
-		<div class="col-md-12">
-	
-	<label class="" for="{$labelfor_usua_email}">
-		
-		{BEGIN usua_email_label}{$label tb_usuarios usua_email }{END usua_email_label}
-	</label>
-	<div class="" >
-		{$usua_email_value}	</div>
-
-		</div>
-		
-</div>
-
-
-{END usua_email_fieldblock}
-											
 {BEGIN inclu_login_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  r-vertical-field" data-fieldname="inclu_login" data-signal-error-for="inclu_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="inclu_login" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  form-horizontal clearfix" data-fieldname="inclu_login" data-signal-error-for="inclu_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="inclu_login" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_inclu_login}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_inclu_login}">
 		
 		{BEGIN inclu_login_label}{$label tb_usuarios inclu_login }{END inclu_login_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$inclu_login_value}	</div>
 
-		</div>
 		
 </div>
 
@@ -171,18 +163,16 @@
 {BEGIN alter_login_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  r-vertical-field" data-fieldname="alter_login" data-signal-error-for="alter_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="alter_login" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  form-horizontal clearfix" data-fieldname="alter_login" data-signal-error-for="alter_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="alter_login" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_alter_login}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_alter_login}">
 		
 		{BEGIN alter_login_label}{$label tb_usuarios alter_login }{END alter_login_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$alter_login_value}	</div>
 
-		</div>
 		
 </div>
 
@@ -201,7 +191,7 @@
 	
 			
 			data-cellId="grid_c" data-pageid="{$pageid}"
-		data-v-cell="2"
+		data-v-cell="3"
 		
 >
 	<div edit-form-cell class="clearfix">
@@ -209,60 +199,73 @@
 {BEGIN clie_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  r-vertical-field" data-fieldname="clie_id" data-signal-error-for="clie_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  form-horizontal clearfix" data-fieldname="clie_id" data-signal-error-for="clie_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_clie_id}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_clie_id}">
 		
 		{BEGIN clie_id_label}{$label tb_usuarios clie_id }{END clie_id_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$clie_id_value}	</div>
 
-		</div>
 		
 </div>
 
 
 {END clie_id_fieldblock}
 											
-{BEGIN usua_domi_status_fieldblock}
+{BEGIN wlSituacao_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_domi_status}  r-vertical-field" data-fieldname="usua_domi_status" data-signal-error-for="usua_domi_status{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="usua_domi_status" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_wlSituacao}  form-horizontal clearfix" data-fieldname="wlSituacao" data-signal-error-for="wlSituacao{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="wlSituacao" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_usua_domi_status}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_wlSituacao}">
 		
-		{BEGIN usua_domi_status_label}{$label tb_usuarios usua_domi_status }{END usua_domi_status_label}
+		{BEGIN wlSituacao_label}{$label tb_usuarios wlSituacao }{END wlSituacao_label}
 	</label>
-	<div class="" >
-		{$usua_domi_status_value}	</div>
+	<div class="col-md-8" >
+		{$wlSituacao_value}	</div>
 
-		</div>
 		
 </div>
 
 
-{END usua_domi_status_fieldblock}
+{END wlSituacao_fieldblock}
+											
+{BEGIN usua_email_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_email}  form-horizontal clearfix" data-fieldname="usua_email" data-signal-error-for="usua_email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="usua_email" >
+
+	
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_usua_email}">
+		
+		{BEGIN usua_email_label}{$label tb_usuarios usua_email }{END usua_email_label}
+	</label>
+	<div class="col-md-8" >
+		{$usua_email_value}	</div>
+
+		
+</div>
+
+
+{END usua_email_fieldblock}
 											
 {BEGIN inclu_dt_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  r-vertical-field" data-fieldname="inclu_dt" data-signal-error-for="inclu_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="inclu_dt" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  form-horizontal clearfix" data-fieldname="inclu_dt" data-signal-error-for="inclu_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="inclu_dt" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_inclu_dt}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_inclu_dt}">
 		
 		{BEGIN inclu_dt_label}{$label tb_usuarios inclu_dt }{END inclu_dt_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$inclu_dt_value}	</div>
 
-		</div>
 		
 </div>
 
@@ -272,18 +275,16 @@
 {BEGIN alter_dt_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  r-vertical-field" data-fieldname="alter_dt" data-signal-error-for="alter_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="alter_dt" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  form-horizontal clearfix" data-fieldname="alter_dt" data-signal-error-for="alter_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="alter_dt" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_alter_dt}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_alter_dt}">
 		
 		{BEGIN alter_dt_label}{$label tb_usuarios alter_dt }{END alter_dt_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$alter_dt_value}	</div>
 
-		</div>
 		
 </div>
 
@@ -293,18 +294,16 @@
 {BEGIN usua_login_ulti_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_login_ulti}  r-vertical-field" data-fieldname="usua_login_ulti" data-signal-error-for="usua_login_ulti{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="usua_login_ulti" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_login_ulti}  form-horizontal clearfix" data-fieldname="usua_login_ulti" data-signal-error-for="usua_login_ulti{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="usua_login_ulti" >
 
-		<div class="col-md-12">
 	
-	<label class="" for="{$labelfor_usua_login_ulti}">
+	<label class="col-md-4 text-right bs-view-label" for="{$labelfor_usua_login_ulti}">
 		
 		{BEGIN usua_login_ulti_label}{$label tb_usuarios usua_login_ulti }{END usua_login_ulti_label}
 	</label>
-	<div class="" >
+	<div class="col-md-8" >
 		{$usua_login_ulti_value}	</div>
 
-		</div>
 		
 </div>
 
@@ -318,8 +317,8 @@
 {END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
-		data-v-width="4"
-	data-v-margin="0"
+		data-v-width="6"
+	data-v-margin="1"
 	
 >		
 	 

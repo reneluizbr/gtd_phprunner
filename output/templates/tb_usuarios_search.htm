@@ -210,31 +210,6 @@
 
 {END usua_username_fieldblock}
 											
-{BEGIN usua_senha_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_senha}  r-horizontal-field form-horizontal" 
-	
-		data-fieldname="usua_senha" 
-	
-	data-signal-error-for="usua_senha{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="usua_senha" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_usua_senha}">
-		{$label tb_usuarios usua_senha }	</label>
-	<div class="r-search-option">
-		{$searchtype_usua_senha}
-	</div>
-	<div class="r-search-field">
-		{$usua_senha_editcontrol}	</div>
-	<div class="r-search-field">
-		{$usua_senha_editcontrol1}
-	</div>
-	
-</div>
-
-{END usua_senha_fieldblock}
-											
 {BEGIN usua_login_ulti_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_usua_login_ulti}  r-horizontal-field form-horizontal" 
@@ -359,6 +334,31 @@
 </div>
 
 {END alter_login_fieldblock}
+											
+{BEGIN wlSituacao_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_wlSituacao}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="wlSituacao" 
+	
+	data-signal-error-for="wlSituacao{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="wlSituacao" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_wlSituacao}">
+		{$label tb_usuarios wlSituacao }	</label>
+	<div class="r-search-option">
+		{$searchtype_wlSituacao}
+	</div>
+	<div class="r-search-field">
+		{$wlSituacao_editcontrol}	</div>
+	<div class="r-search-field">
+		{$wlSituacao_editcontrol1}
+	</div>
+	
+</div>
+
+{END wlSituacao_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

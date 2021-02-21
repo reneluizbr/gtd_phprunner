@@ -587,7 +587,7 @@ $globalSettings["LandingPageId"] = "menu";
 
 $globalSettings["ProjectLogo"] = array();
 $globalSettings["ProjectLogo"]["English"] = "<img src=\"../images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
-$globalSettings["ProjectLogo"]["Portuguese(Brazil)"] = "<img src=\"..XXX/images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
+$globalSettings["ProjectLogo"]["Portuguese(Brazil)"] = "<img src=\"../images/app_logo_gtd3.png\" alt=\"GTD 2020\">";
 $globalSettings["ProjectLogo"]["Spanish"] = "<img src=\"../images/app_logo_gtd3.png\" alt=\"GTD 2020\"";
 
 $globalSettings["CookieBanner"] = array();
@@ -694,9 +694,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "457_1613698925";
+$projectBuildKey = "495_1613698925";
 $wizardBuildKey = "33793";
-$projectBuildNumber = "457";
+$projectBuildNumber = "495";
 
 $mlang_messages = array();
 $mlang_charsets = array();

@@ -911,6 +911,30 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="tb_usuarios" && $field=="wlSituacao")
+	{
+		// Rene: Imagens no Grid para Status do Usuario
+// $bgcolor = "background:yellow";  // Cor de fundo configurada em 'Events' , 'After record processed'
+if ($value == 'CADASTRADO') {
+   //$value = '<strong> - </strong>' ;
+   //$value = '<strong>' . number_format($value, 2, ',', '.')  . '<img src="images/circle_yellow_16.png" alt="" /></strong>';
+   $value = '<img src="images/circle_yellow_16.png" alt="" />';
+   $cor = "color: red;";
+} else if ($value == 'ATIVO') {
+   // $value = '<span>' .number_format($value, 2, ',', '.') . '<img src="images/circle_green_16.png" alt="" /></span>';
+   $value = '<img src="images/circle_green_16.png" alt="" />';
+   $cor = "color: black;";
+} else {  // 'INATIVO', 'SUSPENSO', 'BLOQUEADO', etc
+   // $value = '<em>' . number_format($value, 2, ',', '.') . '<img src="images/circle_red_16.png" alt="" /></em>';
+   $value = '<img src="images/circle_red_16.png" alt="" />';
+   $cor = "color: blue;";
+}
+//$classe = "class='r-ori-vert r-field-number glyphicon glyphicon-thumbs-up'";
+$classe = "class='r-ori-vert r-field-number'";
+//$alinha = "text-align: center;";  // Rene: Mais confiavel usa o alinhamento no CSS do campo no 'Designer Editor'
+$value = "<span style='" . $cor /*. $alinha . "' " */ . $classe . ">" . $value . "</span>";;
+		return $value;
+	}
 	return $value;
 }
 

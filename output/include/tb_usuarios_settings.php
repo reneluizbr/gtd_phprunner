@@ -60,6 +60,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_usuarios["English"]["alter_login"] = "Alter Login";
 	$fieldToolTipstb_usuarios["English"]["alter_login"] = "";
 	$placeHolderstb_usuarios["English"]["alter_login"] = "";
+	$fieldLabelstb_usuarios["English"]["wlSituacao"] = "Wl Situacao";
+	$fieldToolTipstb_usuarios["English"]["wlSituacao"] = "";
+	$placeHolderstb_usuarios["English"]["wlSituacao"] = "";
 	if (count($fieldToolTipstb_usuarios["English"]))
 		$tdatatb_usuarios[".isUseToolTips"] = true;
 }
@@ -102,6 +105,9 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["alter_login"] = "";
+	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["wlSituacao"] = "Situação";
+	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["wlSituacao"] = "";
+	$placeHolderstb_usuarios["Portuguese(Brazil)"]["wlSituacao"] = "";
 	if (count($fieldToolTipstb_usuarios["Portuguese(Brazil)"]))
 		$tdatatb_usuarios[".isUseToolTips"] = true;
 }
@@ -144,6 +150,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstb_usuarios["Spanish"]["alter_login"] = "Alter Login";
 	$fieldToolTipstb_usuarios["Spanish"]["alter_login"] = "";
 	$placeHolderstb_usuarios["Spanish"]["alter_login"] = "";
+	$fieldLabelstb_usuarios["Spanish"]["wlSituacao"] = "Wl Situacao";
+	$fieldToolTipstb_usuarios["Spanish"]["wlSituacao"] = "";
+	$placeHolderstb_usuarios["Spanish"]["wlSituacao"] = "";
 	if (count($fieldToolTipstb_usuarios["Spanish"]))
 		$tdatatb_usuarios[".isUseToolTips"] = true;
 }
@@ -269,9 +278,9 @@ $tdatatb_usuarios[".googleLikeFields"] = array();
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_id";
 $tdatatb_usuarios[".googleLikeFields"][] = "clie_id";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_domi_status";
+$tdatatb_usuarios[".googleLikeFields"][] = "wlSituacao";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_email";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_username";
-$tdatatb_usuarios[".googleLikeFields"][] = "usua_senha";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_login_ulti";
 $tdatatb_usuarios[".googleLikeFields"][] = "inclu_login";
 $tdatatb_usuarios[".googleLikeFields"][] = "inclu_dt";
@@ -311,7 +320,7 @@ $tdatatb_usuarios[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatb_usuarios[".orderindexes"] = array();
 
-$tdatatb_usuarios[".sqlHead"] = "SELECT usua_id,  	clie_id,  	usua_domi_status,  	usua_email,  	usua_username,  	usua_senha,  	usua_login_ulti,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$tdatatb_usuarios[".sqlHead"] = "SELECT usua_id,  	clie_id,  	usua_domi_status,  	usua_domi_status AS wlSituacao,  	usua_email,  	usua_username,  	usua_senha,  	usua_login_ulti,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
 $tdatatb_usuarios[".sqlFrom"] = "FROM tb_usuarios";
 $tdatatb_usuarios[".sqlWhereExpr"] = "";
 $tdatatb_usuarios[".sqlTail"] = "";
@@ -640,9 +649,10 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -801,9 +811,10 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -820,10 +831,144 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 	$tdatatb_usuarios["usua_domi_status"] = $fdata;
 		$tdatatb_usuarios[".searchableFields"][] = "usua_domi_status";
-//	usua_email
+//	wlSituacao
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 4;
+	$fdata["strName"] = "wlSituacao";
+	$fdata["GoodName"] = "wlSituacao";
+	$fdata["ownerTable"] = "tb_usuarios";
+	$fdata["Label"] = GetFieldLabel("tb_usuarios","wlSituacao");
+	$fdata["FieldType"] = 202;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "usua_domi_status";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "usua_domi_status";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Custom");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatatb_usuarios["wlSituacao"] = $fdata;
+		$tdatatb_usuarios[".searchableFields"][] = "wlSituacao";
+//	usua_email
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "usua_email";
 	$fdata["GoodName"] = "usua_email";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -961,7 +1106,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	usua_username
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "usua_username";
 	$fdata["GoodName"] = "usua_username";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1095,7 +1240,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	usua_senha
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "usua_senha";
 	$fdata["GoodName"] = "usua_senha";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1229,7 +1374,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	usua_login_ulti
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "usua_login_ulti";
 	$fdata["GoodName"] = "usua_login_ulti";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1281,8 +1426,9 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1302,7 +1448,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1364,7 +1510,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	inclu_login
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 8;
+	$fdata["Index"] = 9;
 	$fdata["strName"] = "inclu_login";
 	$fdata["GoodName"] = "inclu_login";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1476,10 +1622,11 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1498,7 +1645,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	inclu_dt
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 9;
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "inclu_dt";
 	$fdata["GoodName"] = "inclu_dt";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1613,8 +1760,9 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1633,7 +1781,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	alter_login
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 10;
+	$fdata["Index"] = 11;
 	$fdata["strName"] = "alter_login";
 	$fdata["GoodName"] = "alter_login";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1745,10 +1893,11 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1767,7 +1916,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	alter_dt
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 12;
 	$fdata["strName"] = "alter_dt";
 	$fdata["GoodName"] = "alter_dt";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1934,7 +2083,7 @@ function createSqlQuery_tb_usuarios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "usua_id,  	clie_id,  	usua_domi_status,  	usua_email,  	usua_username,  	usua_senha,  	usua_login_ulti,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$proto0["m_strFieldList"] = "usua_id,  	clie_id,  	usua_domi_status,  	usua_domi_status AS wlSituacao,  	usua_email,  	usua_username,  	usua_senha,  	usua_login_ulti,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
 $proto0["m_strFrom"] = "FROM tb_usuarios";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2018,26 +2167,26 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "usua_email",
+	"m_strName" => "usua_domi_status",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto12["m_sql"] = "usua_email";
+$proto12["m_sql"] = "usua_domi_status";
 $proto12["m_srcTableName"] = "tb_usuarios";
 $proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "";
+$proto12["m_alias"] = "wlSituacao";
 $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "usua_username",
+	"m_strName" => "usua_email",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto14["m_sql"] = "usua_username";
+$proto14["m_sql"] = "usua_email";
 $proto14["m_srcTableName"] = "tb_usuarios";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -2046,12 +2195,12 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "usua_senha",
+	"m_strName" => "usua_username",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto16["m_sql"] = "usua_senha";
+$proto16["m_sql"] = "usua_username";
 $proto16["m_srcTableName"] = "tb_usuarios";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -2060,12 +2209,12 @@ $obj = new SQLFieldListItem($proto16);
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
-	"m_strName" => "usua_login_ulti",
+	"m_strName" => "usua_senha",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto18["m_sql"] = "usua_login_ulti";
+$proto18["m_sql"] = "usua_senha";
 $proto18["m_srcTableName"] = "tb_usuarios";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -2074,12 +2223,12 @@ $obj = new SQLFieldListItem($proto18);
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
-	"m_strName" => "inclu_login",
+	"m_strName" => "usua_login_ulti",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto20["m_sql"] = "inclu_login";
+$proto20["m_sql"] = "usua_login_ulti";
 $proto20["m_srcTableName"] = "tb_usuarios";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -2088,12 +2237,12 @@ $obj = new SQLFieldListItem($proto20);
 $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
-	"m_strName" => "inclu_dt",
+	"m_strName" => "inclu_login",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto22["m_sql"] = "inclu_dt";
+$proto22["m_sql"] = "inclu_login";
 $proto22["m_srcTableName"] = "tb_usuarios";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -2102,12 +2251,12 @@ $obj = new SQLFieldListItem($proto22);
 $proto0["m_fieldlist"][]=$obj;
 						$proto24=array();
 			$obj = new SQLField(array(
-	"m_strName" => "alter_login",
+	"m_strName" => "inclu_dt",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto24["m_sql"] = "alter_login";
+$proto24["m_sql"] = "inclu_dt";
 $proto24["m_srcTableName"] = "tb_usuarios";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -2116,59 +2265,73 @@ $obj = new SQLFieldListItem($proto24);
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
 			$obj = new SQLField(array(
-	"m_strName" => "alter_dt",
+	"m_strName" => "alter_login",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto26["m_sql"] = "alter_dt";
+$proto26["m_sql"] = "alter_login";
 $proto26["m_srcTableName"] = "tb_usuarios";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
 $obj = new SQLFieldListItem($proto26);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto28=array();
-$proto28["m_link"] = "SQLL_MAIN";
-			$proto29=array();
-$proto29["m_strName"] = "tb_usuarios";
-$proto29["m_srcTableName"] = "tb_usuarios";
-$proto29["m_columns"] = array();
-$proto29["m_columns"][] = "usua_id";
-$proto29["m_columns"][] = "clie_id";
-$proto29["m_columns"][] = "usua_domi_status";
-$proto29["m_columns"][] = "usua_email";
-$proto29["m_columns"][] = "usua_username";
-$proto29["m_columns"][] = "usua_senha";
-$proto29["m_columns"][] = "usua_login_ulti";
-$proto29["m_columns"][] = "inclu_login";
-$proto29["m_columns"][] = "inclu_dt";
-$proto29["m_columns"][] = "alter_login";
-$proto29["m_columns"][] = "alter_dt";
-$obj = new SQLTable($proto29);
+						$proto28=array();
+			$obj = new SQLField(array(
+	"m_strName" => "alter_dt",
+	"m_strTable" => "tb_usuarios",
+	"m_srcTableName" => "tb_usuarios"
+));
 
-$proto28["m_table"] = $obj;
-$proto28["m_sql"] = "tb_usuarios";
-$proto28["m_alias"] = "";
+$proto28["m_sql"] = "alter_dt";
 $proto28["m_srcTableName"] = "tb_usuarios";
-$proto30=array();
-$proto30["m_sql"] = "";
-$proto30["m_uniontype"] = "SQLL_UNKNOWN";
+$proto28["m_expr"]=$obj;
+$proto28["m_alias"] = "";
+$obj = new SQLFieldListItem($proto28);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto30=array();
+$proto30["m_link"] = "SQLL_MAIN";
+			$proto31=array();
+$proto31["m_strName"] = "tb_usuarios";
+$proto31["m_srcTableName"] = "tb_usuarios";
+$proto31["m_columns"] = array();
+$proto31["m_columns"][] = "usua_id";
+$proto31["m_columns"][] = "clie_id";
+$proto31["m_columns"][] = "usua_domi_status";
+$proto31["m_columns"][] = "usua_email";
+$proto31["m_columns"][] = "usua_username";
+$proto31["m_columns"][] = "usua_senha";
+$proto31["m_columns"][] = "usua_login_ulti";
+$proto31["m_columns"][] = "inclu_login";
+$proto31["m_columns"][] = "inclu_dt";
+$proto31["m_columns"][] = "alter_login";
+$proto31["m_columns"][] = "alter_dt";
+$obj = new SQLTable($proto31);
+
+$proto30["m_table"] = $obj;
+$proto30["m_sql"] = "tb_usuarios";
+$proto30["m_alias"] = "";
+$proto30["m_srcTableName"] = "tb_usuarios";
+$proto32=array();
+$proto32["m_sql"] = "";
+$proto32["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto30["m_column"]=$obj;
-$proto30["m_contained"] = array();
-$proto30["m_strCase"] = "";
-$proto30["m_havingmode"] = false;
-$proto30["m_inBrackets"] = false;
-$proto30["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto30);
+$proto32["m_column"]=$obj;
+$proto32["m_contained"] = array();
+$proto32["m_strCase"] = "";
+$proto32["m_havingmode"] = false;
+$proto32["m_inBrackets"] = false;
+$proto32["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto32);
 
-$proto28["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto28);
+$proto30["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto30);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2184,7 +2347,7 @@ $queryData_tb_usuarios = createSqlQuery_tb_usuarios();
 	
 		;
 
-											
+												
 
 $tdatatb_usuarios[".sqlquery"] = $queryData_tb_usuarios;
 
