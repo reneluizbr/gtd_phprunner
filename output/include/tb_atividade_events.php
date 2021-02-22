@@ -44,6 +44,28 @@ function BeforeAdd(&$values, &$message, $inline, &$pageObject)
 // Rene: Guarda dados de log antes de incluir ou alterar um registro
 fctConfigura_Usuario($values['inclu_login'], $values['inclu_dt']);
 
+// Rene: Validacao de regra, se ativ_concluida == 1 entao ativ_dt_fim deve ser informada
+$wlRetorno = true;
+if (($values['ativ_concluida'] == 1) and empty($values['ativ_dt_fim'])) {
+		// 'Data fim deve ser informada para atividade concluída.'
+		$message = GetCustomLabel ("Valida_atividade_concluida_sim");
+		$wlRetorno = false;
+} else if(($values['ativ_concluida'] == 0) and !empty($values['ativ_dt_fim'])) {
+		// 'Data fim só pode ser informada se atividade estiver concluída.'
+		$message = GetCustomLabel ("Valida_atividade_concluida_nao");
+		$wlRetorno = false;
+}
+/*
+echo 'Debug:';
+echo $message;
+echo '<br>-------------------';
+echo '<br>' . $values['ativ_concluida'];
+echo '<br>' . $values['ativ_dt_fim'];
+return false;
+*/
+echo $wlRetorno;
+
+return $wlRetorno;
 return true;
 ;		
 } // function BeforeAdd
@@ -120,7 +142,29 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, &
 // Rene: Guarda dados de log antes de incluir ou alterar um registro
 fctConfigura_Usuario($values['alter_login'], $values['alter_dt']);
 
-return true;
+// Rene: Validacao de regra, se ativ_concluida == 1 entao ativ_dt_fim deve ser informada
+$wlRetorno = true;
+if (($values['ativ_concluida'] == 1) and empty($values['ativ_dt_fim'])) {
+		// 'Data fim deve ser informada para atividade concluída.'
+		$message = GetCustomLabel ("Valida_atividade_concluida_sim");
+		$wlRetorno = false;
+} else if(($values['ativ_concluida'] == 0) and !empty($values['ativ_dt_fim'])) {
+		// 'Data fim só pode ser informada se atividade estiver concluída.'
+		$message = GetCustomLabel ("Valida_atividade_concluida_nao");
+		$wlRetorno = false;
+}
+/*
+echo 'Debug:';
+echo $message;
+echo '<br>-------------------';
+echo '<br>' . $values['ativ_concluida'];
+echo '<br>' . $values['ativ_dt_fim'];
+return false;
+*/
+echo $wlRetorno;
+
+return $wlRetorno;
+
 ;		
 } // function BeforeEdit
 

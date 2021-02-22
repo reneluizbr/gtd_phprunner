@@ -122,9 +122,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field4}","text":[{"text":"{$jslabel tb_atividade lista_id }","bold":true}," ",{$lista_id_pdfvalue}]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","text":[{"text":"{$jslabel tb_atividade ativ_fl_ativo }","bold":true}," ",{$ativ_fl_ativo_pdfvalue}]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field8}","text":[{"text":"{$jslabel tb_atividade ativ_concluida }","bold":true}," ",{$ativ_concluida_pdfvalue}]},
 				
 		  ],

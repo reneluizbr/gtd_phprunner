@@ -4,15 +4,16 @@ Roteiro principal do GTD:
         ✔ Dominios @done(2021-02-18 21:58)
         ✔ Parâmetros @started(2021-02-19 11:43) @done(2021-02-19 15:14) @lasted(3h31m16s)
         ✔ Usuarios, com imagens circulo verde, amarelo e vermelho no grid @done(2021-02-21 16:13)
-        ☐ Usuarios, Data ultimo login na tabela após se logar
+        ✔ Usuarios, Data ultimo login na tabela após se logar @done(2021-02-21 20:38)
         ☐ Clientes
         ☐ Planos
         ☐ Planos_valores
         ☐ Clientes_planos
         ✔ Status_atividades @high @started(2021-02-20 15:00) @done(2021-02-20 15:38) @lasted(38m29s)
         ✔ Lista_atividades @high  (Grid de Listas de Atividades com Atividades) @done(2021-02-20 16:51)
-        ☐ Tarefas (com imagens circulo verde, amarelo e vermelho) @started(2021-02-20 16:52)
-            ☐ Regras de tarefas "Concuida" vs "Data Fim" @started(2021-02-21 15:11)
+        ✘ Tarefas (com imagens circulo verde, amarelo e vermelho) @started(2021-02-20 16:52) @cancelled(2021-02-22 17:14) @wasted(2d22m35s)
+        ✔ Tarefas (com abas de filtro "Concuídas", "Em Andamento") @started(2021-02-22 17:51) @done(2021-02-22 18:12) @lasted(21m13s)
+            ✔ Regras de tarefas "Concuida" vs "Data Fim" @started(2021-02-21 15:11) @done(2021-02-22 19:12) @lasted(1d4h1m7s)
     Códigos em geral:
         ✔ EVENT_BEFOREEDIT // Rene: Guarda log antes de incluir ou alterar um registro @done(2021-02-19 15:14)
         ✔ EVENT_BEFOREADD  // Rene: Guarda log antes de incluir ou alterar um registro @done(2021-02-19 15:14)
@@ -30,7 +31,7 @@ Roteiro principal do GTD:
         ☐ Dashboard Painél Principal Contadores
         ☐ Dashboard Painél Principal com Gráficos de Barras
         ☐ Dashboard Painél Principal com Gráficos de Colunas
-        ☐ Dashboard Tarefas Recentes com Grids pai-filho @started(2021-02-20 15:20)
+        ✔ Dashboard Tarefas Recentes com Grids pai-filho @started(2021-02-20 15:20) @done(2021-02-21 20:41) @lasted(1d5h21m41s)
     Graficos:
         ☐ Vendas por Clientes
         ☐ Vendas Clientes Qtde

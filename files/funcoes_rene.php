@@ -19,7 +19,7 @@ function fctConfigura_Usuario( &$usuarioLogin = NULL, &$dataHoraAtual = NULL) {
 
 	// Rene: forma simples de depurar algo mostrando um alert() ou confirm() na pagina
 	//echo "<script>if (confirm('Do you want to print this record?')) location.href='cars_view.php?editid1=".$keys["ID"]."';</script>";
-	echo "<script>alert('Sendo alterado/incluido por ID: " . $userID . ", {$userNome} - {$userEmail}');</script>";
+	//echo "<script>alert('Sendo alterado/incluido por ID: " . $userID . ", {$userNome} - {$userEmail}');</script>";
 
 
 /*

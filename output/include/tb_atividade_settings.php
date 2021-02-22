@@ -357,6 +357,33 @@ $tdatatb_atividade[".sqlFrom"] = "FROM tb_atividade";
 $tdatatb_atividade[".sqlWhereExpr"] = "";
 $tdatatb_atividade[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "EmAndamento",
+	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Em Andamento",
+	'nameType' => 'Text',
+	'where' => "ativ_concluida = 0",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$arrGridTabs[] = array(
+	'tabId' => "Concluida",
+	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluída",
+	'nameType' => 'Text',
+	'where' => "ativ_concluida = 1",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$arrGridTabs[] = array(
+	'tabId' => "Todas",
+	'name' => "<img src=\"images/info.png\" alt=\"\" /> Todas",
+	'nameType' => 'Text',
+	'where' => "ativ_concluida = ativ_concluida",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$tdatatb_atividade[".arrGridTabs"] = $arrGridTabs;
 
 
 

@@ -277,124 +277,6 @@
 
 		 	
 
-		{BEGIN filter_control_clie_id}
-		<div class="panel panel-info filter-field filter-clie_id-container">
-			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
-
-							<input class="filter-selectAll-clie_id" type="checkbox" name="selectAll" {$selectAll_attrs_clie_id} />
-			
-				<label>{$label tb_usuarios clie_id }</label>
-
-				{BEGIN clearLink_clie_id}
-				<a href="#" class="filter-clear filter-clear-clie_id">{mlang_message FILTER_CLEAR}</a>
-				{END clearLink_clie_id}				
-			</div>
-
-			<ul class="list-group">
-				{BEGIN filterCtrlBlock_clie_id}
-				<li class="list-group-item filter-values filter-values-clie_id {$collapsedClass_clie_id} {$visibilityClass_clie_id}">
-					{$clie_id_filter}
-								
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-				</li>				
-				{END filterCtrlBlock_clie_id}
-
-							{BEGIN filter_button_showmore_clie_id}
-				<li class="list-group-item filter-show-more {$collapsedClass_clie_id} {$showMoreBtnClass_clie_id}">
-					<a class="filter-show-more-link filterShowMore_clie_id" href="#">{$show_n_more_clie_id}</a>
-				</li>
-				{END filter_button_showmore_clie_id}			
-			
-
-
-							{BEGIN filter_button_apply_clie_id}
-				<li class="list-group-item filter-field-btn {$collapsedClass_clie_id}">
-					<a href="#" class="rnr-button filter-btn-apply filter-apply-clie_id" {$filterbutton_attrs_clie_id}>{mlang_message FILTER_APPLY}</a>
-				</li>				
-				{END filter_button_apply_clie_id}
-			
-
-				
-	
-			</ul>			
-		</div>
-		{END filter_control_clie_id}
-	 
-			
-	 	
-
-		
-		 
-		 
-
-		 	
-
-		{BEGIN filter_control_wlSituacao}
-		<div class="panel panel-info filter-field filter-wlSituacao-container">
-			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
-
-			
-				<label>{$label tb_usuarios wlSituacao }</label>
-
-				{BEGIN clearLink_wlSituacao}
-				<a href="#" class="filter-clear filter-clear-wlSituacao">{mlang_message FILTER_CLEAR}</a>
-				{END clearLink_wlSituacao}				
-			</div>
-
-			<ul class="list-group">
-				{BEGIN filterCtrlBlock_wlSituacao}
-				<li class="list-group-item filter-values filter-values-wlSituacao {$collapsedClass_wlSituacao} {$visibilityClass_wlSituacao}">
-					{$wlSituacao_filter}
-								
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-				</li>				
-				{END filterCtrlBlock_wlSituacao}
-
-							{BEGIN filter_button_showmore_wlSituacao}
-				<li class="list-group-item filter-show-more {$collapsedClass_wlSituacao} {$showMoreBtnClass_wlSituacao}">
-					<a class="filter-show-more-link filterShowMore_wlSituacao" href="#">{$show_n_more_wlSituacao}</a>
-				</li>
-				{END filter_button_showmore_wlSituacao}			
-			
-
-
-			
-
-				
-	
-			</ul>			
-		</div>
-		{END filter_control_wlSituacao}
-	 
-			
-	 	
-
-		
-		 
-		 
-
-		 	
-
 		{BEGIN filter_control_usua_domi_status}
 		<div class="panel panel-info filter-field filter-usua_domi_status-container">
 			<div class="panel-heading filter-expander">
@@ -414,8 +296,6 @@
 				<li class="list-group-item filter-values filter-values-usua_domi_status {$collapsedClass_usua_domi_status} {$visibilityClass_usua_domi_status}">
 					{$usua_domi_status_filter}
 								
-			
-			
 			
 			
 			
@@ -457,6 +337,66 @@
 
 		 	
 
+		{BEGIN filter_control_clie_id}
+		<div class="panel panel-info filter-field filter-clie_id-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+							<input class="filter-selectAll-clie_id" type="checkbox" name="selectAll" {$selectAll_attrs_clie_id} />
+			
+				<label>{$label tb_usuarios clie_id }</label>
+
+				{BEGIN clearLink_clie_id}
+				<a href="#" class="filter-clear filter-clear-clie_id">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_clie_id}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_clie_id}
+				<li class="list-group-item filter-values filter-values-clie_id {$collapsedClass_clie_id} {$visibilityClass_clie_id}">
+					{$clie_id_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_clie_id}
+
+							{BEGIN filter_button_showmore_clie_id}
+				<li class="list-group-item filter-show-more {$collapsedClass_clie_id} {$showMoreBtnClass_clie_id}">
+					<a class="filter-show-more-link filterShowMore_clie_id" href="#">{$show_n_more_clie_id}</a>
+				</li>
+				{END filter_button_showmore_clie_id}			
+			
+
+
+							{BEGIN filter_button_apply_clie_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_clie_id}">
+					<a href="#" class="rnr-button filter-btn-apply filter-apply-clie_id" {$filterbutton_attrs_clie_id}>{mlang_message FILTER_APPLY}</a>
+				</li>				
+				{END filter_button_apply_clie_id}
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_clie_id}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
 		{BEGIN filter_control_inclu_login}
 		<div class="panel panel-info filter-field filter-inclu_login-container">
 			<div class="panel-heading filter-expander">
@@ -476,8 +416,6 @@
 				<li class="list-group-item filter-values filter-values-inclu_login {$collapsedClass_inclu_login} {$visibilityClass_inclu_login}">
 					{$inclu_login_filter}
 								
-			
-			
 			
 			
 			
@@ -538,8 +476,6 @@
 				<li class="list-group-item filter-values filter-values-alter_login {$collapsedClass_alter_login} {$visibilityClass_alter_login}">
 					{$alter_login_filter}
 								
-			
-			
 			
 			
 			

@@ -223,9 +223,12 @@ Runner.lang.customlabels = {
 	CUSTOM_LABEL_CUSTOM2: 'Registro de estado de actividad',
 	CUSTOM_LABEL_CUSTOM3: 'Registro de usuario',
 	CUSTOM_LABEL_MARCA_REGISTRADA: 'Copyright, 2020 © GTDTasks',
-	CUSTOM_LABEL_VERSAO_SISTEMA: 'GTDTasks © - Build 2021.02.19 (es)',
+	CUSTOM_LABEL_VERSAO_SISTEMA: 'GTDTasks © - Build 2021.02.22 (es)',
 	CUSTOM_LABEL_EMAIL__VALUE__J__CADASTRADO: 'Email %value% já cadastrado',
 	CUSTOM_LABEL_THE_VALUE_IS_INVALID: 'The value is invalid',
 	CUSTOM_LABEL_VERSAO_SISTEMA02: 'GTDTasks © - Build 2020.09.07.(10.3)',
-	CUSTOM_LABEL_VERSAO_SISTEMA03: ''
+	CUSTOM_LABEL_VERSAO_SISTEMA03: '',
+	CUSTOM_LABEL_Valida_atividade_concluida_sim: '(es) Data fim deve ser informada para atividade concluída.',
+	CUSTOM_LABEL_Valida_atividade_concluida_nao: '(es) Data fim só pode ser informada se atividade estiver concluída.',
+	CUSTOM_LABEL_VERSAO_SISTEMA04: ''
 };

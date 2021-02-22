@@ -230,19 +230,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_id}</span>
 						</div>
 		{END searchCtrlBlock_ativ_id}
-																{BEGIN searchCtrlBlock_ativ_fl_ativo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ativ_fl_ativo}" {$filterRow_attrs_ativ_fl_ativo}>
-			<label>{$label tb_atividade ativ_fl_ativo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ativ_fl_ativo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ativ_fl_ativo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_fl_ativo}</span>
-						</div>
-		{END searchCtrlBlock_ativ_fl_ativo}
 																{BEGIN searchCtrlBlock_ativ_dt_ini}
 
 
@@ -673,7 +660,7 @@
 {END supertop_block}
 						{$locking}
 				</div>	
-				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
 					{$header}
 					<div class="r-top">
 									{BEGIN top_block}
@@ -836,26 +823,6 @@
 		<a>
 		  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_ativ_id" checked="checked" value="1" data-field="ativ_id">
-					<span>{$label tb_atividade ativ_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_clie_id" checked="checked" value="1" data-field="clie_id">
-					<span>{$label tb_atividade clie_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_ativ_nm" checked="checked" value="1" data-field="ativ_nm">
 					<span>{$label tb_atividade ativ_nm }</span>
 				</label>
@@ -868,16 +835,6 @@
 				<label>
 					<input type="checkbox" id="hide_stat_id" checked="checked" value="1" data-field="stat_id">
 					<span>{$label tb_atividade stat_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_prioridade" checked="checked" value="1" data-field="ativ_prioridade">
-					<span>{$label tb_atividade ativ_prioridade }</span>
 				</label>
 			</div>
 		</a>
@@ -1062,7 +1019,7 @@
 	 
 		{BEGIN clie_id_fieldheadercolumn}
 	{BEGIN clie_id_fieldheader}
-	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
+	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
 	{$label tb_atividade clie_id }	{$arrow_icon_clie_id}
 	</SPAN>
 	{END clie_id_fieldheader}
@@ -1089,7 +1046,7 @@
 	 
 		{BEGIN ativ_nm_fieldheadercolumn}
 	{BEGIN ativ_nm_fieldheader}
-	<SPAN {$ativ_nm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm">
+	<SPAN {$ativ_nm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm">
 	{$label tb_atividade ativ_nm }	{$arrow_icon_ativ_nm}
 	</SPAN>
 	{END ativ_nm_fieldheader}
@@ -1159,22 +1116,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_fl_ativo_class}
+		 r-ori-vert				{$ativ_prioridade_class}
 			"
 
-			data-field="ativ_fl_ativo"
+			data-field="ativ_prioridade"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_fl_ativo_fieldheadercolumn}
-	{BEGIN ativ_fl_ativo_fieldheader}
-	<SPAN {$ativ_fl_ativo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_fl_ativo">
-	{$label tb_atividade ativ_fl_ativo }	{$arrow_icon_ativ_fl_ativo}
+		{BEGIN ativ_prioridade_fieldheadercolumn}
+	{BEGIN ativ_prioridade_fieldheader}
+	<SPAN {$ativ_prioridade_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade">
+	{$label tb_atividade ativ_prioridade }	{$arrow_icon_ativ_prioridade}
 	</SPAN>
-	{END ativ_fl_ativo_fieldheader}
-{END ativ_fl_ativo_fieldheadercolumn}
+	{END ativ_prioridade_fieldheader}
+{END ativ_prioridade_fieldheadercolumn}
 
 	
 	</th>
@@ -1186,22 +1143,22 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_prioridade_class}
+		 r-ori-vert				{$ativ_concluida_class}
 			"
 
-			data-field="ativ_prioridade"
+			data-field="ativ_concluida"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_prioridade_fieldheadercolumn}
-	{BEGIN ativ_prioridade_fieldheader}
-	<SPAN {$ativ_prioridade_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade">
-	{$label tb_atividade ativ_prioridade }	{$arrow_icon_ativ_prioridade}
+		{BEGIN ativ_concluida_fieldheadercolumn}
+	{BEGIN ativ_concluida_fieldheader}
+	<SPAN {$ativ_concluida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida">
+	{$label tb_atividade ativ_concluida }	{$arrow_icon_ativ_concluida}
 	</SPAN>
-	{END ativ_prioridade_fieldheader}
-{END ativ_prioridade_fieldheadercolumn}
+	{END ativ_concluida_fieldheader}
+{END ativ_concluida_fieldheadercolumn}
 
 	
 	</th>
@@ -1213,22 +1170,22 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_concluida_class}
+		 r-ori-vert				{$ativ_dt_ini_class}
 			"
 
-			data-field="ativ_concluida"
+			data-field="ativ_dt_ini"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_concluida_fieldheadercolumn}
-	{BEGIN ativ_concluida_fieldheader}
-	<SPAN {$ativ_concluida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida">
-	{$label tb_atividade ativ_concluida }	{$arrow_icon_ativ_concluida}
+		{BEGIN ativ_dt_ini_fieldheadercolumn}
+	{BEGIN ativ_dt_ini_fieldheader}
+	<SPAN {$ativ_dt_ini_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini">
+	{$label tb_atividade ativ_dt_ini }	{$arrow_icon_ativ_dt_ini}
 	</SPAN>
-	{END ativ_concluida_fieldheader}
-{END ativ_concluida_fieldheadercolumn}
+	{END ativ_dt_ini_fieldheader}
+{END ativ_dt_ini_fieldheadercolumn}
 
 	
 	</th>
@@ -1240,22 +1197,22 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_dt_ini_class}
+		 r-ori-vert				{$ativ_dt_fim_class}
 			"
 
-			data-field="ativ_dt_ini"
+			data-field="ativ_dt_fim"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_dt_ini_fieldheadercolumn}
-	{BEGIN ativ_dt_ini_fieldheader}
-	<SPAN {$ativ_dt_ini_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini">
-	{$label tb_atividade ativ_dt_ini }	{$arrow_icon_ativ_dt_ini}
+		{BEGIN ativ_dt_fim_fieldheadercolumn}
+	{BEGIN ativ_dt_fim_fieldheader}
+	<SPAN {$ativ_dt_fim_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim">
+	{$label tb_atividade ativ_dt_fim }	{$arrow_icon_ativ_dt_fim}
 	</SPAN>
-	{END ativ_dt_ini_fieldheader}
-{END ativ_dt_ini_fieldheadercolumn}
+	{END ativ_dt_fim_fieldheader}
+{END ativ_dt_fim_fieldheadercolumn}
 
 	
 	</th>
@@ -1267,22 +1224,22 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_dt_fim_class}
+		 r-ori-vert				{$inclu_dt_class}
 			"
 
-			data-field="ativ_dt_fim"
+			data-field="inclu_dt"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_dt_fim_fieldheadercolumn}
-	{BEGIN ativ_dt_fim_fieldheader}
-	<SPAN {$ativ_dt_fim_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim">
-	{$label tb_atividade ativ_dt_fim }	{$arrow_icon_ativ_dt_fim}
+		{BEGIN inclu_dt_fieldheadercolumn}
+	{BEGIN inclu_dt_fieldheader}
+	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	{$label tb_atividade inclu_dt }	{$arrow_icon_inclu_dt}
 	</SPAN>
-	{END ativ_dt_fim_fieldheader}
-{END ativ_dt_fim_fieldheadercolumn}
+	{END inclu_dt_fieldheader}
+{END inclu_dt_fieldheadercolumn}
 
 	
 	</th>
@@ -1294,22 +1251,22 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$inclu_dt_class}
+		 r-ori-vert				{$inclu_login_class}
 			"
 
-			data-field="inclu_dt"
+			data-field="inclu_login"
 	
 	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN inclu_dt_fieldheadercolumn}
-	{BEGIN inclu_dt_fieldheader}
-	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
-	{$label tb_atividade inclu_dt }	{$arrow_icon_inclu_dt}
+		{BEGIN inclu_login_fieldheadercolumn}
+	{BEGIN inclu_login_fieldheader}
+	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
+	{$label tb_atividade inclu_login }	{$arrow_icon_inclu_login}
 	</SPAN>
-	{END inclu_dt_fieldheader}
-{END inclu_dt_fieldheadercolumn}
+	{END inclu_login_fieldheader}
+{END inclu_login_fieldheadercolumn}
 
 	
 	</th>
@@ -1321,22 +1278,22 @@
 	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$inclu_login_class}
+		 r-ori-vert				{$ativ_id_class}
 			"
 
-			data-field="inclu_login"
+			data-field="ativ_id"
 	
 	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN inclu_login_fieldheadercolumn}
-	{BEGIN inclu_login_fieldheader}
-	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
-	{$label tb_atividade inclu_login }	{$arrow_icon_inclu_login}
+		{BEGIN ativ_id_fieldheadercolumn}
+	{BEGIN ativ_id_fieldheader}
+	<SPAN {$ativ_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id">
+	{$label tb_atividade ativ_id }	{$arrow_icon_ativ_id}
 	</SPAN>
-	{END inclu_login_fieldheader}
-{END inclu_login_fieldheadercolumn}
+	{END ativ_id_fieldheader}
+{END ativ_id_fieldheadercolumn}
 
 	
 	</th>
@@ -1527,35 +1484,12 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_fl_ativo_class}
-			"
-
-			data-field="ativ_fl_ativo"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_fl_ativo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_fl_ativo" data-default-width >
-{$ativ_fl_ativo_value}
-</span>
-{END ativ_fl_ativo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$ativ_prioridade_class}
 			"
 
 			data-field="ativ_prioridade"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1565,12 +1499,12 @@
 </span>
 {END ativ_prioridade_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field4}
 				 
-					{BEGIN cellblock_grid_cell_field6}
+					{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$ativ_concluida_class}
@@ -1578,7 +1512,7 @@
 
 			data-field="ativ_concluida"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1588,12 +1522,12 @@
 </span>
 {END ativ_concluida_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field5}
 				 
-					{BEGIN cellblock_grid_cell_field7}
+					{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$ativ_dt_ini_class}
@@ -1601,7 +1535,7 @@
 
 			data-field="ativ_dt_ini"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1611,12 +1545,12 @@
 </span>
 {END ativ_dt_ini_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field6}
 				 
-					{BEGIN cellblock_grid_cell_field8}
+					{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$ativ_dt_fim_class}
@@ -1624,7 +1558,7 @@
 
 			data-field="ativ_dt_fim"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1634,12 +1568,12 @@
 </span>
 {END ativ_dt_fim_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field7}
 				 
-					{BEGIN cellblock_grid_cell_field9}
+					{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$inclu_dt_class}
@@ -1647,7 +1581,7 @@
 
 			data-field="inclu_dt"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1657,12 +1591,12 @@
 </span>
 {END inclu_dt_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field8}
 				 
-					{BEGIN cellblock_grid_cell_field10}
+					{BEGIN cellblock_grid_cell_field9}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$inclu_login_class}
@@ -1670,7 +1604,7 @@
 
 			data-field="inclu_login"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1679,6 +1613,29 @@
 {$inclu_login_value}
 </span>
 {END inclu_login_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_id_class}
+			"
+
+			data-field="ativ_id"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id" data-default-width >
+{$ativ_id_value}
+</span>
+{END ativ_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field10}
 							</tr>

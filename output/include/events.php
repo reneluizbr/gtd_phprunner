@@ -49,6 +49,8 @@ function AfterSuccessfulLogin($username, $password, &$data, &$pageObject)
 {
 
 		
+// Rene: Constantes do sistema
+//constant(string, );
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

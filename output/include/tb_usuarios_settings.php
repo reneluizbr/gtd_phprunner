@@ -325,6 +325,33 @@ $tdatatb_usuarios[".sqlFrom"] = "FROM tb_usuarios";
 $tdatatb_usuarios[".sqlWhereExpr"] = "";
 $tdatatb_usuarios[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "Ativos",
+	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\"/> Ativos",
+	'nameType' => 'Text',
+	'where' => "usua_domi_status ='ATIVO'",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$arrGridTabs[] = array(
+	'tabId' => "Cadastrados",
+	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Cadastrados",
+	'nameType' => 'Text',
+	'where' => "usua_domi_status ='CADASTRADO'",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$arrGridTabs[] = array(
+	'tabId' => "Todos",
+	'name' => "<img src=\"images/beatles1_16.png\" alt=\"\" /> Todos",
+	'nameType' => 'Text',
+	'where' => "1=1",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$tdatatb_usuarios[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -1398,7 +1425,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1490,7 +1517,8 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
