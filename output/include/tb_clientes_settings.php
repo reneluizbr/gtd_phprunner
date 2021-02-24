@@ -9,10 +9,10 @@ $tdatatb_clientes[".OwnerID"] = "";
 $tdatatb_clientes[".OriginalTable"] = "tb_clientes";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"lista_cartoes\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_clientes[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_clientes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_clientes[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"lista_cartoes\",\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatatb_clientes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"lista_cartoes\",\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatatb_clientes[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -87,7 +87,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_clientes["Portuguese(Brazil)"]["clie_pais"] = "País";
 	$fieldToolTipstb_clientes["Portuguese(Brazil)"]["clie_pais"] = "";
 	$placeHolderstb_clientes["Portuguese(Brazil)"]["clie_pais"] = "";
-	$fieldLabelstb_clientes["Portuguese(Brazil)"]["clie_domi_status"] = "Status do Domínio";
+	$fieldLabelstb_clientes["Portuguese(Brazil)"]["clie_domi_status"] = "Status";
 	$fieldToolTipstb_clientes["Portuguese(Brazil)"]["clie_domi_status"] = "";
 	$placeHolderstb_clientes["Portuguese(Brazil)"]["clie_domi_status"] = "";
 	$fieldLabelstb_clientes["Portuguese(Brazil)"]["clie_nm_completo"] = "Nome Completo";
@@ -102,10 +102,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_clientes["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_clientes["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_clientes["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_clientes["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_clientes["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_clientes["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_clientes["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_clientes["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_clientes["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_clientes["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_clientes["Portuguese(Brazil)"]["alter_login"] = "";
 	if (count($fieldToolTipstb_clientes["Portuguese(Brazil)"]))
@@ -1994,6 +1994,35 @@ $page_titles["tb_clientes"] = &$pageTitlestb_clientes;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["tb_clientes"] = array();
+//	tb_clientes_planos
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tb_clientes_planos";
+		$detailsParam["dOriginalTable"] = "tb_clientes_planos";
+
+
+
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tb_clientes_planos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_clientes_planos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["tb_clientes"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tb_clientes"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tb_clientes"][$dIndex]["masterKeys"][]="clie_id";
+
+				$detailsTablesData["tb_clientes"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tb_clientes"][$dIndex]["detailKeys"][]="clie_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["tb_clientes"] = array();

@@ -71,6 +71,20 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
 			$lookupTableLinks["tb_clientes"] = array();
 		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["tb_clientes_planos.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["tb_clientes_planos.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["tb_clientes_planos.clie_id"]["edit"] = array("table" => "tb_clientes_planos", "field" => "clie_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_planos"] ) ) {
+			$lookupTableLinks["tb_planos"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_planos"]["tb_clientes_planos.plan_id"] )) {
+			$lookupTableLinks["tb_planos"]["tb_clientes_planos.plan_id"] = array();
+		}
+		$lookupTableLinks["tb_planos"]["tb_clientes_planos.plan_id"]["edit"] = array("table" => "tb_clientes_planos", "field" => "plan_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
 		if( !isset( $lookupTableLinks["tb_clientes"]["tb_lista_atividades.clie_id"] )) {
 			$lookupTableLinks["tb_clientes"]["tb_lista_atividades.clie_id"] = array();
 		}

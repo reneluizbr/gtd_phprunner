@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'master' => array( 'tb_clientes' => array( 'preview' => false ),
+'tb_planos' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'clipla_id',
 'clie_id',
 'plan_id',

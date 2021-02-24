@@ -28,7 +28,7 @@ Roteiro principal do GTD:
         ✔ CSS customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\styles\custom\custom.css @done(2021-02-19 22:03)
     ✔ Painél de Filtro em paginas Atividades, Usuarios @done(2021-02-22 20:18)
     Dashboards:
-        ☐ Dashboard Painél Principal Contadores
+        ✔ Dashboard Painél Principal Contadores @done(2021-02-24 16:55)
         ✔ Dashboard Painél Principal com Gráficos de Barras @done(2021-02-23 20:20)
         ✔ Dashboard Painél Principal com Gráficos de Colunas @done(2021-02-23 20:30)
         ✔ Dashboard Tarefas Recentes com Grids pai-filho @started(2021-02-20 15:20) @done(2021-02-21 20:41) @lasted(1d5h21m41s)
@@ -40,5 +40,12 @@ Roteiro principal do GTD:
         Graficos de Barras:
             ✔ Tarefas criadas por usuário (inclu_login) @started(2021-02-23 19:43) @done(2021-02-23 20:06) @lasted(23m3s)
         Graficos de Contagem de registros:
-            ☐ Tarefas iniciadas nos últimos 30 dias (ativ_dt_ini >= now()-30days???)
-            ☐ Tarefas finalizadas nos últimos 30 dias (ativ_dt_fim >= now()-30days???)
+            ✔ Qtde de Tarefas no sistema (glyphicon-tags) @started(2021-02-24 16:07) @done(2021-02-24 16:22) @lasted(15m38s)
+            ✔ Qtde de Listas de tarefas (glyphicon-th-list) @done(2021-02-24 16:29)
+            ✔ Qtde de Tarefas iniciadas (glyphicon-share) nos últimos 30 dias (ativ_dt_ini >= now()-30days???) @done(2021-02-24 16:53)
+            ✔ Qtde de Tarefas finalizadas (glyphicon-check) nos últimos 30 dias (ativ_dt_fim >= now()-30days???) @done(2021-02-24 16:53)
+        Graficos de Contagem de registros nivel ADMIN:
+            Qtde de Usuários cadastrado no geral
+            Qtde de Clientes no plano Gratis (glyphicon-user)
+            Qtde de Clientes no plano Pessoal
+            Qtde de Clientes no plano Equipe

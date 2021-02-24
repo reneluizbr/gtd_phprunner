@@ -31,6 +31,12 @@ class class_GlobalEvents extends eventsBase
 		$this->events["tb_atividade_snippet"] = true;
 		$this->events["tb_atividade_snippet1"] = true;
 		$this->events["proc_limpar_tarefas_de_lista_snippet"] = true;
+		$this->events["Dashboard_Lista_e_Tarefas_snippet1"] = true;
+		$this->events["Dashboard_Graficos_snippet"] = true;
+		$this->events["Dashboard_Lista_e_Tarefas_snippet"] = true;
+		$this->events["Dashboard_Graficos_snippet1"] = true;
+		$this->events["Dashboard_Graficos_snippet3"] = true;
+		$this->events["Dashboard_Graficos_snippet2"] = true;
 
 
 
@@ -204,6 +210,130 @@ echo $wlhtml;
 	// Rene: Mostra o ID e o Nome da Lista Ativa
 $wlListaAtiva = $_SESSION['par_lista_id'] . ' - ' . $_SESSION['par_lista_nm'];
 echo "Lista ativa: " . $wlListaAtiva
+	;
+}
+	function event_Dashboard_Lista_e_Tarefas_snippet1(&$params)
+	{
+	$header = "Quantidade de Tarefas";
+
+$res = DB::query("select count(lista_id) as qtde FROM tb_lista_atividades");
+$data = $res->fetchAssoc();
+$res = "<div class='info-box'>";
+//$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
+$res.= "<span class='info-img img_bgcolor_blue glyphicon glyphicon-tags'></span>";
+$res.= "<div class='dashtext'>";
+$res.= "Listas: ";
+$res.= "<b>" . $data["qtde"] . "</b>";
+$res.= "</div>";
+$res.= "</div>";
+echo $res;
+
+
+	;
+}
+	function event_Dashboard_Graficos_snippet(&$params)
+	{
+	$header = "Quantidade de Tarefas";
+
+$res = DB::query("select count(lista_id) as qtde FROM tb_lista_atividades");
+$data = $res->fetchAssoc();
+$res = "<div class='info-box'>";
+//$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
+$res.= "<span class='info-img img_bgcolor_blue glyphicon glyphicon-tags'></span>";
+$res.= "<div class='dashtext'>";
+$res.= "Listas: ";
+$res.= "<b>" . $data["qtde"] . "</b>";
+$res.= "</div>";
+$res.= "</div>";
+echo $res;
+
+
+	;
+}
+	function event_Dashboard_Lista_e_Tarefas_snippet(&$params)
+	{
+	$header = "Quantidade de Tarefas";
+
+$res = DB::query("select count(ativ_id) as qtde FROM tb_atividade");
+$data = $res->fetchAssoc();
+$res = "<div class='info-box'>";
+//$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
+$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-tags'></span>";
+$res.= "<div class='dashtext'>";
+$res.= "Tarefas: ";
+$res.= "<b>" . $data["qtde"] . "</b>";
+$res.= "</div>";
+$res.= "</div>";
+echo $res;
+
+
+	;
+}
+	function event_Dashboard_Graficos_snippet1(&$params)
+	{
+	$header = "Quantidade de Tarefas";
+
+$res = DB::query("select count(ativ_id) as qtde FROM tb_atividade");
+$data = $res->fetchAssoc();
+$res = "<div class='info-box'>";
+//$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
+$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-tags'></span>";
+$res.= "<div class='dashtext'>";
+$res.= "Tarefas: ";
+$res.= "<b>" . $data["qtde"] . "</b>";
+$res.= "</div>";
+$res.= "</div>";
+echo $res;
+
+
+	;
+}
+	function event_Dashboard_Graficos_snippet3(&$params)
+	{
+	// Query de teste e para buscar ultimos 30 dias na tabela de atividades
+$query = "select datetime('now','localtime'), datetime('now','-30 day','localtime')";
+$query = "select count(*) as qtde from tb_atividade where ativ_dt_fim >= datetime('now','-30 day','localtime')";
+//echo $query; //Debug
+// Qtde de Tarefas iniciadas nos últimos 30 dias (ativ_dt_ini >= now()-30days???)
+$header = "Tarefas Encerradas nos últimos 30 dias";
+
+$res = DB::query($query);
+$data = $res->fetchAssoc();
+//print_r($data); //Debug
+$res = "<div class='info-box'>";
+//$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
+$res.= "<span class='info-img img_bgcolor_blue glyphicon glyphicon-check'></span>";
+$res.= "<div class='dashtext'>";
+$res.= "Encerradas: ";
+$res.= "<b>" . $data["qtde"] . "</b>";
+$res.= "</div>";
+$res.= "</div>";
+echo $res;
+	;
+}
+	function event_Dashboard_Graficos_snippet2(&$params)
+	{
+	// Query de teste e para buscar ultimos 30 dias na tabela de atividades
+$query = "select datetime('now','localtime'), datetime('now','-30 day','localtime')";
+$query = "select count(*) as qtde from tb_atividade where ativ_dt_ini >= datetime('now','-30 day','localtime')";
+//echo $query; //Debug
+// Qtde de Tarefas iniciadas nos últimos 30 dias (ativ_dt_ini >= now()-30days???)
+$header = "Tarefas Iniciadas nos últimos 30 dias";
+
+$res = DB::query($query);
+$data = $res->fetchAssoc();
+//print_r($data); //Debug
+$res = "<div class='info-box'>";
+//$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
+$res.= "<span class='info-img img_bgcolor_green glyphicon glyphicon-share'></span>";
+$res.= "<div class='dashtext'>";
+$res.= "Iniciadas: ";
+$res.= "<b>" . $data["qtde"] . "</b>";
+$res.= "</div>";
+$res.= "</div>";
+echo $res;
+
+
 	;
 }
 

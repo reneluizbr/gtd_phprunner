@@ -219,7 +219,7 @@ $tdatadashboard_lista_e_tarefas[".dashElements"] = array();
 
 	$dbelement = array( "elementName" => "tb_lista_atividades_list", "table" => "tb_lista_atividades", 
 		 "pageName" => "lista_simples","type" => 0);
-	$dbelement["cellName"] = "cell_0_0";
+	$dbelement["cellName"] = "cell_2_0";
 
 					$dbelement["inlineAdd"] = 0 > 0;
 	$dbelement["inlineEdit"] = 0 > 0;
@@ -235,7 +235,7 @@ $tdatadashboard_lista_e_tarefas[".dashElements"] = array();
 	$tdatadashboard_lista_e_tarefas[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "tb_atividade_list", "table" => "tb_atividade", 
 		 "pageName" => "lista_simples","type" => 0);
-	$dbelement["cellName"] = "cell_1_0";
+	$dbelement["cellName"] = "cell_3_0";
 
 					$dbelement["inlineAdd"] = 0 > 0;
 	$dbelement["inlineEdit"] = 0 > 0;
@@ -250,14 +250,32 @@ $tdatadashboard_lista_e_tarefas[".dashElements"] = array();
 $dbelement["masterTable"] = "tb_lista_atividades";
 
 	$tdatadashboard_lista_e_tarefas[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "dashboard_lista_e_tarefas_snippet", "table" => "Dashboard_Lista_e_Tarefas", 
+		 "pageName" => "","type" => 7);
+	$dbelement["cellName"] = "cell_0_1";
+
+				$dbelement["snippetId"] = "Dashboard_Lista_e_Tarefas_snippet";
+
+
+	$tdatadashboard_lista_e_tarefas[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "dashboard_lista_e_tarefas_snippet1", "table" => "Dashboard_Lista_e_Tarefas", 
+		 "pageName" => "","type" => 7);
+	$dbelement["cellName"] = "cell_0_0";
+
+				$dbelement["snippetId"] = "Dashboard_Lista_e_Tarefas_snippet1";
+
+
+	$tdatadashboard_lista_e_tarefas[".dashElements"][] = $dbelement;
 
 $tdatadashboard_lista_e_tarefas[".shortTableName"] = "dashboard_lista_e_tarefas";
 $tdatadashboard_lista_e_tarefas[".entityType"] = 4;
 
 
 
-$tableEvents["Dashboard_Lista_e_Tarefas"] = new eventsBase;
-$tdatadashboard_lista_e_tarefas[".hasEvents"] = false;
+
+include_once(getabspath("include/dashboard_lista_e_tarefas_events.php"));
+$tableEvents["Dashboard_Lista_e_Tarefas"] = new eventclass_dashboard_lista_e_tarefas;
+$tdatadashboard_lista_e_tarefas[".hasEvents"] = true;
 
 
 $tdatadashboard_lista_e_tarefas[".tableType"] = "dashboard";

@@ -180,7 +180,7 @@ function getMenuNodes_welcome_page($menuNodesObject)
 	$menuNode["iconType"] = "0";
 	$menuNode["iconShow"] = "1";
 
-		$menuNode["color"] = "";
+		$menuNode["color"] = "#"."4169e1";
 
 	$menuNode["title"] = GetTableCaption("tb_clientes_planos");
 

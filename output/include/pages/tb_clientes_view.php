@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'tb_clientes_planos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'clie_id',
 'clie_nm_reduzido',
 'clie_email',

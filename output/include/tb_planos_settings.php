@@ -9,10 +9,10 @@ $tdatatb_planos[".OwnerID"] = "";
 $tdatatb_planos[".OriginalTable"] = "tb_planos";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_planos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_planos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_planos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatatb_planos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatatb_planos[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -1418,6 +1418,35 @@ $page_titles["tb_planos"] = &$pageTitlestb_planos;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["tb_planos"] = array();
+//	tb_clientes_planos
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tb_clientes_planos";
+		$detailsParam["dOriginalTable"] = "tb_clientes_planos";
+
+
+
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tb_clientes_planos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_clientes_planos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["tb_planos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tb_planos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tb_planos"][$dIndex]["masterKeys"][]="plan_id";
+
+				$detailsTablesData["tb_planos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tb_planos"][$dIndex]["detailKeys"][]="plan_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["tb_planos"] = array();
