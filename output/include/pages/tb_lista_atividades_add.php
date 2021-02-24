@@ -1,7 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'tb_atividade' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'Gráfico Atividades por Lista' => array( 'displayPreview' => 2,
+'Gráfico Tarefas por Lista' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'lista_id',

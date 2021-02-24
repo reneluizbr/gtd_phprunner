@@ -25,10 +25,14 @@ $nonAdminTablesArr[] = "tb_planos_valores";
 $nonAdminTablesArr[] = "tb_status_atividades";
 $nonAdminTablesArr[] = "tb_usuarios";
 $nonAdminTablesArr[] = "log_audit";
-$nonAdminTablesArr[] = "Gráfico Atividades por Lista";
+$nonAdminTablesArr[] = "Gráfico Tarefas por Lista";
 $nonAdminTablesArr[] = "proc_limpar_tarefas_de_lista";
 $nonAdminTablesArr[] = "tb_parametros";
 $nonAdminTablesArr[] = "Dashboard_Lista_e_Tarefas";
+$nonAdminTablesArr[] = "Gráfico Tarefas por Status";
+$nonAdminTablesArr[] = "Gráfico Tarefas por Prioridade";
+$nonAdminTablesArr[] = "Gráfico Tarefas criadas por Usuário";
+$nonAdminTablesArr[] = "Dashboard_Graficos";
 
 $ug_connection = $cman->getForUserGroups();
 

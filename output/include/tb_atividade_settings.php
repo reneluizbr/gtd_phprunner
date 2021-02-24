@@ -360,16 +360,16 @@ $tdatatb_atividade[".sqlTail"] = "";
 //fill array of tabs for list page
 $arrGridTabs = array();
 $arrGridTabs[] = array(
-	'tabId' => "EmAndamento",
-	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Em Andamento",
+	'tabId' => "Nao_Concluidas",
+	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Não Concluídas",
 	'nameType' => 'Text',
 	'where' => "ativ_concluida = 0",
 	'showRowCount' => 1,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
-	'tabId' => "Concluida",
-	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluída",
+	'tabId' => "Concluidas",
+	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluídas",
 	'nameType' => 'Text',
 	'where' => "ativ_concluida = 1",
 	'showRowCount' => 1,

@@ -329,9 +329,12 @@ class ConnectionManager
 		$connectionsIds["admin_members"] = "gtd_20200511_db3";
 		$connectionsIds["admin_users"] = "gtd_20200511_db3";
 		$connectionsIds["log_audit"] = "gtd_20200511_db3";
-		$connectionsIds["Gráfico Atividades por Lista"] = "gtd_20200511_db3";
+		$connectionsIds["Gráfico Tarefas por Lista"] = "gtd_20200511_db3";
 		$connectionsIds["proc_limpar_tarefas_de_lista"] = "gtd_20200511_db3";
 		$connectionsIds["tb_parametros"] = "gtd_20200511_db3";
+		$connectionsIds["Gráfico Tarefas por Status"] = "gtd_20200511_db3";
+		$connectionsIds["Gráfico Tarefas por Prioridade"] = "gtd_20200511_db3";
+		$connectionsIds["Gráfico Tarefas criadas por Usuário"] = "gtd_20200511_db3";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

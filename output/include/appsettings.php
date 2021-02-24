@@ -703,9 +703,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "522_1613698925";
+$projectBuildKey = "557_1613698925";
 $wizardBuildKey = "33793";
-$projectBuildNumber = "522";
+$projectBuildNumber = "557";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -717,7 +717,7 @@ $projectMenus[] = "welcome_page";
 
 
 $menuTreelikeFlags = array();
-$menuTreelikeFlags["main"] = 0;
+$menuTreelikeFlags["main"] = 1;
 
 
 $menuTreelikeFlags["welcome_page"] = 1;
@@ -741,10 +741,14 @@ $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Admin Users";
 $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["log_audit"] = "Log Audit";
-$tableCaptions["English"]["Gr_fico_Atividades_por_Lista"] = "Gráfico Atividades por Lista";
+$tableCaptions["English"]["Gr_fico_Tarefas_por_Lista"] = "Gráfico Tarefas por Lista";
 $tableCaptions["English"]["proc_limpar_tarefas_de_lista"] = "Proc Limpar Tarefas De Lista";
 $tableCaptions["English"]["tb_parametros"] = "Tb Parametros";
 $tableCaptions["English"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
+$tableCaptions["English"]["Gr_fico_Tarefas_por_Status"] = "Gráfico Tarefas por Status";
+$tableCaptions["English"]["Gr_fico_Tarefas_por_Prioridade"] = "Gráfico Tarefas por Prioridade";
+$tableCaptions["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio"] = "Gráfico Tarefas criadas por Usuário";
+$tableCaptions["English"]["Dashboard_Graficos"] = "Dashboard Graficos";
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["tb_atividade"] = "Tarefas";
@@ -760,10 +764,14 @@ $tableCaptions["Portuguese(Brazil)"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Portuguese(Brazil)"]["admin_members"] = "Admin Members";
 $tableCaptions["Portuguese(Brazil)"]["admin_users"] = "Add/Edit users";
 $tableCaptions["Portuguese(Brazil)"]["log_audit"] = "Log Audit";
-$tableCaptions["Portuguese(Brazil)"]["Gr_fico_Atividades_por_Lista"] = "Gráfico Atividades por Lista";
+$tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista"] = "Gráfico Tarefas por Lista";
 $tableCaptions["Portuguese(Brazil)"]["proc_limpar_tarefas_de_lista"] = "Proc Limpar Tarefas De Lista";
 $tableCaptions["Portuguese(Brazil)"]["tb_parametros"] = "Tb Parametros";
 $tableCaptions["Portuguese(Brazil)"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
+$tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status"] = "Gráfico Tarefas por Status";
+$tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade"] = "Gráfico Tarefas por Prioridade";
+$tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio"] = "Gráfico Tarefas criadas por Usuário";
+$tableCaptions["Portuguese(Brazil)"]["Dashboard_Graficos"] = "Dashboard Graficos";
 $tableCaptions["Spanish"] = array();
 $tableCaptions["Spanish"][""] = "";
 $tableCaptions["Spanish"]["tb_atividade"] = "Tareas";
@@ -779,10 +787,14 @@ $tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["admin_users"] = "Admin Users";
 $tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Spanish"]["log_audit"] = "Log Audit";
-$tableCaptions["Spanish"]["Gr_fico_Atividades_por_Lista"] = "Gráfico Atividades por Lista";
+$tableCaptions["Spanish"]["Gr_fico_Tarefas_por_Lista"] = "Gráfico Tarefas por Lista";
 $tableCaptions["Spanish"]["proc_limpar_tarefas_de_lista"] = "Proc Limpar Tarefas De Lista";
 $tableCaptions["Spanish"]["tb_parametros"] = "Tb Parametros";
 $tableCaptions["Spanish"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
+$tableCaptions["Spanish"]["Gr_fico_Tarefas_por_Status"] = "Gráfico Tarefas por Status";
+$tableCaptions["Spanish"]["Gr_fico_Tarefas_por_Prioridade"] = "Gráfico Tarefas por Prioridade";
+$tableCaptions["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio"] = "Gráfico Tarefas criadas por Usuário";
+$tableCaptions["Spanish"]["Dashboard_Graficos"] = "Dashboard Graficos";
 
 
 $globalEvents = new class_GlobalEvents;

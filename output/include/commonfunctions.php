@@ -231,13 +231,21 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("log_audit" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
-	if ("gr_fico_atividades_por_lista" == $shortTName && ($type===false || ($type!==false && $type == 3)))
+	if ("gr_fico_tarefas_por_lista" == $shortTName && ($type===false || ($type!==false && $type == 3)))
 		return true;
 	if ("proc_limpar_tarefas_de_lista" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("tb_parametros" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("dashboard_lista_e_tarefas" == $shortTName && ($type===false || ($type!==false && $type == 4)))
+		return true;
+	if ("gr_fico_tarefas_por_status" == $shortTName && ($type===false || ($type!==false && $type == 3)))
+		return true;
+	if ("gr_fico_tarefas_por_prioridade" == $shortTName && ($type===false || ($type!==false && $type == 3)))
+		return true;
+	if ("gr_fico_tarefas_criadas_por_usu_rio" == $shortTName && ($type===false || ($type!==false && $type == 3)))
+		return true;
+	if ("dashboard_graficos" == $shortTName && ($type===false || ($type!==false && $type == 4)))
 		return true;
 	return false;
 }
@@ -408,12 +416,12 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Gráfico Atividades por Lista");
+		$strPerm = GetUserPermissions("Gráfico Tarefas por Lista");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="Gráfico Atividades por Lista";
+		$arr[]="Gráfico Tarefas por Lista";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -442,6 +450,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Dashboard_Lista_e_Tarefas";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Gráfico Tarefas por Status");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Gráfico Tarefas por Status";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Gráfico Tarefas por Prioridade");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Gráfico Tarefas por Prioridade";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Gráfico Tarefas criadas por Usuário");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Gráfico Tarefas criadas por Usuário";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Dashboard_Graficos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Dashboard_Graficos";
+	}
 	return $arr;
 }
 
@@ -464,10 +508,14 @@ function GetTablesListWithoutSecurity()
 	$arr[]="admin_members";
 	$arr[]="admin_users";
 	$arr[]="log_audit";
-	$arr[]="Gráfico Atividades por Lista";
+	$arr[]="Gráfico Tarefas por Lista";
 	$arr[]="proc_limpar_tarefas_de_lista";
 	$arr[]="tb_parametros";
 	$arr[]="Dashboard_Lista_e_Tarefas";
+	$arr[]="Gráfico Tarefas por Status";
+	$arr[]="Gráfico Tarefas por Prioridade";
+	$arr[]="Gráfico Tarefas criadas por Usuário";
+	$arr[]="Dashboard_Graficos";
 	return $arr;
 }
 
@@ -511,8 +559,14 @@ function GetFullFieldName($field, $table = "", $addAs = true, $connection = null
  */
 function GetChartType($shorttable)
 {
-	if($shorttable=="gr_fico_atividades_por_lista")
+	if($shorttable=="gr_fico_tarefas_por_lista")
 		return "2DDoughnut";
+	if($shorttable=="gr_fico_tarefas_por_status")
+		return "2DPie";
+	if($shorttable=="gr_fico_tarefas_por_prioridade")
+		return "2DDoughnut";
+	if($shorttable=="gr_fico_tarefas_criadas_por_usu_rio")
+		return "2DBar";
 	return "";
 }
 
@@ -1309,7 +1363,7 @@ function GetUserPermissionsStatic( $table )
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="Gráfico Atividades por Lista" )
+	if( $table=="Gráfico Tarefas por Lista" )
 	{
 //	default permissions
 		// grant all by default
@@ -1328,6 +1382,30 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Dashboard_Lista_e_Tarefas" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Gráfico Tarefas por Status" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Gráfico Tarefas por Prioridade" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Gráfico Tarefas criadas por Usuário" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Dashboard_Graficos" )
 	{
 //	default permissions
 		// grant all by default

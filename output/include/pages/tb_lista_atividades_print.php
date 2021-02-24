@@ -2,7 +2,7 @@
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'tb_atividade' => array( 'displayPreview' => 1,
 'previewPageId' => 'print' ),
-'Gráfico Atividades por Lista' => array( 'displayPreview' => 2,
+'Gráfico Tarefas por Lista' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'totals' => array( 'lista_id' => array( 'totalsType' => '' ),
 'clie_id' => array( 'totalsType' => '' ),

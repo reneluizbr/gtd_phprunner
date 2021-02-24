@@ -187,13 +187,13 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("log_audit", " " . GetTableCaption("log_audit"));
-$table = "Gráfico Atividades por Lista";
+$table = "Gráfico Tarefas por Lista";
 $mask="";
 if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
 	$mask .= "S";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("gr_fico_atividades_por_lista", " " . GetTableCaption("Gr_fico_Atividades_por_Lista"));
+$tables[$table] = array("gr_fico_tarefas_por_lista", " " . GetTableCaption("Gr_fico_Tarefas_por_Lista"));
 $table = "proc_limpar_tarefas_de_lista";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -245,6 +245,44 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("dashboard_lista_e_tarefas", " " . GetTableCaption("Dashboard_Lista_e_Tarefas"));
+$table = "Gráfico Tarefas por Status";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("gr_fico_tarefas_por_status", " " . GetTableCaption("Gr_fico_Tarefas_por_Status"));
+$table = "Gráfico Tarefas por Prioridade";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("gr_fico_tarefas_por_prioridade", " " . GetTableCaption("Gr_fico_Tarefas_por_Prioridade"));
+$table = "Gráfico Tarefas criadas por Usuário";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("gr_fico_tarefas_criadas_por_usu_rio", " " . GetTableCaption("Gr_fico_Tarefas_criadas_por_Usu_rio"));
+$table = "Dashboard_Graficos";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("dashboard_graficos", " " . GetTableCaption("Dashboard_Graficos"));
 
 require_once('include/xtempl.php');
 require_once('classes/listpage.php');

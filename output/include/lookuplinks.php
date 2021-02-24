@@ -99,17 +99,17 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
 			$lookupTableLinks["tb_clientes"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_clientes"]["gr_fico_atividades_por_lista.clie_id"] )) {
-			$lookupTableLinks["tb_clientes"]["gr_fico_atividades_por_lista.clie_id"] = array();
+		if( !isset( $lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_lista.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_lista.clie_id"] = array();
 		}
-		$lookupTableLinks["tb_clientes"]["gr_fico_atividades_por_lista.clie_id"]["search"] = array("table" => "Gráfico Atividades por Lista", "field" => "clie_id", "page" => "search");
+		$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_lista.clie_id"]["search"] = array("table" => "Gráfico Tarefas por Lista", "field" => "clie_id", "page" => "search");
 		if( !isset( $lookupTableLinks["tb_lista_atividades"] ) ) {
 			$lookupTableLinks["tb_lista_atividades"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_lista_atividades"]["gr_fico_atividades_por_lista.lista_id"] )) {
-			$lookupTableLinks["tb_lista_atividades"]["gr_fico_atividades_por_lista.lista_id"] = array();
+		if( !isset( $lookupTableLinks["tb_lista_atividades"]["gr_fico_tarefas_por_lista.lista_id"] )) {
+			$lookupTableLinks["tb_lista_atividades"]["gr_fico_tarefas_por_lista.lista_id"] = array();
 		}
-		$lookupTableLinks["tb_lista_atividades"]["gr_fico_atividades_por_lista.lista_id"]["search"] = array("table" => "Gráfico Atividades por Lista", "field" => "lista_id", "page" => "search");
+		$lookupTableLinks["tb_lista_atividades"]["gr_fico_tarefas_por_lista.lista_id"]["search"] = array("table" => "Gráfico Tarefas por Lista", "field" => "lista_id", "page" => "search");
 		if( !isset( $lookupTableLinks["tb_status_atividades"] ) ) {
 			$lookupTableLinks["tb_status_atividades"] = array();
 		}
@@ -124,6 +124,34 @@ function InitLookupLinks()
 			$lookupTableLinks["tb_lista_atividades"]["proc_limpar_tarefas_de_lista.lista_id"] = array();
 		}
 		$lookupTableLinks["tb_lista_atividades"]["proc_limpar_tarefas_de_lista.lista_id"]["edit"] = array("table" => "proc_limpar_tarefas_de_lista", "field" => "lista_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_status.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_status.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_status.clie_id"]["search"] = array("table" => "Gráfico Tarefas por Status", "field" => "clie_id", "page" => "search");
+		if( !isset( $lookupTableLinks["tb_status_atividades"] ) ) {
+			$lookupTableLinks["tb_status_atividades"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_status_atividades"]["gr_fico_tarefas_por_status.stat_id"] )) {
+			$lookupTableLinks["tb_status_atividades"]["gr_fico_tarefas_por_status.stat_id"] = array();
+		}
+		$lookupTableLinks["tb_status_atividades"]["gr_fico_tarefas_por_status.stat_id"]["search"] = array("table" => "Gráfico Tarefas por Status", "field" => "stat_id", "page" => "search");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_prioridade.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_prioridade.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_por_prioridade.clie_id"]["search"] = array("table" => "Gráfico Tarefas por Prioridade", "field" => "clie_id", "page" => "search");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["gr_fico_tarefas_criadas_por_usu_rio.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_criadas_por_usu_rio.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_criadas_por_usu_rio.clie_id"]["search"] = array("table" => "Gráfico Tarefas criadas por Usuário", "field" => "clie_id", "page" => "search");
 }
 
 ?>

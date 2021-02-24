@@ -18,7 +18,7 @@
 'hideEmptyChild' => true,
 'showProceedLink' => true,
 'printDetails' => true ),
-'Gráfico Atividades por Lista' => array( 'displayPreview' => 2,
+'Gráfico Tarefas por Lista' => array( 'displayPreview' => 2,
 'previewPageId' => '',
 'showCount' => false,
 'hideEmptyChild' => false,

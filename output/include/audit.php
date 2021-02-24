@@ -407,7 +407,7 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="Gráfico Atividades por Lista")
+		if($table=="Gráfico Tarefas por Lista")
 		{
 			return false;
 		}
@@ -420,6 +420,22 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="Dashboard_Lista_e_Tarefas")
+		{
+			return false;
+		}
+		if($table=="Gráfico Tarefas por Status")
+		{
+			return false;
+		}
+		if($table=="Gráfico Tarefas por Prioridade")
+		{
+			return false;
+		}
+		if($table=="Gráfico Tarefas criadas por Usuário")
+		{
+			return false;
+		}
+		if($table=="Dashboard_Graficos")
 		{
 			return false;
 		}
@@ -836,7 +852,7 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="Gráfico Atividades por Lista")
+		if($table=="Gráfico Tarefas por Lista")
 		{
 			return false;
 		}
@@ -849,6 +865,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Dashboard_Lista_e_Tarefas")
+		{
+			return false;
+		}
+		if($table=="Gráfico Tarefas por Status")
+		{
+			return false;
+		}
+		if($table=="Gráfico Tarefas por Prioridade")
+		{
+			return false;
+		}
+		if($table=="Gráfico Tarefas criadas por Usuário")
+		{
+			return false;
+		}
+		if($table=="Dashboard_Graficos")
 		{
 			return false;
 		}

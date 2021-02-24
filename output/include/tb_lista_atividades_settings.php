@@ -1332,20 +1332,20 @@ $detailsTablesData["tb_lista_atividades"] = array();
 				$detailsTablesData["tb_lista_atividades"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["tb_lista_atividades"][$dIndex]["detailKeys"][]="lista_id";
-//	Gráfico Atividades por Lista
+//	Gráfico Tarefas por Lista
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="Gráfico Atividades por Lista";
+	$detailsParam["dDataSourceTable"]="Gráfico Tarefas por Lista";
 		$detailsParam["dOriginalTable"] = "tb_atividade";
 
 
 
 			$detailsParam["dType"]=PAGE_CHART;
-		$detailsParam["dShortTable"] = "gr_fico_atividades_por_lista";
-	$detailsParam["dCaptionTable"] = GetTableCaption("Gr_fico_Atividades_por_Lista");
+		$detailsParam["dShortTable"] = "gr_fico_tarefas_por_lista";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Gr_fico_Tarefas_por_Lista");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

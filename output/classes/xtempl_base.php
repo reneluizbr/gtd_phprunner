@@ -125,11 +125,26 @@ class XTempl_Base
 		
 		if( !$hideAddedCharts ) //#9607 1. Temporary fix
 		{
-			$this->assign_function("gr_fico_atividades_por_lista_chart","xt_showchart",
+			$this->assign_function("gr_fico_tarefas_por_lista_chart","xt_showchart",
 			array(
-				"chartName"=>"gr_fico_atividades_por_lista",
-				"table"=>"Gráfico Atividades por Lista",
+				"chartName"=>"gr_fico_tarefas_por_lista",
+				"table"=>"Gráfico Tarefas por Lista",
 				"ctype"=>"2DDoughnut"));
+			$this->assign_function("gr_fico_tarefas_por_status_chart","xt_showchart",
+			array(
+				"chartName"=>"gr_fico_tarefas_por_status",
+				"table"=>"Gráfico Tarefas por Status",
+				"ctype"=>"2DPie"));
+			$this->assign_function("gr_fico_tarefas_por_prioridade_chart","xt_showchart",
+			array(
+				"chartName"=>"gr_fico_tarefas_por_prioridade",
+				"table"=>"Gráfico Tarefas por Prioridade",
+				"ctype"=>"2DDoughnut"));
+			$this->assign_function("gr_fico_tarefas_criadas_por_usu_rio_chart","xt_showchart",
+			array(
+				"chartName"=>"gr_fico_tarefas_criadas_por_usu_rio",
+				"table"=>"Gráfico Tarefas criadas por Usuário",
+				"ctype"=>"2DBar"));
 		}
 		
 

@@ -3077,14 +3077,22 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "log_audit" ] = array( "url" => "log_audit", "type" => 0 );
 	$projectEntitiesReverse[ "log_audit" ] = "log_audit";
-	$projectEntities[ "Gráfico Atividades por Lista" ] = array( "url" => "gr_fico_atividades_por_lista", "type" => 3 );
-	$projectEntitiesReverse[ "gr_fico_atividades_por_lista" ] = "Gráfico Atividades por Lista";
+	$projectEntities[ "Gráfico Tarefas por Lista" ] = array( "url" => "gr_fico_tarefas_por_lista", "type" => 3 );
+	$projectEntitiesReverse[ "gr_fico_tarefas_por_lista" ] = "Gráfico Tarefas por Lista";
 	$projectEntities[ "proc_limpar_tarefas_de_lista" ] = array( "url" => "proc_limpar_tarefas_de_lista", "type" => 0 );
 	$projectEntitiesReverse[ "proc_limpar_tarefas_de_lista" ] = "proc_limpar_tarefas_de_lista";
 	$projectEntities[ "tb_parametros" ] = array( "url" => "tb_parametros", "type" => 0 );
 	$projectEntitiesReverse[ "tb_parametros" ] = "tb_parametros";
 	$projectEntities[ "Dashboard_Lista_e_Tarefas" ] = array( "url" => "dashboard_lista_e_tarefas", "type" => 4 );
 	$projectEntitiesReverse[ "dashboard_lista_e_tarefas" ] = "Dashboard_Lista_e_Tarefas";
+	$projectEntities[ "Gráfico Tarefas por Status" ] = array( "url" => "gr_fico_tarefas_por_status", "type" => 3 );
+	$projectEntitiesReverse[ "gr_fico_tarefas_por_status" ] = "Gráfico Tarefas por Status";
+	$projectEntities[ "Gráfico Tarefas por Prioridade" ] = array( "url" => "gr_fico_tarefas_por_prioridade", "type" => 3 );
+	$projectEntitiesReverse[ "gr_fico_tarefas_por_prioridade" ] = "Gráfico Tarefas por Prioridade";
+	$projectEntities[ "Gráfico Tarefas criadas por Usuário" ] = array( "url" => "gr_fico_tarefas_criadas_por_usu_rio", "type" => 3 );
+	$projectEntitiesReverse[ "gr_fico_tarefas_criadas_por_usu_rio" ] = "Gráfico Tarefas criadas por Usuário";
+	$projectEntities[ "Dashboard_Graficos" ] = array( "url" => "dashboard_graficos", "type" => 4 );
+	$projectEntitiesReverse[ "dashboard_graficos" ] = "Dashboard_Graficos";
 }
 
 function findTable( $table ) {

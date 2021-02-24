@@ -2,7 +2,7 @@
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'tb_atividade' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'Gráfico Atividades por Lista' => array( 'displayPreview' => 2,
+'Gráfico Tarefas por Lista' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'lista_nm',
 'inclu_login',

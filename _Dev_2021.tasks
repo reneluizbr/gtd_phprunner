@@ -26,14 +26,19 @@ Roteiro principal do GTD:
         ✔ funcoes_rene.php:  function fctConfigura_Usuario( &$usuarioLogin = NULL, &$dataHoraAtual = NULL) @done(2021-02-19 14:42)
         ✔ Rodape customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\include\footer.php @done(2021-02-19 22:02)
         ✔ CSS customizado como em C:\UwAmp\www\PHP_Runner_Controle_Fiado\output\styles\custom\custom.css @done(2021-02-19 22:03)
-    ☐ Painél de Filtro em paginas Atividades, Usuarios
+    ✔ Painél de Filtro em paginas Atividades, Usuarios @done(2021-02-22 20:18)
     Dashboards:
         ☐ Dashboard Painél Principal Contadores
-        ☐ Dashboard Painél Principal com Gráficos de Barras
-        ☐ Dashboard Painél Principal com Gráficos de Colunas
+        ✔ Dashboard Painél Principal com Gráficos de Barras @done(2021-02-23 20:20)
+        ✔ Dashboard Painél Principal com Gráficos de Colunas @done(2021-02-23 20:30)
         ✔ Dashboard Tarefas Recentes com Grids pai-filho @started(2021-02-20 15:20) @done(2021-02-21 20:41) @lasted(1d5h21m41s)
     Graficos:
-        ☐ Vendas por Clientes
-        ☐ Vendas Clientes Qtde
-        ☐ Vendas por Clientes Grupo 2
-        ☐ Vendas por Clientes Grupo
+        Graficos de Pizza:
+            ✔ Tarefas por Lista @done(2021-02-23 18:11)
+            ✔ Tarefas por Status @done(2021-02-23 18:31)
+            ✔ Tarefas por Prioridade @done(2021-02-23 19:44)
+        Graficos de Barras:
+            ✔ Tarefas criadas por usuário (inclu_login) @started(2021-02-23 19:43) @done(2021-02-23 20:06) @lasted(23m3s)
+        Graficos de Contagem de registros:
+            ☐ Tarefas iniciadas nos últimos 30 dias (ativ_dt_ini >= now()-30days???)
+            ☐ Tarefas finalizadas nos últimos 30 dias (ativ_dt_fim >= now()-30days???)

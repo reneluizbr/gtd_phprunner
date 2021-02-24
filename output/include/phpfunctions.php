@@ -1013,6 +1013,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return "SIM";
 	}
+				if($table=="Gráfico Tarefas por Status" && $field=="stat_id")
+	{
+		return 0;
+	}
 	return "";
 }
 
