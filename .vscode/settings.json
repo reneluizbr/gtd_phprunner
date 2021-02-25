@@ -6,5 +6,24 @@
         "domi_"
       ]
     }
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#0c6c5a",
+    "activityBar.activeBorder": "#d770ef",
+    "activityBar.background": "#0c6c5a",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#d770ef",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#073e34",
+    "statusBar.border": "#073e34",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#0c6c5a",
+    "titleBar.activeBackground": "#073e34",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.border": "#073e34",
+    "titleBar.inactiveBackground": "#073e3499",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#073e34"
 }

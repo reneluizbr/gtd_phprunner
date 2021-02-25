@@ -2561,9 +2561,9 @@ class RunnerPage
 				return $this->menuNodes[$name];
 			}
 
-			if($name == 'welcome_page')
+			if($name == 'menu_tarefas')
 			{
-				getMenuNodes_welcome_page($menuNodesObject);
+				getMenuNodes_menu_tarefas($menuNodesObject);
 				return $this->menuNodes[$name];
 			}
 

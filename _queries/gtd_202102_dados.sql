@@ -16,9 +16,9 @@
    DELETE FROM tb_dominios;
 
    -- Implementacao futura
-   --DELETE FROM tb_categoria;
-   --DELETE FROM tb_atividade_x_categoria;
-   --DELETE FROM tb_parametros;
+   DELETE FROM tb_categorias;
+   DELETE FROM tb_categorias_x_atividades;
+   DELETE FROM tb_parametros;
 
 
 /* ------------------------ Incluir alguns CLIENTES para testes ----------------------- */
@@ -93,17 +93,21 @@ INSERT INTO tb_status_atividades (clie_id, stat_id, stat_nm, stat_ds, inclu_logi
 
 INSERT INTO tb_lista_atividades (clie_id, lista_id, lista_nm, inclu_login, inclu_dt)
    VALUES
-       (1, 1, 'Lista de Atividades do Trabalho', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
-      ,(1, 2, "Lista de Atividades Familiares" , 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
-      ,(1, 3, 'Lista de Atividades Academicas' , 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+       (1, 001, "GTD Desenvolvimento" , 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+      ,(1, 002, 'Tarefas do Trabalho', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+      ,(1, 003, 'Escola do Filho' , 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+      ,(1, 004, 'Tratamento UBS/SUS' , 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
       ;
 
 INSERT INTO tb_atividade (clie_id, ativ_id, lista_id, stat_id, ativ_dt_ini, ativ_nm, ativ_ds, inclu_login, inclu_dt)
    VALUES
-    (1, 01, 1, 1, strftime('%Y-%m-%d %H:%M:%S','now'), 'Agendar reuniao com equipe'                         , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
-   ,(1, 02, 1, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Finalizar entrega do projeto alpha'                 , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
-   ,(1, 03, 2, 1, strftime('%Y-%m-%d %H:%M:%S','now'), 'Revisar agenda escolar do filho'                    , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
-   ,(1, 04, 2, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Acompanhar estudo do filho para prova de matematica', 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+    (1, 01, 001, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Finalizar entrega do projeto alpha'                 , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,(1, 02, 001, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Páginas de Tabelas'                                 , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,(1, 03, 001, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Dashboards'                                         , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,(1, 04, 001, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Graficos'                                           , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,(1, 05, 002, 1, strftime('%Y-%m-%d %H:%M:%S','now'), 'Agendar reuniao com equipe'                         , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,(1, 06, 003, 1, strftime('%Y-%m-%d %H:%M:%S','now'), 'Revisar agenda escolar do filho'                    , 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,(1, 07, 003, 2, strftime('%Y-%m-%d %H:%M:%S','now'), 'Acompanhar estudo do filho para prova de matematica', 'Descricao opcional mais detalhada da atividade..', 'root', strftime('%Y-%m-%d %H:%M:%S','now'))
    ;
 
 

@@ -532,6 +532,10 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("tb_categorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("tb_categorias_x_atividades" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

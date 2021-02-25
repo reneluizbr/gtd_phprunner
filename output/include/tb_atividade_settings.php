@@ -9,10 +9,10 @@ $tdatatb_atividade[".OwnerID"] = "clie_id";
 $tdatatb_atividade[".OriginalTable"] = "tb_atividade";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_atividade[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_atividade[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_atividade[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatatb_atividade[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatatb_atividade[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -1076,7 +1076,8 @@ $tdatatb_atividade[".hideMobileList"][5]["ativ_ds"] = true;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
-	
+		$edata["HorizontalLookup"] = true;
+
 		
 	$edata["LinkField"] = "lista_id";
 	$edata["LinkFieldType"] = 0;
@@ -2576,6 +2577,35 @@ $page_titles["tb_atividade"] = &$pageTitlestb_atividade;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["tb_atividade"] = array();
+//	tb_categorias_x_atividades
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tb_categorias_x_atividades";
+		$detailsParam["dOriginalTable"] = "tb_categorias_x_atividades";
+
+
+
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tb_categorias_x_atividades";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_categorias_x_atividades");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["tb_atividade"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tb_atividade"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tb_atividade"][$dIndex]["masterKeys"][]="ativ_id";
+
+				$detailsTablesData["tb_atividade"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tb_atividade"][$dIndex]["detailKeys"][]="ativ_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["tb_atividade"] = array();

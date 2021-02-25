@@ -247,6 +247,10 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("dashboard_graficos" == $shortTName && ($type===false || ($type!==false && $type == 4)))
 		return true;
+	if ("tb_categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("tb_categorias_x_atividades" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
 	return false;
 }
 
@@ -486,6 +490,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Dashboard_Graficos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("tb_categorias");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="tb_categorias";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("tb_categorias_x_atividades");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="tb_categorias_x_atividades";
+	}
 	return $arr;
 }
 
@@ -516,6 +538,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Gráfico Tarefas por Prioridade";
 	$arr[]="Gráfico Tarefas criadas por Usuário";
 	$arr[]="Dashboard_Graficos";
+	$arr[]="tb_categorias";
+	$arr[]="tb_categorias_x_atividades";
 	return $arr;
 }
 
@@ -1406,6 +1430,18 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Dashboard_Graficos" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="tb_categorias" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="tb_categorias_x_atividades" )
 	{
 //	default permissions
 		// grant all by default

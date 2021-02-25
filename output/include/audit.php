@@ -439,6 +439,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="tb_categorias")
+		{
+			return false;
+		}
+		if($table=="tb_categorias_x_atividades")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -881,6 +889,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Dashboard_Graficos")
+		{
+			return false;
+		}
+		if($table=="tb_categorias")
+		{
+			return false;
+		}
+		if($table=="tb_categorias_x_atividades")
 		{
 			return false;
 		}

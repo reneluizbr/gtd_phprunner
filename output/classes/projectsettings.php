@@ -3093,6 +3093,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "gr_fico_tarefas_criadas_por_usu_rio" ] = "Gráfico Tarefas criadas por Usuário";
 	$projectEntities[ "Dashboard_Graficos" ] = array( "url" => "dashboard_graficos", "type" => 4 );
 	$projectEntitiesReverse[ "dashboard_graficos" ] = "Dashboard_Graficos";
+	$projectEntities[ "tb_categorias" ] = array( "url" => "tb_categorias", "type" => 0 );
+	$projectEntitiesReverse[ "tb_categorias" ] = "tb_categorias";
+	$projectEntities[ "tb_categorias_x_atividades" ] = array( "url" => "tb_categorias_x_atividades", "type" => 0 );
+	$projectEntitiesReverse[ "tb_categorias_x_atividades" ] = "tb_categorias_x_atividades";
 }
 
 function findTable( $table ) {

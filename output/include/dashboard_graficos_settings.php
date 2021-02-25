@@ -20,59 +20,14 @@ $pageTitlesdashboard_graficos = array();
 if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelsdashboard_graficos["English"] = array();
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_stat_id"] = "Stat Id";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_stat_nm"] = "Stat Nm";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_lista_id"] = "Lista Id";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_lista_nm"] = "Lista Nm";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_Qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_domi_valor"] = "Domi Valor";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_Prioridade"] = "Prioridade";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_Qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio_qtde"] = "Qtde";
 }
 if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
 	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"] = array();
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_stat_id"] = "Stat Id";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_stat_nm"] = "Status";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_clie_id"] = "Cliente";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_lista_id"] = "Lista";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_lista_nm"] = "Lista";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_Qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_domi_valor"] = "Domi Valor";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_Prioridade"] = "Prioridade";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_Qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id"] = "Cliente";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login"] = "Incluído por";
-	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio_qtde"] = "Qtde";
 }
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsdashboard_graficos["Spanish"] = array();
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_stat_id"] = "Stat Id";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_stat_nm"] = "Stat Nm";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_lista_id"] = "Lista Id";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_lista_nm"] = "Lista Nm";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_Qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_domi_valor"] = "Domi Valor";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_Prioridade"] = "Prioridade";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_Qtde"] = "Qtde";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id"] = "Clie Id";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio_qtde"] = "Qtde";
 }
 
 //	search fields

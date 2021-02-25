@@ -20,80 +20,14 @@ $pageTitlesdashboard_lista_e_tarefas = array();
 if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelsdashboard_lista_e_tarefas["English"] = array();
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_lista_id"] = "ID";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_clie_id"] = "Client";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_lista_nm"] = "Name";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_inclu_dt"] = "Included in";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_alter_login"] = "Alter Login";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_alter_dt"] = "Changed on";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_id"] = "ID";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_clie_id"] = "Client";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_nm"] = "Name";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_ds"] = "Description";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_lista_id"] = "List";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_stat_id"] = "Status";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_fl_ativo"] = "Active?";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_prioridade"] = "Priority";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_concluida"] = "Completed";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_dt_ini"] = "Start date";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_dt_fim"] = "End Date";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_inclu_dt"] = "Included in";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_alter_login"] = "Alter Login";
-	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_alter_dt"] = "Changed on";
 }
 if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
 	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"] = array();
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_lista_id"] = "ID";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_clie_id"] = "Cliente";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_lista_nm"] = "Nome";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_inclu_dt"] = "Incluído em";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_alter_login"] = "Alter Login";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_alter_dt"] = "Alterado em";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_id"] = "ID";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_clie_id"] = "Cliente";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_nm"] = "Nome";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_ds"] = "Descrição";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_lista_id"] = "Lista";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_stat_id"] = "Status";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_fl_ativo"] = "Ativo?";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_prioridade"] = "Prioridade";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_concluida"] = "Concluída";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_dt_ini"] = "Data Início";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_dt_fim"] = "Data Fim";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_inclu_login"] = "Incluído por";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_inclu_dt"] = "Incluído em";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_alter_login"] = "Alterado por";
-	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_alter_dt"] = "Alterado em";
 }
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsdashboard_lista_e_tarefas["Spanish"] = array();
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_lista_id"] = "ID";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_clie_id"] = "Cliente";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_lista_nm"] = "Nombre";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_inclu_dt"] = "Incluido en";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_alter_login"] = "Alter Login";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_alter_dt"] = "Cambiado en";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_id"] = "ID";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_clie_id"] = "Cliente";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_nm"] = "Nombre";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_ds"] = "Descripción";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_lista_id"] = "Lista";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_stat_id"] = "Estado";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_fl_ativo"] = "¿Activo?";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_prioridade"] = "Prioridad";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_concluida"] = "Terminado";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_dt_ini"] = "Fecha de inicio";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_dt_fim"] = "Fecha final";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_inclu_login"] = "Inclu Login";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_inclu_dt"] = "Incluido en";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_alter_login"] = "Alter Login";
-	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_alter_dt"] = "Cambiado en";
 }
 
 //	search fields

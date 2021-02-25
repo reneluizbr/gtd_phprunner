@@ -434,6 +434,47 @@ pdfDocument = {
 {END cellblock_grid_c6}
 											],
 				{END row_grid_2}
+								{BEGIN row_grid_3}
+				
+		[
+												{BEGIN cellblock_grid_c7}
+
+{
+	cellId: 'c7',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c7}
+			colSpan: {$colspan_grid_c7},
+			{END colspan_grid_c7}
+		
+			
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_tb_categorias_x_atividades}
+			{$displayDetailTable_tb_categorias_x_atividades }
+		{END details_tb_categorias_x_atividades},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c7}
+																			{ 
+					cellId: 'c7',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_3}
 					]
 	}
 }

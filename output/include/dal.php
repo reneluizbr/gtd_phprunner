@@ -53,6 +53,8 @@ class tDAL
 	var $tblgtd_20200511_db3__seguranca_ugmembers;
 	var $tblgtd_20200511_db3__seguranca_ugrights;
 	var $tblgtd_20200511_db3__tb_atividade;
+	var $tblgtd_20200511_db3__tb_categorias;
+	var $tblgtd_20200511_db3__tb_categorias_x_atividades;
 	var $tblgtd_20200511_db3__tb_clientes;
 	var $tblgtd_20200511_db3__tb_clientes_planos;
 	var $tblgtd_20200511_db3__tb_dominios;
@@ -75,6 +77,8 @@ class tDAL
 		$this->lstTables[] = array("name" => "seguranca_ugmembers", "varname" => "gtd_20200511_db3__seguranca_ugmembers", "altvarname" => "seguranca_ugmembers", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "seguranca_ugrights", "varname" => "gtd_20200511_db3__seguranca_ugrights", "altvarname" => "seguranca_ugrights", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_atividade", "varname" => "gtd_20200511_db3__tb_atividade", "altvarname" => "tb_atividade", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "tb_categorias", "varname" => "gtd_20200511_db3__tb_categorias", "altvarname" => "tb_categorias", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "tb_categorias_x_atividades", "varname" => "gtd_20200511_db3__tb_categorias_x_atividades", "altvarname" => "tb_categorias_x_atividades", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_clientes", "varname" => "gtd_20200511_db3__tb_clientes", "altvarname" => "tb_clientes", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_clientes_planos", "varname" => "gtd_20200511_db3__tb_clientes_planos", "altvarname" => "tb_clientes_planos", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_dominios", "varname" => "gtd_20200511_db3__tb_dominios", "altvarname" => "tb_dominios", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
