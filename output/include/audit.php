@@ -447,6 +447,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="vw_tarefas_categorias")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -897,6 +901,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="tb_categorias_x_atividades")
+		{
+			return false;
+		}
+		if($table=="vw_tarefas_categorias")
 		{
 			return false;
 		}

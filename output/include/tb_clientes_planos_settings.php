@@ -5,7 +5,7 @@
 $tdatatb_clientes_planos = array();
 $tdatatb_clientes_planos[".searchableFields"] = array();
 $tdatatb_clientes_planos[".ShortName"] = "tb_clientes_planos";
-$tdatatb_clientes_planos[".OwnerID"] = "";
+$tdatatb_clientes_planos[".OwnerID"] = "clie_id";
 $tdatatb_clientes_planos[".OriginalTable"] = "tb_clientes_planos";
 
 
@@ -75,10 +75,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["plan_id"] = "Plano";
 	$fieldToolTipstb_clientes_planos["Portuguese(Brazil)"]["plan_id"] = "";
 	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["plan_id"] = "";
-	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_ini"] = "Data Vigência Início";
+	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_ini"] = "Dt Vigência Iní";
 	$fieldToolTipstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_ini"] = "";
 	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_ini"] = "";
-	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_fim"] = "Data Vigência Final";
+	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_fim"] = "Dt Vigência Fim";
 	$fieldToolTipstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_fim"] = "";
 	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_fim"] = "";
 	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["clipla_vl"] = "Valor Mensal";
@@ -145,9 +145,9 @@ if(mlang_getcurrentlang()=="Spanish")
 
 
 $tdatatb_clientes_planos[".shortTableName"] = "tb_clientes_planos";
-$tdatatb_clientes_planos[".nSecOptions"] = 0;
+$tdatatb_clientes_planos[".nSecOptions"] = 1;
 
-$tdatatb_clientes_planos[".mainTableOwnerID"] = "";
+$tdatatb_clientes_planos[".mainTableOwnerID"] = "clie_id";
 $tdatatb_clientes_planos[".entityType"] = 0;
 
 $tdatatb_clientes_planos[".strOriginalTableName"] = "tb_clientes_planos";
@@ -294,14 +294,18 @@ $tdatatb_clientes_planos[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY plan_id, clie_id";
 if(strlen($tstrOrderBy) && strtolower(substr($tstrOrderBy,0,8))!="order by")
 	$tstrOrderBy = "order by ".$tstrOrderBy;
 $tdatatb_clientes_planos[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatb_clientes_planos[".orderindexes"] = array();
+	$tdatatb_clientes_planos[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "plan_id");
 
-$tdatatb_clientes_planos[".sqlHead"] = "SELECT clipla_id,  	clie_id,  	plan_id,  	clipla_dt_vigenc_ini,  	clipla_dt_vigenc_fim,  	clipla_vl,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+	$tdatatb_clientes_planos[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "clie_id");
+
+
+$tdatatb_clientes_planos[".sqlHead"] = "SELECT clipla_id,  clie_id,  plan_id,  clipla_dt_vigenc_ini,  clipla_dt_vigenc_fim,  clipla_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $tdatatb_clientes_planos[".sqlFrom"] = "FROM tb_clientes_planos";
 $tdatatb_clientes_planos[".sqlWhereExpr"] = "";
 $tdatatb_clientes_planos[".sqlTail"] = "";
@@ -631,8 +635,9 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterTotalFields"] = "clipla_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -640,7 +645,8 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 
 		$fdata["filterBy"] = 0;
 
-	
+		$fdata["parentFilterField"] = "plan_id";
+
 
 	
 	
@@ -792,9 +798,10 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "clipla_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1379,7 +1386,7 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1470,7 +1477,8 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "clipla_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1648,7 +1656,7 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1823,10 +1831,10 @@ function createSqlQuery_tb_clientes_planos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "clipla_id,  	clie_id,  	plan_id,  	clipla_dt_vigenc_ini,  	clipla_dt_vigenc_fim,  	clipla_vl,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$proto0["m_strFieldList"] = "clipla_id,  clie_id,  plan_id,  clipla_dt_vigenc_ini,  clipla_dt_vigenc_fim,  clipla_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $proto0["m_strFrom"] = "FROM tb_clientes_planos";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY plan_id, clie_id";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -2047,6 +2055,32 @@ $obj = new SQLFromListItem($proto26);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto30=array();
+						$obj = new SQLField(array(
+	"m_strName" => "plan_id",
+	"m_strTable" => "tb_clientes_planos",
+	"m_srcTableName" => "tb_clientes_planos"
+));
+
+$proto30["m_column"]=$obj;
+$proto30["m_bAsc"] = 1;
+$proto30["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto30);
+
+$proto0["m_orderby"][]=$obj;					
+												$proto32=array();
+						$obj = new SQLField(array(
+	"m_strName" => "clie_id",
+	"m_strTable" => "tb_clientes_planos",
+	"m_srcTableName" => "tb_clientes_planos"
+));
+
+$proto32["m_column"]=$obj;
+$proto32["m_bAsc"] = 1;
+$proto32["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto32);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="tb_clientes_planos";		
 $obj = new SQLQuery($proto0);
 
@@ -2062,7 +2096,8 @@ $queryData_tb_clientes_planos = createSqlQuery_tb_clientes_planos();
 
 $tdatatb_clientes_planos[".sqlquery"] = $queryData_tb_clientes_planos;
 
-$tableEvents["tb_clientes_planos"] = new eventsBase;
-$tdatatb_clientes_planos[".hasEvents"] = false;
+include_once(getabspath("include/tb_clientes_planos_events.php"));
+$tableEvents["tb_clientes_planos"] = new eventclass_tb_clientes_planos;
+$tdatatb_clientes_planos[".hasEvents"] = true;
 
 ?>

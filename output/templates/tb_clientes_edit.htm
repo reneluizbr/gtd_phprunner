@@ -105,33 +105,10 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN clie_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  r-vertical-field" 
-	data-fieldname="clie_id" 
-	data-signal-error-for="clie_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="clie_id" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_clie_id}">
-		{BEGIN clie_id_label}{$label tb_clientes clie_id }{END clie_id_label}
-	</label>
-	<div class="r-edit-field">
-		{$clie_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="clie_id">
-		<div class="text-muted" >
-		{$tooltip tb_clientes clie_id }		</div>
-	</div>
-</div>
-
-
-{END clie_id_fieldblock}
-											
 {BEGIN clie_nm_reduzido_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_nm_reduzido}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_nm_reduzido}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_nm_reduzido" 
 	data-signal-error-for="clie_nm_reduzido{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_nm_reduzido" >
@@ -154,7 +131,7 @@
 {BEGIN clie_email_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_email}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_email}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_email" 
 	data-signal-error-for="clie_email{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="clie_email" >
@@ -177,7 +154,7 @@
 {BEGIN clie_endereco_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_endereco}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_endereco}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_endereco" 
 	data-signal-error-for="clie_endereco{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="clie_endereco" >
@@ -200,7 +177,7 @@
 {BEGIN clie_pais_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_pais}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_pais}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_pais" 
 	data-signal-error-for="clie_pais{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="clie_pais" >
@@ -223,7 +200,7 @@
 {BEGIN clie_domi_status_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_domi_status}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_domi_status}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_domi_status" 
 	data-signal-error-for="clie_domi_status{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="clie_domi_status" >
@@ -246,7 +223,7 @@
 {BEGIN clie_nm_completo_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_nm_completo}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_nm_completo}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_nm_completo" 
 	data-signal-error-for="clie_nm_completo{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="clie_nm_completo" >
@@ -269,7 +246,7 @@
 {BEGIN clie_fones_contato_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_fones_contato}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_fones_contato}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_fones_contato" 
 	data-signal-error-for="clie_fones_contato{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="clie_fones_contato" >
@@ -288,98 +265,6 @@
 
 
 {END clie_fones_contato_fieldblock}
-											
-{BEGIN inclu_dt_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  r-vertical-field" 
-	data-fieldname="inclu_dt" 
-	data-signal-error-for="inclu_dt{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="inclu_dt" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_inclu_dt}">
-		{BEGIN inclu_dt_label}{$label tb_clientes inclu_dt }{END inclu_dt_label}
-	</label>
-	<div class="r-edit-field">
-		{$inclu_dt_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="inclu_dt">
-		<div class="text-muted" >
-		{$tooltip tb_clientes inclu_dt }		</div>
-	</div>
-</div>
-
-
-{END inclu_dt_fieldblock}
-											
-{BEGIN alter_dt_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  r-vertical-field" 
-	data-fieldname="alter_dt" 
-	data-signal-error-for="alter_dt{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="alter_dt" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_alter_dt}">
-		{BEGIN alter_dt_label}{$label tb_clientes alter_dt }{END alter_dt_label}
-	</label>
-	<div class="r-edit-field">
-		{$alter_dt_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="alter_dt">
-		<div class="text-muted" >
-		{$tooltip tb_clientes alter_dt }		</div>
-	</div>
-</div>
-
-
-{END alter_dt_fieldblock}
-											
-{BEGIN inclu_login_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  r-vertical-field" 
-	data-fieldname="inclu_login" 
-	data-signal-error-for="inclu_login{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="inclu_login" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_inclu_login}">
-		{BEGIN inclu_login_label}{$label tb_clientes inclu_login }{END inclu_login_label}
-	</label>
-	<div class="r-edit-field">
-		{$inclu_login_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="inclu_login">
-		<div class="text-muted" >
-		{$tooltip tb_clientes inclu_login }		</div>
-	</div>
-</div>
-
-
-{END inclu_login_fieldblock}
-											
-{BEGIN alter_login_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  r-vertical-field" 
-	data-fieldname="alter_login" 
-	data-signal-error-for="alter_login{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="alter_login" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_alter_login}">
-		{BEGIN alter_login_label}{$label tb_clientes alter_login }{END alter_login_label}
-	</label>
-	<div class="r-edit-field">
-		{$alter_login_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="alter_login">
-		<div class="text-muted" >
-		{$tooltip tb_clientes alter_login }		</div>
-	</div>
-</div>
-
-
-{END alter_login_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

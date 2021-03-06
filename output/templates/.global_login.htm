@@ -245,11 +245,23 @@
 		<div class="row">
 			 
 				<div 
-	data-cellId="superbottom_c1" data-pageid="{$pageid}"	{$cell_superbottom_c1}
-	class="r-align-center r-ori-vert			col-md-12
+	data-cellId="superbottom_c1" data-pageid="{$pageid}" data-page=".global_login"	{$cell_superbottom_c1}
+	class="r-align-center			col-md-12
 	
 ">
-			</div>					</div>
+		 
+		<span data-itemtype="login_remind" data-itemid="login_remind" {$item_login_remind} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" {$forgotpasswordlink_attrs} href="remind.php" >
+							{mlang_message FORGOT}			</a>
+</span>
+	 
+		<span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-link   
+	" {$registerlink_attrs} href="register.php" >
+							{mlang_message SIGN_UP}			</a>
+</span>
+		</div>					</div>
 	</div>		
 {END superbottom_block}
 					

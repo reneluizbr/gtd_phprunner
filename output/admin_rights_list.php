@@ -45,6 +45,7 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 	$mask .= "S";
 if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
 	$mask .= "P";
+$mask .= "M";
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("tb_clientes", " " . GetTableCaption("tb_clientes"));
@@ -62,6 +63,7 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 	$mask .= "S";
 if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
 	$mask .= "P";
+$mask .= "M";
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("tb_clientes_planos", " " . GetTableCaption("tb_clientes_planos"));
@@ -297,6 +299,7 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 	$mask .= "S";
 if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
 	$mask .= "P";
+$mask .= "M";
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("tb_categorias", " " . GetTableCaption("tb_categorias"));
@@ -317,6 +320,24 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("tb_categorias_x_atividades", " " . GetTableCaption("tb_categorias_x_atividades"));
+$table = "vw_tarefas_categorias";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+$mask .= "M";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("vw_tarefas_categorias", " " . GetTableCaption("vw_tarefas_categorias"));
 
 require_once('include/xtempl.php');
 require_once('classes/listpage.php');

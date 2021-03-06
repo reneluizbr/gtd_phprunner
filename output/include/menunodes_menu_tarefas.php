@@ -7,6 +7,32 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNode = array();
 	$menuNode["id"] = "1";
+	$menuNode["name"] = "MENU_PRINCIPAL";
+	$menuNode["href"] = "menu.php";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "CustomID";
+	$menuNode["linkType"] = "External";
+	$menuNode["pageType"] = strtolower("");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-home";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = GetCustomLabel("MENU_PRINCIPAL");
+
+
+
+	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "2";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -32,7 +58,7 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "2";
+	$menuNode["id"] = "3";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -58,7 +84,7 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "3";
+	$menuNode["id"] = "4";
 	$menuNode["name"] = "Status de Tarefas";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -84,7 +110,7 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "4";
+	$menuNode["id"] = "5";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -110,8 +136,8 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "5";
-	$menuNode["name"] = "";
+	$menuNode["id"] = "6";
+	$menuNode["name"] = "Categorias X Atividades";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "tb_categorias_x_atividades";
@@ -130,7 +156,7 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetTableCaption("tb_categorias_x_atividades");
+	$menuNode["title"] = "Categorias X Atividades";
 
 
 

@@ -101,7 +101,7 @@ class ChangePasswordPage extends RunnerPage
 		global $cUserNameFieldType;
 		
 		if( $this->token )
-			return " where".$this->connection->addFieldWrappers( "" )."=". $this->connection->prepareString( $this->token );
+			return " where".$this->connection->addFieldWrappers( "reset_token2" )."=". $this->connection->prepareString( $this->token );
 				
 		$value = $this->getSqlPreparedLoginTableValue( @$_SESSION["UserID"], $this->usernameField, $cUserNameFieldType );
 		if( $this->pSet->usersTableInProject() ) {
@@ -152,8 +152,8 @@ class ChangePasswordPage extends RunnerPage
 		$setPart = " set ".$this->connection->addFieldWrappers( $this->passwordField )."=".$passvalue;
 		if( $this->token )
 		{
-			$setPart.= ", ".$this->connection->addFieldWrappers( "" )."=". $this->connection->prepareString( "" ).", "
-				.$this->connection->addFieldWrappers( "" )."=". $this->connection->addDateQuotes( NULL );
+			$setPart.= ", ".$this->connection->addFieldWrappers( "reset_token2" )."=". $this->connection->prepareString( "" ).", "
+				.$this->connection->addFieldWrappers( "reset_date" )."=". $this->connection->addDateQuotes( NULL );
 				
 		}
 		
@@ -454,12 +454,12 @@ class ChangePasswordPage extends RunnerPage
 		if( !$this->token )
 			return true;
 			
-		$sqlSelect = "select ".$this->connection->addFieldWrappers( "" )." from".$this->connection->addTableWrappers("tb_usuarios")
-			." where".$this->connection->addFieldWrappers( "" )."=". $this->connection->prepareString( $this->token );
+		$sqlSelect = "select ".$this->connection->addFieldWrappers( "reset_date" )." from".$this->connection->addTableWrappers("tb_usuarios")
+			." where".$this->connection->addFieldWrappers( "reset_token2" )."=". $this->connection->prepareString( $this->token );
 			
 		$data = $this->cipherer->DecryptFetchedArray( $this->connection->query( $sqlSelect )->fetchAssoc() );
 		if( $data )
-			return secondsPassedFrom( $data[""] ) < 86400;
+			return secondsPassedFrom( $data["reset_date"] ) < 86400;
 		
 		return false;
 	}

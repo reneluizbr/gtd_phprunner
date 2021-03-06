@@ -251,6 +251,8 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("tb_categorias_x_atividades" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
+	if ("vw_tarefas_categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
 	return false;
 }
 
@@ -508,6 +510,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="tb_categorias_x_atividades";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("vw_tarefas_categorias");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="vw_tarefas_categorias";
+	}
 	return $arr;
 }
 
@@ -540,6 +551,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Dashboard_Graficos";
 	$arr[]="tb_categorias";
 	$arr[]="tb_categorias_x_atividades";
+	$arr[]="vw_tarefas_categorias";
 	return $arr;
 }
 
@@ -590,7 +602,7 @@ function GetChartType($shorttable)
 	if($shorttable=="gr_fico_tarefas_por_prioridade")
 		return "2DDoughnut";
 	if($shorttable=="gr_fico_tarefas_criadas_por_usu_rio")
-		return "2DBar";
+		return "2DColumn";
 	return "";
 }
 
@@ -1447,6 +1459,12 @@ function GetUserPermissionsStatic( $table )
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
+	if( $table=="vw_tarefas_categorias" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
 	// grant nothing by default
 	return "";
 }
@@ -1564,12 +1582,15 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 
 		$_SESSION["OwnerID"] = $data["clie_id"];
 	$_SESSION["_tb_atividade_OwnerID"] = $data["clie_id"];
-		$_SESSION["_tb_clientes_OwnerID"] = $data["alter_dt"];
+		$_SESSION["_tb_clientes_OwnerID"] = $data["clie_id"];
+		$_SESSION["_tb_clientes_planos_OwnerID"] = $data["clie_id"];
 		$_SESSION["_tb_lista_atividades_OwnerID"] = $data["clie_id"];
 		$_SESSION["_tb_status_atividades_OwnerID"] = $data["clie_id"];
 		$_SESSION["_tb_usuarios_OwnerID"] = $data["clie_id"];
 		$_SESSION["_admin_members_OwnerID"] = $data["clie_id"];
 		$_SESSION["_admin_users_OwnerID"] = $data["clie_id"];
+		$_SESSION["_tb_categorias_OwnerID"] = $data["clie_id"];
+		$_SESSION["_vw_tarefas_categorias_OwnerID"] = $data["clie_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1637,6 +1658,18 @@ function CheckSecurity($strValue, $strAction, $table = "")
 				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
+		if($table=="tb_clientes")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="tb_clientes_planos")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
 		if($table=="tb_lista_atividades")
 		{
 
@@ -1652,7 +1685,7 @@ function CheckSecurity($strValue, $strAction, $table = "")
 		if($table=="tb_usuarios")
 		{
 
-				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
 		if($table=="admin_members")
@@ -1665,6 +1698,18 @@ function CheckSecurity($strValue, $strAction, $table = "")
 		{
 
 				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="tb_categorias")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="vw_tarefas_categorias")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
 	}
@@ -1741,6 +1786,14 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
+		if($table=="tb_clientes")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="tb_clientes_planos")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
 		if($table=="tb_lista_atividades")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
@@ -1751,8 +1804,7 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 		}
 		if($table=="tb_usuarios")
 		{
-				if($strAction == "Edit" || $strAction == "Delete")
-				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 		if($table=="admin_members")
 		{
@@ -1763,6 +1815,14 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 		{
 				if($strAction == "Edit" || $strAction == "Delete")
 				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="tb_categorias")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="vw_tarefas_categorias")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 	}
 
@@ -2264,6 +2324,8 @@ function checkpassword($pwd)
 
 		$cUnique[$c] = 1;
 	}
+	if($cDigit<1)
+		return false;
 	return true;
 }
 

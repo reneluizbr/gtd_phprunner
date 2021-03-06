@@ -5,14 +5,14 @@
 $tdatatb_clientes = array();
 $tdatatb_clientes[".searchableFields"] = array();
 $tdatatb_clientes[".ShortName"] = "tb_clientes";
-$tdatatb_clientes[".OwnerID"] = "";
+$tdatatb_clientes[".OwnerID"] = "clie_id";
 $tdatatb_clientes[".OriginalTable"] = "tb_clientes";
 
 
 $defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"lista_cartoes\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_clientes[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"lista_cartoes\",\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_clientes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"lista_cartoes\",\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_clientes[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"lista_cartoes\",\"cartao_cliente\",\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatatb_clientes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"lista_cartoes\",\"cartao_cliente\",\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatatb_clientes[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -163,9 +163,9 @@ if(mlang_getcurrentlang()=="Spanish")
 
 
 $tdatatb_clientes[".shortTableName"] = "tb_clientes";
-$tdatatb_clientes[".nSecOptions"] = 0;
+$tdatatb_clientes[".nSecOptions"] = 1;
 
-$tdatatb_clientes[".mainTableOwnerID"] = "";
+$tdatatb_clientes[".mainTableOwnerID"] = "clie_id";
 $tdatatb_clientes[".entityType"] = 0;
 
 $tdatatb_clientes[".strOriginalTableName"] = "tb_clientes";
@@ -1096,7 +1096,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1106,6 +1106,36 @@ $tdatatb_clientes[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tb_dominios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+		
+	$edata["LinkField"] = "domi_valor";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "domi_ordem||'-'||domi_exibe";
+
+				$edata["LookupWhere"] = "domi_grupo = \"CLIENTE_STATUS\"";
+
+
+		$edata["CustomDisplay"] = "true";
+
+	$edata["LookupOrderBy"] = "domi_ordem";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -1121,10 +1151,8 @@ $tdatatb_clientes[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1150,7 +1178,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1606,7 +1634,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1634,8 +1662,9 @@ $tdatatb_clientes[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1655,7 +1684,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1697,7 +1726,8 @@ $tdatatb_clientes[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "clie_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1875,7 +1905,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1903,8 +1933,9 @@ $tdatatb_clientes[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1924,7 +1955,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -2316,7 +2347,8 @@ $queryData_tb_clientes = createSqlQuery_tb_clientes();
 
 $tdatatb_clientes[".sqlquery"] = $queryData_tb_clientes;
 
-$tableEvents["tb_clientes"] = new eventsBase;
-$tdatatb_clientes[".hasEvents"] = false;
+include_once(getabspath("include/tb_clientes_events.php"));
+$tableEvents["tb_clientes"] = new eventclass_tb_clientes;
+$tdatatb_clientes[".hasEvents"] = true;
 
 ?>

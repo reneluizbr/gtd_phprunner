@@ -35,6 +35,7 @@ $nonAdminTablesArr[] = "Gráfico Tarefas criadas por Usuário";
 $nonAdminTablesArr[] = "Dashboard_Graficos";
 $nonAdminTablesArr[] = "tb_categorias";
 $nonAdminTablesArr[] = "tb_categorias_x_atividades";
+$nonAdminTablesArr[] = "vw_tarefas_categorias";
 
 $ug_connection = $cman->getForUserGroups();
 

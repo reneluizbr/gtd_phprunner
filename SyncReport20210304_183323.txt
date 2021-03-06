@@ -1,0 +1,5 @@
+Modified tables ("-" means deleted field, "+" means new field):
+	● tb_atividade:
+		 + ativ_domi_unid_tempo
+		 + ativ_tempo_estimado
+		 + ativ_tempo_real

@@ -1,0 +1,19 @@
+Notification on registering
+
+You have registered as a user at %url%
+
+Click this link to confirm your account and finish the registration:
+%activateurl%
+If you are unable to click on the link, copy and paste it into your browser window.
+
+ID: %usua_id_value%
+Customer ID: %clie_id_value%
+Domi Status: %usua_domi_status_value%
+Wl Situacao: %wlSituacao_value%
+Email: %usua_email_value%
+Username: %usua_username_value%
+Last Login: %usua_login_ulti_value%
+Inclu Login: %inclu_login_value%
+Included in: %inclu_dt_value%
+Alter Login: %alter_login_value%
+Changed on: %alter_dt_value%

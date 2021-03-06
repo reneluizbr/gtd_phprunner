@@ -94,7 +94,7 @@ CREATE TABLE tb_clientes
 .print Criando tabela 02/12
 CREATE TABLE tb_usuarios
    (usua_id           INTEGER       primary key AUTOINCREMENT not null --comment 'ID do usuario'
-   ,clie_id           INTEGER       not null             --comment 'Identificador global do cliente'
+   ,clie_id           INTEGER      NOT NULL DEFAULT '0'    --comment 'Identificador global do cliente, 0-Cliente auto cadastrado'
    ,usua_domi_status  VARCHAR (60) not null DEFAULT 'CADASTRADO'  --comment 'Valor para o Dominio/Grupo "STATUS_USUARIO"'
    ,usua_email        VARCHAR (255) not null             --comment 'Email do usuario'
    ,usua_username     VARCHAR (50)  not null             --comment 'Nome do Usuario', ACHO MELHOR usar o email
@@ -104,7 +104,7 @@ CREATE TABLE tb_usuarios
    ,inclu_dt          DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
    ,alter_login       VARCHAR (50)                        --comment 'ID do usuario que realizou a alteracao'
    ,alter_dt          DATETIME                            --comment 'Data e hora em que foi realizada a alteracao'
-   ,foreign key (clie_id)  references tb_clientes (clie_id)  ON UPDATE RESTRICT ON DELETE RESTRICT
+   ,FOREIGN KEY (clie_id)  references tb_clientes (clie_id)  ON UPDATE RESTRICT ON DELETE RESTRICT
    );
    -- Criacao de Indices Unicos e Gerais
    CREATE INDEX ix_clie_id ON tb_usuarios (clie_id);
@@ -229,21 +229,24 @@ CREATE TABLE tb_lista_atividades
 
 .print Criando tabela 10/12
 CREATE TABLE tb_atividade
-   (ativ_id         INTEGER      primary key AUTOINCREMENT not null
-   ,clie_id         INTEGER      not null             --comment 'Identificador global do cliente'
-   ,ativ_nm         VARCHAR (50) not null             --comment 'Nome'
-   ,ativ_ds         TEXT                              --comment 'Descricao mais longa'
-   ,lista_id        INTEGER                           --comment 'ID da lista, caso atividade pertença a alguma lista'
-   ,stat_id         INTEGER      not null             --comment 'Status da atividade'
-   ,ativ_fl_ativo   INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_fl_ativo IN (0, 1))'
-   ,ativ_prioridade VARCHAR (1)  not null DEFAULT "BAIXA" --comment 'CHECK (ativ_prioridade IN ("BAIXA","MEDIA","ALTA"))'
-   ,ativ_concluida  INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_concluida IN (0, 1))'
-   ,ativ_dt_ini     DATETIME                          --comment 'Data início da atividade'
-   ,ativ_dt_fim     DATETIME                          --comment 'Data fim da atividade'
-   ,inclu_login     VARCHAR (50) NOT NULL DEFAULT '0'         --comment 'ID do usuario que realizou a inclusao'
-   ,inclu_dt        DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
-   ,alter_login     VARCHAR (50)                        --comment 'ID do usuario que realizou a alteracao'
-   ,alter_dt        DATETIME                            --comment 'Data e hora em que foi realizada a alteracao'
+   (ativ_id              INTEGER      primary key AUTOINCREMENT not null
+   ,clie_id              INTEGER      not null             --comment 'Identificador global do cliente'
+   ,ativ_nm              VARCHAR (50) not null             --comment 'Nome'
+   ,ativ_ds              TEXT                              --comment 'Descricao mais longa'
+   ,lista_id             INTEGER                           --comment 'ID da lista, caso atividade pertença a alguma lista'
+   ,stat_id              INTEGER      not null             --comment 'Status da atividade'
+   ,ativ_fl_ativo        INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_fl_ativo IN (0, 1))'
+   ,ativ_prioridade      VARCHAR (1)  not null DEFAULT "BAIXA" --comment 'CHECK (ativ_prioridade IN ("BAIXA","MEDIA","ALTA"))'
+   ,ativ_concluida       INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_concluida IN (0, 1))'
+   ,ativ_dt_ini          DATETIME                          --comment 'Data início da atividade'
+   ,ativ_dt_fim          DATETIME                          --comment 'Data fim da atividade'
+   ,ativ_domi_unid_tempo VARCHAR (60)       --comment 'Valor para o Dominio/Grupo "TEMPO_UNIDADE"'
+   ,ativ_tempo_estimado  INTEGER             --comment 'Tempo Estimado da ativdade na unidade ativ_domi_unid_tempo'
+   ,ativ_tempo_real      INTEGER             --comment 'Tempo Real da ativdade na unidade ativ_domi_unid_tempo'
+   ,inclu_login          VARCHAR (50) NOT NULL DEFAULT '0'         --comment 'ID do usuario que realizou a inclusao'
+   ,inclu_dt             DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
+   ,alter_login          VARCHAR (50)                        --comment 'ID do usuario que realizou a alteracao'
+   ,alter_dt             DATETIME                            --comment 'Data e hora em que foi realizada a alteracao'
    ,foreign key (stat_id)  references tb_status_atividades  (stat_id)  ON UPDATE RESTRICT ON DELETE RESTRICT
    ,foreign key (lista_id) references tb_lista_atividades (lista_id) ON UPDATE RESTRICT ON DELETE RESTRICT
    ,foreign key (clie_id)  references tb_clientes (clie_id) ON UPDATE RESTRICT ON DELETE RESTRICT
@@ -272,8 +275,8 @@ CREATE TABLE tb_categorias_x_atividades
    ,ativ_id         INTEGER      not null             --comment 'Identificador global da Tarefa'
    ,inclu_login     VARCHAR (50) NOT NULL DEFAULT '0'         --comment 'ID do usuario que realizou a inclusao'
    ,inclu_dt        DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
-   ,foreign key (ativ_id)  references tb_atividade  (ativ_id) ON UPDATE RESTRICT ON DELETE RESTRICT
-   ,foreign key (cate_id)  references tb_categorias (cate_id) ON UPDATE RESTRICT ON DELETE RESTRICT
+   ,foreign key (ativ_id)  references tb_atividade  (ativ_id) ON UPDATE RESTRICT ON DELETE CASCADE
+   ,foreign key (cate_id)  references tb_categorias (cate_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 -- Criacao de Indices Unicos e Gerais
    CREATE INDEX ix_caat_cate_idx ON tb_categorias (cate_id);
@@ -284,3 +287,73 @@ CREATE TABLE tb_categorias_x_atividades
 .print Fim do Script de criacao de tabelas.
 -- --------------------------------------------------------------------------------
 -- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+DROP VIEW IF EXISTS vw_tarefas_categorias_v1;
+/*
+   CREATE VIEW vw_tarefas_categorias_v1
+   AS
+      SELECT a.ativ_id
+         ,a.clie_id
+         ,a.ativ_nm
+         ,a.ativ_ds
+         ,a.lista_id
+         ,l.lista_nm
+         ,a.stat_id
+         ,s.stat_nm
+         ,a.ativ_fl_ativo
+         ,a.ativ_prioridade
+         ,a.ativ_concluida
+         ,a.ativ_dt_ini
+         ,a.ativ_dt_fim
+         ,a.inclu_login
+         ,a.inclu_dt
+         ,a.alter_login
+         ,a.alter_dt
+      , GROUP_CONCAT(cate_nm,', ') as Categorias
+      FROM tb_atividade a
+      LEFT JOIN tb_categorias_x_atividades ca ON a.ativ_id = ca.ativ_id
+      LEFT JOIN tb_categorias c               ON c.cate_id = ca.cate_id
+      LEFT JOIN tb_lista_atividades l         ON a.lista_id = l.lista_id
+      LEFT JOIN tb_status_atividades s        ON a.stat_id = s.stat_id
+      GROUP BY a.ativ_id
+   ;
+*/
+DROP VIEW IF EXISTS vw_tarefas_categorias_v1;
+
+
+
+DROP VIEW IF EXISTS vw_tarefas_categorias;
+CREATE VIEW vw_tarefas_categorias
+AS
+   SELECT CAST(GROUP_CONCAT(cate_nm,', ') AS VARCHAR(200)) as Categorias
+      , tb.*
+   FROM ( /* Necessario criar subquery para seguir ordem de cate_nm*/
+      SELECT a.ativ_id
+         ,a.clie_id
+         ,a.ativ_nm
+         ,c.cate_nm
+         ,a.ativ_ds
+         ,a.lista_id
+         ,l.lista_nm
+         ,a.stat_id
+         ,s.stat_nm
+         ,a.ativ_fl_ativo
+         ,a.ativ_prioridade
+         ,a.ativ_concluida
+         ,a.ativ_dt_ini
+         ,a.ativ_dt_fim
+         ,a.inclu_login
+         ,a.inclu_dt
+         ,a.alter_login
+         ,a.alter_dt
+      -- , GROUP_CONCAT(cate_nm,', ') as Categorias
+      FROM tb_atividade a
+      LEFT JOIN tb_categorias_x_atividades ca ON a.ativ_id = ca.ativ_id
+      LEFT JOIN tb_categorias c               ON c.cate_id = ca.cate_id
+      LEFT JOIN tb_lista_atividades l         ON a.lista_id = l.lista_id
+      LEFT JOIN tb_status_atividades s        ON a.stat_id = s.stat_id
+      -- GROUP BY a.ativ_id
+      ORDER BY c.cate_nm
+   ) AS tb
+   GROUP BY ativ_id
+;

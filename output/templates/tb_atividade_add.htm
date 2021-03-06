@@ -29,7 +29,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="6"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -47,7 +47,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="6"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -244,6 +244,52 @@
 
 
 {END ativ_dt_ini_fieldblock}
+											
+{BEGIN ativ_domi_unid_tempo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ativ_domi_unid_tempo}  r-horizontal-field form-horizontal" 
+	data-fieldname="ativ_domi_unid_tempo" 
+	data-signal-error-for="ativ_domi_unid_tempo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="ativ_domi_unid_tempo" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_ativ_domi_unid_tempo}">
+		{BEGIN ativ_domi_unid_tempo_label}{$label tb_atividade ativ_domi_unid_tempo }{END ativ_domi_unid_tempo_label}
+	</label>
+	<div class="r-edit-field">
+		{$ativ_domi_unid_tempo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ativ_domi_unid_tempo">
+		<div class="text-muted" >
+		{$tooltip tb_atividade ativ_domi_unid_tempo }		</div>
+	</div>
+</div>
+
+
+{END ativ_domi_unid_tempo_fieldblock}
+											
+{BEGIN ativ_tempo_real_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ativ_tempo_real}  r-horizontal-field form-horizontal" 
+	data-fieldname="ativ_tempo_real" 
+	data-signal-error-for="ativ_tempo_real{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="ativ_tempo_real" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_ativ_tempo_real}">
+		{BEGIN ativ_tempo_real_label}{$label tb_atividade ativ_tempo_real }{END ativ_tempo_real_label}
+	</label>
+	<div class="r-edit-field">
+		{$ativ_tempo_real_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ativ_tempo_real">
+		<div class="text-muted" >
+		{$tooltip tb_atividade ativ_tempo_real }		</div>
+	</div>
+</div>
+
+
+{END ativ_tempo_real_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -330,37 +376,39 @@
 
 
 {END ativ_dt_fim_fieldblock}
+											
+{BEGIN ativ_tempo_estimado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ativ_tempo_estimado}  r-horizontal-field form-horizontal" 
+	data-fieldname="ativ_tempo_estimado" 
+	data-signal-error-for="ativ_tempo_estimado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="ativ_tempo_estimado" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_ativ_tempo_estimado}">
+		{BEGIN ativ_tempo_estimado_label}{$label tb_atividade ativ_tempo_estimado }{END ativ_tempo_estimado_label}
+	</label>
+	<div class="r-edit-field">
+		{$ativ_tempo_estimado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ativ_tempo_estimado">
+		<div class="text-muted" >
+		{$tooltip tb_atividade ativ_tempo_estimado }		</div>
+	</div>
+</div>
+
+
+{END ativ_tempo_estimado_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c6}
 								</tr>
-	 
-	 
-																</tbody></table>
-				
-{BEGIN details_tb_categorias_x_atividades}
-<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
-	<div class="panel panel-info details-grid">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-							{$caption tb_categorias_x_atividades }				
-							<span>
-					{$detailslButtons_tb_categorias_x_atividades}
-																				</span>
-			</h4>
-		</div>
-		<div class="panel-body">
-			{$displayDetailTable_tb_categorias_x_atividades}
-		</div>
-	</div>
-</div>
-{END details_tb_categorias_x_atividades}
-	
-				{END grid_block}
+			</tbody></table>
+{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="6"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 

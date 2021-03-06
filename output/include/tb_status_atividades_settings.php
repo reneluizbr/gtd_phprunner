@@ -1839,7 +1839,8 @@ $queryData_tb_status_atividades = createSqlQuery_tb_status_atividades();
 
 $tdatatb_status_atividades[".sqlquery"] = $queryData_tb_status_atividades;
 
-$tableEvents["tb_status_atividades"] = new eventsBase;
-$tdatatb_status_atividades[".hasEvents"] = false;
+include_once(getabspath("include/tb_status_atividades_events.php"));
+$tableEvents["tb_status_atividades"] = new eventclass_tb_status_atividades;
+$tdatatb_status_atividades[".hasEvents"] = true;
 
 ?>

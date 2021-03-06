@@ -96,7 +96,8 @@ class RegisterPage extends RunnerPage
 			$this->registerSuccess = $this->registerNewUser();
 			$this->doAfterRegistrationEvent();
 				
-		
+				$this->notifyUserAndAdmin();
+	
 			if( !$this->registerSuccess && $this->mode == REGISTER_POPUP  )
 			{
 				$returnJSON = array();
@@ -161,9 +162,38 @@ class RegisterPage extends RunnerPage
 			$globalEvents->AfterUnsuccessfulRegistration( $this->regValues, $this->message, $this );		
 	}
 
+	/**
+	 * Send emails to a new registered user or/and to admin-user
+	 */
+	protected function notifyUserAndAdmin()
+	{
+		if( !$this->registerSuccess )
+			return;
+			
+		
+		$sentMailResults1 = $this->sendAdminRegisterMessage();
+		if( !@$sentMailResults1["mailed"] )
+			$this->message.= " ".$sentMailResults1["message"];	
+	}
 
 	
 	
+	/**
+	 * Send an email to admin-user
+	 * @return Array	 
+	 */
+	protected function sendAdminRegisterMessage()
+	{
+		$data = array();		
+	
+		foreach( $this->pSet->getPageFields() as $uf ) {
+			$data[ GoodFieldName( $uf . "_value" ) ] = $this->regValues[ $uf ];
+		}
+		
+		$strEmail = "reneluizbr@gmail.com";
+
+		return RunnerPage::sendEmailByTemplate($strEmail, "adminregister", $data);
+	}
 	
 	/**
 	 *
@@ -195,6 +225,7 @@ class RegisterPage extends RunnerPage
 		
 		$this->strUsername = $values["usua_username"];
 		$this->strPassword = $values["usua_senha"];
+		$this->strEmail = $values["usua_email"];
 		
 		if( !$this->checkRegisterData( $this->strUsername, $this->strPassword, $this->strEmail ) )
 			$allow_registration = false;
@@ -247,6 +278,17 @@ class RegisterPage extends RunnerPage
 			$ret = false;
 		}
 
+		//	check if entered email already exists
+		if( !strlen($strEmail) )
+		{
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = mlang_message("VALID_EMAIL");
+			$ret = false;
+		}
+		else if( !$this->checkIfEmailUnique( $strEmail ) )
+		{
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = mlang_message("EMAIL_ALREADY1")." <i>". runner_htmlspecialchars( $strEmail )."</i> ".mlang_message("EMAIL_ALREADY2");
+			$ret = false;
+		}
 		
 		if( $this->pwdStrong )
 		{
@@ -329,15 +371,15 @@ class RegisterPage extends RunnerPage
 	 */
 	protected function checkIfEmailUnique( $strEmail )
 	{
-		if( $this->cipherer->isFieldEncrypted("") )
-			$sEmail = $this->cipherer->MakeDBValue("", $strEmail, "", true);	
+		if( $this->cipherer->isFieldEncrypted("usua_email") )
+			$sEmail = $this->cipherer->MakeDBValue("usua_email", $strEmail, "", true);	
 		else 
-			$sEmail = add_db_quotes("", $strEmail);
+			$sEmail = add_db_quotes("usua_email", $strEmail);
 			
 		$strSQL = "select count(*) from ". $this->connection->addTableWrappers( "tb_usuarios" ) 
 			." where ".
 			$this->connection->comparisonSQL( 
-				$this->getFieldSQLDecrypt(""), 
+				$this->getFieldSQLDecrypt("usua_email"), 
 				$sEmail,
 				true
 			);

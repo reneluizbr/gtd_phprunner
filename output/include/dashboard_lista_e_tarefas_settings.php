@@ -20,14 +20,80 @@ $pageTitlesdashboard_lista_e_tarefas = array();
 if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelsdashboard_lista_e_tarefas["English"] = array();
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_lista_id"] = "Tb Lista Atividades Lista Id";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_clie_id"] = "Tb Lista Atividades Clie Id";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_lista_nm"] = "Tb Lista Atividades Lista Nm";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_inclu_login"] = "Tb Lista Atividades Inclu Login";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_inclu_dt"] = "Tb Lista Atividades Inclu Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_alter_login"] = "Tb Lista Atividades Alter Login";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_lista_atividades_alter_dt"] = "Tb Lista Atividades Alter Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_id"] = "Tb Atividade Ativ Id";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_clie_id"] = "Tb Atividade Clie Id";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_nm"] = "Tb Atividade Ativ Nm";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_ds"] = "Tb Atividade Ativ Ds";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_lista_id"] = "Tb Atividade Lista Id";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_stat_id"] = "Tb Atividade Stat Id";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_fl_ativo"] = "Tb Atividade Ativ Fl Ativo";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_prioridade"] = "Tb Atividade Ativ Prioridade";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_concluida"] = "Tb Atividade Ativ Concluida";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_dt_ini"] = "Tb Atividade Ativ Dt Ini";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_ativ_dt_fim"] = "Tb Atividade Ativ Dt Fim";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_inclu_login"] = "Tb Atividade Inclu Login";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_inclu_dt"] = "Tb Atividade Inclu Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_alter_login"] = "Tb Atividade Alter Login";
+	$fieldLabelsdashboard_lista_e_tarefas["English"]["tb_atividade_alter_dt"] = "Tb Atividade Alter Dt";
 }
 if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
 	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"] = array();
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_lista_id"] = "Tb Lista Atividades Lista Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_clie_id"] = "Tb Lista Atividades Clie Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_lista_nm"] = "Tb Lista Atividades Lista Nm";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_inclu_login"] = "Tb Lista Atividades Inclu Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_inclu_dt"] = "Tb Lista Atividades Inclu Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_alter_login"] = "Tb Lista Atividades Alter Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_lista_atividades_alter_dt"] = "Tb Lista Atividades Alter Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_id"] = "Tb Atividade Ativ Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_clie_id"] = "Tb Atividade Clie Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_nm"] = "Tb Atividade Ativ Nm";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_ds"] = "Tb Atividade Ativ Ds";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_lista_id"] = "Tb Atividade Lista Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_stat_id"] = "Tb Atividade Stat Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_fl_ativo"] = "Tb Atividade Ativ Fl Ativo";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_prioridade"] = "Tb Atividade Ativ Prioridade";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_concluida"] = "Tb Atividade Ativ Concluida";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_dt_ini"] = "Tb Atividade Ativ Dt Ini";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_ativ_dt_fim"] = "Tb Atividade Ativ Dt Fim";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_inclu_login"] = "Tb Atividade Inclu Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_inclu_dt"] = "Tb Atividade Inclu Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_alter_login"] = "Tb Atividade Alter Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Portuguese(Brazil)"]["tb_atividade_alter_dt"] = "Tb Atividade Alter Dt";
 }
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsdashboard_lista_e_tarefas["Spanish"] = array();
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_lista_id"] = "Tb Lista Atividades Lista Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_clie_id"] = "Tb Lista Atividades Clie Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_lista_nm"] = "Tb Lista Atividades Lista Nm";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_inclu_login"] = "Tb Lista Atividades Inclu Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_inclu_dt"] = "Tb Lista Atividades Inclu Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_alter_login"] = "Tb Lista Atividades Alter Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_lista_atividades_alter_dt"] = "Tb Lista Atividades Alter Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_id"] = "Tb Atividade Ativ Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_clie_id"] = "Tb Atividade Clie Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_nm"] = "Tb Atividade Ativ Nm";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_ds"] = "Tb Atividade Ativ Ds";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_lista_id"] = "Tb Atividade Lista Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_stat_id"] = "Tb Atividade Stat Id";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_fl_ativo"] = "Tb Atividade Ativ Fl Ativo";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_prioridade"] = "Tb Atividade Ativ Prioridade";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_concluida"] = "Tb Atividade Ativ Concluida";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_dt_ini"] = "Tb Atividade Ativ Dt Ini";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_ativ_dt_fim"] = "Tb Atividade Ativ Dt Fim";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_inclu_login"] = "Tb Atividade Inclu Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_inclu_dt"] = "Tb Atividade Inclu Dt";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_alter_login"] = "Tb Atividade Alter Login";
+	$fieldLabelsdashboard_lista_e_tarefas["Spanish"]["tb_atividade_alter_dt"] = "Tb Atividade Alter Dt";
 }
 
 //	search fields

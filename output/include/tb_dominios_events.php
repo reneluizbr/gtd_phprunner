@@ -159,6 +159,10 @@ function BeforeAdd(&$values, &$message, $inline, &$pageObject)
 {
 
 		
+// Rene: Tratamento de campos para converter em maiusculas antes de salvar
+$values['domi_grupo'] = strtoupper($values['domi_grupo']);
+$values['domi_valor'] = strtoupper($values['domi_valor']);
+
 // Rene: Guarda dados de log antes de incluir ou alterar um registro
 fctConfigura_Usuario($values['inclu_login'], $values['inclu_dt']);
 
@@ -235,6 +239,10 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, &
 {
 
 		
+// Rene: Tratamento de campos para converter em maiusculas antes de salvar
+$values['domi_grupo'] = strtoupper($values['domi_grupo']);
+$values['domi_valor'] = strtoupper($values['domi_valor']);
+
 // Rene: Guarda dados de log antes de incluir ou alterar um registro
 fctConfigura_Usuario($values['alter_login'], $values['alter_dt']);
 

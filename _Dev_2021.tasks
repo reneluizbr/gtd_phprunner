@@ -1,17 +1,86 @@
+Seguir conceito do PPP:
+    ✔ Produto (software) @done(2021-03-03 21:53)
+        Plataforma
+            Desktops (PC, Notebooks)
+            Web (Internet)
+            Mobile (Android, IOS) - Aplicativos
+    ☐ Propaganda
+        Marketing Digital
+            Anúncios pagos
+            Vídeos em algum canal no Youtube (OBS Studio)
+            SEO (Search Engine Optmization)
+    ☐ Preço
+        Plano Gratis (com propagandas)
+        Plano Pessoal
+        Plano Equipe (amigos)
+        Plano Corporativo ???
+
+Idéias (sonhador/patrocinador):
+    ✔ Controle de Tarefas (GTD, Monday.com) @done(2021-03-03 20:01)
+    ☐ Investimentos (FinPesso, Money, ..)
+    ✔ Controle de Fiado @done(2021-03-03 20:20)
+    ☐ Pet Shop ()
+    ☐ Orçamento e Gerenciamento de Reformas
+
+Possível uso de aplicação financeira:
+    ✔ Prazos limite para conclusão de tarefas @done(2021-03-03 18:40)
+    ✔ Apontamentos de horas (self employer) @started(2021-03-04 18:22) @done(2021-03-04 20:06) @lasted(1h44m46s)
+        Unidade de tempo: Minutos [X], Horas [ ], Dias [ ], Semanas, Meses [ ]
+        Tempo Estimado: 45
+        Tempo Real    : 110
+    ✘ Agendamentos (registros e controles de datas futuras) @cancelled(2021-03-03 18:23)
+    ✘ Parte financeira @cancelled(2021-03-03 18:40)
+        Tela de parâmetros financeiros:
+            Custo/Hora (em R$ ou US$): ex: R$ 85,00 / USD 40,00
+            Quantidade de horas/dia  : ex: 6/ao dia
+            Quantidade de dias/mês   : ex: 12/mês
+    ✔ Dashboards de quantidades @done(2021-03-03 18:34)
+    ✘ Dashboards de tempo ou financeiro @cancelled(2021-03-04 20:12)
+
+
 # Tarefas (ver como .todo ou .tasks)
+Roteiro de Testes do GTD:
+    ✔ Ao excluir uma categoria, excluir os registros em tb_categorias_x_atividades @done(2021-02-27 15:13)
+    ✔ Recadastrar carga inicial de Categorias: pessoal, emprego, saude, projeto_gtd, projeto_web, desejo, computador, smartphone, ... @done(2021-02-27 16:55)
+    ✔ Recadastrar carga inicial de Clientes: 01-Rene, 02-Homolog... @done(2021-02-27 17:24)
+    ✔ Recadastrar carga inicial de Usuarios: apenas "root" e "admin" @done(2021-02-27 17:25)
+    ✔ Teste de auto cadastramento de usuario (usar campo "usua_email" como login) @started(2021-03-06 11:15) @done(2021-03-06 12:04) @lasted(49m18s)
+        ✔ Revisto permissões do perfil "Padrao" para usuários auto cadastrados @started(2021-03-06 12:17) @done(2021-03-06 12:43) @lasted(26m41s)
+        ✔ Incluir um novo cliente e associar o usuário ao cliente  @started(2021-03-06 16:10) @done(2021-03-06 18:55) @lasted(2h45m29s)
+        ☐ Incluir dados iniciais do cliente (categorias, lista_atividades, atividades, categorias_x_atividades, status_atividades)
+        ☐ @high @tagRever @tagFuturo Rever configurações para envio de email (após assinatura do servidor):
+            SMTP server      : localhost
+            SMTP server port : 25
+            SMTP username    : gtdtaks???
+            SMTP password    : senha???
+    ☐ Teste e Revisao de permissoes de acesso @started(2021-03-06 12:44)
+    ☐ Revisao da traducao do Ingles por mim
+    ☐ Revisao da traducao do Ingles por outra pessoa
+    ☐ Revisao da traducao do Espanhol por mim
+    ✔ @tagBug Inclusao/atualizacao em tb_dominios dava erro na validacao da expressao regular se digitasse em minuscula @done(2021-03-04 18:27)
+    ✔ fctConfigura_Usuario($values['alter_login'], $values['alter_dt']) em páginas faltantes @started(2021-03-05 21:55) @done(2021-03-05 22:18) @lasted(23m30s)
+    ☐ Criar regra para "Dt Vigência Iní" VS "Dt Vigência Fim" nas páginas "Valores Base dos Planos" @started(2021-03-05 23:33)
+    ☐ Criar regra para "Dt Vigência Iní" VS "Dt Vigência Fim" nas páginas "Planos do Cliente" @started(2021-03-05 23:37)
+
+Tópicos e recursos mais avançados:
+    ✔ Query VW_TAREFAS_CATEGORIAS com CONCAT() de Categorias de linhas em coluna @started(2021-02-27 18:57) @done(2021-02-27 21:58) @lasted(3h1m56s)
+    ✘ Página de consulta de atividades com base na view VW_TAREFAS_CATEGORIAS @cancelled(2021-03-04 17:24)
+        Na view do SQLite, colunas montadas com funções (ex: GROUP_CONCAT) não retornam datatype, o PHPRunner encara como BLOB
+
 Roteiro principal do GTD:
     Páginas de Tabelas:
         ✔ Dominios @done(2021-02-18 21:58)
         ✔ Parâmetros @started(2021-02-19 11:43) @done(2021-02-19 15:14) @lasted(3h31m16s)
         ✔ Usuarios, com imagens circulo verde, amarelo e vermelho no grid @done(2021-02-21 16:13)
         ✔ Usuarios, Data ultimo login na tabela após se logar @done(2021-02-21 20:38)
-        ☐ Clientes @started(2021-02-24 20:05)
-        ☐ Planos @started(2021-02-24 20:05)
-        ☐ Planos_valores @started(2021-02-24 20:10)
-        ☐ Clientes_planos @started(2021-02-24 20:10)
-        ✔ Status_atividades @high @started(2021-02-20 15:00) @done(2021-02-20 15:38) @lasted(38m29s)
-        ✔ Lista_atividades @high  (Grid de Listas de Atividades com Atividades) @done(2021-02-20 16:51)
+        ✔ Clientes @started(2021-02-24 20:05) @done(2021-02-27 16:03) @lasted(2d19h58m12s)
+        ✔ Planos @started(2021-02-24 20:05) @done(2021-03-05 22:35) @lasted(1w2d2h30m16s)
+        ✔ Planos_valores @started(2021-02-24 20:10) @done(2021-03-05 23:37) @lasted(1w2d3h27m46s)
+        ✔ Clientes_planos (Planos do Cliente REVER) @started(2021-02-24 20:10) @tagRever @done(2021-03-05 23:54) @lasted(1w2d3h44m55s)
+        ✔ Status_atividades @started(2021-02-20 15:00) @done(2021-02-20 15:38) @lasted(38m29s)
+        ✔ Lista_atividades (Grid de Listas de Atividades com Atividades) @done(2021-02-20 16:51)
         ✔ Categorias (de tarefas) @started(2021-02-25 16:20) @done(2021-02-25 20:01) @lasted(3h41m14s)
+        ✔ Categorias_x_Atividades @done(2021-02-26 19:17)
         ✘ Tarefas (com imagens circulo verde, amarelo e vermelho) @started(2021-02-20 16:52) @cancelled(2021-02-22 17:14) @wasted(2d22m35s)
         ✔ Tarefas (com abas de filtro "Concuídas", "Em Andamento") @started(2021-02-22 17:51) @done(2021-02-22 18:12) @lasted(21m13s)
             ✔ Regras de tarefas "Concuida" vs "Data Fim" @started(2021-02-21 15:11) @done(2021-02-22 19:12) @lasted(1d4h1m7s)

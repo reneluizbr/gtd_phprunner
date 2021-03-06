@@ -66,13 +66,13 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plva_id"] = "ID";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["plva_id"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["plva_id"] = "";
-	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plan_id"] = "ID do Plano";
+	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plan_id"] = "Plano";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["plan_id"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["plan_id"] = "";
-	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_ini"] = "Data Vigência Início";
+	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_ini"] = "Dt Vigência Iní";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_ini"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_ini"] = "";
-	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_fim"] = "Data Vigência Final";
+	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_fim"] = "Dt Vigência Fim";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_fim"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["plva_dt_vigenc_fim"] = "";
 	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["plva_vl"] = "Valor do Plano";
@@ -84,10 +84,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_planos_valores["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_planos_valores["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_planos_valores["Portuguese(Brazil)"]["alter_login"] = "";
 	if (count($fieldToolTipstb_planos_valores["Portuguese(Brazil)"]))
@@ -228,7 +228,7 @@ $tdatatb_planos_valores[".rowHighlite"] = true;
 
 
 
-									
+																		
 
 $tdatatb_planos_valores[".ajaxCodeSnippetAdded"] = false;
 
@@ -240,7 +240,7 @@ $tdatatb_planos_valores[".addPageEvents"] = false;
 $tdatatb_planos_valores[".isUseTimeForSearch"] = false;
 
 
-$tdatatb_planos_valores[".badgeColor"] = "BC8F8F";
+$tdatatb_planos_valores[".badgeColor"] = "008000";
 
 
 $tdatatb_planos_valores[".allSearchFields"] = array();
@@ -284,14 +284,18 @@ $tdatatb_planos_valores[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY plan_id, plva_dt_vigenc_ini DESC";
 if(strlen($tstrOrderBy) && strtolower(substr($tstrOrderBy,0,8))!="order by")
 	$tstrOrderBy = "order by ".$tstrOrderBy;
 $tdatatb_planos_valores[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatb_planos_valores[".orderindexes"] = array();
+	$tdatatb_planos_valores[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "plan_id");
 
-$tdatatb_planos_valores[".sqlHead"] = "SELECT plva_id,  	plan_id,  	plva_dt_vigenc_ini,  	plva_dt_vigenc_fim,  	plva_vl,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+	$tdatatb_planos_valores[".orderindexes"][] = array(3, (0 ? "ASC" : "DESC"), "plva_dt_vigenc_ini");
+
+
+$tdatatb_planos_valores[".sqlHead"] = "SELECT plva_id,  plan_id,  plva_dt_vigenc_ini,  plva_dt_vigenc_fim,  plva_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $tdatatb_planos_valores[".sqlFrom"] = "FROM tb_planos_valores";
 $tdatatb_planos_valores[".sqlWhereExpr"] = "";
 $tdatatb_planos_valores[".sqlTail"] = "";
@@ -530,7 +534,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -540,6 +544,36 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tb_planos";
+		$edata["listPageId"] = "list";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 2;
+
+	
+		
+	$edata["LinkField"] = "plan_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "plan_id || '-' || plan_nm";
+
+	
+
+		$edata["CustomDisplay"] = "true";
+
+	$edata["LookupOrderBy"] = "plan_id";
+
+		$edata["LookupDesc"] = true;
+
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -556,17 +590,14 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -587,7 +618,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -595,9 +626,10 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "plva_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -670,7 +702,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -691,7 +723,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -734,7 +766,8 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "plva_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -807,7 +840,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -827,7 +860,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -869,7 +902,8 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "plva_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -913,7 +947,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -921,7 +955,8 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 2;
+
 	
 	
 	
@@ -951,7 +986,8 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -964,7 +1000,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -974,7 +1010,9 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1001,9 +1039,10 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "plva_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1011,7 +1050,8 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 		$fdata["filterBy"] = 0;
 
-	
+		$fdata["parentFilterField"] = "plan_id";
+
 
 	
 	
@@ -1181,7 +1221,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1209,8 +1249,9 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1230,7 +1271,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1450,7 +1491,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1478,8 +1519,9 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1499,7 +1541,7 @@ $tdatatb_planos_valores[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1575,6 +1617,22 @@ $masterTablesData["tb_planos_valores"] = array();
 
 
 
+	
+				$strOriginalDetailsTable="tb_planos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="tb_planos";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "tb_planos";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["tb_planos_valores"][0] = $masterParams;
+				$masterTablesData["tb_planos_valores"][0]["masterKeys"] = array();
+	$masterTablesData["tb_planos_valores"][0]["masterKeys"][]="plan_id";
+				$masterTablesData["tb_planos_valores"][0]["detailKeys"] = array();
+	$masterTablesData["tb_planos_valores"][0]["detailKeys"][]="plan_id";
+		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1593,10 +1651,10 @@ function createSqlQuery_tb_planos_valores()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "plva_id,  	plan_id,  	plva_dt_vigenc_ini,  	plva_dt_vigenc_fim,  	plva_vl,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$proto0["m_strFieldList"] = "plva_id,  plan_id,  plva_dt_vigenc_ini,  plva_dt_vigenc_fim,  plva_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $proto0["m_strFrom"] = "FROM tb_planos_valores";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY plan_id, plva_dt_vigenc_ini DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -1802,6 +1860,32 @@ $obj = new SQLFromListItem($proto24);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto28=array();
+						$obj = new SQLField(array(
+	"m_strName" => "plan_id",
+	"m_strTable" => "tb_planos_valores",
+	"m_srcTableName" => "tb_planos_valores"
+));
+
+$proto28["m_column"]=$obj;
+$proto28["m_bAsc"] = 1;
+$proto28["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto28);
+
+$proto0["m_orderby"][]=$obj;					
+												$proto30=array();
+						$obj = new SQLField(array(
+	"m_strName" => "plva_dt_vigenc_ini",
+	"m_strTable" => "tb_planos_valores",
+	"m_srcTableName" => "tb_planos_valores"
+));
+
+$proto30["m_column"]=$obj;
+$proto30["m_bAsc"] = 0;
+$proto30["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto30);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="tb_planos_valores";		
 $obj = new SQLQuery($proto0);
 
@@ -1817,7 +1901,8 @@ $queryData_tb_planos_valores = createSqlQuery_tb_planos_valores();
 
 $tdatatb_planos_valores[".sqlquery"] = $queryData_tb_planos_valores;
 
-$tableEvents["tb_planos_valores"] = new eventsBase;
-$tdatatb_planos_valores[".hasEvents"] = false;
+include_once(getabspath("include/tb_planos_valores_events.php"));
+$tableEvents["tb_planos_valores"] = new eventclass_tb_planos_valores;
+$tdatatb_planos_valores[".hasEvents"] = true;
 
 ?>

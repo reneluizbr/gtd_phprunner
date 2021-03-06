@@ -75,13 +75,13 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_planos["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_planos["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_planos["Portuguese(Brazil)"]["alter_dt"] = "";
-	$fieldLabelstb_planos["Portuguese(Brazil)"]["plan_domi_tipo"] = "Plan Domi Tipo";
+	$fieldLabelstb_planos["Portuguese(Brazil)"]["plan_domi_tipo"] = "Tipo Plano";
 	$fieldToolTipstb_planos["Portuguese(Brazil)"]["plan_domi_tipo"] = "";
 	$placeHolderstb_planos["Portuguese(Brazil)"]["plan_domi_tipo"] = "";
-	$fieldLabelstb_planos["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_planos["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_planos["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_planos["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_planos["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_planos["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_planos["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_planos["Portuguese(Brazil)"]["alter_login"] = "";
 	if (count($fieldToolTipstb_planos["Portuguese(Brazil)"]))
@@ -520,7 +520,7 @@ $tdatatb_planos[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -530,6 +530,37 @@ $tdatatb_planos[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tb_dominios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["autoCompleteFields"][] = array('masterF'=>"plan_ds", 'lookupF'=>"domi_exibe");
+	$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "domi_valor";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "domi_ordem || '-' || domi_valor";
+
+				$edata["LookupWhere"] = "domi_grupo = 'PLANO_TIPO'";
+
+
+		$edata["CustomDisplay"] = "true";
+
+	$edata["LookupOrderBy"] = "domi_ordem";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -545,10 +576,8 @@ $tdatatb_planos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -574,7 +603,7 @@ $tdatatb_planos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -788,7 +817,7 @@ $tdatatb_planos[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -812,11 +841,11 @@ $tdatatb_planos[".hideMobileList"] = array();
 	
 	
 	
-	
-			$edata["HTML5InuptType"] = "text";
+				$edata["nRows"] = 150;
+			$edata["nCols"] = 200;
 
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -852,7 +881,8 @@ $tdatatb_planos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "plan_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1030,7 +1060,7 @@ $tdatatb_planos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1058,8 +1088,9 @@ $tdatatb_planos[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1079,7 +1110,7 @@ $tdatatb_planos[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1299,7 +1330,7 @@ $tdatatb_planos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1432,6 +1463,35 @@ $detailsTablesData["tb_planos"] = array();
 				$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "tb_clientes_planos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("tb_clientes_planos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["tb_planos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tb_planos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tb_planos"][$dIndex]["masterKeys"][]="plan_id";
+
+				$detailsTablesData["tb_planos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tb_planos"][$dIndex]["detailKeys"][]="plan_id";
+//	tb_planos_valores
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tb_planos_valores";
+		$detailsParam["dOriginalTable"] = "tb_planos_valores";
+
+
+
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tb_planos_valores";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_planos_valores");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1680,7 +1740,8 @@ $queryData_tb_planos = createSqlQuery_tb_planos();
 
 $tdatatb_planos[".sqlquery"] = $queryData_tb_planos;
 
-$tableEvents["tb_planos"] = new eventsBase;
-$tdatatb_planos[".hasEvents"] = false;
+include_once(getabspath("include/tb_planos_events.php"));
+$tableEvents["tb_planos"] = new eventclass_tb_planos;
+$tdatatb_planos[".hasEvents"] = true;
 
 ?>

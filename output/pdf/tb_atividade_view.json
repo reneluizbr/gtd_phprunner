@@ -236,6 +236,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field9}","text":[{"text":"{$jslabel tb_atividade ativ_dt_ini }","bold":true}," ",{$ativ_dt_ini_pdfvalue}]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","text":[{"text":"{$jslabel tb_atividade ativ_domi_unid_tempo }","bold":true}," ",{$ativ_domi_unid_tempo_pdfvalue}]},
+				
 		  ],
   "border": [ false, false, false, false ],
           },
@@ -260,6 +263,12 @@ pdfDocument = {
 		
 				
 			{"hidden":"{$item_hide_integrated_edit_field10}","text":[{"text":"{$jslabel tb_atividade ativ_dt_fim }","bold":true}," ",{$ativ_dt_fim_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","text":[{"text":"{$jslabel tb_atividade ativ_tempo_estimado }","bold":true}," ",{$ativ_tempo_estimado_pdfvalue}]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field16}","text":[{"text":"{$jslabel tb_atividade ativ_tempo_real }","bold":true}," ",{$ativ_tempo_real_pdfvalue}]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -475,6 +484,57 @@ pdfDocument = {
 				},
 							],
 				{END row_grid_3}
+								{BEGIN row_grid_4}
+				
+		[
+												{BEGIN cellblock_grid_c8}
+
+{
+	cellId: 'c8',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c8}
+																			{BEGIN cellblock_grid_c9}
+
+{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c9}
+											],
+				{END row_grid_4}
 					]
 	}
 }

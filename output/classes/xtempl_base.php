@@ -144,7 +144,7 @@ class XTempl_Base
 			array(
 				"chartName"=>"gr_fico_tarefas_criadas_por_usu_rio",
 				"table"=>"Gráfico Tarefas criadas por Usuário",
-				"ctype"=>"2DBar"));
+				"ctype"=>"2DColumn"));
 		}
 		
 

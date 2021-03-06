@@ -216,6 +216,70 @@
 <!-- End Search panel content -->
 			</div>
 		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+<!--
+	<button type="button" class="btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
+		<span class="glyphicon glyphicon-filter"><span> Filter	
+	</button>
+-->	
+	<div class="filterPanelContainer {$filterPanelStateClass}">
+
+
+
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_plan_ds}
+		<div class="panel panel-info filter-field filter-plan_ds-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+			
+				<label>{$label tb_planos plan_ds }</label>
+
+				{BEGIN clearLink_plan_ds}
+				<a href="#" class="filter-clear filter-clear-plan_ds">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_plan_ds}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_plan_ds}
+				<li class="list-group-item filter-values filter-values-plan_ds {$collapsedClass_plan_ds} {$visibilityClass_plan_ds}">
+					{$plan_ds_filter}
+								
+			
+			
+				</li>				
+				{END filterCtrlBlock_plan_ds}
+
+							{BEGIN filter_button_showmore_plan_ds}
+				<li class="list-group-item filter-show-more {$collapsedClass_plan_ds} {$showMoreBtnClass_plan_ds}">
+					<a class="filter-show-more-link filterShowMore_plan_ds" href="#">{$show_n_more_plan_ds}</a>
+				</li>
+				{END filter_button_showmore_plan_ds}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_plan_ds}
+	 
+	</div>
+</div>			</div>
+		
     {END left_block}
 </div>				</div>	
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -410,7 +474,7 @@
 {END supertop_block}
 						{$locking}
 				</div>	
-				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
 					{$header}
 					<div class="r-top">
 									{BEGIN top_block}
@@ -523,6 +587,13 @@
 					Planos de Clientes				</label>
 			</div>
 			{END print_details_tb_clientes_planos}
+														{BEGIN print_details_tb_planos_valores}
+			<div>
+				<label for="printDetailstb_planos_valores{$id}">
+					<input type="checkbox" value="tb_planos_valores" id="printDetailstb_planos_valores{$id}" checked>
+					Valores de Planos				</label>
+			</div>
+			{END print_details_tb_planos_valores}
 						</div>
 </div>
 {END print_details}
@@ -735,22 +806,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$plan_ds_class}
+		 r-ori-vert				{$plan_domi_tipo_class}
 			"
 
-			data-field="plan_ds"
+			data-field="plan_domi_tipo"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN plan_ds_fieldheadercolumn}
-	{BEGIN plan_ds_fieldheader}
-	<SPAN {$plan_ds_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="plan_ds">
-	{$label tb_planos plan_ds }	{$arrow_icon_plan_ds}
+		{BEGIN plan_domi_tipo_fieldheadercolumn}
+	{BEGIN plan_domi_tipo_fieldheader}
+	<SPAN {$plan_domi_tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="plan_domi_tipo">
+	{$label tb_planos plan_domi_tipo }	{$arrow_icon_plan_domi_tipo}
 	</SPAN>
-	{END plan_ds_fieldheader}
-{END plan_ds_fieldheadercolumn}
+	{END plan_domi_tipo_fieldheader}
+{END plan_domi_tipo_fieldheadercolumn}
 
 	
 	</th>
@@ -762,22 +833,22 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$inclu_dt_class}
+		 r-ori-vert				{$plan_ds_class}
 			"
 
-			data-field="inclu_dt"
+			data-field="plan_ds"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN inclu_dt_fieldheadercolumn}
-	{BEGIN inclu_dt_fieldheader}
-	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
-	{$label tb_planos inclu_dt }	{$arrow_icon_inclu_dt}
+		{BEGIN plan_ds_fieldheadercolumn}
+	{BEGIN plan_ds_fieldheader}
+	<SPAN {$plan_ds_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="plan_ds">
+	{$label tb_planos plan_ds }	{$arrow_icon_plan_ds}
 	</SPAN>
-	{END inclu_dt_fieldheader}
-{END inclu_dt_fieldheadercolumn}
+	{END plan_ds_fieldheader}
+{END plan_ds_fieldheadercolumn}
 
 	
 	</th>
@@ -789,22 +860,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$alter_dt_class}
+		 r-ori-vert				{$inclu_dt_class}
 			"
 
-			data-field="alter_dt"
+			data-field="inclu_dt"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN alter_dt_fieldheadercolumn}
-	{BEGIN alter_dt_fieldheader}
-	<SPAN {$alter_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_dt">
-	{$label tb_planos alter_dt }	{$arrow_icon_alter_dt}
+		{BEGIN inclu_dt_fieldheadercolumn}
+	{BEGIN inclu_dt_fieldheader}
+	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	{$label tb_planos inclu_dt }	{$arrow_icon_inclu_dt}
 	</SPAN>
-	{END alter_dt_fieldheader}
-{END alter_dt_fieldheadercolumn}
+	{END inclu_dt_fieldheader}
+{END inclu_dt_fieldheadercolumn}
 
 	
 	</th>
@@ -816,45 +887,18 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$plan_domi_tipo_class}
-			"
-
-			data-field="plan_domi_tipo"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN plan_domi_tipo_fieldheadercolumn}
-	{BEGIN plan_domi_tipo_fieldheader}
-	<SPAN {$plan_domi_tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="plan_domi_tipo">
-	{$label tb_planos plan_domi_tipo }	{$arrow_icon_plan_domi_tipo}
-	</SPAN>
-	{END plan_domi_tipo_fieldheader}
-{END plan_domi_tipo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-				 
-					{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$inclu_login_class}
 			"
 
 			data-field="inclu_login"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN inclu_login_fieldheadercolumn}
 	{BEGIN inclu_login_fieldheader}
-	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
+	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
 	{$label tb_planos inclu_login }	{$arrow_icon_inclu_login}
 	</SPAN>
 	{END inclu_login_fieldheader}
@@ -862,34 +906,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-				 
-					{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$alter_login_class}
-			"
-
-			data-field="alter_login"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN alter_login_fieldheadercolumn}
-	{BEGIN alter_login_fieldheader}
-	<SPAN {$alter_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_login">
-	{$label tb_planos alter_login }	{$arrow_icon_alter_login}
-	</SPAN>
-	{END alter_login_fieldheader}
-{END alter_login_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field5}
 							</tr>
 					 
 					 
@@ -984,22 +1001,40 @@
 	>
 
 	 
-			 
 		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$tb_clientes_planos_link_attrs} 
-			class="{$dtables_link_class} details-badge badge tb_clientes_planos_badge" 
-			title="{mlang_message SHOW_DETAILS}"
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$tb_clientes_planos_cntspan_class}" {$tb_clientes_planos_childnumber_attr}>
-				{$tb_clientes_planos_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
+		
+	{BEGIN tb_clientes_planos_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$tb_clientes_planos_link_attrs} data-short-details="tb_clientes_planos"
+		 
+			>
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+						Clientes		
+									<span {$tb_clientes_planos_childnumber_attr} dir="ltr">
+					{BEGIN tb_clientes_planos_childcount}({$tb_clientes_planos_childnumber}){END tb_clientes_planos_childcount}
+				</span>
+						</a>
+	</span>
+	{END tb_clientes_planos_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN tb_planos_valores_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$tb_planos_valores_link_attrs} data-short-details="tb_planos_valores"
+		 
+			>
+							<span class="glyphicon glyphicon-usd"></span>
+						Valores		
+									<span {$tb_planos_valores_childnumber_attr} dir="ltr">
+					{BEGIN tb_planos_valores_childcount}({$tb_planos_valores_childnumber}){END tb_planos_valores_childcount}
+				</span>
+						</a>
+	</span>
+	{END tb_planos_valores_dtable_link}
+
 
 	
 	</td>
@@ -1057,81 +1092,12 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$plan_ds_class}
-			"
-
-			data-field="plan_ds"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN plan_ds_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="plan_ds" data-default-width >
-{$plan_ds_value}
-</span>
-{END plan_ds_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_dt_class}
-			"
-
-			data-field="inclu_dt"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_dt_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
-{$inclu_dt_value}
-</span>
-{END inclu_dt_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$alter_dt_class}
-			"
-
-			data-field="alter_dt"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN alter_dt_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_dt" data-default-width >
-{$alter_dt_value}
-</span>
-{END alter_dt_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$plan_domi_tipo_class}
 			"
 
 			data-field="plan_domi_tipo"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1141,12 +1107,58 @@
 </span>
 {END plan_domi_tipo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field6}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$plan_ds_class}
+			"
+
+			data-field="plan_ds"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN plan_ds_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="plan_ds" data-default-width >
+{$plan_ds_value}
+</span>
+{END plan_ds_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+				 
+					{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_dt_class}
+			"
+
+			data-field="inclu_dt"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_dt_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
+{$inclu_dt_value}
+</span>
+{END inclu_dt_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$inclu_login_class}
@@ -1154,7 +1166,7 @@
 
 			data-field="inclu_login"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1164,30 +1176,7 @@
 </span>
 {END inclu_login_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-				 
-					{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$alter_login_class}
-			"
-
-			data-field="alter_login"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN alter_login_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_login" data-default-width >
-{$alter_login_value}
-</span>
-{END alter_login_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -1200,22 +1189,21 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="tb_clientes_planos"
-			data-details-tb_clientes_planos	>
-		<span data-details-inside data-short-table="tb_clientes_planos">
-			</span>
+		<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders=""
+	>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>
@@ -1378,38 +1366,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-				 
-					{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_planos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-				 
-					{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_planos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

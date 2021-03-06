@@ -33,16 +33,30 @@ require_once(getabspath("classes/cipherer.php"));
 
 include_once(getabspath("include/tb_atividade_events.php"));
 $tableEvents["tb_atividade"] = new eventclass_tb_atividade;
+include_once(getabspath("include/tb_clientes_events.php"));
+$tableEvents["tb_clientes"] = new eventclass_tb_clientes;
+include_once(getabspath("include/tb_clientes_planos_events.php"));
+$tableEvents["tb_clientes_planos"] = new eventclass_tb_clientes_planos;
 include_once(getabspath("include/tb_dominios_events.php"));
 $tableEvents["tb_dominios"] = new eventclass_tb_dominios;
 include_once(getabspath("include/tb_lista_atividades_events.php"));
 $tableEvents["tb_lista_atividades"] = new eventclass_tb_lista_atividades;
+include_once(getabspath("include/tb_planos_events.php"));
+$tableEvents["tb_planos"] = new eventclass_tb_planos;
+include_once(getabspath("include/tb_planos_valores_events.php"));
+$tableEvents["tb_planos_valores"] = new eventclass_tb_planos_valores;
+include_once(getabspath("include/tb_status_atividades_events.php"));
+$tableEvents["tb_status_atividades"] = new eventclass_tb_status_atividades;
 include_once(getabspath("include/tb_usuarios_events.php"));
 $tableEvents["tb_usuarios"] = new eventclass_tb_usuarios;
 include_once(getabspath("include/proc_limpar_tarefas_de_lista_events.php"));
 $tableEvents["proc_limpar_tarefas_de_lista"] = new eventclass_proc_limpar_tarefas_de_lista;
 include_once(getabspath("include/tb_parametros_events.php"));
 $tableEvents["tb_parametros"] = new eventclass_tb_parametros;
+include_once(getabspath("include/tb_categorias_events.php"));
+$tableEvents["tb_categorias"] = new eventclass_tb_categorias;
+include_once(getabspath("include/tb_categorias_x_atividades_events.php"));
+$tableEvents["tb_categorias_x_atividades"] = new eventclass_tb_categorias_x_atividades;
 
 $xt = new Xtempl();
 

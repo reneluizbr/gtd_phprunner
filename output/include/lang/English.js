@@ -231,5 +231,7 @@ Runner.lang.customlabels = {
 	CUSTOM_LABEL_Valida_atividade_concluida_sim: '(en) Data fim deve ser informada para atividade concluída.',
 	CUSTOM_LABEL_Valida_atividade_concluida_nao: '(en) Data fim só pode ser informada se atividade estiver concluída.',
 	CUSTOM_LABEL_VERSAO_SISTEMA04: 'GTDTasks © - Build 2021.02.19 (en)',
-	CUSTOM_LABEL_VERSAO_SISTEMA05: 'GTDTasks © - Build 2021.02.22 (pt)'
+	CUSTOM_LABEL_VERSAO_SISTEMA05: 'GTDTasks © - Build 2021.02.22 (pt)',
+	CUSTOM_LABEL_DETAILS_FOUND: '',
+	CUSTOM_LABEL_MENU_PRINCIPAL: 'Main Menu'
 };

@@ -113,19 +113,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_id}</span>
 						</div>
 		{END searchCtrlBlock_ativ_id}
-																{BEGIN searchCtrlBlock_cate_nm}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_cate_nm}" {$filterRow_attrs_cate_nm}>
-			<label>{$label tb_categorias_x_atividades cate_nm }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_cate_nm}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_cate_nm}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_cate_nm}</span>
-						</div>
-		{END searchCtrlBlock_cate_nm}
 																{BEGIN searchCtrlBlock_inclu_login}
 
 
@@ -165,19 +152,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_cate_id}</span>
 						</div>
 		{END searchCtrlBlock_cate_id}
-																{BEGIN searchCtrlBlock_caat_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_caat_id}" {$filterRow_attrs_caat_id}>
-			<label>{$label tb_categorias_x_atividades caat_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_caat_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_caat_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_caat_id}</span>
-						</div>
-		{END searchCtrlBlock_caat_id}
 		
 
 	</div>
@@ -189,6 +163,136 @@
 </div>
 <!-- End Search panel content -->
 			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+<!--
+	<button type="button" class="btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
+		<span class="glyphicon glyphicon-filter"><span> Filter	
+	</button>
+-->	
+	<div class="filterPanelContainer {$filterPanelStateClass}">
+
+
+
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_cate_id}
+		<div class="panel panel-info filter-field filter-cate_id-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+							<input class="filter-selectAll-cate_id" type="checkbox" name="selectAll" {$selectAll_attrs_cate_id} />
+			
+				<label>{$label tb_categorias_x_atividades cate_id }</label>
+
+				{BEGIN clearLink_cate_id}
+				<a href="#" class="filter-clear filter-clear-cate_id">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_cate_id}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_cate_id}
+				<li class="list-group-item filter-values filter-values-cate_id {$collapsedClass_cate_id} {$visibilityClass_cate_id}">
+					{$cate_id_filter}
+								
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_cate_id}
+
+							{BEGIN filter_button_showmore_cate_id}
+				<li class="list-group-item filter-show-more {$collapsedClass_cate_id} {$showMoreBtnClass_cate_id}">
+					<a class="filter-show-more-link filterShowMore_cate_id" href="#">{$show_n_more_cate_id}</a>
+				</li>
+				{END filter_button_showmore_cate_id}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_cate_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_cate_id}">
+					<a href="#" class="rnr-button filter-cate_id-btn-multiselect filter-apply-cate_id" {$filterbutton_attrs_cate_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_cate_id}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_cate_id}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_inclu_login}
+		<div class="panel panel-info filter-field filter-inclu_login-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+							<input class="filter-selectAll-inclu_login" type="checkbox" name="selectAll" {$selectAll_attrs_inclu_login} />
+			
+				<label>{$label tb_categorias_x_atividades inclu_login }</label>
+
+				{BEGIN clearLink_inclu_login}
+				<a href="#" class="filter-clear filter-clear-inclu_login">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_inclu_login}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_inclu_login}
+				<li class="list-group-item filter-values filter-values-inclu_login {$collapsedClass_inclu_login} {$visibilityClass_inclu_login}">
+					{$inclu_login_filter}
+								
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_inclu_login}
+
+							{BEGIN filter_button_showmore_inclu_login}
+				<li class="list-group-item filter-show-more {$collapsedClass_inclu_login} {$showMoreBtnClass_inclu_login}">
+					<a class="filter-show-more-link filterShowMore_inclu_login" href="#">{$show_n_more_inclu_login}</a>
+				</li>
+				{END filter_button_showmore_inclu_login}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_inclu_login}
+				<li class="list-group-item filter-field-btn {$collapsedClass_inclu_login}">
+					<a href="#" class="rnr-button filter-inclu_login-btn-multiselect filter-apply-inclu_login" {$filterbutton_attrs_inclu_login}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_inclu_login}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_inclu_login}
+	 
+	</div>
+</div>			</div>
 		
     {END left_block}
 </div>				</div>	
@@ -552,10 +656,6 @@
 		content: "{$label tb_categorias_x_atividades cate_id}";
 	}
 	
-	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="cate_nm"]:before {
-		content: "{$label tb_categorias_x_atividades cate_nm}";
-	}
-	
 	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_id"]:before {
 		content: "{$label tb_categorias_x_atividades ativ_id}";
 	}
@@ -630,22 +730,22 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$caat_id_class}
+		 r-ori-vert				{$cate_id_class}
 			"
 
-			data-field="caat_id"
+			data-field="cate_id"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN caat_id_fieldheadercolumn}
-	{BEGIN caat_id_fieldheader}
-	<SPAN {$caat_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caat_id">
-	{$label tb_categorias_x_atividades caat_id }	{$arrow_icon_caat_id}
+		{BEGIN cate_id_fieldheadercolumn}
+	{BEGIN cate_id_fieldheader}
+	<SPAN {$cate_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cate_id">
+	{$label tb_categorias_x_atividades cate_id }	{$arrow_icon_cate_id}
 	</SPAN>
-	{END caat_id_fieldheader}
-{END caat_id_fieldheadercolumn}
+	{END cate_id_fieldheader}
+{END cate_id_fieldheadercolumn}
 
 	
 	</th>
@@ -657,22 +757,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$cate_id_class}
+		 r-ori-vert				{$ativ_id_class}
 			"
 
-			data-field="cate_id"
+			data-field="ativ_id"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN cate_id_fieldheadercolumn}
-	{BEGIN cate_id_fieldheader}
-	<SPAN {$cate_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cate_id">
-	{$label tb_categorias_x_atividades cate_id }	{$arrow_icon_cate_id}
+		{BEGIN ativ_id_fieldheadercolumn}
+	{BEGIN ativ_id_fieldheader}
+	<SPAN {$ativ_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id">
+	{$label tb_categorias_x_atividades ativ_id }	{$arrow_icon_ativ_id}
 	</SPAN>
-	{END cate_id_fieldheader}
-{END cate_id_fieldheadercolumn}
+	{END ativ_id_fieldheader}
+{END ativ_id_fieldheadercolumn}
 
 	
 	</th>
@@ -684,22 +784,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_id_class}
+		 r-ori-vert				{$inclu_dt_class}
 			"
 
-			data-field="ativ_id"
+			data-field="inclu_dt"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_id_fieldheadercolumn}
-	{BEGIN ativ_id_fieldheader}
-	<SPAN {$ativ_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id">
-	{$label tb_categorias_x_atividades ativ_id }	{$arrow_icon_ativ_id}
+		{BEGIN inclu_dt_fieldheadercolumn}
+	{BEGIN inclu_dt_fieldheader}
+	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	{$label tb_categorias_x_atividades inclu_dt }	{$arrow_icon_inclu_dt}
 	</SPAN>
-	{END ativ_id_fieldheader}
-{END ativ_id_fieldheadercolumn}
+	{END inclu_dt_fieldheader}
+{END inclu_dt_fieldheadercolumn}
 
 	
 	</th>
@@ -722,7 +822,7 @@
 	 
 		{BEGIN inclu_login_fieldheadercolumn}
 	{BEGIN inclu_login_fieldheader}
-	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
+	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
 	{$label tb_categorias_x_atividades inclu_login }	{$arrow_icon_inclu_login}
 	</SPAN>
 	{END inclu_login_fieldheader}
@@ -731,60 +831,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
-				 
-					{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_dt_class}
-			"
-
-			data-field="inclu_dt"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_dt_fieldheadercolumn}
-	{BEGIN inclu_dt_fieldheader}
-	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
-	{$label tb_categorias_x_atividades inclu_dt }	{$arrow_icon_inclu_dt}
-	</SPAN>
-	{END inclu_dt_fieldheader}
-{END inclu_dt_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-				 
-					{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cate_nm_class}
-			"
-
-			data-field="cate_nm"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cate_nm_fieldheadercolumn}
-	{BEGIN cate_nm_fieldheader}
-	<SPAN {$cate_nm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cate_nm">
-	{$label tb_categorias_x_atividades cate_nm }	{$arrow_icon_cate_nm}
-	</SPAN>
-	{END cate_nm_fieldheader}
-{END cate_nm_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
 							</tr>
 					 
 					 
@@ -814,17 +860,6 @@
 	
 	>
 
-	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="tb_categorias_x_atividades_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
@@ -879,35 +914,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$caat_id_class}
-			"
-
-			data-field="caat_id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN caat_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="caat_id" data-default-width >
-{$caat_id_value}
-</span>
-{END caat_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$cate_id_class}
 			"
 
 			data-field="cate_id"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -917,12 +929,12 @@
 </span>
 {END cate_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 				 
-					{BEGIN cellblock_grid_cell_field2}
+					{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$ativ_id_class}
@@ -930,7 +942,7 @@
 
 			data-field="ativ_id"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -939,6 +951,29 @@
 {$ativ_id_value}
 </span>
 {END ativ_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_dt_class}
+			"
+
+			data-field="inclu_dt"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_dt_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
+{$inclu_dt_value}
+</span>
+{END inclu_dt_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 				 
@@ -964,52 +999,6 @@
 {END inclu_login_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_dt_class}
-			"
-
-			data-field="inclu_dt"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_dt_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
-{$inclu_dt_value}
-</span>
-{END inclu_dt_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cate_nm_class}
-			"
-
-			data-field="cate_nm"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cate_nm_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cate_nm" data-default-width >
-{$cate_nm_value}
-</span>
-{END cate_nm_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
 							</tr>
 					 
 					
@@ -1121,38 +1110,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-				 
-					{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_categorias_x_atividades_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
-				 
-					{BEGIN cellblock_grid_footcell_field5}
-	<td
-	
-	{$cell_grid_footcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_categorias_x_atividades_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field5}
 							</tr>
 					
 					</tfoot>

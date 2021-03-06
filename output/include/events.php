@@ -26,6 +26,10 @@ class class_GlobalEvents extends eventsBase
 
 
 
+		$this->events["AfterSuccessfulRegistration"]=true;
+
+		$this->events["BeforeProcessRegister"]=true;
+
 
 //	onscreen events
 		$this->events["tb_atividade_snippet"] = true;
@@ -123,6 +127,112 @@ DB::Update("tb_usuarios", $wlDadoAlterar, $wlChaves);
 
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After successful registration
+function AfterSuccessfulRegistration(&$userdata, &$pageObject)
+{
+
+		
+// Rene: Tenta enviar um email apos o cadastramento do usuario
+// **********  Send simple email  ************
+$email="reneluizbr@gmail.com";
+$from="admin@gtdtasks.com";
+$msg="Foi cadastrado um novo usuário:\nSistema GTDTasks.";
+$subject="Cadastramento de novo usuário";
+$attachments = array();
+
+// Rene:  Incluir dados iniciais do cliente (categorias, lista_atividades, atividades, categorias_x_atividades, status_atividades)
+$wlNovo_usua_id = $userdata["usua_id"];
+$wlNovo_usua_email = $userdata["usua_email"];
+//print_r($userdata);
+//   retornou os campo da tela/página (Não tem o ID do usuário na pagina, recuperar pelo email):
+//       Array ( [usua_username] => rene18 [usua_senha] => rene18 [usua_email] => rene18@gmail.com )
+fctCargaInicialUsuarioIncluido($wlNovo_usua_email);
+
+// Rene: Envio de email apos o cadastramento de usuario... 
+// TODO: Ativar depois que estiver online no servidor
+// Attachments description. The 'path' is required. Others parameters are optional.
+// $attachments =  array(
+//		array('path' => getabspath('files/1.jpg')),
+//		array('path' => getabspath('files/2.jpg'), 'name' => 'image.jpg', 'encoding' => 'base64', 'type' => 'application/octet-stream')) ;
+
+$ret=runner_mail(array('to' => $email, 'subject' => $subject, 'body' => $msg, 'from'=>$from, 'attachments' => $attachments));
+// You can manually overwrite SMTP settings
+// $ret=runner_mail(array('to' => $email, 'subject' => $subject, 'body' => $msg, 'from'=>$from, 'attachments' => $attachments,
+//     'host' => 'somehost', 'port' => 25, 'username' => 'smtpUserName', 'password' => 'password'));
+if(!$ret["mailed"]) {
+	// Rene: Desabilitar exibição de erro caso ocorra falha no envio do email
+	// echo "<strong>Não foi possível o envio do email:<br></strong>";
+	// echo $ret["message"];
+}
+
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function AfterSuccessfulRegistration
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+				// Register page: Before process
+function BeforeProcessRegister(&$pageObject)
+{
+
+		
+// Rene: Configuração do Timezone para Brasil, sem horario de verao
+date_default_timezone_set('america/Recife');
+// ... mas na página de Registro não funciona... ainda registra a hora +3
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeProcessRegister
+
 		
 		
 		

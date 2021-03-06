@@ -1,0 +1,15 @@
+Notificación de registro
+
+Usuario registrado en %url%
+
+ID: %usua_id_value%
+Identificación del cliente: %clie_id_value%
+Domi Status: %usua_domi_status_value%
+Wl Situacao: %wlSituacao_value%
+Correo electrónico: %usua_email_value%
+Nombre de usuario: %usua_username_value%
+Último acceso: %usua_login_ulti_value%
+Inclu Login: %inclu_login_value%
+Incluido en: %inclu_dt_value%
+Alter Login: %alter_login_value%
+Cambiado en: %alter_dt_value%

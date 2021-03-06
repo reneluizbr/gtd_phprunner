@@ -64,6 +64,7 @@ class tDAL
 	var $tblgtd_20200511_db3__tb_planos_valores;
 	var $tblgtd_20200511_db3__tb_status_atividades;
 	var $tblgtd_20200511_db3__tb_usuarios;
+	var $tblgtd_20200511_db3__vw_tarefas_categorias;
 	var $lstTables;
 	var $Table = array();
 
@@ -88,6 +89,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "tb_planos_valores", "varname" => "gtd_20200511_db3__tb_planos_valores", "altvarname" => "tb_planos_valores", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_status_atividades", "varname" => "gtd_20200511_db3__tb_status_atividades", "altvarname" => "tb_status_atividades", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_usuarios", "varname" => "gtd_20200511_db3__tb_usuarios", "altvarname" => "tb_usuarios", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "vw_tarefas_categorias", "varname" => "gtd_20200511_db3__vw_tarefas_categorias", "altvarname" => "vw_tarefas_categorias", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 	}
 
 	/**

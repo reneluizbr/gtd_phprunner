@@ -212,7 +212,7 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".geocodingEnabled"] = false;
 
 
 // chart settings
-$tdatagr_fico_tarefas_criadas_por_usu_rio[".chartType"] = "2DBar";
+$tdatagr_fico_tarefas_criadas_por_usu_rio[".chartType"] = "2DColumn";
 // end of chart settings
 
 
@@ -229,9 +229,9 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".strOrderBy"] = $tstrOrderBy;
 
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".orderindexes"] = array();
 
-$tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlHead"] = "SELECT \"at\".clie_id,  \"at\".inclu_login,  COUNT(\"at\".ativ_id) AS qtde";
+$tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlHead"] = "SELECT clie_id,  inclu_login,  COUNT(ativ_id) AS qtde";
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlFrom"] = "FROM tb_atividade AS \"at\"";
-$tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlWhereExpr"] = "(1=1)";
+$tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlWhereExpr"] = "(1 =1)";
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -321,7 +321,7 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".hideMobileList"] = array();
 		$fdata["strField"] = "clie_id";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "\"at\".clie_id";
+	$fdata["FullName"] = "clie_id";
 
 	
 	
@@ -483,7 +483,7 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".hideMobileList"] = array();
 		$fdata["strField"] = "inclu_login";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "\"at\".inclu_login";
+	$fdata["FullName"] = "inclu_login";
 
 	
 	
@@ -617,7 +617,7 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".hideMobileList"] = array();
 		$fdata["strField"] = "qtde";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "COUNT(\"at\".ativ_id)";
+	$fdata["FullName"] = "COUNT(ativ_id)";
 
 	
 	
@@ -739,7 +739,7 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".hideMobileList"] = array();
 			<attr value="0">Gráfico Tarefas criadas por Usuário</attr>
 		</attr>
 		<attr value="chart_type">
-			<attr value="type">2d_bar</attr>
+			<attr value="type">2d_column</attr>
 		</attr>
 
 		<attr value="parameters">';
@@ -833,15 +833,15 @@ function createSqlQuery_gr_fico_tarefas_criadas_por_usu_rio()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "\"at\".clie_id,  \"at\".inclu_login,  COUNT(\"at\".ativ_id) AS qtde";
+$proto0["m_strFieldList"] = "clie_id,  inclu_login,  COUNT(ativ_id) AS qtde";
 $proto0["m_strFrom"] = "FROM tb_atividade AS \"at\"";
-$proto0["m_strWhere"] = "(1=1)";
+$proto0["m_strWhere"] = "(1 =1)";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "1=1";
+$proto2["m_sql"] = "1 =1";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLNonParsed(array(
 	"m_sql" => "1"
@@ -880,7 +880,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "Gráfico Tarefas criadas por Usuário"
 ));
 
-$proto6["m_sql"] = "\"at\".clie_id";
+$proto6["m_sql"] = "clie_id";
 $proto6["m_srcTableName"] = "Gráfico Tarefas criadas por Usuário";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -894,7 +894,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "Gráfico Tarefas criadas por Usuário"
 ));
 
-$proto8["m_sql"] = "\"at\".inclu_login";
+$proto8["m_sql"] = "inclu_login";
 $proto8["m_srcTableName"] = "Gráfico Tarefas criadas por Usuário";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -915,7 +915,7 @@ $proto11["m_arguments"][]=$obj;
 $proto11["m_strFunctionName"] = "COUNT";
 $obj = new SQLFunctionCall($proto11);
 
-$proto10["m_sql"] = "COUNT(\"at\".ativ_id)";
+$proto10["m_sql"] = "COUNT(ativ_id)";
 $proto10["m_srcTableName"] = "Gráfico Tarefas criadas por Usuário";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "qtde";
@@ -940,6 +940,9 @@ $proto14["m_columns"][] = "ativ_prioridade";
 $proto14["m_columns"][] = "ativ_concluida";
 $proto14["m_columns"][] = "ativ_dt_ini";
 $proto14["m_columns"][] = "ativ_dt_fim";
+$proto14["m_columns"][] = "ativ_domi_unid_tempo";
+$proto14["m_columns"][] = "ativ_tempo_estimado";
+$proto14["m_columns"][] = "ativ_tempo_real";
 $proto14["m_columns"][] = "inclu_login";
 $proto14["m_columns"][] = "inclu_dt";
 $proto14["m_columns"][] = "alter_login";

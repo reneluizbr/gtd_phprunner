@@ -3,14 +3,14 @@
 		"path": "$ROOTPATH$\\_queries\\gtd_202102.sql",
 		"bookmarks": [
 			{
-				"line": 82,
-				"column": 20,
-				"label": "clie_domi_status"
+				"line": 76,
+				"column": 7,
+				"label": "TABLE tb_clientes"
 			},
 			{
-				"line": 203,
-				"column": 16,
-				"label": "stat_fl_pago"
+				"line": 325,
+				"column": 33,
+				"label": "VIEW vw_tarefas_categorias"
 			}
 		]
 	},
@@ -18,19 +18,39 @@
 		"path": "$ROOTPATH$\\_queries\\gtd_202102_dados.sql",
 		"bookmarks": [
 			{
-				"line": 35,
+				"line": 36,
 				"column": 10,
 				"label": "INTO tb_usuarios"
 			},
 			{
-				"line": 37,
-				"column": 39,
-				"label": "root@email_fake.com"
+				"line": 105,
+				"column": 24,
+				"label": "INTO tb_atividade"
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Rene\\AppData\\Roaming\\Code\\User\\settings.json",
+		"bookmarks": [
+			{
+				"line": 130,
+				"column": 42,
+				"label": "fontes modernas"
 			},
 			{
-				"line": 47,
-				"column": 10,
-				"label": "INTO tb_dominios"
+				"line": 1944,
+				"column": 20,
+				"label": "\"codemap.sql\": ["
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\output\\include\\appsettings.php",
+		"bookmarks": [
+			{
+				"line": 1,
+				"column": 0,
+				"label": "$dDebug = false;"
 			}
 		]
 	}

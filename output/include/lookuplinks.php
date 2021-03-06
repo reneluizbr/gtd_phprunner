@@ -68,6 +68,20 @@ function InitLookupLinks()
 			$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_prioridade"] = array();
 		}
 		$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_prioridade"]["edit"] = array("table" => "tb_atividade", "field" => "ativ_prioridade", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_dominios"] ) ) {
+			$lookupTableLinks["tb_dominios"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_dominios"]["tb_atividade.ativ_domi_unid_tempo"] )) {
+			$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_domi_unid_tempo"] = array();
+		}
+		$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_domi_unid_tempo"]["edit"] = array("table" => "tb_atividade", "field" => "ativ_domi_unid_tempo", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_dominios"] ) ) {
+			$lookupTableLinks["tb_dominios"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_dominios"]["tb_clientes.clie_domi_status"] )) {
+			$lookupTableLinks["tb_dominios"]["tb_clientes.clie_domi_status"] = array();
+		}
+		$lookupTableLinks["tb_dominios"]["tb_clientes.clie_domi_status"]["edit"] = array("table" => "tb_clientes", "field" => "clie_domi_status", "page" => "edit");
 		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
 			$lookupTableLinks["tb_clientes"] = array();
 		}
@@ -89,6 +103,20 @@ function InitLookupLinks()
 			$lookupTableLinks["tb_clientes"]["tb_lista_atividades.clie_id"] = array();
 		}
 		$lookupTableLinks["tb_clientes"]["tb_lista_atividades.clie_id"]["edit"] = array("table" => "tb_lista_atividades", "field" => "clie_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_dominios"] ) ) {
+			$lookupTableLinks["tb_dominios"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_dominios"]["tb_planos.plan_domi_tipo"] )) {
+			$lookupTableLinks["tb_dominios"]["tb_planos.plan_domi_tipo"] = array();
+		}
+		$lookupTableLinks["tb_dominios"]["tb_planos.plan_domi_tipo"]["edit"] = array("table" => "tb_planos", "field" => "plan_domi_tipo", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_planos"] ) ) {
+			$lookupTableLinks["tb_planos"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_planos"]["tb_planos_valores.plan_id"] )) {
+			$lookupTableLinks["tb_planos"]["tb_planos_valores.plan_id"] = array();
+		}
+		$lookupTableLinks["tb_planos"]["tb_planos_valores.plan_id"]["edit"] = array("table" => "tb_planos_valores", "field" => "plan_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
 			$lookupTableLinks["tb_clientes"] = array();
 		}
@@ -166,6 +194,13 @@ function InitLookupLinks()
 			$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_criadas_por_usu_rio.clie_id"] = array();
 		}
 		$lookupTableLinks["tb_clientes"]["gr_fico_tarefas_criadas_por_usu_rio.clie_id"]["search"] = array("table" => "Gráfico Tarefas criadas por Usuário", "field" => "clie_id", "page" => "search");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["tb_categorias.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["tb_categorias.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["tb_categorias.clie_id"]["edit"] = array("table" => "tb_categorias", "field" => "clie_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["tb_categorias"] ) ) {
 			$lookupTableLinks["tb_categorias"] = array();
 		}

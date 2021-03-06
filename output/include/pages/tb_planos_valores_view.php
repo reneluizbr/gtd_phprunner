@@ -1,5 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'master' => array( 'tb_planos' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'plva_id',
 'plan_id',
 'plva_dt_vigenc_ini',

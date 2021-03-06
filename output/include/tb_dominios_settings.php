@@ -578,7 +578,7 @@ $tdatatb_dominios[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Regular expression");
-				$edata["validateAs"]["regExp"] = "[A-Z_]+";
+				$edata["validateAs"]["regExp"] = "[A-Za-z_]+";
 	$edata["validateAs"]["customMessages"]["RegExp"] = array("message" => "THE_VALUE_IS_INVALID", "messageType" => "CustomID");
 			$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
@@ -609,7 +609,7 @@ $tdatatb_dominios[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 1;
-		$fdata["filterMultiSelect"] = 2;
+		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "domi_id";
 		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
@@ -857,7 +857,7 @@ $tdatatb_dominios[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Regular expression");
-				$edata["validateAs"]["regExp"] = "[_A-Z]+";
+				$edata["validateAs"]["regExp"] = "[A-Za-z_]+";
 	$edata["validateAs"]["customMessages"]["RegExp"] = array("message" => "THE_VALUE_IS_INVALID", "messageType" => "CustomID");
 			$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		

@@ -3097,6 +3097,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "tb_categorias" ] = "tb_categorias";
 	$projectEntities[ "tb_categorias_x_atividades" ] = array( "url" => "tb_categorias_x_atividades", "type" => 0 );
 	$projectEntitiesReverse[ "tb_categorias_x_atividades" ] = "tb_categorias_x_atividades";
+	$projectEntities[ "vw_tarefas_categorias" ] = array( "url" => "vw_tarefas_categorias", "type" => 0 );
+	$projectEntitiesReverse[ "vw_tarefas_categorias" ] = "vw_tarefas_categorias";
 }
 
 function findTable( $table ) {

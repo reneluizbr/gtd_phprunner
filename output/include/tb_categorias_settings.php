@@ -5,7 +5,7 @@
 $tdatatb_categorias = array();
 $tdatatb_categorias[".searchableFields"] = array();
 $tdatatb_categorias[".ShortName"] = "tb_categorias";
-$tdatatb_categorias[".OwnerID"] = "";
+$tdatatb_categorias[".OwnerID"] = "clie_id";
 $tdatatb_categorias[".OriginalTable"] = "tb_categorias";
 
 
@@ -57,25 +57,25 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"] = array();
 	$placeHolderstb_categorias["Portuguese(Brazil)"] = array();
 	$pageTitlestb_categorias["Portuguese(Brazil)"] = array();
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["cate_id"] = "Cate Id";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["cate_id"] = "Id";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["cate_id"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["cate_id"] = "";
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["clie_id"] = "Clie Id";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["clie_id"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["clie_id"] = "";
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["cate_nm"] = "Cate Nm";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["cate_nm"] = "Categoria";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["cate_nm"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["cate_nm"] = "";
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["inclu_login"] = "Incluído por";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["inclu_dt"] = "Inclu Dt";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["inclu_dt"] = "Incluído em";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["inclu_dt"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["inclu_dt"] = "";
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["alter_login"] = "Alterado por";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["alter_login"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["alter_login"] = "";
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "Alter Dt";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "";
 	if (count($fieldToolTipstb_categorias["Portuguese(Brazil)"]))
@@ -118,9 +118,9 @@ if(mlang_getcurrentlang()=="Spanish")
 
 
 $tdatatb_categorias[".shortTableName"] = "tb_categorias";
-$tdatatb_categorias[".nSecOptions"] = 0;
+$tdatatb_categorias[".nSecOptions"] = 1;
 
-$tdatatb_categorias[".mainTableOwnerID"] = "";
+$tdatatb_categorias[".mainTableOwnerID"] = "clie_id";
 $tdatatb_categorias[".entityType"] = 0;
 
 $tdatatb_categorias[".strOriginalTableName"] = "tb_categorias";
@@ -276,6 +276,17 @@ $tdatatb_categorias[".sqlFrom"] = "FROM tb_categorias";
 $tdatatb_categorias[".sqlWhereExpr"] = "";
 $tdatatb_categorias[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatatb_categorias[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -510,7 +521,7 @@ $tdatatb_categorias[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -520,6 +531,34 @@ $tdatatb_categorias[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tb_clientes";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "clie_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "clie_nm_reduzido";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "clie_nm_reduzido";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -536,17 +575,14 @@ $tdatatb_categorias[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -567,7 +603,7 @@ $tdatatb_categorias[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -889,7 +925,7 @@ $tdatatb_categorias[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -917,8 +953,9 @@ $tdatatb_categorias[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -938,7 +975,7 @@ $tdatatb_categorias[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1158,7 +1195,7 @@ $tdatatb_categorias[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1186,8 +1223,9 @@ $tdatatb_categorias[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1207,7 +1245,7 @@ $tdatatb_categorias[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1277,6 +1315,35 @@ $page_titles["tb_categorias"] = &$pageTitlestb_categorias;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["tb_categorias"] = array();
+//	tb_categorias_x_atividades
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tb_categorias_x_atividades";
+		$detailsParam["dOriginalTable"] = "tb_categorias_x_atividades";
+
+
+
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tb_categorias_x_atividades";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_categorias_x_atividades");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["tb_categorias"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tb_categorias"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tb_categorias"][$dIndex]["masterKeys"][]="cate_id";
+
+				$detailsTablesData["tb_categorias"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tb_categorias"][$dIndex]["detailKeys"][]="cate_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["tb_categorias"] = array();
@@ -1495,7 +1562,8 @@ $queryData_tb_categorias = createSqlQuery_tb_categorias();
 
 $tdatatb_categorias[".sqlquery"] = $queryData_tb_categorias;
 
-$tableEvents["tb_categorias"] = new eventsBase;
-$tdatatb_categorias[".hasEvents"] = false;
+include_once(getabspath("include/tb_categorias_events.php"));
+$tableEvents["tb_categorias"] = new eventclass_tb_categorias;
+$tdatatb_categorias[".hasEvents"] = true;
 
 ?>

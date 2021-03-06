@@ -11,6 +11,9 @@ $dalTabletb_atividade["ativ_prioridade"] = array("type"=>202,"varname"=>"ativ_pr
 $dalTabletb_atividade["ativ_concluida"] = array("type"=>3,"varname"=>"ativ_concluida", "name" => "ativ_concluida");
 $dalTabletb_atividade["ativ_dt_ini"] = array("type"=>135,"varname"=>"ativ_dt_ini", "name" => "ativ_dt_ini");
 $dalTabletb_atividade["ativ_dt_fim"] = array("type"=>135,"varname"=>"ativ_dt_fim", "name" => "ativ_dt_fim");
+$dalTabletb_atividade["ativ_domi_unid_tempo"] = array("type"=>202,"varname"=>"ativ_domi_unid_tempo", "name" => "ativ_domi_unid_tempo");
+$dalTabletb_atividade["ativ_tempo_estimado"] = array("type"=>3,"varname"=>"ativ_tempo_estimado", "name" => "ativ_tempo_estimado");
+$dalTabletb_atividade["ativ_tempo_real"] = array("type"=>3,"varname"=>"ativ_tempo_real", "name" => "ativ_tempo_real");
 $dalTabletb_atividade["inclu_login"] = array("type"=>202,"varname"=>"inclu_login", "name" => "inclu_login");
 $dalTabletb_atividade["inclu_dt"] = array("type"=>135,"varname"=>"inclu_dt", "name" => "inclu_dt");
 $dalTabletb_atividade["alter_login"] = array("type"=>202,"varname"=>"alter_login", "name" => "alter_login");

@@ -9,10 +9,10 @@ $tdatatb_categorias_x_atividades[".OwnerID"] = "";
 $tdatatb_categorias_x_atividades[".OriginalTable"] = "tb_categorias_x_atividades";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_categorias_x_atividades[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"lista_simples\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_categorias_x_atividades[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"lista_simples\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_categorias_x_atividades[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"lista_simples\",\"lista_simples_tarefas\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatatb_categorias_x_atividades[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"lista_simples\",\"lista_simples_tarefas\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatatb_categorias_x_atividades[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -33,9 +33,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_categorias_x_atividades["English"]["cate_id"] = "Cate Id";
 	$fieldToolTipstb_categorias_x_atividades["English"]["cate_id"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["cate_id"] = "";
-	$fieldLabelstb_categorias_x_atividades["English"]["cate_nm"] = "Cate Nm";
-	$fieldToolTipstb_categorias_x_atividades["English"]["cate_nm"] = "";
-	$placeHolderstb_categorias_x_atividades["English"]["cate_nm"] = "";
 	$fieldLabelstb_categorias_x_atividades["English"]["ativ_id"] = "Ativ Id";
 	$fieldToolTipstb_categorias_x_atividades["English"]["ativ_id"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["ativ_id"] = "";
@@ -63,15 +60,12 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["ativ_id"] = "Atividade";
 	$fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"]["ativ_id"] = "";
 	$placeHolderstb_categorias_x_atividades["Portuguese(Brazil)"]["ativ_id"] = "";
-	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_login"] = "por";
 	$fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_login"] = "";
 	$placeHolderstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_login"] = "";
-	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_dt"] = "Inclu Dt";
+	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_dt"] = "Incluído em";
 	$fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_dt"] = "";
 	$placeHolderstb_categorias_x_atividades["Portuguese(Brazil)"]["inclu_dt"] = "";
-	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["cate_nm"] = "Cate Nm";
-	$fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"]["cate_nm"] = "";
-	$placeHolderstb_categorias_x_atividades["Portuguese(Brazil)"]["cate_nm"] = "";
 	if (count($fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"]))
 		$tdatatb_categorias_x_atividades[".isUseToolTips"] = true;
 }
@@ -87,9 +81,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstb_categorias_x_atividades["Spanish"]["cate_id"] = "Cate Id";
 	$fieldToolTipstb_categorias_x_atividades["Spanish"]["cate_id"] = "";
 	$placeHolderstb_categorias_x_atividades["Spanish"]["cate_id"] = "";
-	$fieldLabelstb_categorias_x_atividades["Spanish"]["cate_nm"] = "Cate Nm";
-	$fieldToolTipstb_categorias_x_atividades["Spanish"]["cate_nm"] = "";
-	$placeHolderstb_categorias_x_atividades["Spanish"]["cate_nm"] = "";
 	$fieldLabelstb_categorias_x_atividades["Spanish"]["ativ_id"] = "Ativ Id";
 	$fieldToolTipstb_categorias_x_atividades["Spanish"]["ativ_id"] = "";
 	$placeHolderstb_categorias_x_atividades["Spanish"]["ativ_id"] = "";
@@ -201,7 +192,7 @@ $tdatatb_categorias_x_atividades[".rowHighlite"] = true;
 
 
 
-																		
+																											
 
 $tdatatb_categorias_x_atividades[".ajaxCodeSnippetAdded"] = false;
 
@@ -223,7 +214,6 @@ $tdatatb_categorias_x_atividades[".requiredSearchFields"] = array();
 $tdatatb_categorias_x_atividades[".googleLikeFields"] = array();
 $tdatatb_categorias_x_atividades[".googleLikeFields"][] = "caat_id";
 $tdatatb_categorias_x_atividades[".googleLikeFields"][] = "cate_id";
-$tdatatb_categorias_x_atividades[".googleLikeFields"][] = "cate_nm";
 $tdatatb_categorias_x_atividades[".googleLikeFields"][] = "ativ_id";
 $tdatatb_categorias_x_atividades[".googleLikeFields"][] = "inclu_login";
 $tdatatb_categorias_x_atividades[".googleLikeFields"][] = "inclu_dt";
@@ -261,8 +251,8 @@ $tdatatb_categorias_x_atividades[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatb_categorias_x_atividades[".orderindexes"] = array();
 
-$tdatatb_categorias_x_atividades[".sqlHead"] = "SELECT caat_id,  	ca.cate_id,  	ct.cate_nm,  	ativ_id,  	ca.inclu_login,  	ca.inclu_dt";
-$tdatatb_categorias_x_atividades[".sqlFrom"] = "FROM tb_categorias_x_atividades ca  INNER JOIN tb_categorias ct ON ct.cate_id = ca.cate_id";
+$tdatatb_categorias_x_atividades[".sqlHead"] = "SELECT caat_id,  	cate_id,  	ativ_id,  	inclu_login,  	inclu_dt";
+$tdatatb_categorias_x_atividades[".sqlFrom"] = "FROM tb_categorias_x_atividades";
 $tdatatb_categorias_x_atividades[".sqlWhereExpr"] = "";
 $tdatatb_categorias_x_atividades[".sqlTail"] = "";
 
@@ -465,7 +455,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 		$fdata["strField"] = "cate_id";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ca.cate_id";
+	$fdata["FullName"] = "cate_id";
 
 	
 	
@@ -515,9 +505,10 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 	$edata["LookupTable"] = "tb_categorias";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 4;
 
-	
+		$edata["HorizontalLookup"] = true;
+
 		
 	$edata["LinkField"] = "cate_id";
 	$edata["LinkFieldType"] = 0;
@@ -530,18 +521,17 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["AllowToAdd"] = true;
+		
 	
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -562,8 +552,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+							
 	
 	//	End validation
 
@@ -590,9 +579,10 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "caat_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -609,144 +599,10 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 
 	$tdatatb_categorias_x_atividades["cate_id"] = $fdata;
 		$tdatatb_categorias_x_atividades[".searchableFields"][] = "cate_id";
-//	cate_nm
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 3;
-	$fdata["strName"] = "cate_nm";
-	$fdata["GoodName"] = "cate_nm";
-	$fdata["ownerTable"] = "tb_categorias";
-	$fdata["Label"] = GetFieldLabel("tb_categorias_x_atividades","cate_nm");
-	$fdata["FieldType"] = 202;
-
-	
-	
-	
-			
-
-		$fdata["strField"] = "cate_nm";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ct.cate_nm";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatatb_categorias_x_atividades["cate_nm"] = $fdata;
-		$tdatatb_categorias_x_atividades[".searchableFields"][] = "cate_nm";
 //	ativ_id
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "ativ_id";
 	$fdata["GoodName"] = "ativ_id";
 	$fdata["ownerTable"] = "tb_categorias_x_atividades";
@@ -909,7 +765,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 //	inclu_login
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "inclu_login";
 	$fdata["GoodName"] = "inclu_login";
 	$fdata["ownerTable"] = "tb_categorias_x_atividades";
@@ -924,7 +780,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 		$fdata["strField"] = "inclu_login";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ca.inclu_login";
+	$fdata["FullName"] = "inclu_login";
 
 	
 	
@@ -1022,8 +878,9 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "caat_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1043,7 +900,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 //	inclu_dt
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "inclu_dt";
 	$fdata["GoodName"] = "inclu_dt";
 	$fdata["ownerTable"] = "tb_categorias_x_atividades";
@@ -1058,7 +915,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 		$fdata["strField"] = "inclu_dt";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ca.inclu_dt";
+	$fdata["FullName"] = "inclu_dt";
 
 	
 	
@@ -1067,7 +924,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1095,8 +952,9 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1116,7 +974,7 @@ $tdatatb_categorias_x_atividades[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 20;
 	$edata["LastYearFactor"] = 50;
 
@@ -1208,6 +1066,22 @@ $masterTablesData["tb_categorias_x_atividades"] = array();
 				$masterTablesData["tb_categorias_x_atividades"][0]["detailKeys"] = array();
 	$masterTablesData["tb_categorias_x_atividades"][0]["detailKeys"][]="ativ_id";
 		
+	
+				$strOriginalDetailsTable="tb_categorias";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="tb_categorias";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "tb_categorias";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["tb_categorias_x_atividades"][1] = $masterParams;
+				$masterTablesData["tb_categorias_x_atividades"][1]["masterKeys"] = array();
+	$masterTablesData["tb_categorias_x_atividades"][1]["masterKeys"][]="cate_id";
+				$masterTablesData["tb_categorias_x_atividades"][1]["detailKeys"] = array();
+	$masterTablesData["tb_categorias_x_atividades"][1]["detailKeys"][]="cate_id";
+		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1226,8 +1100,8 @@ function createSqlQuery_tb_categorias_x_atividades()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "caat_id,  	ca.cate_id,  	ct.cate_nm,  	ativ_id,  	ca.inclu_login,  	ca.inclu_dt";
-$proto0["m_strFrom"] = "FROM tb_categorias_x_atividades ca  INNER JOIN tb_categorias ct ON ct.cate_id = ca.cate_id";
+$proto0["m_strFieldList"] = "caat_id,  	cate_id,  	ativ_id,  	inclu_login,  	inclu_dt";
+$proto0["m_strFrom"] = "FROM tb_categorias_x_atividades";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1269,7 +1143,7 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "caat_id",
-	"m_strTable" => "ca",
+	"m_strTable" => "tb_categorias_x_atividades",
 	"m_srcTableName" => "tb_categorias_x_atividades"
 ));
 
@@ -1283,11 +1157,11 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "cate_id",
-	"m_strTable" => "ca",
+	"m_strTable" => "tb_categorias_x_atividades",
 	"m_srcTableName" => "tb_categorias_x_atividades"
 ));
 
-$proto8["m_sql"] = "ca.cate_id";
+$proto8["m_sql"] = "cate_id";
 $proto8["m_srcTableName"] = "tb_categorias_x_atividades";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1296,12 +1170,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "cate_nm",
-	"m_strTable" => "ct",
+	"m_strName" => "ativ_id",
+	"m_strTable" => "tb_categorias_x_atividades",
 	"m_srcTableName" => "tb_categorias_x_atividades"
 ));
 
-$proto10["m_sql"] = "ct.cate_nm";
+$proto10["m_sql"] = "ativ_id";
 $proto10["m_srcTableName"] = "tb_categorias_x_atividades";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1310,12 +1184,12 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ativ_id",
-	"m_strTable" => "ca",
+	"m_strName" => "inclu_login",
+	"m_strTable" => "tb_categorias_x_atividades",
 	"m_srcTableName" => "tb_categorias_x_atividades"
 ));
 
-$proto12["m_sql"] = "ativ_id";
+$proto12["m_sql"] = "inclu_login";
 $proto12["m_srcTableName"] = "tb_categorias_x_atividades";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1324,107 +1198,53 @@ $obj = new SQLFieldListItem($proto12);
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "inclu_login",
-	"m_strTable" => "ca",
+	"m_strName" => "inclu_dt",
+	"m_strTable" => "tb_categorias_x_atividades",
 	"m_srcTableName" => "tb_categorias_x_atividades"
 ));
 
-$proto14["m_sql"] = "ca.inclu_login";
+$proto14["m_sql"] = "inclu_dt";
 $proto14["m_srcTableName"] = "tb_categorias_x_atividades";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
 $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto16=array();
-			$obj = new SQLField(array(
-	"m_strName" => "inclu_dt",
-	"m_strTable" => "ca",
-	"m_srcTableName" => "tb_categorias_x_atividades"
-));
-
-$proto16["m_sql"] = "ca.inclu_dt";
-$proto16["m_srcTableName"] = "tb_categorias_x_atividades";
-$proto16["m_expr"]=$obj;
-$proto16["m_alias"] = "";
-$obj = new SQLFieldListItem($proto16);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto18=array();
-$proto18["m_link"] = "SQLL_MAIN";
-			$proto19=array();
-$proto19["m_strName"] = "tb_categorias_x_atividades";
-$proto19["m_srcTableName"] = "tb_categorias_x_atividades";
-$proto19["m_columns"] = array();
-$proto19["m_columns"][] = "caat_id";
-$proto19["m_columns"][] = "cate_id";
-$proto19["m_columns"][] = "ativ_id";
-$proto19["m_columns"][] = "inclu_login";
-$proto19["m_columns"][] = "inclu_dt";
-$obj = new SQLTable($proto19);
+												$proto16=array();
+$proto16["m_link"] = "SQLL_MAIN";
+			$proto17=array();
+$proto17["m_strName"] = "tb_categorias_x_atividades";
+$proto17["m_srcTableName"] = "tb_categorias_x_atividades";
+$proto17["m_columns"] = array();
+$proto17["m_columns"][] = "caat_id";
+$proto17["m_columns"][] = "cate_id";
+$proto17["m_columns"][] = "ativ_id";
+$proto17["m_columns"][] = "inclu_login";
+$proto17["m_columns"][] = "inclu_dt";
+$obj = new SQLTable($proto17);
 
-$proto18["m_table"] = $obj;
-$proto18["m_sql"] = "tb_categorias_x_atividades ca";
-$proto18["m_alias"] = "ca";
-$proto18["m_srcTableName"] = "tb_categorias_x_atividades";
-$proto20=array();
-$proto20["m_sql"] = "";
-$proto20["m_uniontype"] = "SQLL_UNKNOWN";
+$proto16["m_table"] = $obj;
+$proto16["m_sql"] = "tb_categorias_x_atividades";
+$proto16["m_alias"] = "";
+$proto16["m_srcTableName"] = "tb_categorias_x_atividades";
+$proto18=array();
+$proto18["m_sql"] = "";
+$proto18["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto20["m_column"]=$obj;
-$proto20["m_contained"] = array();
-$proto20["m_strCase"] = "";
-$proto20["m_havingmode"] = false;
-$proto20["m_inBrackets"] = false;
-$proto20["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto20);
+$proto18["m_column"]=$obj;
+$proto18["m_contained"] = array();
+$proto18["m_strCase"] = "";
+$proto18["m_havingmode"] = false;
+$proto18["m_inBrackets"] = false;
+$proto18["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto18);
 
-$proto18["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto18);
-
-$proto0["m_fromlist"][]=$obj;
-												$proto22=array();
-$proto22["m_link"] = "SQLL_INNERJOIN";
-			$proto23=array();
-$proto23["m_strName"] = "tb_categorias";
-$proto23["m_srcTableName"] = "tb_categorias_x_atividades";
-$proto23["m_columns"] = array();
-$proto23["m_columns"][] = "cate_id";
-$proto23["m_columns"][] = "clie_id";
-$proto23["m_columns"][] = "cate_nm";
-$proto23["m_columns"][] = "inclu_login";
-$proto23["m_columns"][] = "inclu_dt";
-$proto23["m_columns"][] = "alter_login";
-$proto23["m_columns"][] = "alter_dt";
-$obj = new SQLTable($proto23);
-
-$proto22["m_table"] = $obj;
-$proto22["m_sql"] = "INNER JOIN tb_categorias ct ON ct.cate_id = ca.cate_id";
-$proto22["m_alias"] = "ct";
-$proto22["m_srcTableName"] = "tb_categorias_x_atividades";
-$proto24=array();
-$proto24["m_sql"] = "ct.cate_id = ca.cate_id";
-$proto24["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "cate_id",
-	"m_strTable" => "ct",
-	"m_srcTableName" => "tb_categorias_x_atividades"
-));
-
-$proto24["m_column"]=$obj;
-$proto24["m_contained"] = array();
-$proto24["m_strCase"] = "= ca.cate_id";
-$proto24["m_havingmode"] = false;
-$proto24["m_inBrackets"] = false;
-$proto24["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto24);
-
-$proto22["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto22);
+$proto16["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto16);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1440,11 +1260,12 @@ $queryData_tb_categorias_x_atividades = createSqlQuery_tb_categorias_x_atividade
 	
 		;
 
-						
+					
 
 $tdatatb_categorias_x_atividades[".sqlquery"] = $queryData_tb_categorias_x_atividades;
 
-$tableEvents["tb_categorias_x_atividades"] = new eventsBase;
-$tdatatb_categorias_x_atividades[".hasEvents"] = false;
+include_once(getabspath("include/tb_categorias_x_atividades_events.php"));
+$tableEvents["tb_categorias_x_atividades"] = new eventclass_tb_categorias_x_atividades;
+$tdatatb_categorias_x_atividades[".hasEvents"] = true;
 
 ?>

@@ -20,14 +20,59 @@ $pageTitlesdashboard_graficos = array();
 if(mlang_getcurrentlang()=="English")
 {
 	$fieldLabelsdashboard_graficos["English"] = array();
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_clie_id"] = "Gr Fico Tarefas Por Status Clie Id";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_stat_id"] = "Gr Fico Tarefas Por Status Stat Id";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_stat_nm"] = "Gr Fico Tarefas Por Status Stat Nm";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Status_qtde"] = "Gr Fico Tarefas Por Status Qtde";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_clie_id"] = "Gr Fico Tarefas Por Lista Clie Id";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_lista_id"] = "Gr Fico Tarefas Por Lista Lista Id";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_lista_nm"] = "Gr Fico Tarefas Por Lista Lista Nm";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Lista_Qtde"] = "Gr Fico Tarefas Por Lista Qtde";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_clie_id"] = "Gr Fico Tarefas Por Prioridade Clie Id";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_domi_valor"] = "Gr Fico Tarefas Por Prioridade Domi Valor";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_Prioridade"] = "Gr Fico Tarefas Por Prioridade Prioridade";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_por_Prioridade_Qtde"] = "Gr Fico Tarefas Por Prioridade Qtde";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id"] = "Gr Fico Tarefas Criadas Por Usu Rio Clie Id";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login"] = "Gr Fico Tarefas Criadas Por Usu Rio Inclu Login";
+	$fieldLabelsdashboard_graficos["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio_qtde"] = "Gr Fico Tarefas Criadas Por Usu Rio Qtde";
 }
 if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
 	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"] = array();
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_clie_id"] = "Gr Fico Tarefas Por Status Clie Id";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_stat_id"] = "Gr Fico Tarefas Por Status Stat Id";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_stat_nm"] = "Gr Fico Tarefas Por Status Stat Nm";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status_qtde"] = "Gr Fico Tarefas Por Status Qtde";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_clie_id"] = "Gr Fico Tarefas Por Lista Clie Id";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_lista_id"] = "Gr Fico Tarefas Por Lista Lista Id";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_lista_nm"] = "Gr Fico Tarefas Por Lista Lista Nm";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Lista_Qtde"] = "Gr Fico Tarefas Por Lista Qtde";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_clie_id"] = "Gr Fico Tarefas Por Prioridade Clie Id";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_domi_valor"] = "Gr Fico Tarefas Por Prioridade Domi Valor";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_Prioridade"] = "Gr Fico Tarefas Por Prioridade Prioridade";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade_Qtde"] = "Gr Fico Tarefas Por Prioridade Qtde";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id"] = "Gr Fico Tarefas Criadas Por Usu Rio Clie Id";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login"] = "Gr Fico Tarefas Criadas Por Usu Rio Inclu Login";
+	$fieldLabelsdashboard_graficos["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio_qtde"] = "Gr Fico Tarefas Criadas Por Usu Rio Qtde";
 }
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsdashboard_graficos["Spanish"] = array();
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_clie_id"] = "Gr Fico Tarefas Por Status Clie Id";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_stat_id"] = "Gr Fico Tarefas Por Status Stat Id";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_stat_nm"] = "Gr Fico Tarefas Por Status Stat Nm";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Status_qtde"] = "Gr Fico Tarefas Por Status Qtde";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_clie_id"] = "Gr Fico Tarefas Por Lista Clie Id";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_lista_id"] = "Gr Fico Tarefas Por Lista Lista Id";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_lista_nm"] = "Gr Fico Tarefas Por Lista Lista Nm";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Lista_Qtde"] = "Gr Fico Tarefas Por Lista Qtde";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_clie_id"] = "Gr Fico Tarefas Por Prioridade Clie Id";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_domi_valor"] = "Gr Fico Tarefas Por Prioridade Domi Valor";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_Prioridade"] = "Gr Fico Tarefas Por Prioridade Prioridade";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_por_Prioridade_Qtde"] = "Gr Fico Tarefas Por Prioridade Qtde";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id"] = "Gr Fico Tarefas Criadas Por Usu Rio Clie Id";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login"] = "Gr Fico Tarefas Criadas Por Usu Rio Inclu Login";
+	$fieldLabelsdashboard_graficos["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio_qtde"] = "Gr Fico Tarefas Criadas Por Usu Rio Qtde";
 }
 
 //	search fields

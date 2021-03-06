@@ -163,7 +163,7 @@ if(mlang_getcurrentlang()=="Spanish")
 
 
 $tdatatb_usuarios[".shortTableName"] = "tb_usuarios";
-$tdatatb_usuarios[".nSecOptions"] = 2;
+$tdatatb_usuarios[".nSecOptions"] = 1;
 
 $tdatatb_usuarios[".mainTableOwnerID"] = "clie_id";
 $tdatatb_usuarios[".entityType"] = 0;
@@ -328,6 +328,14 @@ $tdatatb_usuarios[".sqlTail"] = "";
 //fill array of tabs for list page
 $arrGridTabs = array();
 $arrGridTabs[] = array(
+	'tabId' => "Todos",
+	'name' => "<img src=\"images/beatles1_16.png\" alt=\"\" /> Todos",
+	'nameType' => 'Text',
+	'where' => "1=1",
+	'showRowCount' => 1,
+	'hideEmpty' => 0,
+);
+$arrGridTabs[] = array(
 	'tabId' => "Ativos",
 	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\"/> Ativos",
 	'nameType' => 'Text',
@@ -340,14 +348,6 @@ $arrGridTabs[] = array(
 	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Cadastrados",
 	'nameType' => 'Text',
 	'where' => "usua_domi_status ='CADASTRADO'",
-	'showRowCount' => 1,
-	'hideEmpty' => 0,
-);
-$arrGridTabs[] = array(
-	'tabId' => "Todos",
-	'name' => "<img src=\"images/beatles1_16.png\" alt=\"\" /> Todos",
-	'nameType' => 'Text',
-	'where' => "1=1",
 	'showRowCount' => 1,
 	'hideEmpty' => 0,
 );
@@ -489,7 +489,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -651,7 +651,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -813,7 +813,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -947,7 +947,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -1085,7 +1085,9 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "EMAIL__VALUE__J__CADASTRADO", "messageType" => "CustomID");
 
 	
-	//	End validation
+						if(count($edata["validateAs"]) && !in_array('IsEmail', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsEmail';
+//	End validation
 
 	
 			
@@ -1220,7 +1222,9 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+				if(count($edata["validateAs"]) && !in_array('IsRequired', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsRequired';
+		//	End validation
 
 	
 			
@@ -1354,7 +1358,9 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+				if(count($edata["validateAs"]) && !in_array('IsRequired', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsRequired';
+		//	End validation
 
 	
 			
@@ -1425,7 +1431,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1490,7 +1496,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -1625,7 +1631,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -1697,7 +1703,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -1761,7 +1767,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -1896,7 +1902,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -1968,7 +1974,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -2032,7 +2038,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+					//	End validation
 
 	
 			

@@ -113,6 +113,45 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_alter_dt}</span>
 						</div>
 		{END searchCtrlBlock_alter_dt}
+																{BEGIN searchCtrlBlock_ativ_tempo_real}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_tempo_real}" {$filterRow_attrs_ativ_tempo_real}>
+			<label>{$label tb_atividade ativ_tempo_real }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_tempo_real}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_tempo_real}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_tempo_real}</span>
+						</div>
+		{END searchCtrlBlock_ativ_tempo_real}
+																{BEGIN searchCtrlBlock_ativ_tempo_estimado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_tempo_estimado}" {$filterRow_attrs_ativ_tempo_estimado}>
+			<label>{$label tb_atividade ativ_tempo_estimado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_tempo_estimado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_tempo_estimado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_tempo_estimado}</span>
+						</div>
+		{END searchCtrlBlock_ativ_tempo_estimado}
+																{BEGIN searchCtrlBlock_ativ_domi_unid_tempo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_domi_unid_tempo}" {$filterRow_attrs_ativ_domi_unid_tempo}>
+			<label>{$label tb_atividade ativ_domi_unid_tempo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_domi_unid_tempo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_domi_unid_tempo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_domi_unid_tempo}</span>
+						</div>
+		{END searchCtrlBlock_ativ_domi_unid_tempo}
 																{BEGIN searchCtrlBlock_alter_login}
 
 
@@ -340,6 +379,12 @@
 			
 			
 			
+			
+			
+			
+			
+			
+			
 				</li>				
 				{END filterCtrlBlock_stat_id}
 
@@ -368,6 +413,180 @@
 
 		 	
 
+		{BEGIN filter_control_ativ_domi_unid_tempo}
+		<div class="panel panel-info filter-field filter-ativ_domi_unid_tempo-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+			
+				<label>{$label tb_atividade ativ_domi_unid_tempo }</label>
+
+				{BEGIN clearLink_ativ_domi_unid_tempo}
+				<a href="#" class="filter-clear filter-clear-ativ_domi_unid_tempo">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_domi_unid_tempo}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_domi_unid_tempo}
+				<li class="list-group-item filter-values filter-values-ativ_domi_unid_tempo {$collapsedClass_ativ_domi_unid_tempo} {$visibilityClass_ativ_domi_unid_tempo}">
+					{$ativ_domi_unid_tempo_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_domi_unid_tempo}
+
+							{BEGIN filter_button_showmore_ativ_domi_unid_tempo}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_domi_unid_tempo} {$showMoreBtnClass_ativ_domi_unid_tempo}">
+					<a class="filter-show-more-link filterShowMore_ativ_domi_unid_tempo" href="#">{$show_n_more_ativ_domi_unid_tempo}</a>
+				</li>
+				{END filter_button_showmore_ativ_domi_unid_tempo}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_domi_unid_tempo}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_ativ_tempo_real}
+		<div class="panel panel-info filter-field filter-ativ_tempo_real-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+			
+				<label>{$label tb_atividade ativ_tempo_real }</label>
+
+				{BEGIN clearLink_ativ_tempo_real}
+				<a href="#" class="filter-clear filter-clear-ativ_tempo_real">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_tempo_real}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_tempo_real}
+				<li class="list-group-item filter-values filter-values-ativ_tempo_real {$collapsedClass_ativ_tempo_real} {$visibilityClass_ativ_tempo_real}">
+					{$ativ_tempo_real_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_tempo_real}
+
+							{BEGIN filter_button_showmore_ativ_tempo_real}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_tempo_real} {$showMoreBtnClass_ativ_tempo_real}">
+					<a class="filter-show-more-link filterShowMore_ativ_tempo_real" href="#">{$show_n_more_ativ_tempo_real}</a>
+				</li>
+				{END filter_button_showmore_ativ_tempo_real}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_tempo_real}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_ativ_tempo_estimado}
+		<div class="panel panel-info filter-field filter-ativ_tempo_estimado-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+			
+				<label>{$label tb_atividade ativ_tempo_estimado }</label>
+
+				{BEGIN clearLink_ativ_tempo_estimado}
+				<a href="#" class="filter-clear filter-clear-ativ_tempo_estimado">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_tempo_estimado}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_tempo_estimado}
+				<li class="list-group-item filter-values filter-values-ativ_tempo_estimado {$collapsedClass_ativ_tempo_estimado} {$visibilityClass_ativ_tempo_estimado}">
+					{$ativ_tempo_estimado_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_tempo_estimado}
+
+							{BEGIN filter_button_showmore_ativ_tempo_estimado}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_tempo_estimado} {$showMoreBtnClass_ativ_tempo_estimado}">
+					<a class="filter-show-more-link filterShowMore_ativ_tempo_estimado" href="#">{$show_n_more_ativ_tempo_estimado}</a>
+				</li>
+				{END filter_button_showmore_ativ_tempo_estimado}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_tempo_estimado}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
 		{BEGIN filter_control_ativ_prioridade}
 		<div class="panel panel-info filter-field filter-ativ_prioridade-container">
 			<div class="panel-heading filter-expander">
@@ -386,6 +605,12 @@
 				<li class="list-group-item filter-values filter-values-ativ_prioridade {$collapsedClass_ativ_prioridade} {$visibilityClass_ativ_prioridade}">
 					{$ativ_prioridade_filter}
 								
+			
+			
+			
+			
+			
+			
 			
 			
 			
@@ -438,6 +663,12 @@
 				<li class="list-group-item filter-values filter-values-lista_id {$collapsedClass_lista_id} {$visibilityClass_lista_id}">
 					{$lista_id_filter}
 								
+			
+			
+			
+			
+			
+			
 			
 			
 			
@@ -799,7 +1030,7 @@
 			<div>
 				<label for="printDetailstb_categorias_x_atividades{$id}">
 					<input type="checkbox" value="tb_categorias_x_atividades" id="printDetailstb_categorias_x_atividades{$id}" checked>
-					Tb Categorias X Atividades				</label>
+					Categorias por Atividades				</label>
 			</div>
 			{END print_details_tb_categorias_x_atividades}
 						</div>
@@ -846,16 +1077,6 @@
 		<a>
 		  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_ativ_id" checked="checked" value="1" data-field="ativ_id">
-					<span>{$label tb_atividade ativ_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_clie_id" checked="checked" value="1" data-field="clie_id">
 					<span>{$label tb_atividade clie_id }</span>
 				</label>
@@ -868,6 +1089,16 @@
 				<label>
 					<input type="checkbox" id="hide_ativ_nm" checked="checked" value="1" data-field="ativ_nm">
 					<span>{$label tb_atividade ativ_nm }</span>
+				</label>
+			</div>
+		</a>
+		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_lista_id" checked="checked" value="1" data-field="lista_id">
+					<span>{$label tb_atividade lista_id }</span>
 				</label>
 			</div>
 		</a>
@@ -922,9 +1153,87 @@
 			</div>
 		</a>
 		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_inclu_dt" checked="checked" value="1" data-field="inclu_dt">
+					<span>{$label tb_atividade inclu_dt }</span>
+				</label>
+			</div>
+		</a>
+		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_inclu_login" checked="checked" value="1" data-field="inclu_login">
+					<span>{$label tb_atividade inclu_login }</span>
+				</label>
+			</div>
+		</a>
+		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ativ_id" checked="checked" value="1" data-field="ativ_id">
+					<span>{$label tb_atividade ativ_id }</span>
+				</label>
+			</div>
+		</a>
+		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ativ_domi_unid_tempo" checked="checked" value="1" data-field="ativ_domi_unid_tempo">
+					<span>{$label tb_atividade ativ_domi_unid_tempo }</span>
+				</label>
+			</div>
+		</a>
+		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ativ_tempo_estimado" checked="checked" value="1" data-field="ativ_tempo_estimado">
+					<span>{$label tb_atividade ativ_tempo_estimado }</span>
+				</label>
+			</div>
+		</a>
+		</li>
+						<li>
+		<a>
+		  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ativ_tempo_real" checked="checked" value="1" data-field="ativ_tempo_real">
+					<span>{$label tb_atividade ativ_tempo_real }</span>
+				</label>
+			</div>
+		</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-6
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	Categ</span>
+		</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -981,6 +1290,18 @@
 	
 	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_dt_fim"]:before {
 		content: "{$label tb_atividade ativ_dt_fim}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_domi_unid_tempo"]:before {
+		content: "{$label tb_atividade ativ_domi_unid_tempo}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_tempo_estimado"]:before {
+		content: "{$label tb_atividade ativ_tempo_estimado}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_tempo_real"]:before {
+		content: "{$label tb_atividade ativ_tempo_real}";
 	}
 	
 	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="inclu_login"]:before {
@@ -1077,22 +1398,22 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$clie_id_class}
+		 r-ori-vert				{$ativ_id_class}
 			"
 
-			data-field="clie_id"
+			data-field="ativ_id"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN clie_id_fieldheadercolumn}
-	{BEGIN clie_id_fieldheader}
-	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
-	{$label tb_atividade clie_id }	{$arrow_icon_clie_id}
+		{BEGIN ativ_id_fieldheadercolumn}
+	{BEGIN ativ_id_fieldheader}
+	<SPAN {$ativ_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id">
+	{$label tb_atividade ativ_id }	{$arrow_icon_ativ_id}
 	</SPAN>
-	{END clie_id_fieldheader}
-{END clie_id_fieldheadercolumn}
+	{END ativ_id_fieldheader}
+{END ativ_id_fieldheadercolumn}
 
 	
 	</th>
@@ -1104,22 +1425,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_nm_class}
+		 r-ori-vert				{$clie_id_class}
 			"
 
-			data-field="ativ_nm"
+			data-field="clie_id"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_nm_fieldheadercolumn}
-	{BEGIN ativ_nm_fieldheader}
-	<SPAN {$ativ_nm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm">
-	{$label tb_atividade ativ_nm }	{$arrow_icon_ativ_nm}
+		{BEGIN clie_id_fieldheadercolumn}
+	{BEGIN clie_id_fieldheader}
+	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
+	{$label tb_atividade clie_id }	{$arrow_icon_clie_id}
 	</SPAN>
-	{END ativ_nm_fieldheader}
-{END ativ_nm_fieldheadercolumn}
+	{END clie_id_fieldheader}
+{END clie_id_fieldheadercolumn}
 
 	
 	</th>
@@ -1131,22 +1452,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$lista_id_class}
+		 r-ori-vert				{$ativ_nm_class}
 			"
 
-			data-field="lista_id"
+			data-field="ativ_nm"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN lista_id_fieldheadercolumn}
-	{BEGIN lista_id_fieldheader}
-	<SPAN {$lista_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lista_id">
-	{$label tb_atividade lista_id }	{$arrow_icon_lista_id}
+		{BEGIN ativ_nm_fieldheadercolumn}
+	{BEGIN ativ_nm_fieldheader}
+	<SPAN {$ativ_nm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm">
+	{$label tb_atividade ativ_nm }	{$arrow_icon_ativ_nm}
 	</SPAN>
-	{END lista_id_fieldheader}
-{END lista_id_fieldheadercolumn}
+	{END ativ_nm_fieldheader}
+{END ativ_nm_fieldheadercolumn}
 
 	
 	</th>
@@ -1158,22 +1479,22 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$stat_id_class}
+		 r-ori-vert				{$lista_id_class}
 			"
 
-			data-field="stat_id"
+			data-field="lista_id"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN stat_id_fieldheadercolumn}
-	{BEGIN stat_id_fieldheader}
-	<SPAN {$stat_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="stat_id">
-	{$label tb_atividade stat_id }	{$arrow_icon_stat_id}
+		{BEGIN lista_id_fieldheadercolumn}
+	{BEGIN lista_id_fieldheader}
+	<SPAN {$lista_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lista_id">
+	{$label tb_atividade lista_id }	{$arrow_icon_lista_id}
 	</SPAN>
-	{END stat_id_fieldheader}
-{END stat_id_fieldheadercolumn}
+	{END lista_id_fieldheader}
+{END lista_id_fieldheadercolumn}
 
 	
 	</th>
@@ -1185,22 +1506,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_prioridade_class}
+		 r-ori-vert				{$stat_id_class}
 			"
 
-			data-field="ativ_prioridade"
+			data-field="stat_id"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_prioridade_fieldheadercolumn}
-	{BEGIN ativ_prioridade_fieldheader}
-	<SPAN {$ativ_prioridade_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade">
-	{$label tb_atividade ativ_prioridade }	{$arrow_icon_ativ_prioridade}
+		{BEGIN stat_id_fieldheadercolumn}
+	{BEGIN stat_id_fieldheader}
+	<SPAN {$stat_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="stat_id">
+	{$label tb_atividade stat_id }	{$arrow_icon_stat_id}
 	</SPAN>
-	{END ativ_prioridade_fieldheader}
-{END ativ_prioridade_fieldheadercolumn}
+	{END stat_id_fieldheader}
+{END stat_id_fieldheadercolumn}
 
 	
 	</th>
@@ -1212,22 +1533,22 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_concluida_class}
+		 r-ori-vert				{$ativ_prioridade_class}
 			"
 
-			data-field="ativ_concluida"
+			data-field="ativ_prioridade"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_concluida_fieldheadercolumn}
-	{BEGIN ativ_concluida_fieldheader}
-	<SPAN {$ativ_concluida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida">
-	{$label tb_atividade ativ_concluida }	{$arrow_icon_ativ_concluida}
+		{BEGIN ativ_prioridade_fieldheadercolumn}
+	{BEGIN ativ_prioridade_fieldheader}
+	<SPAN {$ativ_prioridade_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade">
+	{$label tb_atividade ativ_prioridade }	{$arrow_icon_ativ_prioridade}
 	</SPAN>
-	{END ativ_concluida_fieldheader}
-{END ativ_concluida_fieldheadercolumn}
+	{END ativ_prioridade_fieldheader}
+{END ativ_prioridade_fieldheadercolumn}
 
 	
 	</th>
@@ -1239,22 +1560,22 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_dt_ini_class}
+		 r-ori-vert				{$ativ_concluida_class}
 			"
 
-			data-field="ativ_dt_ini"
+			data-field="ativ_concluida"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_dt_ini_fieldheadercolumn}
-	{BEGIN ativ_dt_ini_fieldheader}
-	<SPAN {$ativ_dt_ini_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini">
-	{$label tb_atividade ativ_dt_ini }	{$arrow_icon_ativ_dt_ini}
+		{BEGIN ativ_concluida_fieldheadercolumn}
+	{BEGIN ativ_concluida_fieldheader}
+	<SPAN {$ativ_concluida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida">
+	{$label tb_atividade ativ_concluida }	{$arrow_icon_ativ_concluida}
 	</SPAN>
-	{END ativ_dt_ini_fieldheader}
-{END ativ_dt_ini_fieldheadercolumn}
+	{END ativ_concluida_fieldheader}
+{END ativ_concluida_fieldheadercolumn}
 
 	
 	</th>
@@ -1266,22 +1587,22 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ativ_dt_fim_class}
+		 r-ori-vert				{$ativ_dt_ini_class}
 			"
 
-			data-field="ativ_dt_fim"
+			data-field="ativ_dt_ini"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ativ_dt_fim_fieldheadercolumn}
-	{BEGIN ativ_dt_fim_fieldheader}
-	<SPAN {$ativ_dt_fim_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim">
-	{$label tb_atividade ativ_dt_fim }	{$arrow_icon_ativ_dt_fim}
+		{BEGIN ativ_dt_ini_fieldheadercolumn}
+	{BEGIN ativ_dt_ini_fieldheader}
+	<SPAN {$ativ_dt_ini_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini">
+	{$label tb_atividade ativ_dt_ini }	{$arrow_icon_ativ_dt_ini}
 	</SPAN>
-	{END ativ_dt_fim_fieldheader}
-{END ativ_dt_fim_fieldheadercolumn}
+	{END ativ_dt_ini_fieldheader}
+{END ativ_dt_ini_fieldheadercolumn}
 
 	
 	</th>
@@ -1293,22 +1614,22 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$inclu_dt_class}
+		 r-ori-vert				{$ativ_dt_fim_class}
 			"
 
-			data-field="inclu_dt"
+			data-field="ativ_dt_fim"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN inclu_dt_fieldheadercolumn}
-	{BEGIN inclu_dt_fieldheader}
-	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
-	{$label tb_atividade inclu_dt }	{$arrow_icon_inclu_dt}
+		{BEGIN ativ_dt_fim_fieldheadercolumn}
+	{BEGIN ativ_dt_fim_fieldheader}
+	<SPAN {$ativ_dt_fim_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim">
+	{$label tb_atividade ativ_dt_fim }	{$arrow_icon_ativ_dt_fim}
 	</SPAN>
-	{END inclu_dt_fieldheader}
-{END inclu_dt_fieldheadercolumn}
+	{END ativ_dt_fim_fieldheader}
+{END ativ_dt_fim_fieldheadercolumn}
 
 	
 	</th>
@@ -1320,12 +1641,120 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
+		 r-ori-vert				{$ativ_domi_unid_tempo_class}
+			"
+
+			data-field="ativ_domi_unid_tempo"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_domi_unid_tempo_fieldheadercolumn}
+	{BEGIN ativ_domi_unid_tempo_fieldheader}
+	<SPAN {$ativ_domi_unid_tempo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_domi_unid_tempo">
+	{$label tb_atividade ativ_domi_unid_tempo }	{$arrow_icon_ativ_domi_unid_tempo}
+	</SPAN>
+	{END ativ_domi_unid_tempo_fieldheader}
+{END ativ_domi_unid_tempo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+				 
+					{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_estimado_class}
+			"
+
+			data-field="ativ_tempo_estimado"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_estimado_fieldheadercolumn}
+	{BEGIN ativ_tempo_estimado_fieldheader}
+	<SPAN {$ativ_tempo_estimado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_estimado">
+	{$label tb_atividade ativ_tempo_estimado }	{$arrow_icon_ativ_tempo_estimado}
+	</SPAN>
+	{END ativ_tempo_estimado_fieldheader}
+{END ativ_tempo_estimado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_real_class}
+			"
+
+			data-field="ativ_tempo_real"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_real_fieldheadercolumn}
+	{BEGIN ativ_tempo_real_fieldheader}
+	<SPAN {$ativ_tempo_real_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_real">
+	{$label tb_atividade ativ_tempo_real }	{$arrow_icon_ativ_tempo_real}
+	</SPAN>
+	{END ativ_tempo_real_fieldheader}
+{END ativ_tempo_real_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+				 
+					{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_dt_class}
+			"
+
+			data-field="inclu_dt"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_dt_fieldheadercolumn}
+	{BEGIN inclu_dt_fieldheader}
+	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	{$label tb_atividade inclu_dt }	{$arrow_icon_inclu_dt}
+	</SPAN>
+	{END inclu_dt_fieldheader}
+{END inclu_dt_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+				 
+					{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
 		 r-ori-vert				{$inclu_login_class}
 			"
 
 			data-field="inclu_login"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1339,34 +1768,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
-				 
-					{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_id_class}
-			"
-
-			data-field="ativ_id"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_id_fieldheadercolumn}
-	{BEGIN ativ_id_fieldheader}
-	<SPAN {$ativ_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id">
-	{$label tb_atividade ativ_id }	{$arrow_icon_ativ_id}
-	</SPAN>
-	{END ativ_id_fieldheader}
-{END ativ_id_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field13}
 							</tr>
 					 
 					 
@@ -1475,13 +1877,15 @@
 	{BEGIN tb_categorias_x_atividades_dtable_link}
 	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
 	<a  {$tb_categorias_x_atividades_link_attrs} data-short-details="tb_categorias_x_atividades"
-		 
-			>
-							<span class="glyphicon glyphicon-glass"></span>
-						Categorias		
-									<span {$tb_categorias_x_atividades_childnumber_attr} dir="ltr">
-					{BEGIN tb_categorias_x_atividades_childcount}({$tb_categorias_x_atividades_childnumber}){END tb_categorias_x_atividades_childcount}
+		class="{$tb_categorias_x_atividades_dlink_class}" 
+		title="{$caption tb_categorias_x_atividades }"	>
+							<span class="glyphicon glyphicon-star-empty"></span>
+								
+									{BEGIN tb_categorias_x_atividades_childcount}
+				<span class="details-badge badge tb_categorias_x_atividades_badge" {$tb_categorias_x_atividades_childnumber_attr}>
+					{$tb_categorias_x_atividades_childnumber}				
 				</span>
+				{END tb_categorias_x_atividades_childcount}
 						</a>
 	</span>
 	{END tb_categorias_x_atividades_dtable_link}
@@ -1497,242 +1901,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$clie_id_class}
-			"
-
-			data-field="clie_id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN clie_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id" data-default-width >
-{$clie_id_value}
-</span>
-{END clie_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_nm_class}
-			"
-
-			data-field="ativ_nm"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_nm_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm" data-default-width >
-{$ativ_nm_value}
-</span>
-{END ativ_nm_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-				 
-					{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$lista_id_class}
-			"
-
-			data-field="lista_id"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN lista_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lista_id" data-default-width >
-{$lista_id_value}
-</span>
-{END lista_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$stat_id_class}
-			"
-
-			data-field="stat_id"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN stat_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="stat_id" data-default-width >
-{$stat_id_value}
-</span>
-{END stat_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_prioridade_class}
-			"
-
-			data-field="ativ_prioridade"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_prioridade_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade" data-default-width >
-{$ativ_prioridade_value}
-</span>
-{END ativ_prioridade_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_concluida_class}
-			"
-
-			data-field="ativ_concluida"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_concluida_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida" data-default-width >
-{$ativ_concluida_value}
-</span>
-{END ativ_concluida_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-				 
-					{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_dt_ini_class}
-			"
-
-			data-field="ativ_dt_ini"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_dt_ini_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini" data-default-width >
-{$ativ_dt_ini_value}
-</span>
-{END ativ_dt_ini_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-				 
-					{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_dt_fim_class}
-			"
-
-			data-field="ativ_dt_fim"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_dt_fim_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim" data-default-width >
-{$ativ_dt_fim_value}
-</span>
-{END ativ_dt_fim_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-				 
-					{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_dt_class}
-			"
-
-			data-field="inclu_dt"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_dt_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
-{$inclu_dt_value}
-</span>
-{END inclu_dt_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-				 
-					{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_login_class}
-			"
-
-			data-field="inclu_login"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_login_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login" data-default-width >
-{$inclu_login_value}
-</span>
-{END inclu_login_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
-				 
-					{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$ativ_id_class}
 			"
 
 			data-field="ativ_id"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1742,7 +1916,306 @@
 </span>
 {END ativ_id_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field}
+				 
+					{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$clie_id_class}
+			"
+
+			data-field="clie_id"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN clie_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id" data-default-width >
+{$clie_id_value}
+</span>
+{END clie_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_nm_class}
+			"
+
+			data-field="ativ_nm"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_nm_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm" data-default-width >
+{$ativ_nm_value}
+</span>
+{END ativ_nm_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+				 
+					{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lista_id_class}
+			"
+
+			data-field="lista_id"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lista_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lista_id" data-default-width >
+{$lista_id_value}
+</span>
+{END lista_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+				 
+					{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$stat_id_class}
+			"
+
+			data-field="stat_id"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN stat_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="stat_id" data-default-width >
+{$stat_id_value}
+</span>
+{END stat_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_prioridade_class}
+			"
+
+			data-field="ativ_prioridade"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_prioridade_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade" data-default-width >
+{$ativ_prioridade_value}
+</span>
+{END ativ_prioridade_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+				 
+					{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_concluida_class}
+			"
+
+			data-field="ativ_concluida"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_concluida_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida" data-default-width >
+{$ativ_concluida_value}
+</span>
+{END ativ_concluida_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+				 
+					{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_dt_ini_class}
+			"
+
+			data-field="ativ_dt_ini"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_dt_ini_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini" data-default-width >
+{$ativ_dt_ini_value}
+</span>
+{END ativ_dt_ini_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+				 
+					{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_dt_fim_class}
+			"
+
+			data-field="ativ_dt_fim"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_dt_fim_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim" data-default-width >
+{$ativ_dt_fim_value}
+</span>
+{END ativ_dt_fim_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_domi_unid_tempo_class}
+			"
+
+			data-field="ativ_domi_unid_tempo"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_domi_unid_tempo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_domi_unid_tempo" data-default-width >
+{$ativ_domi_unid_tempo_value}
+</span>
+{END ativ_domi_unid_tempo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_estimado_class}
+			"
+
+			data-field="ativ_tempo_estimado"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_estimado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_estimado" data-default-width >
+{$ativ_tempo_estimado_value}
+</span>
+{END ativ_tempo_estimado_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_real_class}
+			"
+
+			data-field="ativ_tempo_real"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_real_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_real" data-default-width >
+{$ativ_tempo_real_value}
+</span>
+{END ativ_tempo_real_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+				 
+					{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_dt_class}
+			"
+
+			data-field="inclu_dt"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_dt_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
+{$inclu_dt_value}
+</span>
+{END inclu_dt_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+				 
+					{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_login_class}
+			"
+
+			data-field="inclu_login"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_login_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login" data-default-width >
+{$inclu_login_value}
+</span>
+{END inclu_login_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -2011,6 +2484,54 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+				 
+					{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+				 
+					{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
 							</tr>
 					
 					</tfoot>

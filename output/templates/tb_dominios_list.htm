@@ -285,13 +285,14 @@
 			
 
 
-							{BEGIN filter_button_apply_domi_grupo}
-				<li class="list-group-item filter-field-btn {$collapsedClass_domi_grupo}">
-					<a href="#" class="rnr-button filter-btn-apply filter-apply-domi_grupo" {$filterbutton_attrs_domi_grupo}>{mlang_message FILTER_APPLY}</a>
-				</li>				
-				{END filter_button_apply_domi_grupo}
 			
 
+			 
+				{BEGIN filter_button_multiselect_domi_grupo}
+				<li class="list-group-item filter-field-btn {$collapsedClass_domi_grupo}">
+					<a href="#" class="rnr-button filter-domi_grupo-btn-multiselect filter-apply-domi_grupo" {$filterbutton_attrs_domi_grupo}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_domi_grupo}					
 				
 	
 			</ul>			

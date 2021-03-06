@@ -68,8 +68,10 @@ $custom_labels["English"] = array();
 	$custom_labels["English"]['Valida_atividade_concluida_nao'] = "(en) Data fim só pode ser informada se atividade estiver concluída.";
 					$custom_labels["English"]['VERSAO_SISTEMA04'] = "GTDTasks © - Build 2021.02.19 (en)";
 			$custom_labels["English"]['VERSAO_SISTEMA05'] = "GTDTasks © - Build 2021.02.22 (pt)";
+			$custom_labels["English"]['DETAILS_FOUND'] = "";
+			$custom_labels["English"]['MENU_PRINCIPAL'] = "Main Menu";
 		$custom_labels["Portuguese(Brazil)"] = array();
-		$custom_labels["Portuguese(Brazil)"]['TASKS'] = "Atividades";
+		$custom_labels["Portuguese(Brazil)"]['TASKS'] = "Tarefas";
 			$custom_labels["Portuguese(Brazil)"]['TB_ATIVIDADE_DESCRIPTION'] = "Cadastramento de Atividades ou Tarefas";
 			$custom_labels["Portuguese(Brazil)"]['TB_CLIENTES_DESCRIPTION'] = "Cadastramento de Clientes";
 			$custom_labels["Portuguese(Brazil)"]['TB_CLIENTES_PLANOS_DESCRIPTION'] = "Cadastramento de Planos de Clientes";
@@ -80,7 +82,7 @@ $custom_labels["English"] = array();
 			$custom_labels["Portuguese(Brazil)"]['CUSTOM2'] = "Cadastramento de Status de Atividades";
 			$custom_labels["Portuguese(Brazil)"]['CUSTOM3'] = "Cadastramento de Usuários";
 				$custom_labels["Portuguese(Brazil)"]['MARCA_REGISTRADA'] = "Direitos Autorais, 2020 © GTDTasks ";
-	$custom_labels["Portuguese(Brazil)"]['VERSAO_SISTEMA'] = "GTDTasks © - Build 2021.02.24 (pt)";
+	$custom_labels["Portuguese(Brazil)"]['VERSAO_SISTEMA'] = "GTDTasks © - Build 2021.03.06a (pt)";
 				$custom_labels["Portuguese(Brazil)"]['EMAIL__VALUE__J__CADASTRADO'] = "Email %value% já cadastrado";
 			$custom_labels["Portuguese(Brazil)"]['THE_VALUE_IS_INVALID'] = "O valor é inválido (espaços?)";
 				$custom_labels["Portuguese(Brazil)"]['VERSAO_SISTEMA02'] = "GTDTasks © - Build 2020.09.07.(10.3)";
@@ -89,6 +91,8 @@ $custom_labels["English"] = array();
 	$custom_labels["Portuguese(Brazil)"]['Valida_atividade_concluida_nao'] = "Data fim só pode ser informada se atividade estiver concluída.";
 				$custom_labels["Portuguese(Brazil)"]['VERSAO_SISTEMA04'] = "";
 			$custom_labels["Portuguese(Brazil)"]['VERSAO_SISTEMA05'] = "";
+			$custom_labels["Portuguese(Brazil)"]['DETAILS_FOUND'] = "Ítens Achados";
+			$custom_labels["Portuguese(Brazil)"]['MENU_PRINCIPAL'] = "Menu Principal";
 	$custom_labels["Spanish"] = array();
 			$custom_labels["Spanish"]['TASKS'] = "Actividades";
 			$custom_labels["Spanish"]['TB_ATIVIDADE_DESCRIPTION'] = "Registro de actividades o tareas";
@@ -110,6 +114,8 @@ $custom_labels["English"] = array();
 	$custom_labels["Spanish"]['Valida_atividade_concluida_nao'] = "(es) Data fim só pode ser informada se atividade estiver concluída.";
 			$custom_labels["Spanish"]['VERSAO_SISTEMA04'] = "";
 			$custom_labels["Spanish"]['VERSAO_SISTEMA05'] = "";
+			$custom_labels["Spanish"]['DETAILS_FOUND'] = "";
+			$custom_labels["Spanish"]['MENU_PRINCIPAL'] = "Main Menu";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -569,17 +575,21 @@ $globalSettings["popupPagesLayoutNames"] = array();
 					
 ;
 $globalSettings["popupPagesLayoutNames"]["login"] = "login";
+			;
+$globalSettings["popupPagesLayoutNames"]["register"] = "login";
+			;
+$globalSettings["popupPagesLayoutNames"]["remind"] = "login";
 
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
 
-$globalSettings["useCustomSMTPSettings"] = false;
+$globalSettings["useCustomSMTPSettings"] = true;
 
 $globalSettings["strSMTPUser"] = "";
 $globalSettings["strSMTPServer"] = "localhost";
 $globalSettings["strSMTPPort"] = "25";
 $globalSettings["strSMTPPassword"] = "";
-$globalSettings["strFromEmail"] = "";
+$globalSettings["strFromEmail"] = "admin@gtdtasks.com";
 
 //
 
@@ -620,6 +630,7 @@ $globalSettings["SpUserIdField"] = "";
 //password global settings for register page
 $globalSettings["pwdStrong"] = true;
 $globalSettings["pwdLen"] = 4;
+$globalSettings["pwdDigits"] = 1;
 
 
 /**
@@ -674,11 +685,11 @@ $wr_is_standalone = false;
 $WRAdminPagePassword = "";
 
 $cLoginTable = "tb_usuarios";
-$cDisplayNameField = "";
+$cDisplayNameField = "usua_email";
 $cUserNameField	= "usua_username";
 $cPasswordField	= "usua_senha";
 $cUserGroupField = "usua_username";
-$cEmailField = "";
+$cEmailField = "usua_email";
 $globalSettings["usersTableInProject"] = true;
 $globalSettings["usersDatasourceTable"] = "tb_usuarios";
 
@@ -694,9 +705,10 @@ $cEmailFieldType = 200;
 
 $arrCustomPages = array();
 
-																																							$cUserNameFieldType	= 202;
+																																				$cEmailFieldType = 202;
+			$cUserNameFieldType	= 202;
 												$cPasswordFieldType	= 202;
-																																																
+																																																																																				
 $gPermissionsRefreshTime = 0;
 $gPermissionsRead = false;
 
@@ -706,9 +718,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "619_1614292741";
+$projectBuildKey = "795_1614893600";
 $wizardBuildKey = "33793";
-$projectBuildNumber = "619";
+$projectBuildNumber = "795";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -750,10 +762,11 @@ $tableCaptions["English"]["tb_parametros"] = "Tb Parametros";
 $tableCaptions["English"]["Gr_fico_Tarefas_por_Status"] = "Gráfico Tarefas por Status";
 $tableCaptions["English"]["Gr_fico_Tarefas_por_Prioridade"] = "Gráfico Tarefas por Prioridade";
 $tableCaptions["English"]["Gr_fico_Tarefas_criadas_por_Usu_rio"] = "Gráfico Tarefas criadas por Usuário";
-$tableCaptions["English"]["tb_categorias"] = "Tb Categorias";
+$tableCaptions["English"]["tb_categorias"] = "Categorias";
+$tableCaptions["English"]["tb_categorias_x_atividades"] = "Categorias X Atividades";
+$tableCaptions["English"]["vw_tarefas_categorias"] = "Vw Tarefas Categorias";
 $tableCaptions["English"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
 $tableCaptions["English"]["Dashboard_Graficos"] = "Dashboard Graficos";
-$tableCaptions["English"]["tb_categorias_x_atividades"] = "Tb Categorias X Atividades";
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["tb_atividade"] = "Tarefas";
@@ -775,10 +788,11 @@ $tableCaptions["Portuguese(Brazil)"]["tb_parametros"] = "Tb Parametros";
 $tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Status"] = "Gráfico Tarefas por Status";
 $tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_por_Prioridade"] = "Gráfico Tarefas por Prioridade";
 $tableCaptions["Portuguese(Brazil)"]["Gr_fico_Tarefas_criadas_por_Usu_rio"] = "Gráfico Tarefas criadas por Usuário";
-$tableCaptions["Portuguese(Brazil)"]["tb_categorias"] = "Tb Categorias";
+$tableCaptions["Portuguese(Brazil)"]["tb_categorias"] = "Categorias";
+$tableCaptions["Portuguese(Brazil)"]["tb_categorias_x_atividades"] = "Categorias por Atividades";
+$tableCaptions["Portuguese(Brazil)"]["vw_tarefas_categorias"] = "Vw Tarefas Categorias";
 $tableCaptions["Portuguese(Brazil)"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
 $tableCaptions["Portuguese(Brazil)"]["Dashboard_Graficos"] = "Dashboard Graficos";
-$tableCaptions["Portuguese(Brazil)"]["tb_categorias_x_atividades"] = "Tb Categorias X Atividades";
 $tableCaptions["Spanish"] = array();
 $tableCaptions["Spanish"][""] = "";
 $tableCaptions["Spanish"]["tb_atividade"] = "Tareas";
@@ -800,10 +814,11 @@ $tableCaptions["Spanish"]["tb_parametros"] = "Tb Parametros";
 $tableCaptions["Spanish"]["Gr_fico_Tarefas_por_Status"] = "Gráfico Tarefas por Status";
 $tableCaptions["Spanish"]["Gr_fico_Tarefas_por_Prioridade"] = "Gráfico Tarefas por Prioridade";
 $tableCaptions["Spanish"]["Gr_fico_Tarefas_criadas_por_Usu_rio"] = "Gráfico Tarefas criadas por Usuário";
-$tableCaptions["Spanish"]["tb_categorias"] = "Tb Categorias";
+$tableCaptions["Spanish"]["tb_categorias"] = "Categorias";
+$tableCaptions["Spanish"]["tb_categorias_x_atividades"] = "Categorias X Atividades";
+$tableCaptions["Spanish"]["vw_tarefas_categorias"] = "Vw Tarefas Categorias";
 $tableCaptions["Spanish"]["Dashboard_Lista_e_Tarefas"] = "Dashboard Lista E Tarefas";
 $tableCaptions["Spanish"]["Dashboard_Graficos"] = "Dashboard Graficos";
-$tableCaptions["Spanish"]["tb_categorias_x_atividades"] = "Tb Categorias X Atividades";
 
 
 $globalEvents = new class_GlobalEvents;

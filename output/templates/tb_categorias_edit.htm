@@ -29,7 +29,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -47,7 +47,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -150,108 +150,34 @@
 
 
 {END cate_nm_fieldblock}
-											
-{BEGIN inclu_login_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  r-vertical-field" 
-	data-fieldname="inclu_login" 
-	data-signal-error-for="inclu_login{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="inclu_login" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_inclu_login}">
-		{BEGIN inclu_login_label}{$label tb_categorias inclu_login }{END inclu_login_label}
-	</label>
-	<div class="r-edit-field">
-		{$inclu_login_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="inclu_login">
-		<div class="text-muted" >
-		{$tooltip tb_categorias inclu_login }		</div>
-	</div>
-</div>
-
-
-{END inclu_login_fieldblock}
-											
-{BEGIN inclu_dt_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  r-vertical-field" 
-	data-fieldname="inclu_dt" 
-	data-signal-error-for="inclu_dt{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="inclu_dt" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_inclu_dt}">
-		{BEGIN inclu_dt_label}{$label tb_categorias inclu_dt }{END inclu_dt_label}
-	</label>
-	<div class="r-edit-field">
-		{$inclu_dt_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="inclu_dt">
-		<div class="text-muted" >
-		{$tooltip tb_categorias inclu_dt }		</div>
-	</div>
-</div>
-
-
-{END inclu_dt_fieldblock}
-											
-{BEGIN alter_login_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  r-vertical-field" 
-	data-fieldname="alter_login" 
-	data-signal-error-for="alter_login{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="alter_login" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_alter_login}">
-		{BEGIN alter_login_label}{$label tb_categorias alter_login }{END alter_login_label}
-	</label>
-	<div class="r-edit-field">
-		{$alter_login_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="alter_login">
-		<div class="text-muted" >
-		{$tooltip tb_categorias alter_login }		</div>
-	</div>
-</div>
-
-
-{END alter_login_fieldblock}
-											
-{BEGIN alter_dt_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  r-vertical-field" 
-	data-fieldname="alter_dt" 
-	data-signal-error-for="alter_dt{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="alter_dt" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_alter_dt}">
-		{BEGIN alter_dt_label}{$label tb_categorias alter_dt }{END alter_dt_label}
-	</label>
-	<div class="r-edit-field">
-		{$alter_dt_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="alter_dt">
-		<div class="text-muted" >
-		{$tooltip tb_categorias alter_dt }		</div>
-	</div>
-</div>
-
-
-{END alter_dt_fieldblock}
-	
-								</td>
+										</td>
 			{END cellblock_grid_c3}
-								</tr>
-			</tbody></table>
-{END grid_block}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_tb_categorias_x_atividades}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption tb_categorias_x_atividades }				
+							<span>
+					{$detailslButtons_tb_categorias_x_atividades}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_tb_categorias_x_atividades}
+		</div>
+	</div>
+</div>
+{END details_tb_categorias_x_atividades}
+	
+				{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 

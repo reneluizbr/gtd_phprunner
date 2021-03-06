@@ -310,6 +310,8 @@
 								
 			
 			
+			
+			
 				</li>				
 				{END filterCtrlBlock_clie_domi_status}
 
@@ -328,6 +330,56 @@
 			</ul>			
 		</div>
 		{END filter_control_clie_domi_status}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_inclu_dt}
+		<div class="panel panel-info filter-field filter-inclu_dt-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+			
+				<label>{$label tb_clientes inclu_dt }</label>
+
+				{BEGIN clearLink_inclu_dt}
+				<a href="#" class="filter-clear filter-clear-inclu_dt">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_inclu_dt}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_inclu_dt}
+				<li class="list-group-item filter-values filter-values-inclu_dt {$collapsedClass_inclu_dt} {$visibilityClass_inclu_dt}">
+					{$inclu_dt_filter}
+								
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_inclu_dt}
+
+							{BEGIN filter_button_showmore_inclu_dt}
+				<li class="list-group-item filter-show-more {$collapsedClass_inclu_dt} {$showMoreBtnClass_inclu_dt}">
+					<a class="filter-show-more-link filterShowMore_inclu_dt" href="#">{$show_n_more_inclu_dt}</a>
+				</li>
+				{END filter_button_showmore_inclu_dt}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_inclu_dt}
 	 
 	</div>
 </div>			</div>
@@ -876,34 +928,34 @@
 										<tr>
 						 
 							<td 
-	class="r-align-right r-ori-vert				{$clie_endereco_class}
+	class="r-align-right r-ori-vert				{$clie_domi_status_class}
 			"
 			 
 		data-field=""
 	 
 	data-cellId="grid_cell_label3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-label-col>
  
-{BEGIN clie_endereco_fieldheadercolumn}
+{BEGIN clie_domi_status_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_endereco">
-	{$label tb_clientes clie_endereco }	</span>
-{END clie_endereco_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_domi_status">
+	{$label tb_clientes clie_domi_status }	</span>
+{END clie_domi_status_fieldheadercolumn}
 
 </td>
 						 
 							<td 
-	class=" r-ori-vert				{$clie_endereco_class}
+	class=" r-ori-vert				{$clie_domi_status_class}
 			"
 			 
 		data-field=""
 	 
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-value-col>
  
-{BEGIN clie_endereco_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_endereco" data-default-width >
-{$clie_endereco_value}
+{BEGIN clie_domi_status_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_domi_status" data-default-width >
+{$clie_domi_status_value}
 </span>
-{END clie_endereco_fieldcolumn}</td>
+{END clie_domi_status_fieldcolumn}</td>
 											</tr>
 									 
 										<tr>
@@ -942,45 +994,12 @@
 										<tr>
 						 
 							<td 
-	class="r-align-right r-ori-vert				{$clie_domi_status_class}
-			"
-			 
-		data-field=""
-	 
-	data-cellId="grid_cell_label5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-label-col>
- 
-{BEGIN clie_domi_status_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_domi_status">
-	{$label tb_clientes clie_domi_status }	</span>
-{END clie_domi_status_fieldheadercolumn}
-
-</td>
-						 
-							<td 
-	class=" r-ori-vert				{$clie_domi_status_class}
-			"
-			 
-		data-field=""
-	 
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-value-col>
- 
-{BEGIN clie_domi_status_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_domi_status" data-default-width >
-{$clie_domi_status_value}
-</span>
-{END clie_domi_status_fieldcolumn}</td>
-											</tr>
-									 
-										<tr>
-						 
-							<td 
 	class="r-align-right r-ori-vert				{$clie_nm_completo_class}
 			"
 			 
 		data-field=""
 	 
-	data-cellId="grid_cell_label6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-label-col>
+	data-cellId="grid_cell_label5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-label-col>
  
 {BEGIN clie_nm_completo_fieldheadercolumn}
  
@@ -996,13 +1015,46 @@
 			 
 		data-field=""
 	 
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-value-col>
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-value-col>
  
 {BEGIN clie_nm_completo_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_nm_completo" data-default-width >
 {$clie_nm_completo_value}
 </span>
 {END clie_nm_completo_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$clie_endereco_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-label-col>
+ 
+{BEGIN clie_endereco_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_endereco">
+	{$label tb_clientes clie_endereco }	</span>
+{END clie_endereco_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$clie_endereco_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_clientes_lista_cartoes" data-value-col>
+ 
+{BEGIN clie_endereco_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_endereco" data-default-width >
+{$clie_endereco_value}
+</span>
+{END clie_endereco_fieldcolumn}</td>
 											</tr>
 									 
 										<tr>

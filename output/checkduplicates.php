@@ -26,6 +26,9 @@ $denyChecking = $pSet->allowDuplicateValues( $fieldName );
 $regEmailMode = false;
 $regUsernameMode = false;
 
+$regEmailMode = $table == "tb_usuarios" && $fieldName == $cEmailField;
+$regUsernameMode = $table == "tb_usuarios" && $fieldName == $cUserNameField;
+$denyChecking = $denyChecking && ( $table != "tb_usuarios" || $fieldName != $cUserNameField && $fieldName != $cEmailField );
 
 if( $denyChecking )
 {
