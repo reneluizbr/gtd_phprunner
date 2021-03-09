@@ -53,8 +53,46 @@ Roteiro de Testes do GTD:
             SMTP server port : 25
             SMTP username    : gtdtaks???
             SMTP password    : senha???
-    ☐ Teste e Revisao de permissoes de acesso @started(2021-03-06 12:44)
+    ✔ Teste e Revisao de permissoes de acesso @started(2021-03-06 12:44) @done(2021-03-07 15:16) @lasted(1d2h32m52s)
     ☐ Revisao da traducao do Ingles por mim
+    ✘ Adicionado um favicon.ico em "C:\UwAmp\www\GTD_PHPRunner\output\images\favicon.ico" @cancelled(2021-03-09 19:11)
+        Aparentemente não funcionou...:
+        No PHPRunner -> em Templates -> hearders.htm
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>{$pagetitle}</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <!-- Rene: Adicionado um favicon.png em todas as paginas -->
+            <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+            <base href="{$projectPath}">
+        O template gerado aparentemente veio de uma destas páginas:
+            C:\DevTools\PHPRunner10.3.33761\templates\layouts\page.htm
+            C:\DevTools\PHPRunner10.3.33761\templates\layouts\bspage1.htm
+            C:\DevTools\PHPRunner10.3.33761\templates\layouts\bspage_sidebar1.htm
+            C:\DevTools\PHPRunner10.3.33761\templates\layouts\page_menu_mobile.htm
+            C:\DevTools\PHPRunner10.3.33761\templates\layouts\bspage_sidebar.htm
+            C:\DevTools\PHPRunner10.3.33761\templates\layouts\bspage.htm
+
+    ☐ Customize icon for “Add to home screen”  @tagFuturo @started(2021-03-09 18:30)
+        Copiada algumas tags do Buble.io do aplicativo da Jota barbearia
+        Teste na pagina C:\UwAmp\www\GTD_PHPRunner\output\templates\log_audit_list.htm:
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+            <!-- Rene: Adicionado um favicon.png em todas as paginas... -->
+            <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            Muito grande, tem mais de 29000 bytes nesta tag!
+                <!-- <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KG(29000+bytes!!!)...RK5CYII="> -->
+            Esta segunda forma funciona OK:
+                <link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+            Esta forma não funciona, pelo menos no meu LG com Android 7:
+                <!-- <link rel="icon" sizes="192x192" href="./images/gtd_192x192.png"> -->
+
+            <base href="{$projectPath}">
+
     ☐ Revisao da traducao do Ingles por outra pessoa
     ☐ Revisao da traducao do Espanhol por mim
     ✔ @tagBug Inclusao/atualizacao em tb_dominios dava erro na validacao da expressao regular se digitasse em minuscula @done(2021-03-04 18:27)

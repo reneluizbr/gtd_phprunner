@@ -712,9 +712,10 @@ $tdatalog_audit[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -722,7 +723,8 @@ $tdatalog_audit[".hideMobileList"] = array();
 
 		$fdata["filterBy"] = 0;
 
-	
+		$fdata["parentFilterField"] = "user";
+
 
 	
 	
@@ -846,8 +848,8 @@ $tdatalog_audit[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "id";
 		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
@@ -981,9 +983,10 @@ $tdatalog_audit[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1115,9 +1118,10 @@ $tdatalog_audit[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1125,7 +1129,8 @@ $tdatalog_audit[".hideMobileList"] = array();
 
 		$fdata["filterBy"] = 0;
 
-	
+		$fdata["parentFilterField"] = "table";
+
 
 	
 	

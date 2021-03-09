@@ -51,6 +51,21 @@
 				"line": 1,
 				"column": 0,
 				"label": "$dDebug = false;"
+			},
+			{
+				"line": 720,
+				"column": 0,
+				"label": "$projectBuildKey = \"796_1614893600\";"
+			}
+		]
+	},
+	{
+		"path": "c:\\DevTools\\_PHPRunner_versoes_e_notas.md",
+		"bookmarks": [
+			{
+				"line": 142,
+				"column": 0,
+				"label": "Acessos do GTD via FTP"
 			}
 		]
 	}
