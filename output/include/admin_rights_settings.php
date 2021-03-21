@@ -48,7 +48,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipsadmin_rights["Portuguese(Brazil)"] = array();
 	$placeHoldersadmin_rights["Portuguese(Brazil)"] = array();
 	$pageTitlesadmin_rights["Portuguese(Brazil)"] = array();
-	$fieldLabelsadmin_rights["Portuguese(Brazil)"]["TableName"] = "Table Name";
+	$fieldLabelsadmin_rights["Portuguese(Brazil)"]["TableName"] = "Nome Tabela";
 	$fieldToolTipsadmin_rights["Portuguese(Brazil)"]["TableName"] = "";
 	$placeHoldersadmin_rights["Portuguese(Brazil)"]["TableName"] = "";
 	$fieldLabelsadmin_rights["Portuguese(Brazil)"]["GroupID"] = "Group ID";
@@ -57,7 +57,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadmin_rights["Portuguese(Brazil)"]["AccessMask"] = "Access Mask";
 	$fieldToolTipsadmin_rights["Portuguese(Brazil)"]["AccessMask"] = "";
 	$placeHoldersadmin_rights["Portuguese(Brazil)"]["AccessMask"] = "";
-	$fieldLabelsadmin_rights["Portuguese(Brazil)"]["Page"] = "Page";
+	$fieldLabelsadmin_rights["Portuguese(Brazil)"]["Page"] = "Página";
 	$fieldToolTipsadmin_rights["Portuguese(Brazil)"]["Page"] = "";
 	$placeHoldersadmin_rights["Portuguese(Brazil)"]["Page"] = "";
 	if (count($fieldToolTipsadmin_rights["Portuguese(Brazil)"]))
@@ -117,7 +117,7 @@ $tdataadmin_rights[".listAjax"] = false;
 //	temporary
 $tdataadmin_rights[".listAjax"] = false;
 
-	$tdataadmin_rights[".audit"] = false;
+	$tdataadmin_rights[".audit"] = true;
 
 	$tdataadmin_rights[".locking"] = false;
 

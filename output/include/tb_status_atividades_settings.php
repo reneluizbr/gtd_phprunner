@@ -30,7 +30,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_status_atividades["English"]["stat_id"] = "ID";
 	$fieldToolTipstb_status_atividades["English"]["stat_id"] = "";
 	$placeHolderstb_status_atividades["English"]["stat_id"] = "";
-	$fieldLabelstb_status_atividades["English"]["clie_id"] = "Customer ID";
+	$fieldLabelstb_status_atividades["English"]["clie_id"] = "Customer";
 	$fieldToolTipstb_status_atividades["English"]["clie_id"] = "";
 	$placeHolderstb_status_atividades["English"]["clie_id"] = "";
 	$fieldLabelstb_status_atividades["English"]["stat_nm"] = "Name";
@@ -42,16 +42,16 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_status_atividades["English"]["stat_fl_ativo"] = "Active?";
 	$fieldToolTipstb_status_atividades["English"]["stat_fl_ativo"] = "";
 	$placeHolderstb_status_atividades["English"]["stat_fl_ativo"] = "";
-	$fieldLabelstb_status_atividades["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_status_atividades["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_status_atividades["English"]["inclu_dt"] = "";
 	$placeHolderstb_status_atividades["English"]["inclu_dt"] = "";
 	$fieldLabelstb_status_atividades["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_status_atividades["English"]["alter_dt"] = "";
 	$placeHolderstb_status_atividades["English"]["alter_dt"] = "";
-	$fieldLabelstb_status_atividades["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_status_atividades["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_status_atividades["English"]["inclu_login"] = "";
 	$placeHolderstb_status_atividades["English"]["inclu_login"] = "";
-	$fieldLabelstb_status_atividades["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_status_atividades["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_status_atividades["English"]["alter_login"] = "";
 	$placeHolderstb_status_atividades["English"]["alter_login"] = "";
 	if (count($fieldToolTipstb_status_atividades["English"]))
@@ -158,11 +158,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_status_atividades[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_status_atividades[".listAjax"] = false;
+	$tdatatb_status_atividades[".listAjax"] = true;
 //	temporary
 $tdatatb_status_atividades[".listAjax"] = false;
 
-	$tdatatb_status_atividades[".audit"] = false;
+	$tdatatb_status_atividades[".audit"] = true;
 
 	$tdatatb_status_atividades[".locking"] = false;
 

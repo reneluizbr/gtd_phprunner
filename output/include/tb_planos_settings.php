@@ -36,19 +36,19 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_planos["English"]["plan_ds"] = "Description";
 	$fieldToolTipstb_planos["English"]["plan_ds"] = "";
 	$placeHolderstb_planos["English"]["plan_ds"] = "";
-	$fieldLabelstb_planos["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_planos["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_planos["English"]["inclu_dt"] = "";
 	$placeHolderstb_planos["English"]["inclu_dt"] = "";
 	$fieldLabelstb_planos["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_planos["English"]["alter_dt"] = "";
 	$placeHolderstb_planos["English"]["alter_dt"] = "";
-	$fieldLabelstb_planos["English"]["plan_domi_tipo"] = "Plan Domi Tipo";
+	$fieldLabelstb_planos["English"]["plan_domi_tipo"] = "Plan Type";
 	$fieldToolTipstb_planos["English"]["plan_domi_tipo"] = "";
 	$placeHolderstb_planos["English"]["plan_domi_tipo"] = "";
-	$fieldLabelstb_planos["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_planos["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_planos["English"]["inclu_login"] = "";
 	$placeHolderstb_planos["English"]["inclu_login"] = "";
-	$fieldLabelstb_planos["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_planos["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_planos["English"]["alter_login"] = "";
 	$placeHolderstb_planos["English"]["alter_login"] = "";
 	if (count($fieldToolTipstb_planos["English"]))
@@ -149,11 +149,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_planos[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_planos[".listAjax"] = false;
+	$tdatatb_planos[".listAjax"] = true;
 //	temporary
 $tdatatb_planos[".listAjax"] = false;
 
-	$tdatatb_planos[".audit"] = false;
+	$tdatatb_planos[".audit"] = true;
 
 	$tdatatb_planos[".locking"] = false;
 

@@ -203,6 +203,12 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_inline_save_all}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_inline_cancel_all}"},
+				
+				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 				
@@ -236,9 +242,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_columns_control}"},
-				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'right',
@@ -262,10 +265,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"Categ","hidden":"{$item_hide_text}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
           },
 
@@ -284,8 +285,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_sort_dropdown}"},
+				
+		  ],
   "border": [ false, false, false, false ],
           "alignment": 'right',
     },
@@ -371,8 +374,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$custom CAT_}","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
           },
 
@@ -771,7 +776,16 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_grid_inline_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_save}"},
+				
+				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_copy}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},

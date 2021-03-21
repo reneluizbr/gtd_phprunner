@@ -56,7 +56,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jspagetitlelabel tb_atividade view}","hidden":"{$item_hide_view_header}","fontSize":30},
+			{"text":"{$jspagetitlelabel tb_atividade view}","hidden":"{$item_hide_view_header}","bold":true,"fontSize":30},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -88,84 +88,14 @@ pdfDocument = {
 												{BEGIN col_grid_1}
 						"*", 
 							{END col_grid_1}
+												{BEGIN col_grid_2}
+						"*", 
+							{END col_grid_2}
 					 ],	
 		
 		body: [
 				
 					{BEGIN row_grid_0}
-				
-		[
-												{BEGIN cellblock_grid_c3}
-
-{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			style: 'undefinedcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field}","text":[{"text":"{$jslabel tb_atividade ativ_id }","bold":true}," ",{$ativ_id_pdfvalue}]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","text":[{"text":"{$jslabel tb_atividade ativ_nm }","bold":true}," ",{$ativ_nm_pdfvalue}]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","text":[{"text":"{$jslabel tb_atividade lista_id }","bold":true}," ",{$lista_id_pdfvalue}]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field8}","text":[{"text":"{$jslabel tb_atividade ativ_concluida }","bold":true}," ",{$ativ_concluida_pdfvalue}]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-          },
-
-{END cellblock_grid_c3}
-																			{BEGIN cellblock_grid_c}
-
-{
-	cellId: 'c',
-	col:0,
-	row:0,
-			style: 'undefinedcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","text":[{"text":"{$jslabel tb_atividade clie_id }","bold":true}," ",{$clie_id_pdfvalue}]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","text":[{"text":"{$jslabel tb_atividade ativ_ds }","bold":true}," ",{$ativ_ds_pdfvalue}]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","text":[{"text":"{$jslabel tb_atividade stat_id }","bold":true}," ",{$stat_id_pdfvalue}]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","text":[{"text":"{$jslabel tb_atividade ativ_prioridade }","bold":true}," ",{$ativ_prioridade_pdfvalue}]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-          },
-
-{END cellblock_grid_c}
-											],
-				{END row_grid_0}
-								{BEGIN row_grid_1}
 				
 		[
 												{BEGIN cellblock_grid_c4}
@@ -179,9 +109,543 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
-					{BEGIN colspan_grid_c4}
-			colSpan: {$colspan_grid_c4},
-			{END colspan_grid_c4}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field17}","text":"{$jslabel tb_atividade ativ_id }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c4}
+																			{BEGIN cellblock_grid_c2}
+
+{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c2}
+			colSpan: {$colspan_grid_c2},
+			{END colspan_grid_c2}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","text":{$ativ_id_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c2}
+																			{ 
+					cellId: 'c2',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_0}
+								{BEGIN row_grid_1}
+				
+		[
+												{BEGIN cellblock_grid_c8}
+
+{
+	cellId: 'c8',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field18}","text":"{$jslabel tb_atividade clie_id }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c8}
+																			{BEGIN cellblock_grid_c9}
+
+{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c9}
+			colSpan: {$colspan_grid_c9},
+			{END colspan_grid_c9}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","text":{$clie_id_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c9}
+																			{ 
+					cellId: 'c9',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_1}
+								{BEGIN row_grid_2}
+				
+		[
+												{BEGIN cellblock_grid_c5}
+
+{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","text":"{$jslabel tb_atividade ativ_nm }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c5}
+																			{BEGIN cellblock_grid_c6}
+
+{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c6}
+			colSpan: {$colspan_grid_c6},
+			{END colspan_grid_c6}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","text":{$ativ_nm_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c6}
+																			{ 
+					cellId: 'c6',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_2}
+								{BEGIN row_grid_3}
+				
+		[
+												{BEGIN cellblock_grid_c27}
+
+{
+	cellId: 'c27',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field20}","text":"{$jslabel tb_atividade ativ_ds }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c27}
+																			{BEGIN cellblock_grid_c28}
+
+{
+	cellId: 'c28',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","text":{$ativ_ds_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c28}
+																			{BEGIN cellblock_grid_c29}
+
+{
+	cellId: 'c29',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c29}
+											],
+				{END row_grid_3}
+								{BEGIN row_grid_4}
+				
+		[
+												{BEGIN cellblock_grid_c19}
+
+{
+	cellId: 'c19',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field21}","text":"{$jslabel tb_atividade lista_id }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c19}
+																			{BEGIN cellblock_grid_c20}
+
+{
+	cellId: 'c20',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c20}
+			colSpan: {$colspan_grid_c20},
+			{END colspan_grid_c20}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","text":{$lista_id_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c20}
+																			{ 
+					cellId: 'c20',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_4}
+								{BEGIN row_grid_5}
+				
+		[
+												{BEGIN cellblock_grid_c23}
+
+{
+	cellId: 'c23',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field22}","text":"{$jslabel tb_atividade stat_id }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c23}
+																			{BEGIN cellblock_grid_c24}
+
+{
+	cellId: 'c24',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c24}
+			colSpan: {$colspan_grid_c24},
+			{END colspan_grid_c24}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","text":{$stat_id_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c24}
+																			{ 
+					cellId: 'c24',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_5}
+								{BEGIN row_grid_6}
+				
+		[
+												{BEGIN cellblock_grid_c30}
+
+{
+	cellId: 'c30',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field24}","text":"{$jslabel tb_atividade ativ_prioridade }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c30}
+																			{BEGIN cellblock_grid_c31}
+
+{
+	cellId: 'c31',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c31}
+			colSpan: {$colspan_grid_c31},
+			{END colspan_grid_c31}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","text":{$ativ_prioridade_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c31}
+																			{ 
+					cellId: 'c31',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_6}
+								{BEGIN row_grid_7}
+				
+		[
+												{BEGIN cellblock_grid_c13}
+
+{
+	cellId: 'c13',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field23}","text":"{$jslabel tb_atividade ativ_concluida }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+    },
+
+{END cellblock_grid_c13}
+																			{BEGIN cellblock_grid_c14}
+
+{
+	cellId: 'c14',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c14}
+			colSpan: {$colspan_grid_c14},
+			{END colspan_grid_c14}
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","text":{$ativ_concluida_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c14}
+																			{ 
+					cellId: 'c14',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+							],
+				{END row_grid_7}
+								{BEGIN row_grid_8}
+				
+		[
+												{BEGIN cellblock_grid_c1}
+
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c1}
+			colSpan: {$colspan_grid_c1},
+			{END colspan_grid_c1}
 		
 			
 	
@@ -286,6 +750,48 @@ pdfDocument = {
 		margin: [0,0,0,15],
 	},
 				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c1}
+																			{ 
+					cellId: 'c1',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+															{ 
+					cellId: 'c1',
+					row:  0,
+					col:  2,
+					text: ''
+				},
+							],
+				{END row_grid_8}
+								{BEGIN row_grid_9}
+				
+		[
+												{BEGIN cellblock_grid_c17}
+
+{
+	cellId: 'c17',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c17}
+			colSpan: {$colspan_grid_c17},
+			{END colspan_grid_c17}
+		
+			
+	
+	
+			"stack": [
+		
 						 
 		{
 		layout: 'panel',
@@ -334,6 +840,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field12}","text":[{"text":"{$jslabel tb_atividade inclu_dt }","bold":true}," ",{$inclu_dt_pdfvalue}]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","text":[{"text":"{$jslabel tb_atividade inclu_login }","bold":true}," ",{$inclu_login_pdfvalue}]},
+				
 		  ],
   "border": [ false, false, false, false ],
           },
@@ -359,6 +868,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field14}","text":[{"text":"{$jslabel tb_atividade alter_dt }","bold":true}," ",{$alter_dt_pdfvalue}]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","text":[{"text":"{$jslabel tb_atividade alter_login }","bold":true}," ",{$alter_login_pdfvalue}]},
+				
 		  ],
   "border": [ false, false, false, false ],
           },
@@ -379,71 +891,22 @@ pdfDocument = {
   "border": [ false, false, false, false ],
           },
 
-{END cellblock_grid_c4}
+{END cellblock_grid_c17}
 																			{ 
-					cellId: 'c4',
+					cellId: 'c17',
 					row:  0,
 					col:  1,
 					text: ''
 				},
+															{ 
+					cellId: 'c17',
+					row:  0,
+					col:  2,
+					text: ''
+				},
 							],
-				{END row_grid_1}
-								{BEGIN row_grid_2}
-				
-		[
-												{BEGIN cellblock_grid_c5}
-
-{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			style: 'undefinedcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field11}","text":[{"text":"{$jslabel tb_atividade inclu_login }","bold":true}," ",{$inclu_login_pdfvalue}]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-          },
-
-{END cellblock_grid_c5}
-																			{BEGIN cellblock_grid_c6}
-
-{
-	cellId: 'c6',
-	col:0,
-	row:0,
-			style: 'undefinedcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-			
-	
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field13}","text":[{"text":"{$jslabel tb_atividade alter_login }","bold":true}," ",{$alter_login_pdfvalue}]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-          },
-
-{END cellblock_grid_c6}
-											],
-				{END row_grid_2}
-								{BEGIN row_grid_3}
+				{END row_grid_9}
+								{BEGIN row_grid_10}
 				
 		[
 												{BEGIN cellblock_grid_c7}
@@ -482,59 +945,14 @@ pdfDocument = {
 					col:  1,
 					text: ''
 				},
+															{ 
+					cellId: 'c7',
+					row:  0,
+					col:  2,
+					text: ''
+				},
 							],
-				{END row_grid_3}
-								{BEGIN row_grid_4}
-				
-		[
-												{BEGIN cellblock_grid_c8}
-
-{
-	cellId: 'c8',
-	col:0,
-	row:0,
-			style: 'undefinedcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-			
-	
-	
-			"stack": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-          },
-
-{END cellblock_grid_c8}
-																			{BEGIN cellblock_grid_c9}
-
-{
-	cellId: 'c9',
-	col:0,
-	row:0,
-			style: 'undefinedcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-			
-	
-	
-			"stack": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-          },
-
-{END cellblock_grid_c9}
-											],
-				{END row_grid_4}
+				{END row_grid_10}
 					]
 	}
 }

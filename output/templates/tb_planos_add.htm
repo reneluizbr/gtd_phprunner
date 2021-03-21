@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -33,7 +36,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -51,7 +54,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -204,12 +207,133 @@
 	</div>
 </div>
 {END details_tb_planos_valores}
+											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
 	
-				{END grid_block}
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN inclu_login_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  r-horizontal-field form-horizontal" 
+	data-fieldname="inclu_login" 
+	data-signal-error-for="inclu_login{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="inclu_login" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_inclu_login}">
+		{BEGIN inclu_login_label}{$label tb_planos inclu_login }{END inclu_login_label}
+	</label>
+	<div class="r-edit-field">
+		{$inclu_login_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="inclu_login">
+		<div class="text-muted" >
+		{$tooltip tb_planos inclu_login }		</div>
+	</div>
+</div>
+
+
+{END inclu_login_fieldblock}
+											
+{BEGIN inclu_dt_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  r-horizontal-field form-horizontal" 
+	data-fieldname="inclu_dt" 
+	data-signal-error-for="inclu_dt{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="inclu_dt" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_inclu_dt}">
+		{BEGIN inclu_dt_label}{$label tb_planos inclu_dt }{END inclu_dt_label}
+	</label>
+	<div class="r-edit-field">
+		{$inclu_dt_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="inclu_dt">
+		<div class="text-muted" >
+		{$tooltip tb_planos inclu_dt }		</div>
+	</div>
+</div>
+
+
+{END inclu_dt_fieldblock}
+											
+{BEGIN alter_login_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  r-horizontal-field form-horizontal" 
+	data-fieldname="alter_login" 
+	data-signal-error-for="alter_login{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="alter_login" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_alter_login}">
+		{BEGIN alter_login_label}{$label tb_planos alter_login }{END alter_login_label}
+	</label>
+	<div class="r-edit-field">
+		{$alter_login_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="alter_login">
+		<div class="text-muted" >
+		{$tooltip tb_planos alter_login }		</div>
+	</div>
+</div>
+
+
+{END alter_login_fieldblock}
+											
+{BEGIN alter_dt_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  r-horizontal-field form-horizontal" 
+	data-fieldname="alter_dt" 
+	data-signal-error-for="alter_dt{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="alter_dt" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_alter_dt}">
+		{BEGIN alter_dt_label}{$label tb_planos alter_dt }{END alter_dt_label}
+	</label>
+	<div class="r-edit-field">
+		{$alter_dt_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="alter_dt">
+		<div class="text-muted" >
+		{$tooltip tb_planos alter_dt }		</div>
+	</div>
+</div>
+
+
+{END alter_dt_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 

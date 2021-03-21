@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -87,8 +90,9 @@
 		{BEGIN filter_control_stat_id}
 		<div class="panel panel-info filter-field filter-stat_id-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
+							<input class="filter-selectAll-stat_id" type="checkbox" name="selectAll" {$selectAll_attrs_stat_id} />
 			
 				<label>{$label tb_atividade stat_id }</label>
 
@@ -121,6 +125,12 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_stat_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_stat_id}">
+					<a href="#" class="rnr-button filter-stat_id-btn-multiselect filter-apply-stat_id" {$filterbutton_attrs_stat_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_stat_id}					
 				
 	
 			</ul>			
@@ -141,6 +151,7 @@
 			<div class="panel-heading filter-expander">
 																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
 
+							<input class="filter-selectAll-lista_id" type="checkbox" name="selectAll" {$selectAll_attrs_lista_id} />
 			
 				<label>{$label tb_atividade lista_id }</label>
 
@@ -173,6 +184,12 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_lista_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_lista_id}">
+					<a href="#" class="rnr-button filter-lista_id-btn-multiselect filter-apply-lista_id" {$filterbutton_attrs_lista_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_lista_id}					
 				
 	
 			</ul>			
@@ -191,8 +208,9 @@
 		{BEGIN filter_control_ativ_prioridade}
 		<div class="panel panel-info filter-field filter-ativ_prioridade-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
+							<input class="filter-selectAll-ativ_prioridade" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_prioridade} />
 			
 				<label>{$label tb_atividade ativ_prioridade }</label>
 
@@ -225,6 +243,12 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_ativ_prioridade}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_prioridade}">
+					<a href="#" class="rnr-button filter-ativ_prioridade-btn-multiselect filter-apply-ativ_prioridade" {$filterbutton_attrs_ativ_prioridade}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_prioridade}					
 				
 	
 			</ul>			

@@ -31,31 +31,31 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipstb_dominios["English"]["domi_id"] = "";
 	$placeHolderstb_dominios["English"]["domi_id"] = "";
 	$fieldLabelstb_dominios["English"]["domi_grupo"] = "Group";
-	$fieldToolTipstb_dominios["English"]["domi_grupo"] = "";
+	$fieldToolTipstb_dominios["English"]["domi_grupo"] = "Nome sem espaços";
 	$placeHolderstb_dominios["English"]["domi_grupo"] = "";
 	$fieldLabelstb_dominios["English"]["domi_ordem"] = "Order";
-	$fieldToolTipstb_dominios["English"]["domi_ordem"] = "";
+	$fieldToolTipstb_dominios["English"]["domi_ordem"] = "Número de ordem";
 	$placeHolderstb_dominios["English"]["domi_ordem"] = "";
 	$fieldLabelstb_dominios["English"]["domi_valor"] = "Value";
-	$fieldToolTipstb_dominios["English"]["domi_valor"] = "";
+	$fieldToolTipstb_dominios["English"]["domi_valor"] = "String sem espaços(pt-br)";
 	$placeHolderstb_dominios["English"]["domi_valor"] = "";
 	$fieldLabelstb_dominios["English"]["domi_exibe"] = "Exhibition";
-	$fieldToolTipstb_dominios["English"]["domi_exibe"] = "";
+	$fieldToolTipstb_dominios["English"]["domi_exibe"] = "Nome de exibição";
 	$placeHolderstb_dominios["English"]["domi_exibe"] = "";
-	$fieldLabelstb_dominios["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_dominios["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_dominios["English"]["inclu_dt"] = "";
 	$placeHolderstb_dominios["English"]["inclu_dt"] = "";
 	$fieldLabelstb_dominios["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_dominios["English"]["alter_dt"] = "";
 	$placeHolderstb_dominios["English"]["alter_dt"] = "";
-	$fieldLabelstb_dominios["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_dominios["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_dominios["English"]["inclu_login"] = "";
 	$placeHolderstb_dominios["English"]["inclu_login"] = "";
-	$fieldLabelstb_dominios["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_dominios["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_dominios["English"]["alter_login"] = "";
 	$placeHolderstb_dominios["English"]["alter_login"] = "";
-	$pageTitlestb_dominios["English"]["view"] = "Domínio {%domi_id} - {\$domi_grupo}, {%domi_valor}";
-	$pageTitlestb_dominios["English"]["edit"] = "Domínio, Editar [{%domi_id} - {%domi_grupo}, {%domi_valor}]";
+	$pageTitlestb_dominios["English"]["view"] = "Domain {%domi_id} - {\$domi_grupo}, {%domi_valor}";
+	$pageTitlestb_dominios["English"]["edit"] = "Domain, Edit [{%domi_id} - {%domi_grupo}, {%domi_valor}]";
 	if (count($fieldToolTipstb_dominios["English"]))
 		$tdatatb_dominios[".isUseToolTips"] = true;
 }
@@ -69,17 +69,17 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_id"] = "";
 	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_id"] = "";
 	$fieldLabelstb_dominios["Portuguese(Brazil)"]["domi_grupo"] = "Grupo";
-	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_grupo"] = "Nome sem espaços";
-	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_grupo"] = "Nome sem espaços. ex: TIPO_NAT";
+	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_grupo"] = "";
+	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_grupo"] = "";
 	$fieldLabelstb_dominios["Portuguese(Brazil)"]["domi_ordem"] = "Ordem";
-	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_ordem"] = "Número de ordem";
-	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_ordem"] = "Ordem Sequencial";
+	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_ordem"] = "";
+	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_ordem"] = "";
 	$fieldLabelstb_dominios["Portuguese(Brazil)"]["domi_valor"] = "Valor";
-	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_valor"] = "String sem espaços";
-	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_valor"] = "Nome sem espaços. ex: ATIVA";
+	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_valor"] = "";
+	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_valor"] = "";
 	$fieldLabelstb_dominios["Portuguese(Brazil)"]["domi_exibe"] = "Exibição";
-	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_exibe"] = "Nome de exibição";
-	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_exibe"] = "Nome de exibição: ex: Ativo Ok";
+	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["domi_exibe"] = "";
+	$placeHolderstb_dominios["Portuguese(Brazil)"]["domi_exibe"] = "";
 	$fieldLabelstb_dominios["Portuguese(Brazil)"]["inclu_dt"] = "Incluído em";
 	$fieldToolTipstb_dominios["Portuguese(Brazil)"]["inclu_dt"] = "";
 	$placeHolderstb_dominios["Portuguese(Brazil)"]["inclu_dt"] = "";
@@ -164,11 +164,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_dominios[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_dominios[".listAjax"] = false;
+	$tdatatb_dominios[".listAjax"] = true;
 //	temporary
 $tdatatb_dominios[".listAjax"] = false;
 
-	$tdatatb_dominios[".audit"] = false;
+	$tdatatb_dominios[".audit"] = true;
 
 	$tdatatb_dominios[".locking"] = false;
 
@@ -301,7 +301,7 @@ $tdatatb_dominios[".orderindexes"] = array();
 	$tdatatb_dominios[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "domi_ordem");
 
 
-$tdatatb_dominios[".sqlHead"] = "SELECT domi_id,  domi_grupo,  domi_ordem,  domi_valor,  domi_exibe,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
+$tdatatb_dominios[".sqlHead"] = "SELECT domi_id, domi_grupo, domi_ordem, domi_valor, domi_exibe, inclu_login, inclu_dt, alter_login, alter_dt";
 $tdatatb_dominios[".sqlFrom"] = "FROM tb_dominios";
 $tdatatb_dominios[".sqlWhereExpr"] = "";
 $tdatatb_dominios[".sqlTail"] = "";
@@ -345,6 +345,18 @@ $tdatatb_dominios[".Keys"] = $tableKeystb_dominios;
 
 
 $tdatatb_dominios[".hideMobileList"] = array();
+		$tdatatb_dominios[".hideMobileList"][4] = array();
+$tdatatb_dominios[".hideMobileList"][4]["domi_id"] = true;
+		$tdatatb_dominios[".hideMobileList"][4]["inclu_login"] = true;
+		$tdatatb_dominios[".hideMobileList"][4]["inclu_dt"] = true;
+		$tdatatb_dominios[".hideMobileList"][4]["alter_login"] = true;
+		$tdatatb_dominios[".hideMobileList"][4]["alter_dt"] = true;
+		$tdatatb_dominios[".hideMobileList"][5] = array();
+$tdatatb_dominios[".hideMobileList"][5]["domi_id"] = true;
+		$tdatatb_dominios[".hideMobileList"][5]["inclu_login"] = true;
+		$tdatatb_dominios[".hideMobileList"][5]["inclu_dt"] = true;
+		$tdatatb_dominios[".hideMobileList"][5]["alter_login"] = true;
+		$tdatatb_dominios[".hideMobileList"][5]["alter_dt"] = true;
 
 
 
@@ -612,7 +624,7 @@ $tdatatb_dominios[".hideMobileList"] = array();
 		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "domi_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1622,7 +1634,7 @@ function createSqlQuery_tb_dominios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "domi_id,  domi_grupo,  domi_ordem,  domi_valor,  domi_exibe,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
+$proto0["m_strFieldList"] = "domi_id, domi_grupo, domi_ordem, domi_valor, domi_exibe, inclu_login, inclu_dt, alter_login, alter_dt";
 $proto0["m_strFrom"] = "FROM tb_dominios";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY domi_grupo, domi_ordem";

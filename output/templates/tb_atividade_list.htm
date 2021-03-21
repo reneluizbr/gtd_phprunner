@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -104,7 +107,33 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_alter_dt}
+																		{BEGIN searchCtrlBlock_ativ_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_id}" {$filterRow_attrs_ativ_id}>
+			<label>{$label tb_atividade ativ_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_id}</span>
+						</div>
+		{END searchCtrlBlock_ativ_id}
+																{BEGIN searchCtrlBlock_ativ_fl_ativo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_fl_ativo}" {$filterRow_attrs_ativ_fl_ativo}>
+			<label>{$label tb_atividade ativ_fl_ativo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_fl_ativo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_fl_ativo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_fl_ativo}</span>
+						</div>
+		{END searchCtrlBlock_ativ_fl_ativo}
+																{BEGIN searchCtrlBlock_alter_dt}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_alter_dt}" {$filterRow_attrs_alter_dt}>
@@ -260,19 +289,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_nm}</span>
 						</div>
 		{END searchCtrlBlock_ativ_nm}
-																{BEGIN searchCtrlBlock_ativ_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ativ_id}" {$filterRow_attrs_ativ_id}>
-			<label>{$label tb_atividade ativ_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ativ_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ativ_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_id}</span>
-						</div>
-		{END searchCtrlBlock_ativ_id}
 																{BEGIN searchCtrlBlock_ativ_dt_ini}
 
 
@@ -359,11 +375,77 @@
 
 		 	
 
-		{BEGIN filter_control_stat_id}
-		<div class="panel panel-info filter-field filter-stat_id-container">
+		{BEGIN filter_control_lista_id}
+		<div class="panel panel-info filter-field filter-lista_id-container">
 			<div class="panel-heading filter-expander">
 																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
 
+							<input class="filter-selectAll-lista_id" type="checkbox" name="selectAll" {$selectAll_attrs_lista_id} />
+			
+				<label>{$label tb_atividade lista_id }</label>
+
+				{BEGIN clearLink_lista_id}
+				<a href="#" class="filter-clear filter-clear-lista_id">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_lista_id}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_lista_id}
+				<li class="list-group-item filter-values filter-values-lista_id {$collapsedClass_lista_id} {$visibilityClass_lista_id}">
+					{$lista_id_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_lista_id}
+
+							{BEGIN filter_button_showmore_lista_id}
+				<li class="list-group-item filter-show-more {$collapsedClass_lista_id} {$showMoreBtnClass_lista_id}">
+					<a class="filter-show-more-link filterShowMore_lista_id" href="#">{$show_n_more_lista_id}</a>
+				</li>
+				{END filter_button_showmore_lista_id}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_lista_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_lista_id}">
+					<a href="#" class="rnr-button filter-lista_id-btn-multiselect filter-apply-lista_id" {$filterbutton_attrs_lista_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_lista_id}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_lista_id}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_stat_id}
+		<div class="panel panel-info filter-field filter-stat_id-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
+
+							<input class="filter-selectAll-stat_id" type="checkbox" name="selectAll" {$selectAll_attrs_stat_id} />
 			
 				<label>{$label tb_atividade stat_id }</label>
 
@@ -402,6 +484,12 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_stat_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_stat_id}">
+					<a href="#" class="rnr-button filter-stat_id-btn-multiselect filter-apply-stat_id" {$filterbutton_attrs_stat_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_stat_id}					
 				
 	
 			</ul>			
@@ -420,8 +508,9 @@
 		{BEGIN filter_control_ativ_domi_unid_tempo}
 		<div class="panel panel-info filter-field filter-ativ_domi_unid_tempo-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
+							<input class="filter-selectAll-ativ_domi_unid_tempo" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_domi_unid_tempo} />
 			
 				<label>{$label tb_atividade ativ_domi_unid_tempo }</label>
 
@@ -460,6 +549,12 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_ativ_domi_unid_tempo}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_domi_unid_tempo}">
+					<a href="#" class="rnr-button filter-ativ_domi_unid_tempo-btn-multiselect filter-apply-ativ_domi_unid_tempo" {$filterbutton_attrs_ativ_domi_unid_tempo}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_domi_unid_tempo}					
 				
 	
 			</ul>			
@@ -536,8 +631,9 @@
 		{BEGIN filter_control_ativ_tempo_estimado}
 		<div class="panel panel-info filter-field filter-ativ_tempo_estimado-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
+							<input class="filter-selectAll-ativ_tempo_estimado" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_tempo_estimado} />
 			
 				<label>{$label tb_atividade ativ_tempo_estimado }</label>
 
@@ -576,6 +672,12 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_ativ_tempo_estimado}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_tempo_estimado}">
+					<a href="#" class="rnr-button filter-ativ_tempo_estimado-btn-multiselect filter-apply-ativ_tempo_estimado" {$filterbutton_attrs_ativ_tempo_estimado}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_tempo_estimado}					
 				
 	
 			</ul>			
@@ -594,8 +696,9 @@
 		{BEGIN filter_control_ativ_prioridade}
 		<div class="panel panel-info filter-field filter-ativ_prioridade-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
+							<input class="filter-selectAll-ativ_prioridade" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_prioridade} />
 			
 				<label>{$label tb_atividade ativ_prioridade }</label>
 
@@ -634,69 +737,17 @@
 
 			
 
+			 
+				{BEGIN filter_button_multiselect_ativ_prioridade}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_prioridade}">
+					<a href="#" class="rnr-button filter-ativ_prioridade-btn-multiselect filter-apply-ativ_prioridade" {$filterbutton_attrs_ativ_prioridade}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_prioridade}					
 				
 	
 			</ul>			
 		</div>
 		{END filter_control_ativ_prioridade}
-	 
-			
-	 	
-
-		
-		 
-		 
-
-		 	
-
-		{BEGIN filter_control_lista_id}
-		<div class="panel panel-info filter-field filter-lista_id-container">
-			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
-
-			
-				<label>{$label tb_atividade lista_id }</label>
-
-				{BEGIN clearLink_lista_id}
-				<a href="#" class="filter-clear filter-clear-lista_id">{mlang_message FILTER_CLEAR}</a>
-				{END clearLink_lista_id}				
-			</div>
-
-			<ul class="list-group">
-				{BEGIN filterCtrlBlock_lista_id}
-				<li class="list-group-item filter-values filter-values-lista_id {$collapsedClass_lista_id} {$visibilityClass_lista_id}">
-					{$lista_id_filter}
-								
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-				</li>				
-				{END filterCtrlBlock_lista_id}
-
-							{BEGIN filter_button_showmore_lista_id}
-				<li class="list-group-item filter-show-more {$collapsedClass_lista_id} {$showMoreBtnClass_lista_id}">
-					<a class="filter-show-more-link filterShowMore_lista_id" href="#">{$show_n_more_lista_id}</a>
-				</li>
-				{END filter_button_showmore_lista_id}			
-			
-
-
-			
-
-				
-	
-			</ul>			
-		</div>
-		{END filter_control_lista_id}
 	 
 	</div>
 </div>			</div>
@@ -738,6 +789,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -769,6 +826,12 @@
 									<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
+								<li data-itemtype="edit_selected" data-itemid="edit_selected" {$item_edit_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$editselectedlink_attrs} {$editselectedlink_span}  title="" >
+				
+		{mlang_message EDIT_SELECTED}		
+		</a>
+	</li>
 							{BEGIN exportselected_link}
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
@@ -785,7 +848,7 @@
 		</a>
 	</li>
 {END deleteselected_link}
-							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="tb_atividade_search.php" {$advsearchlink_attrs}  title="" >
 				
 		{mlang_message ADVANCED_SEARCH}		
@@ -815,14 +878,6 @@
 		</a>
 	</li>
 {END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="tb_atividade_import.php?{$crosstable_attrs}"  title="" >
-				
-		{mlang_message IMPORT}		
-		</a>
-	</li>
-{END import_link}
 							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
 	<li><a href="#" data-lang="English" class="rnr-langlink">
 		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
@@ -933,7 +988,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="tb_atividade_add.php" >
+	" {$addlink_attrs} href="tb_atividade_add.php" data-popup >
 							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
@@ -946,9 +1001,25 @@
 </span>
 {END inlineadd_link}
 	 
+		{BEGIN saveall_link}
+<span data-itemtype="inline_save_all" data-itemid="inline_save_all" {$item_inline_save_all} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savealllink_attrs} {$savealllink_span} >
+							{mlang_message SAVE_ALL}			</a>
+</span>
+{END saveall_link}
+	 
+		{BEGIN cancelall_link}
+<span data-itemtype="inline_cancel_all" data-itemid="inline_cancel_all" {$item_inline_cancel_all} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$cancelalllink_attrs} {$cancelalllink_span} >
+							{mlang_message CANCEL_ALL}			</a>
+</span>
+{END cancelall_link}
+	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
+	<a type="button" title="" class="btn btn-danger   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
 							{mlang_message DELETE}			</a>
 </span>
@@ -1034,7 +1105,7 @@
 			<div>
 				<label for="printDetailstb_categorias_x_atividades{$id}">
 					<input type="checkbox" value="tb_categorias_x_atividades" id="printDetailstb_categorias_x_atividades{$id}" checked>
-					Categorias por Atividades				</label>
+					Task's Categories				</label>
 			</div>
 			{END print_details_tb_categorias_x_atividades}
 						</div>
@@ -1070,155 +1141,6 @@
 															</ul>
 </span>
 {END print_friendly}
-	 
-		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
-		 reorder	keep-open btn-group"
-	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="{mlang_message SHOW_HIDE_COLUMNS}"
-	>
-	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
-	<ul role="menu" class="dropdown-menu dropdown-left">
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_clie_id" checked="checked" value="1" data-field="clie_id">
-					<span>{$label tb_atividade clie_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_nm" checked="checked" value="1" data-field="ativ_nm">
-					<span>{$label tb_atividade ativ_nm }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_lista_id" checked="checked" value="1" data-field="lista_id">
-					<span>{$label tb_atividade lista_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_stat_id" checked="checked" value="1" data-field="stat_id">
-					<span>{$label tb_atividade stat_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_prioridade" checked="checked" value="1" data-field="ativ_prioridade">
-					<span>{$label tb_atividade ativ_prioridade }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_concluida" checked="checked" value="1" data-field="ativ_concluida">
-					<span>{$label tb_atividade ativ_concluida }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_dt_ini" checked="checked" value="1" data-field="ativ_dt_ini">
-					<span>{$label tb_atividade ativ_dt_ini }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_dt_fim" checked="checked" value="1" data-field="ativ_dt_fim">
-					<span>{$label tb_atividade ativ_dt_fim }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_inclu_dt" checked="checked" value="1" data-field="inclu_dt">
-					<span>{$label tb_atividade inclu_dt }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_inclu_login" checked="checked" value="1" data-field="inclu_login">
-					<span>{$label tb_atividade inclu_login }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_id" checked="checked" value="1" data-field="ativ_id">
-					<span>{$label tb_atividade ativ_id }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_domi_unid_tempo" checked="checked" value="1" data-field="ativ_domi_unid_tempo">
-					<span>{$label tb_atividade ativ_domi_unid_tempo }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_tempo_estimado" checked="checked" value="1" data-field="ativ_tempo_estimado">
-					<span>{$label tb_atividade ativ_tempo_estimado }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-						<li>
-		<a>
-		  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ativ_tempo_real" checked="checked" value="1" data-field="ativ_tempo_real">
-					<span>{$label tb_atividade ativ_tempo_real }</span>
-				</label>
-			</div>
-		</a>
-		</li>
-			</ul>
-</div>
 		</div>					</div>
 	 
 		<div class="row">
@@ -1228,16 +1150,16 @@
 	class=" r-ori-vert			col-md-6
 	
 ">
-		 
-		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
-	Categ</span>
-		</div>			 
+			</div>			 
 				<div 
 	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
 	class="r-align-right r-ori-vert			col-md-6
 	
 ">
-			</div>					</div>
+		 
+		<div class="form-inline sortby-ctrl" data-itemtype="sort_dropdown" data-itemid="sort_dropdown" {$item_sort_dropdown} data-pageid="{$pageid}">
+{mlang_message SORT_BY}&nbsp;{$sortByDropdown}
+</div>		</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -1392,6 +1314,9 @@
 	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	{$custom CAT_}</span>
 	
 	</th>
 	{END cellblock_grid_headcell_details}
@@ -1808,12 +1733,32 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="tb_atividade_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
+	 glyphicon glyphicon-pencil" href="tb_atividade_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" data-popup >		
 				
 								</a>
 </span>
 {END edit_link}
 {END edit_column}
+	 
+		{BEGIN inlineedit_column}
+{BEGIN inlineedit_link}
+<span data-itemtype="grid_inline_edit" data-itemid="grid_inline_edit" {$item_grid_inline_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message INLINE_EDIT}" class="btn-link   
+	 glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="{mlang_message INLINE_EDIT}" >		
+				
+								</a>
+</span>
+{END inlineedit_link}
+{END inlineedit_column}
+	 
+		{BEGIN inline_save}
+<span data-itemtype="grid_inline_save" data-itemid="grid_inline_save" {$item_grid_inline_save} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message SAVE}" class="btn-link   
+	 glyphicon glyphicon-ok" {$inlinesavelink_attrs} title="{mlang_message SAVE}" >		
+				
+								</a>
+</span>
+{END inline_save}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
@@ -1823,6 +1768,17 @@
 								</a>
 </span>
 {END inline_cancel}
+	 
+		{BEGIN copy_column}
+{BEGIN copy_link}
+<span data-itemtype="grid_copy" data-itemid="grid_copy" {$item_grid_copy} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message COPY}" class="btn-link   
+	 glyphicon glyphicon-duplicate" href="tb_atividade_add.php?{$copylink}" {$copylink_attrs} title="{mlang_message COPY}" data-popup >		
+				
+								</a>
+</span>
+{END copy_link}
+{END copy_column}
 	 
 		{BEGIN view_column}
 {BEGIN view_link}

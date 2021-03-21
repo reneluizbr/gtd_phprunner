@@ -27,16 +27,16 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["English"] = array();
 	$placeHoldersgr_fico_tarefas_por_prioridade["English"] = array();
 	$pageTitlesgr_fico_tarefas_por_prioridade["English"] = array();
-	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["clie_id"] = "Clie Id";
+	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["clie_id"] = "Domi Value";
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["English"]["clie_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_prioridade["English"]["clie_id"] = "";
-	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["Qtde"] = "Qtde";
+	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["Qtde"] = "Dashboard with Charts";
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["English"]["Qtde"] = "";
 	$placeHoldersgr_fico_tarefas_por_prioridade["English"]["Qtde"] = "";
-	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["domi_valor"] = "Domi Valor";
+	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["domi_valor"] = "Domi Value";
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["English"]["domi_valor"] = "";
 	$placeHoldersgr_fico_tarefas_por_prioridade["English"]["domi_valor"] = "";
-	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["Prioridade"] = "Prioridade";
+	$fieldLabelsgr_fico_tarefas_por_prioridade["English"]["Prioridade"] = "Chart Tasks created by User";
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["English"]["Prioridade"] = "";
 	$placeHoldersgr_fico_tarefas_por_prioridade["English"]["Prioridade"] = "";
 	if (count($fieldToolTipsgr_fico_tarefas_por_prioridade["English"]))
@@ -48,7 +48,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"] = array();
 	$placeHoldersgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"] = array();
 	$pageTitlesgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"] = array();
-	$fieldLabelsgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"]["clie_id"] = "Clie Id";
+	$fieldLabelsgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipsgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"]["clie_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"]["clie_id"] = "";
 	$fieldLabelsgr_fico_tarefas_por_prioridade["Portuguese(Brazil)"]["Qtde"] = "Qtde";
@@ -239,33 +239,33 @@ $tdatagr_fico_tarefas_por_prioridade[".strOrderBy"] = $tstrOrderBy;
 
 $tdatagr_fico_tarefas_por_prioridade[".orderindexes"] = array();
 
-$tdatagr_fico_tarefas_por_prioridade[".sqlHead"] = "SELECT A.clie_id,  domi_valor,  domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade,  COUNT(A.ativ_id) AS Qtde";
-$tdatagr_fico_tarefas_por_prioridade[".sqlFrom"] = "FROM tb_atividade AS A  , tb_dominios AS D";
-$tdatagr_fico_tarefas_por_prioridade[".sqlWhereExpr"] = "(A.ativ_prioridade = D.domi_valor)  AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+$tdatagr_fico_tarefas_por_prioridade[".sqlHead"] = "SELECT A.clie_id, domi_valor, domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade, COUNT(A.ativ_id) AS Qtde";
+$tdatagr_fico_tarefas_por_prioridade[".sqlFrom"] = "FROM tb_atividade AS A , tb_dominios AS D";
+$tdatagr_fico_tarefas_por_prioridade[".sqlWhereExpr"] = "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
 $tdatagr_fico_tarefas_por_prioridade[".sqlTail"] = "";
 
 //fill array of tabs for list page
 $arrGridTabs = array();
 $arrGridTabs[] = array(
 	'tabId' => "Todas",
-	'name' => "<img src=\"images/info.png\" alt=\"\" /> Todas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS1",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = ativ_concluida",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Nao_Concluidas",
-	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Não Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______N_O_CONCLU_DAS",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 0",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Concluidas",
-	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______CONCLU_DAS",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 1",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
@@ -897,8 +897,8 @@ $tdatagr_fico_tarefas_por_prioridade[".hideMobileList"] = array();
 			<attr value="appearance">';
 
 
-	$tdatagr_fico_tarefas_por_prioridade[".chartXml"] .= '<attr value="head">'.xmlencode("Tarefas por Prioridade").'</attr>
-<attr value="foot">'.xmlencode("Quantidades por Prioridade").'</attr>
+	$tdatagr_fico_tarefas_por_prioridade[".chartXml"] .= '<attr value="head">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_POR_PRIORIDADE_HEADER")).'</attr>
+<attr value="foot">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_POR_PRIORIDADE_FOOTER")).'</attr>
 <attr value="y_axis_label">'.xmlencode("ativ_id").'</attr>
 
 
@@ -982,18 +982,18 @@ function createSqlQuery_gr_fico_tarefas_por_prioridade()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "A.clie_id,  domi_valor,  domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade,  COUNT(A.ativ_id) AS Qtde";
-$proto0["m_strFrom"] = "FROM tb_atividade AS A  , tb_dominios AS D";
-$proto0["m_strWhere"] = "(A.ativ_prioridade = D.domi_valor)  AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+$proto0["m_strFieldList"] = "A.clie_id, domi_valor, domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade, COUNT(A.ativ_id) AS Qtde";
+$proto0["m_strFrom"] = "FROM tb_atividade AS A , tb_dominios AS D";
+$proto0["m_strWhere"] = "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "(A.ativ_prioridade = D.domi_valor)  AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+$proto2["m_sql"] = "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "(A.ativ_prioridade = D.domi_valor)  AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'"
+	"m_sql" => "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'"
 ));
 
 $proto2["m_column"]=$obj;

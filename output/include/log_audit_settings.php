@@ -9,10 +9,10 @@ $tdatalog_audit[".OwnerID"] = "";
 $tdatalog_audit[".OriginalTable"] = "log_audit";
 
 
-$defaultPages = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatalog_audit[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatalog_audit[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatalog_audit[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatalog_audit[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatalog_audit[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -33,7 +33,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelslog_audit["English"]["datetime"] = "Datetime";
 	$fieldToolTipslog_audit["English"]["datetime"] = "";
 	$placeHolderslog_audit["English"]["datetime"] = "";
-	$fieldLabelslog_audit["English"]["ip"] = "Ip";
+	$fieldLabelslog_audit["English"]["ip"] = "IP";
 	$fieldToolTipslog_audit["English"]["ip"] = "";
 	$placeHolderslog_audit["English"]["ip"] = "";
 	$fieldLabelslog_audit["English"]["user"] = "User";
@@ -140,7 +140,7 @@ $popupPagesLayoutNames = array();
 $tdatalog_audit[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatalog_audit[".listAjax"] = false;
+	$tdatalog_audit[".listAjax"] = true;
 //	temporary
 $tdatalog_audit[".listAjax"] = false;
 

@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -112,7 +115,7 @@
 {BEGIN usua_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_id}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_id}  r-horizontal-field form-horizontal" 
 	data-fieldname="usua_id" 
 	data-signal-error-for="usua_id{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="usua_id" >
@@ -135,7 +138,7 @@
 {BEGIN clie_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  r-horizontal-field form-horizontal" 
 	data-fieldname="clie_id" 
 	data-signal-error-for="clie_id{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
@@ -158,7 +161,7 @@
 {BEGIN usua_domi_status_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_domi_status}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_domi_status}  r-horizontal-field form-horizontal" 
 	data-fieldname="usua_domi_status" 
 	data-signal-error-for="usua_domi_status{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="usua_domi_status" >
@@ -178,33 +181,10 @@
 
 {END usua_domi_status_fieldblock}
 											
-{BEGIN usua_email_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_email}  r-vertical-field" 
-	data-fieldname="usua_email" 
-	data-signal-error-for="usua_email{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="usua_email" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_usua_email}">
-		{BEGIN usua_email_label}{$label tb_usuarios usua_email }{END usua_email_label}
-	</label>
-	<div class="r-edit-field">
-		{$usua_email_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="usua_email">
-		<div class="text-muted" >
-		{$tooltip tb_usuarios usua_email }		</div>
-	</div>
-</div>
-
-
-{END usua_email_fieldblock}
-											
 {BEGIN usua_username_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_username}  r-vertical-field" 
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_username}  r-horizontal-field form-horizontal" 
 	data-fieldname="usua_username" 
 	data-signal-error-for="usua_username{$id}" 
 	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="usua_username" >
@@ -224,28 +204,53 @@
 
 {END usua_username_fieldblock}
 											
-{BEGIN usua_senha_fieldblock}
+{BEGIN usua_email_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_senha}  r-vertical-field" 
-	data-fieldname="usua_senha" 
-	data-signal-error-for="usua_senha{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="usua_senha" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_email}  r-horizontal-field form-horizontal" 
+	data-fieldname="usua_email" 
+	data-signal-error-for="usua_email{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="usua_email" >
 
 
-	<label class="r-edit-label control-label" for="{$labelfor_usua_senha}">
-		{BEGIN usua_senha_label}{$label tb_usuarios usua_senha }{END usua_senha_label}
+	<label class="r-edit-label control-label" for="{$labelfor_usua_email}">
+		{BEGIN usua_email_label}{$label tb_usuarios usua_email }{END usua_email_label}
 	</label>
 	<div class="r-edit-field">
-		{$usua_senha_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="usua_senha">
+		{$usua_email_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="usua_email">
 		<div class="text-muted" >
-		{$tooltip tb_usuarios usua_senha }		</div>
+		{$tooltip tb_usuarios usua_email }		</div>
 	</div>
 </div>
 
 
-{END usua_senha_fieldblock}
+{END usua_email_fieldblock}
+											
+{BEGIN usua_idioma_ulti_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_idioma_ulti}  r-horizontal-field form-horizontal" 
+	data-fieldname="usua_idioma_ulti" 
+	data-signal-error-for="usua_idioma_ulti{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-page="tb_usuarios_edit" data-field="usua_idioma_ulti" data-before-same-field >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_usua_idioma_ulti}">
+		{BEGIN usua_idioma_ulti_label}{$label tb_usuarios usua_idioma_ulti }{END usua_idioma_ulti_label}
+	</label>
+	<div class="r-edit-field">
+		{$usua_idioma_ulti_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="usua_idioma_ulti">
+		<div class="text-muted" >
+		{$tooltip tb_usuarios usua_idioma_ulti }		</div>
+	</div>
+</div>
+
+
+{END usua_idioma_ulti_fieldblock}
+											<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="tb_usuarios_edit" data-small > 
+	{$custom __USUA_IDIOMA_ULT__ONLY_CHANGES_AFTER_A_NEW_LOGIN}</span>
 	
 								</td>
 			{END cellblock_grid_c3}

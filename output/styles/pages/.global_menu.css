@@ -62,4 +62,9 @@
   background-color: #CD853F;
 }
 
+/* Put  your custom CSS code here */
+
+[data-cellid="left_c1"][data-page=".global_menu"][data-cellid="left_c1"][data-page=".global_menu"][data-cellid="left_c1"][data-page=".global_menu"] {
+  color: red;
+}
 

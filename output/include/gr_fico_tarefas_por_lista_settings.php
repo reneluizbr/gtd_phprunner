@@ -27,16 +27,16 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsgr_fico_tarefas_por_lista["English"] = array();
 	$placeHoldersgr_fico_tarefas_por_lista["English"] = array();
 	$pageTitlesgr_fico_tarefas_por_lista["English"] = array();
-	$fieldLabelsgr_fico_tarefas_por_lista["English"]["clie_id"] = "Clie Id";
+	$fieldLabelsgr_fico_tarefas_por_lista["English"]["clie_id"] = "Customer";
 	$fieldToolTipsgr_fico_tarefas_por_lista["English"]["clie_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_lista["English"]["clie_id"] = "";
-	$fieldLabelsgr_fico_tarefas_por_lista["English"]["lista_id"] = "Lista Id";
+	$fieldLabelsgr_fico_tarefas_por_lista["English"]["lista_id"] = "List";
 	$fieldToolTipsgr_fico_tarefas_por_lista["English"]["lista_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_lista["English"]["lista_id"] = "";
-	$fieldLabelsgr_fico_tarefas_por_lista["English"]["lista_nm"] = "Lista Nm";
+	$fieldLabelsgr_fico_tarefas_por_lista["English"]["lista_nm"] = "List Name";
 	$fieldToolTipsgr_fico_tarefas_por_lista["English"]["lista_nm"] = "";
 	$placeHoldersgr_fico_tarefas_por_lista["English"]["lista_nm"] = "";
-	$fieldLabelsgr_fico_tarefas_por_lista["English"]["Qtde"] = "Qtde";
+	$fieldLabelsgr_fico_tarefas_por_lista["English"]["Qtde"] = "Qty";
 	$fieldToolTipsgr_fico_tarefas_por_lista["English"]["Qtde"] = "";
 	$placeHoldersgr_fico_tarefas_por_lista["English"]["Qtde"] = "";
 	if (count($fieldToolTipsgr_fico_tarefas_por_lista["English"]))
@@ -239,8 +239,8 @@ $tdatagr_fico_tarefas_por_lista[".strOrderBy"] = $tstrOrderBy;
 
 $tdatagr_fico_tarefas_por_lista[".orderindexes"] = array();
 
-$tdatagr_fico_tarefas_por_lista[".sqlHead"] = "SELECT A.clie_id,  A.lista_id,  L.lista_nm,  COUNT(A.lista_id) AS Qtde";
-$tdatagr_fico_tarefas_por_lista[".sqlFrom"] = "FROM tb_atividade AS A  , tb_lista_atividades AS L";
+$tdatagr_fico_tarefas_por_lista[".sqlHead"] = "SELECT A.clie_id, A.lista_id, L.lista_nm, COUNT(A.lista_id) AS Qtde";
+$tdatagr_fico_tarefas_por_lista[".sqlFrom"] = "FROM tb_atividade AS A , tb_lista_atividades AS L";
 $tdatagr_fico_tarefas_por_lista[".sqlWhereExpr"] = "(A.lista_id = L.lista_id)";
 $tdatagr_fico_tarefas_por_lista[".sqlTail"] = "";
 
@@ -248,24 +248,24 @@ $tdatagr_fico_tarefas_por_lista[".sqlTail"] = "";
 $arrGridTabs = array();
 $arrGridTabs[] = array(
 	'tabId' => "Todas",
-	'name' => "<img src=\"images/info.png\" alt=\"\" /> Todas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS3",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = ativ_concluida",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Nao_Concluidas",
-	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Não Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______N_O_CONCLU_DAS2",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 0",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Concluidas",
-	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______CONCLU_DAS2",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 1",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
@@ -927,8 +927,8 @@ $tdatagr_fico_tarefas_por_lista[".hideMobileList"] = array();
 			<attr value="appearance">';
 
 
-	$tdatagr_fico_tarefas_por_lista[".chartXml"] .= '<attr value="head">'.xmlencode("Tarefas por Lista").'</attr>
-<attr value="foot">'.xmlencode("Quantidades por Lista").'</attr>
+	$tdatagr_fico_tarefas_por_lista[".chartXml"] .= '<attr value="head">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_POR_LISTA_HEADER")).'</attr>
+<attr value="foot">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_POR_LISTA_FOOTER")).'</attr>
 <attr value="y_axis_label">'.xmlencode("ativ_id").'</attr>
 
 
@@ -1028,8 +1028,8 @@ function createSqlQuery_gr_fico_tarefas_por_lista()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "A.clie_id,  A.lista_id,  L.lista_nm,  COUNT(A.lista_id) AS Qtde";
-$proto0["m_strFrom"] = "FROM tb_atividade AS A  , tb_lista_atividades AS L";
+$proto0["m_strFieldList"] = "A.clie_id, A.lista_id, L.lista_nm, COUNT(A.lista_id) AS Qtde";
+$proto0["m_strFrom"] = "FROM tb_atividade AS A , tb_lista_atividades AS L";
 $proto0["m_strWhere"] = "(A.lista_id = L.lista_id)";
 $proto0["m_strOrderBy"] = "";
 	

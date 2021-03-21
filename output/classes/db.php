@@ -402,6 +402,7 @@ class DB
 		$dalTables[ $conn->connId ] = array();
 		if( "gtd_20200511_db3" == $conn->connId )
 		{
+			$dalTables[$conn->connId][] = array("name" => "GTD_PHPRunner_settings", "varname" => "gtd_20200511_db3__GTD_PHPRunner_settings", "altvarname" => "GTD_PHPRunner_settings", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 			$dalTables[$conn->connId][] = array("name" => "log_audit", "varname" => "gtd_20200511_db3__log_audit", "altvarname" => "log_audit", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 			$dalTables[$conn->connId][] = array("name" => "proc_limpar_tarefas_de_lista", "varname" => "gtd_20200511_db3__proc_limpar_tarefas_de_lista", "altvarname" => "proc_limpar_tarefas_de_lista", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 			$dalTables[$conn->connId][] = array("name" => "seguranca_uggroups", "varname" => "gtd_20200511_db3__seguranca_uggroups", "altvarname" => "seguranca_uggroups", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");

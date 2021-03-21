@@ -113,12 +113,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{BEGIN mastertable_block}
-			{$showmasterfile}
-		{END mastertable_block},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
           },
 

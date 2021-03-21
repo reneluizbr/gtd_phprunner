@@ -1,3 +1,92 @@
+Pendências, Notas e Itens a Fazer:
+    ✔ Recuperar último idioma selecionado por usuário (2021-03-20 17:29, Sat) @tagMelhoria @started(2021-03-21 01:05) @done(2021-03-21 03:20) @lasted(2h15m56s)
+        Criar mais uma coluna em tb_usuarios
+            usua_idioma_ulti  VARCHAR (30)  --comment 'Ultimo idioma utilizado'
+        Como guardar o idioma atual numa variavel de Sessao
+            $_SESSION["language"] = mlang_getcurrentlang();
+        Fluxo de processamento pensado: Nao consegui ver o clique no botão "lang_selector"
+            After Successfull Login -> Buscar o $wlUltimoIdioma usado em tb_usuarios
+                $_SESSION["language"] = mlang_getcurrentlang();
+                //echo "<script>alert('Idioma atual: " . $_SESSION["language"] . "');</script>";
+                //$_SESSION["language"]="Spanish";
+                //$_SESSION["language"]="Portuguese(Brazil)";
+                //echo "<script>alert('Idioma trocado para: " . $_SESSION["language"] . "');</script>";
+
+                // Rene: Buscar o $wlUltimoIdioma usado em tb_usuarios (Assume "English" se não tiver)
+                $rs = DB::Query("select usua_idioma_ulti from tb_usuarios where usua_id = {$_SESSION['usua_id']}");
+                $wlDados = $rs->fetchAssoc();
+                $wlUltimoIdioma = wlDados[0];
+                If (empty($wlUltimoIdioma)) {
+                    $wlUltimoIdioma = "English";
+                    // $wlUltimoIdioma = "Spanish";
+                    // $wlUltimoIdioma = "Portuguese(Brazil)";
+                }
+                $_SESSION["language"] = $wlUltimoIdioma;
+
+            Before Menu page process -> Setar o idioma de $_SESSION["language"]
+
+Melhorias em andamento e futuras @tagMelhoria:
+    ✔ Atualização da Base da Web (com nova coluna usua_idioma_ulti) @started(2021-03-21 13:11) @done(2021-03-21 14:11) @lasted(1h59s)
+    ✘ Bug: em tb_usuario, AfterEdit(), o comando exit(); após header("Location:menu.php"); não permitia a alteração do registro @cancelled(2021-03-21 14:15)
+        mas sem ele, a página não é redirecionada para recarregar o menu após a troca do idioma
+    ✔ Ajustado todas as datas para o formato "YYYY-MM-DD HH:MI:SS" @done(2021-03-21 14:57)
+    ✔ Desligada auditoria da própria tabela log_audit @done(2021-03-21 14:21)
+    ✔ Estilização 01 da tela de Login @done(2021-03-18 10:40)
+    ✔ Estilização do menu lateral à esquerda @done(2021-03-18 15:40)
+    ✔ Troca dos fundos das páginas da direita por algo diferente de branco @started(2021-03-18 15:41) @done(2021-03-18 21:28) @lasted(5h47m25s)
+    Para um usuário comum, na ListPage não aparece ícone para Editar nem o Delete fica habilitado, investigando:
+        ✘ function AfterTableInit() @cancelled(2021-03-19 21:08)
+            // Rene: Restringe dados somente do mesmo cliente do usuário logado
+            //      ou ALGUMA OUTRA CONDICAO ESPECIAL, se for necessario
+            // $_SESSION["clie_id"]
+            // $_SESSION["usua_id"]
+            if ($_SESSION["usua_id"] != 0) {
+                // OK, limita a visualizacao dos registros
+                $query->addWhere("clie_id='" . $_SESSION["clie_id"] . "'");
+            }
+            // echo "<script>alert('Funcao AfterTableInit(), $query: " . $query . "');</script>";
+            // echo "<script>alert('Funcao AfterTableInit(), query: " . $_SESSION["clie_id"] . "');</script>";
+
+        ✘ function GetTablePermissions($permissions) @cancelled(2021-03-19 21:18)
+            // RENE: Teste de permissões. Nao consegui fazer funcionar o DELETE em Categorias
+            // $permissions = "AEDSP";
+
+        ✔ function IsRecordEditable($values, $isEditable) @done(2021-03-19 21:30)
+            // Rene: Teste para habilitar o DELETE...
+            $isEditable = true;
+            return $isEditable;
+        ✔ Estilizando o botão "Delete" nas páginas com fundo vermelho (quando habilitado) @started(2021-03-19 21:30) @done(2021-03-19 22:09) @lasted(39m51s)
+            ✘ /* RENE: CSS tentativa de deixar o botao DELETE vermelho nas ListPage. Desisti, Setando diretamente no Designer @cancelled(2021-03-19 22:06)
+                #delete_selected1 {
+                    background-color: green;
+                }
+                #delete_selected1[enabled],
+                #delete_selected1:enabled {
+                    background-color: red !important;
+                }
+                #delete_selected1[disabled],
+                #delete_selected1:disabled {
+                    background-color: yellow !important;
+                }
+                */
+        ✔ Estilizando o botão Delete em todas as ListPage das 12 (até agora) paginas @done(2021-03-19 22:08)
+            tb_clientes                (btn-danger)
+            tb_usuarios                (btn-danger)
+            tb_planos                  (btn-danger)
+            tb_planos_valores          (btn-danger)
+            tb_clientes_planos         (btn-danger)
+            tb_dominios                (btn-danger)
+            tb_parametros              (btn-danger)
+            tb_status_atividades       (btn-danger)
+            tb_lista_atividades     (btn-warning)
+            tb_atividade               (btn-danger)
+            tb_categorias           (btn-warning)
+            tb_categorias_x_atividades (btn-danger)
+    Tópicos e recursos mais avançados:
+        ✔ Query VW_TAREFAS_CATEGORIAS com CONCAT() de Categorias de linhas em coluna @started(2021-02-27 18:57) @done(2021-02-27 21:58) @lasted(3h1m56s)
+        ✘ Página de consulta de atividades com base na view VW_TAREFAS_CATEGORIAS @cancelled(2021-03-04 17:24)
+            Na view do SQLite, colunas montadas com funções (ex: GROUP_CONCAT) não retornam datatype, o PHPRunner encara como BLOB
+
 Seguir conceito do PPP:
     ✔ Produto (software) @done(2021-03-03 21:53)
         Plataforma
@@ -47,14 +136,37 @@ Roteiro de Testes do GTD:
     ✔ Teste de auto cadastramento de usuario (usar campo "usua_email" como login) @started(2021-03-06 11:15) @done(2021-03-06 12:04) @lasted(49m18s)
         ✔ Revisto permissões do perfil "Padrao" para usuários auto cadastrados @started(2021-03-06 12:17) @done(2021-03-06 12:43) @lasted(26m41s)
         ✔ Incluir um novo cliente e associar o usuário ao cliente  @started(2021-03-06 16:10) @done(2021-03-06 18:55) @lasted(2h45m29s)
-        ☐ Incluir dados iniciais do cliente (categorias, lista_atividades, atividades, categorias_x_atividades, status_atividades)
+        ✔ Incluir dados iniciais do cliente (categorias, lista_atividades, atividades, categorias_x_atividades, status_atividades) @done(2021-03-10 17:46)
+        ✔ Identificar idioma para incluir dados iniciais regionalizados @done(2021-03-14 12:00)
+        ✔ Traduzir demais strings fixas do código (ex: Dashboards) com GetCustomLabel()  e $_SESSION["language"] @done(2021-03-13 13:41)
+            Strings:
+                GetCustomLabel ("CL_listas")
+                GetCustomLabel ("CL_encerradas")
+                GetCustomLabel ("CL_iniciadas")
+                GetCustomLabel ("CL_tarefas")
+                GetCustomLabel ("CL_quantidade_de_listas")
+                GetCustomLabel ("CL_quantidade_de_tarefas")
+                GetCustomLabel ("CL_tarefas_iniciadas_ultimos_30_dias")   // Tarefas Iniciadas nos últimos 30 dias
+                GetCustomLabel ("CL_tarefas_encerradas_ultimos_30_dias")  // Tarefas Encerradas nos últimos 30 dias
+            Identificação do Idioma, Exemplo:
+                echo GetCustomLabel ("Message1");
+                if ($_SESSION["language"]=="Spanish")
+                {
+                    header("Location: mydata_spanish_list.php");
+                exit();
+                }
+                else if ($_SESSION["language"]=="French")
+                {
+                    header("Location: mydata_french_list.php");
+                    exit();
+                }
         ☐ @high @tagRever @tagFuturo Rever configurações para envio de email (após assinatura do servidor):
             SMTP server      : localhost
             SMTP server port : 25
             SMTP username    : gtdtaks???
             SMTP password    : senha???
     ✔ Teste e Revisao de permissoes de acesso @started(2021-03-06 12:44) @done(2021-03-07 15:16) @lasted(1d2h32m52s)
-    ☐ Revisao da traducao do Ingles por mim
+    ✔ Revisao da traducao do Ingles por mim @tagRever @started(2021-03-11 15:00) @done(2021-03-11 16:30) @lasted(1h30s)
     ✘ Adicionado um favicon.ico em "C:\UwAmp\www\GTD_PHPRunner\output\images\favicon.ico" @cancelled(2021-03-09 19:11)
         Aparentemente não funcionou...:
         No PHPRunner -> em Templates -> hearders.htm
@@ -75,7 +187,7 @@ Roteiro de Testes do GTD:
             C:\DevTools\PHPRunner10.3.33761\templates\layouts\bspage_sidebar.htm
             C:\DevTools\PHPRunner10.3.33761\templates\layouts\bspage.htm
 
-    ☐ Customize icon for “Add to home screen”  @tagFuturo @started(2021-03-09 18:30)
+    ✔ Customize icon for “Add to home screen”  @tagRever @started(2021-03-09 18:30) @done(2021-03-13 16:24) @lasted(3d21h54m25s)
         Copiada algumas tags do Buble.io do aplicativo da Jota barbearia
         Teste na pagina C:\UwAmp\www\GTD_PHPRunner\output\templates\log_audit_list.htm:
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -93,17 +205,36 @@ Roteiro de Testes do GTD:
 
             <base href="{$projectPath}">
 
-    ☐ Revisao da traducao do Ingles por outra pessoa
-    ☐ Revisao da traducao do Espanhol por mim
+    ✔ Revisao da traducao do Espanhol por mim @started(2021-03-11 15:00) @done(2021-03-11 16:31) @lasted(1h31m11s)
+    ☐ Revisao da traducao do Ingles por outra pessoa @tagFuturo (Eduardo de férias em 2021-03-12 16:25, Fri)
     ✔ @tagBug Inclusao/atualizacao em tb_dominios dava erro na validacao da expressao regular se digitasse em minuscula @done(2021-03-04 18:27)
     ✔ fctConfigura_Usuario($values['alter_login'], $values['alter_dt']) em páginas faltantes @started(2021-03-05 21:55) @done(2021-03-05 22:18) @lasted(23m30s)
     ☐ Criar regra para "Dt Vigência Iní" VS "Dt Vigência Fim" nas páginas "Valores Base dos Planos" @started(2021-03-05 23:33)
     ☐ Criar regra para "Dt Vigência Iní" VS "Dt Vigência Fim" nas páginas "Planos do Cliente" @started(2021-03-05 23:37)
 
-Tópicos e recursos mais avançados:
-    ✔ Query VW_TAREFAS_CATEGORIAS com CONCAT() de Categorias de linhas em coluna @started(2021-02-27 18:57) @done(2021-02-27 21:58) @lasted(3h1m56s)
-    ✘ Página de consulta de atividades com base na view VW_TAREFAS_CATEGORIAS @cancelled(2021-03-04 17:24)
-        Na view do SQLite, colunas montadas com funções (ex: GROUP_CONCAT) não retornam datatype, o PHPRunner encara como BLOB
+✔ Revisão da "Landing Page": @started(2021-03-20 13:10) @done(2021-03-20 17:25) @lasted(4h15m24s)
+    Página v.1 em "C:\UwAmp\www\GTD_PHPRunner\output\ssp", feita à mão, tem:
+        01) Bem vindo - "Bem vindo ao Portal de Acesso"
+        02) Recursos - "Recursos Incríveis"
+        03) Atualizações - "Atualizações Gratuitas!"
+        04) Screenshots - "Telas do Sistema"
+        05) Preços - "Nossos planos de acesso"
+        06) Blog - "Novidades" (Título "Blog" errado...)
+        07) Contato - "Gostamos de ouvir você" (fomulário)
+        08) Rodapé - "© 2019 - Direitos reservados"
+    Página v.2 em "C:\Fontes\GTDTasks_Mobrise\Site", feita com "C:\DevTools\Mobirise4\Mobirise.exe":
+        ✔ Cabecalho - "Gerenciamento de Tarefas com Disciplina" @done(2021-03-20 14:04)
+        ✔ Filosofia do Sistema - "Eficiência / Simplicidade / Praticidade" @done(2021-03-20 14:10)
+        ✘ Características (substituir... Screenshots "Telas do Sistema") @cancelled(2021-03-20 14:17)
+        ✔ Screenshots "Telas do Sistema" @done(2021-03-20 15:33)
+        ✘ Depoimentos (substituir por ??? Removido!) @cancelled(2021-03-20 14:04)
+            ✘ Tabela de Recursos - Remover? Removido! @cancelled(2021-03-20 15:34)
+            ✘ Why Choose Us ??? - Removido! @cancelled(2021-03-20 15:34)
+        ✔ Planos - "Plano Gratuito" / "Plano Pessoal" / "Plano Colaborativo" (Equipe) @done(2021-03-20 15:38)
+        ✔ Contagem Regressiva (até 2021/07/01) @done(2021-03-20 16:36)
+        ✔ Entre em Contato - "Nome, Email, Telefone, Mensagem" (fomulário) @done(2021-03-20 16:37)
+    ✔ Atualização do site na web com nova landing page (GTDTasks © - Build 2021.03.20") @done(2021-03-20 17:26)
+
 
 Roteiro principal do GTD:
     Páginas de Tabelas:

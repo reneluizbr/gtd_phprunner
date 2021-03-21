@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'details' => array( 'tb_categorias_x_atividades' => array( 'displayPreview' => 1 ) ),
+'details' => array( 'tb_categorias_x_atividades' => array( 'displayPreview' => 1,
+'previewPageId' => 'print' ) ),
 'totals' => array( 'cate_id' => array( 'totalsType' => '' ),
 'clie_id' => array( 'totalsType' => '' ),
 'cate_nm' => array( 'totalsType' => '' ),
@@ -446,7 +447,8 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'details_preview' => array( 'type' => 'details_preview',
 'table' => 'tb_categorias_x_atividades',
 'items' => array(  ),
-'popup' => false ) ),
+'popup' => false,
+'pageId' => 'print' ) ),
 'dbProps' => array(  ),
 'version' => 4 );
 		?>

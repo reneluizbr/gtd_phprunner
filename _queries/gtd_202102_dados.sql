@@ -34,11 +34,13 @@
 
  /* ------------------------ Incluir alguns USUARIOS para testes ----------------------- */
    -- Nao incluindo aqui os usuários 1 'root', 2 'admin',3 'user' e,4 'trainee' (básicos de segurança)
+   -- Incluir nenhum cliente de carga incial? (2021-03-13 13:14, Sat)
    INSERT INTO tb_usuarios (clie_id, usua_id, usua_domi_status, usua_email, usua_username, usua_senha, inclu_login, inclu_dt)
    VALUES
-       (1, 01, 'CADASTRADO', 'root@email_fake.com'      , 'root'      , '$2y$10$rZRlCy2AV9414eAj8CeOv.l4dmPjdcTMnB4yV1VgnOAOdLSJJOPlW', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: 'root'
-      ,(1, 02, 'ATIVO'     , 'admin@email_fake.com'     , 'admin'     , '$2y$10$xInu90xW0jOAIWU7p6Oyne2bE9w.qw71g7VptJ31c4W/p43c/sQI.', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: 'admin'
-      -- Demais usuarios devem ser cadastrados pelo sistema
+        (1, 01, 'CADASTRADO', 'root@email_fake.com'      , 'root'      , '$2y$10$UZ2hIk51tkfYNI7TIdpli.33n17tDTcLZ/c0kcpcqzLcOqCpORq/m', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: "padrao"
+      --  (1, 01, 'CADASTRADO', 'root@email_fake.com'      , 'root'      , '$2y$10$rZRlCy2AV9414eAj8CeOv.l4dmPjdcTMnB4yV1VgnOAOdLSJJOPlW', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: 'root'
+       ,(1, 02, 'ATIVO'     , 'admin@email_fake.com'     , 'admin'     , '$2y$10$xInu90xW0jOAIWU7p6Oyne2bE9w.qw71g7VptJ31c4W/p43c/sQI.', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: 'admin'
+      -- -- Demais usuarios devem ser cadastrados pelo sistema
          --,(1, 03, 'CADASTRADO', 'user@email_fake.com'      , 'user'      , '$2y$10$INcEJxjWQ8leDesYxjDqIOv8ivBqlySlG41c2v/pYC..C/Cj2Dffe', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: 'user'
          --,(1, 04, 'CADASTRADO', 'trainee@email_fake.com'   , 'trainee'   , '$2y$10$T6s14LOdMknFkGl8enAVo.0DVAQmrxawEuIzGy8dlwR/Q02M.9ZeC', 'root', strftime('%Y-%m-%d %H:%M:%S','now')) -- senha: 'trainee'
 

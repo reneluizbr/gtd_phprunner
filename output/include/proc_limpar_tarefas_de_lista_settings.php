@@ -30,25 +30,25 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["ID"] = "ID";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["ID"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["ID"] = "";
-	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["DataHora"] = "Data Hora";
+	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["DataHora"] = "Date/Time";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["DataHora"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["DataHora"] = "";
-	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["AnterioresAData"] = "Anteriores AData";
+	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["AnterioresAData"] = "Before Date";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["AnterioresAData"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["AnterioresAData"] = "";
-	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["SomenteComDataConclusao"] = "Somente Com Data Conclusao";
+	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["SomenteComDataConclusao"] = "Only With End Date";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["SomenteComDataConclusao"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["SomenteComDataConclusao"] = "";
-	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["SomenteSemComentarios"] = "Somente Sem Comentarios";
+	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["SomenteSemComentarios"] = "Only Without Comments";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["SomenteSemComentarios"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["SomenteSemComentarios"] = "";
-	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["SomenteDoStatus"] = "Somente Do Status";
+	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["SomenteDoStatus"] = "Only Status";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["SomenteDoStatus"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["SomenteDoStatus"] = "";
 	$fieldLabelsproc_limpar_tarefas_de_lista["English"]["lista_id"] = "Lista Id";
 	$fieldToolTipsproc_limpar_tarefas_de_lista["English"]["lista_id"] = "";
 	$placeHoldersproc_limpar_tarefas_de_lista["English"]["lista_id"] = "";
-	$pageTitlesproc_limpar_tarefas_de_lista["English"]["add"] = "Proc Limpar Tarefas De Lista, Adicionar Novo";
+	$pageTitlesproc_limpar_tarefas_de_lista["English"]["add"] = "Procedure for cleaning up tasks from a list";
 	if (count($fieldToolTipsproc_limpar_tarefas_de_lista["English"]))
 		$tdataproc_limpar_tarefas_de_lista[".isUseToolTips"] = true;
 }
@@ -142,11 +142,11 @@ $popupPagesLayoutNames = array();
 $tdataproc_limpar_tarefas_de_lista[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdataproc_limpar_tarefas_de_lista[".listAjax"] = false;
+	$tdataproc_limpar_tarefas_de_lista[".listAjax"] = true;
 //	temporary
 $tdataproc_limpar_tarefas_de_lista[".listAjax"] = false;
 
-	$tdataproc_limpar_tarefas_de_lista[".audit"] = false;
+	$tdataproc_limpar_tarefas_de_lista[".audit"] = true;
 
 	$tdataproc_limpar_tarefas_de_lista[".locking"] = false;
 

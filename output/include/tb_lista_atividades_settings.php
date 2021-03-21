@@ -30,25 +30,25 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_lista_atividades["English"]["lista_id"] = "ID";
 	$fieldToolTipstb_lista_atividades["English"]["lista_id"] = "";
 	$placeHolderstb_lista_atividades["English"]["lista_id"] = "";
-	$fieldLabelstb_lista_atividades["English"]["clie_id"] = "Client";
+	$fieldLabelstb_lista_atividades["English"]["clie_id"] = "Customer";
 	$fieldToolTipstb_lista_atividades["English"]["clie_id"] = "";
 	$placeHolderstb_lista_atividades["English"]["clie_id"] = "";
 	$fieldLabelstb_lista_atividades["English"]["lista_nm"] = "Name";
 	$fieldToolTipstb_lista_atividades["English"]["lista_nm"] = "";
 	$placeHolderstb_lista_atividades["English"]["lista_nm"] = "";
-	$fieldLabelstb_lista_atividades["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_lista_atividades["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_lista_atividades["English"]["inclu_dt"] = "";
 	$placeHolderstb_lista_atividades["English"]["inclu_dt"] = "";
 	$fieldLabelstb_lista_atividades["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_lista_atividades["English"]["alter_dt"] = "";
 	$placeHolderstb_lista_atividades["English"]["alter_dt"] = "";
-	$fieldLabelstb_lista_atividades["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_lista_atividades["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_lista_atividades["English"]["inclu_login"] = "";
 	$placeHolderstb_lista_atividades["English"]["inclu_login"] = "";
-	$fieldLabelstb_lista_atividades["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_lista_atividades["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_lista_atividades["English"]["alter_login"] = "";
 	$placeHolderstb_lista_atividades["English"]["alter_login"] = "";
-	$pageTitlestb_lista_atividades["English"]["remover_tarefas_da_lista"] = "Activities list [{%lista_id}]";
+	$pageTitlestb_lista_atividades["English"]["remover_tarefas_da_lista"] = "Task's List [{%lista_id}]";
 	if (count($fieldToolTipstb_lista_atividades["English"]))
 		$tdatatb_lista_atividades[".isUseToolTips"] = true;
 }
@@ -143,7 +143,7 @@ $popupPagesLayoutNames = array();
 $tdatatb_lista_atividades[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_lista_atividades[".listAjax"] = false;
+	$tdatatb_lista_atividades[".listAjax"] = true;
 //	temporary
 $tdatatb_lista_atividades[".listAjax"] = false;
 

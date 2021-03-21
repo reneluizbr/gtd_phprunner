@@ -42,16 +42,16 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_planos_valores["English"]["plva_vl"] = "Plan Amount";
 	$fieldToolTipstb_planos_valores["English"]["plva_vl"] = "";
 	$placeHolderstb_planos_valores["English"]["plva_vl"] = "";
-	$fieldLabelstb_planos_valores["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_planos_valores["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_planos_valores["English"]["inclu_dt"] = "";
 	$placeHolderstb_planos_valores["English"]["inclu_dt"] = "";
 	$fieldLabelstb_planos_valores["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_planos_valores["English"]["alter_dt"] = "";
 	$placeHolderstb_planos_valores["English"]["alter_dt"] = "";
-	$fieldLabelstb_planos_valores["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_planos_valores["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_planos_valores["English"]["inclu_login"] = "";
 	$placeHolderstb_planos_valores["English"]["inclu_login"] = "";
-	$fieldLabelstb_planos_valores["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_planos_valores["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_planos_valores["English"]["alter_login"] = "";
 	$placeHolderstb_planos_valores["English"]["alter_login"] = "";
 	if (count($fieldToolTipstb_planos_valores["English"]))
@@ -158,11 +158,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_planos_valores[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_planos_valores[".listAjax"] = false;
+	$tdatatb_planos_valores[".listAjax"] = true;
 //	temporary
 $tdatatb_planos_valores[".listAjax"] = false;
 
-	$tdatatb_planos_valores[".audit"] = false;
+	$tdatatb_planos_valores[".audit"] = true;
 
 	$tdatatb_planos_valores[".locking"] = false;
 
@@ -295,7 +295,7 @@ $tdatatb_planos_valores[".orderindexes"] = array();
 	$tdatatb_planos_valores[".orderindexes"][] = array(3, (0 ? "ASC" : "DESC"), "plva_dt_vigenc_ini");
 
 
-$tdatatb_planos_valores[".sqlHead"] = "SELECT plva_id,  plan_id,  plva_dt_vigenc_ini,  plva_dt_vigenc_fim,  plva_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
+$tdatatb_planos_valores[".sqlHead"] = "SELECT plva_id, plan_id, plva_dt_vigenc_ini, plva_dt_vigenc_fim, plva_vl, inclu_login, inclu_dt, alter_login, alter_dt";
 $tdatatb_planos_valores[".sqlFrom"] = "FROM tb_planos_valores";
 $tdatatb_planos_valores[".sqlWhereExpr"] = "";
 $tdatatb_planos_valores[".sqlTail"] = "";
@@ -1651,7 +1651,7 @@ function createSqlQuery_tb_planos_valores()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "plva_id,  plan_id,  plva_dt_vigenc_ini,  plva_dt_vigenc_fim,  plva_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
+$proto0["m_strFieldList"] = "plva_id, plan_id, plva_dt_vigenc_ini, plva_dt_vigenc_fim, plva_vl, inclu_login, inclu_dt, alter_login, alter_dt";
 $proto0["m_strFrom"] = "FROM tb_planos_valores";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY plan_id, plva_dt_vigenc_ini DESC";

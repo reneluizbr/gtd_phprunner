@@ -9,6 +9,7 @@ Wl Situacao: %wlSituacao_value%
 Correo electrónico: %usua_email_value%
 Nombre de usuario: %usua_username_value%
 Último acceso: %usua_login_ulti_value%
+(es) Idioma: %usua_idioma_ulti_value%
 Inclu Login: %inclu_login_value%
 Incluido en: %inclu_dt_value%
 Alter Login: %alter_login_value%

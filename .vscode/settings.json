@@ -12,6 +12,48 @@
       "keyword": [
         "REVER"
       ]
+    },
+    {
+      "color": "Cyan",
+      "keyword": []
+    },
+    {
+      "color": "Red",
+      "keyword": [
+        "ERRO"
+      ]
+    },
+    {
+      "color": "Yellow",
+      "keyword": [
+        "Record was added",
+        "DB::Insert"
+      ]
+    },
+    {
+      "color": "Blue",
+      "keyword": [
+        "Record updated"
+      ]
     }
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#e9ba91",
+    "activityBar.activeBorder": "#1b854c",
+    "activityBar.background": "#e9ba91",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#1b854c",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#e1a066",
+    "statusBar.border": "#e1a066",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#d9863b",
+    "titleBar.activeBackground": "#e1a066",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.border": "#e1a066",
+    "titleBar.inactiveBackground": "#e1a06699",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#e1a066"
 }

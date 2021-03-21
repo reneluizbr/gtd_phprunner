@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -103,7 +106,7 @@
 	 
 		{BEGIN usua_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_id">
 	{$label tb_usuarios usua_id }	</span>
 {END usua_id_fieldheadercolumn}
 
@@ -128,7 +131,7 @@
 	 
 		{BEGIN clie_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
 	{$label tb_usuarios clie_id }	</span>
 {END clie_id_fieldheadercolumn}
 
@@ -153,7 +156,7 @@
 	 
 		{BEGIN usua_domi_status_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_domi_status">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_domi_status">
 	{$label tb_usuarios usua_domi_status }	</span>
 {END usua_domi_status_fieldheadercolumn}
 
@@ -178,7 +181,7 @@
 	 
 		{BEGIN usua_email_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_email">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_email">
 	{$label tb_usuarios usua_email }	</span>
 {END usua_email_fieldheadercolumn}
 
@@ -203,7 +206,7 @@
 	 
 		{BEGIN usua_username_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_username">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_username">
 	{$label tb_usuarios usua_username }	</span>
 {END usua_username_fieldheadercolumn}
 
@@ -228,7 +231,7 @@
 	 
 		{BEGIN usua_login_ulti_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_login_ulti">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_login_ulti">
 	{$label tb_usuarios usua_login_ulti }	</span>
 {END usua_login_ulti_fieldheadercolumn}
 
@@ -253,7 +256,7 @@
 	 
 		{BEGIN inclu_dt_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
 	{$label tb_usuarios inclu_dt }	</span>
 {END inclu_dt_fieldheadercolumn}
 
@@ -278,7 +281,7 @@
 	 
 		{BEGIN alter_dt_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_dt">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_dt">
 	{$label tb_usuarios alter_dt }	</span>
 {END alter_dt_fieldheadercolumn}
 
@@ -303,7 +306,7 @@
 	 
 		{BEGIN inclu_login_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
 	{$label tb_usuarios inclu_login }	</span>
 {END inclu_login_fieldheadercolumn}
 
@@ -328,7 +331,7 @@
 	 
 		{BEGIN alter_login_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_login">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_login">
 	{$label tb_usuarios alter_login }	</span>
 {END alter_login_fieldheadercolumn}
 
@@ -353,13 +356,38 @@
 	 
 		{BEGIN wlSituacao_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="wlSituacao">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="wlSituacao">
 	{$label tb_usuarios wlSituacao }	</span>
 {END wlSituacao_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$usua_idioma_ulti_class}
+			"
+
+			data-field="usua_idioma_ulti"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN usua_idioma_ulti_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_idioma_ulti">
+	{$label tb_usuarios usua_idioma_ulti }	</span>
+{END usua_idioma_ulti_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
 							</tr>
 					 
 					 
@@ -628,6 +656,29 @@
 {END wlSituacao_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$usua_idioma_ulti_class}
+			"
+
+			data-field="usua_idioma_ulti"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN usua_idioma_ulti_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_idioma_ulti" data-default-width >
+{$usua_idioma_ulti_value}
+</span>
+{END usua_idioma_ulti_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
 							</tr>
 					 
 					
@@ -819,6 +870,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_usuarios_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
 							</tr>
 					
 					</tfoot>

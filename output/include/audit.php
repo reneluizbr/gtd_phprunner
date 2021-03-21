@@ -365,11 +365,11 @@ class AuditTrailTable
 		}
 		if($table=="tb_clientes_planos")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_dominios")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_lista_atividades")
 		{
@@ -377,15 +377,15 @@ class AuditTrailTable
 		}
 		if($table=="tb_planos")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_planos_valores")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_status_atividades")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_usuarios")
 		{
@@ -393,7 +393,7 @@ class AuditTrailTable
 		}
 		if($table=="admin_rights")
 		{
-			return false;
+			return true;
 		}
 		if($table=="admin_members")
 		{
@@ -413,11 +413,11 @@ class AuditTrailTable
 		}
 		if($table=="proc_limpar_tarefas_de_lista")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_parametros")
 		{
-			return false;
+			return true;
 		}
 		if($table=="Dashboard_Lista_e_Tarefas")
 		{
@@ -441,11 +441,11 @@ class AuditTrailTable
 		}
 		if($table=="tb_categorias")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_categorias_x_atividades")
 		{
-			return false;
+			return true;
 		}
 		if($table=="vw_tarefas_categorias")
 		{
@@ -822,11 +822,11 @@ class AuditTrailFile
 		}
 		if($table=="tb_clientes_planos")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_dominios")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_lista_atividades")
 		{
@@ -834,15 +834,15 @@ class AuditTrailFile
 		}
 		if($table=="tb_planos")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_planos_valores")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_status_atividades")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_usuarios")
 		{
@@ -850,7 +850,7 @@ class AuditTrailFile
 		}
 		if($table=="admin_rights")
 		{
-			return false;
+			return true;
 		}
 		if($table=="admin_members")
 		{
@@ -870,11 +870,11 @@ class AuditTrailFile
 		}
 		if($table=="proc_limpar_tarefas_de_lista")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_parametros")
 		{
-			return false;
+			return true;
 		}
 		if($table=="Dashboard_Lista_e_Tarefas")
 		{
@@ -898,11 +898,11 @@ class AuditTrailFile
 		}
 		if($table=="tb_categorias")
 		{
-			return false;
+			return true;
 		}
 		if($table=="tb_categorias_x_atividades")
 		{
-			return false;
+			return true;
 		}
 		if($table=="vw_tarefas_categorias")
 		{

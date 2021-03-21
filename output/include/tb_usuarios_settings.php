@@ -30,10 +30,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_usuarios["English"]["usua_id"] = "ID";
 	$fieldToolTipstb_usuarios["English"]["usua_id"] = "";
 	$placeHolderstb_usuarios["English"]["usua_id"] = "";
-	$fieldLabelstb_usuarios["English"]["clie_id"] = "Customer ID";
+	$fieldLabelstb_usuarios["English"]["clie_id"] = "Customer";
 	$fieldToolTipstb_usuarios["English"]["clie_id"] = "";
 	$placeHolderstb_usuarios["English"]["clie_id"] = "";
-	$fieldLabelstb_usuarios["English"]["usua_domi_status"] = "Domi Status";
+	$fieldLabelstb_usuarios["English"]["usua_domi_status"] = "Status";
 	$fieldToolTipstb_usuarios["English"]["usua_domi_status"] = "";
 	$placeHolderstb_usuarios["English"]["usua_domi_status"] = "";
 	$fieldLabelstb_usuarios["English"]["usua_email"] = "Email";
@@ -48,21 +48,24 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_usuarios["English"]["usua_login_ulti"] = "Last Login";
 	$fieldToolTipstb_usuarios["English"]["usua_login_ulti"] = "";
 	$placeHolderstb_usuarios["English"]["usua_login_ulti"] = "";
-	$fieldLabelstb_usuarios["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_usuarios["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_usuarios["English"]["inclu_dt"] = "";
 	$placeHolderstb_usuarios["English"]["inclu_dt"] = "";
 	$fieldLabelstb_usuarios["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_usuarios["English"]["alter_dt"] = "";
 	$placeHolderstb_usuarios["English"]["alter_dt"] = "";
-	$fieldLabelstb_usuarios["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_usuarios["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_usuarios["English"]["inclu_login"] = "";
 	$placeHolderstb_usuarios["English"]["inclu_login"] = "";
-	$fieldLabelstb_usuarios["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_usuarios["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_usuarios["English"]["alter_login"] = "";
 	$placeHolderstb_usuarios["English"]["alter_login"] = "";
-	$fieldLabelstb_usuarios["English"]["wlSituacao"] = "Wl Situacao";
+	$fieldLabelstb_usuarios["English"]["wlSituacao"] = "Condition";
 	$fieldToolTipstb_usuarios["English"]["wlSituacao"] = "";
 	$placeHolderstb_usuarios["English"]["wlSituacao"] = "";
+	$fieldLabelstb_usuarios["English"]["usua_idioma_ulti"] = "Language";
+	$fieldToolTipstb_usuarios["English"]["usua_idioma_ulti"] = "";
+	$placeHolderstb_usuarios["English"]["usua_idioma_ulti"] = "";
 	if (count($fieldToolTipstb_usuarios["English"]))
 		$tdatatb_usuarios[".isUseToolTips"] = true;
 }
@@ -78,7 +81,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["clie_id"] = "";
-	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["usua_domi_status"] = "Domi Status";
+	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["usua_domi_status"] = "Status";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["usua_domi_status"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["usua_domi_status"] = "";
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["usua_email"] = "Email";
@@ -108,6 +111,9 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["wlSituacao"] = "Situação";
 	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["wlSituacao"] = "";
 	$placeHolderstb_usuarios["Portuguese(Brazil)"]["wlSituacao"] = "";
+	$fieldLabelstb_usuarios["Portuguese(Brazil)"]["usua_idioma_ulti"] = "Idioma";
+	$fieldToolTipstb_usuarios["Portuguese(Brazil)"]["usua_idioma_ulti"] = "";
+	$placeHolderstb_usuarios["Portuguese(Brazil)"]["usua_idioma_ulti"] = "";
 	if (count($fieldToolTipstb_usuarios["Portuguese(Brazil)"]))
 		$tdatatb_usuarios[".isUseToolTips"] = true;
 }
@@ -153,6 +159,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstb_usuarios["Spanish"]["wlSituacao"] = "Wl Situacao";
 	$fieldToolTipstb_usuarios["Spanish"]["wlSituacao"] = "";
 	$placeHolderstb_usuarios["Spanish"]["wlSituacao"] = "";
+	$fieldLabelstb_usuarios["Spanish"]["usua_idioma_ulti"] = "(es) Idioma";
+	$fieldToolTipstb_usuarios["Spanish"]["usua_idioma_ulti"] = "";
+	$placeHolderstb_usuarios["Spanish"]["usua_idioma_ulti"] = "";
 	if (count($fieldToolTipstb_usuarios["Spanish"]))
 		$tdatatb_usuarios[".isUseToolTips"] = true;
 }
@@ -185,7 +194,7 @@ $popupPagesLayoutNames = array();
 $tdatatb_usuarios[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_usuarios[".listAjax"] = false;
+	$tdatatb_usuarios[".listAjax"] = true;
 //	temporary
 $tdatatb_usuarios[".listAjax"] = false;
 
@@ -282,6 +291,7 @@ $tdatatb_usuarios[".googleLikeFields"][] = "wlSituacao";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_email";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_username";
 $tdatatb_usuarios[".googleLikeFields"][] = "usua_login_ulti";
+$tdatatb_usuarios[".googleLikeFields"][] = "usua_idioma_ulti";
 $tdatatb_usuarios[".googleLikeFields"][] = "inclu_login";
 $tdatatb_usuarios[".googleLikeFields"][] = "inclu_dt";
 $tdatatb_usuarios[".googleLikeFields"][] = "alter_login";
@@ -320,7 +330,7 @@ $tdatatb_usuarios[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatb_usuarios[".orderindexes"] = array();
 
-$tdatatb_usuarios[".sqlHead"] = "SELECT usua_id,  	clie_id,  	usua_domi_status,  	usua_domi_status AS wlSituacao,  	usua_email,  	usua_username,  	usua_senha,  	usua_login_ulti,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$tdatatb_usuarios[".sqlHead"] = "SELECT usua_id,  clie_id,  usua_domi_status,  usua_domi_status AS wlSituacao,  usua_email,  usua_username,  usua_senha,  usua_login_ulti,  usua_idioma_ulti,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $tdatatb_usuarios[".sqlFrom"] = "FROM tb_usuarios";
 $tdatatb_usuarios[".sqlWhereExpr"] = "";
 $tdatatb_usuarios[".sqlTail"] = "";
@@ -680,7 +690,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "usua_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -772,7 +782,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "domi_exibe";
 
-				$edata["LookupWhere"] = "domi_grupo = 'STATUS_USUARIO'";
+				$edata["LookupWhere"] = "domi_grupo = 'USUARIO_STATUS'";
 
 
 	
@@ -842,7 +852,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 		$fdata["filterMultiSelect"] = 2;
 		$fdata["filterTotalFields"] = "usua_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -976,7 +986,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 		$fdata["filterMultiSelect"] = 0;
 		$fdata["filterTotalFields"] = "usua_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1541,10 +1551,160 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 
 	$tdatatb_usuarios["usua_login_ulti"] = $fdata;
 		$tdatatb_usuarios[".searchableFields"][] = "usua_login_ulti";
-//	inclu_login
+//	usua_idioma_ulti
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 9;
+	$fdata["strName"] = "usua_idioma_ulti";
+	$fdata["GoodName"] = "usua_idioma_ulti";
+	$fdata["ownerTable"] = "tb_usuarios";
+	$fdata["Label"] = GetFieldLabel("tb_usuarios","usua_idioma_ulti");
+	$fdata["FieldType"] = 202;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "usua_idioma_ulti";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "usua_idioma_ulti";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "English";
+	$edata["LookupValues"][] = "Portuguese(Brazil)";
+	$edata["LookupValues"][] = "Spanish";
+
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+					//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "usua_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatatb_usuarios["usua_idioma_ulti"] = $fdata;
+		$tdatatb_usuarios[".searchableFields"][] = "usua_idioma_ulti";
+//	inclu_login
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "inclu_login";
 	$fdata["GoodName"] = "inclu_login";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1679,7 +1839,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	inclu_dt
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 10;
+	$fdata["Index"] = 11;
 	$fdata["strName"] = "inclu_dt";
 	$fdata["GoodName"] = "inclu_dt";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1815,7 +1975,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	alter_login
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 12;
 	$fdata["strName"] = "alter_login";
 	$fdata["GoodName"] = "alter_login";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -1950,7 +2110,7 @@ $tdatatb_usuarios[".hideMobileList"] = array();
 //	alter_dt
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 12;
+	$fdata["Index"] = 13;
 	$fdata["strName"] = "alter_dt";
 	$fdata["GoodName"] = "alter_dt";
 	$fdata["ownerTable"] = "tb_usuarios";
@@ -2117,7 +2277,7 @@ function createSqlQuery_tb_usuarios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "usua_id,  	clie_id,  	usua_domi_status,  	usua_domi_status AS wlSituacao,  	usua_email,  	usua_username,  	usua_senha,  	usua_login_ulti,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$proto0["m_strFieldList"] = "usua_id,  clie_id,  usua_domi_status,  usua_domi_status AS wlSituacao,  usua_email,  usua_username,  usua_senha,  usua_login_ulti,  usua_idioma_ulti,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $proto0["m_strFrom"] = "FROM tb_usuarios";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2271,12 +2431,12 @@ $obj = new SQLFieldListItem($proto20);
 $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
-	"m_strName" => "inclu_login",
+	"m_strName" => "usua_idioma_ulti",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto22["m_sql"] = "inclu_login";
+$proto22["m_sql"] = "usua_idioma_ulti";
 $proto22["m_srcTableName"] = "tb_usuarios";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -2285,12 +2445,12 @@ $obj = new SQLFieldListItem($proto22);
 $proto0["m_fieldlist"][]=$obj;
 						$proto24=array();
 			$obj = new SQLField(array(
-	"m_strName" => "inclu_dt",
+	"m_strName" => "inclu_login",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto24["m_sql"] = "inclu_dt";
+$proto24["m_sql"] = "inclu_login";
 $proto24["m_srcTableName"] = "tb_usuarios";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -2299,12 +2459,12 @@ $obj = new SQLFieldListItem($proto24);
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
 			$obj = new SQLField(array(
-	"m_strName" => "alter_login",
+	"m_strName" => "inclu_dt",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto26["m_sql"] = "alter_login";
+$proto26["m_sql"] = "inclu_dt";
 $proto26["m_srcTableName"] = "tb_usuarios";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
@@ -2313,59 +2473,74 @@ $obj = new SQLFieldListItem($proto26);
 $proto0["m_fieldlist"][]=$obj;
 						$proto28=array();
 			$obj = new SQLField(array(
-	"m_strName" => "alter_dt",
+	"m_strName" => "alter_login",
 	"m_strTable" => "tb_usuarios",
 	"m_srcTableName" => "tb_usuarios"
 ));
 
-$proto28["m_sql"] = "alter_dt";
+$proto28["m_sql"] = "alter_login";
 $proto28["m_srcTableName"] = "tb_usuarios";
 $proto28["m_expr"]=$obj;
 $proto28["m_alias"] = "";
 $obj = new SQLFieldListItem($proto28);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto30=array();
-$proto30["m_link"] = "SQLL_MAIN";
-			$proto31=array();
-$proto31["m_strName"] = "tb_usuarios";
-$proto31["m_srcTableName"] = "tb_usuarios";
-$proto31["m_columns"] = array();
-$proto31["m_columns"][] = "usua_id";
-$proto31["m_columns"][] = "clie_id";
-$proto31["m_columns"][] = "usua_domi_status";
-$proto31["m_columns"][] = "usua_email";
-$proto31["m_columns"][] = "usua_username";
-$proto31["m_columns"][] = "usua_senha";
-$proto31["m_columns"][] = "usua_login_ulti";
-$proto31["m_columns"][] = "inclu_login";
-$proto31["m_columns"][] = "inclu_dt";
-$proto31["m_columns"][] = "alter_login";
-$proto31["m_columns"][] = "alter_dt";
-$obj = new SQLTable($proto31);
+						$proto30=array();
+			$obj = new SQLField(array(
+	"m_strName" => "alter_dt",
+	"m_strTable" => "tb_usuarios",
+	"m_srcTableName" => "tb_usuarios"
+));
 
-$proto30["m_table"] = $obj;
-$proto30["m_sql"] = "tb_usuarios";
-$proto30["m_alias"] = "";
+$proto30["m_sql"] = "alter_dt";
 $proto30["m_srcTableName"] = "tb_usuarios";
-$proto32=array();
-$proto32["m_sql"] = "";
-$proto32["m_uniontype"] = "SQLL_UNKNOWN";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto32=array();
+$proto32["m_link"] = "SQLL_MAIN";
+			$proto33=array();
+$proto33["m_strName"] = "tb_usuarios";
+$proto33["m_srcTableName"] = "tb_usuarios";
+$proto33["m_columns"] = array();
+$proto33["m_columns"][] = "usua_id";
+$proto33["m_columns"][] = "clie_id";
+$proto33["m_columns"][] = "usua_domi_status";
+$proto33["m_columns"][] = "usua_email";
+$proto33["m_columns"][] = "usua_username";
+$proto33["m_columns"][] = "usua_senha";
+$proto33["m_columns"][] = "usua_login_ulti";
+$proto33["m_columns"][] = "inclu_login";
+$proto33["m_columns"][] = "inclu_dt";
+$proto33["m_columns"][] = "alter_login";
+$proto33["m_columns"][] = "alter_dt";
+$proto33["m_columns"][] = "usua_idioma_ulti";
+$obj = new SQLTable($proto33);
+
+$proto32["m_table"] = $obj;
+$proto32["m_sql"] = "tb_usuarios";
+$proto32["m_alias"] = "";
+$proto32["m_srcTableName"] = "tb_usuarios";
+$proto34=array();
+$proto34["m_sql"] = "";
+$proto34["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto32["m_column"]=$obj;
-$proto32["m_contained"] = array();
-$proto32["m_strCase"] = "";
-$proto32["m_havingmode"] = false;
-$proto32["m_inBrackets"] = false;
-$proto32["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto32);
+$proto34["m_column"]=$obj;
+$proto34["m_contained"] = array();
+$proto34["m_strCase"] = "";
+$proto34["m_havingmode"] = false;
+$proto34["m_inBrackets"] = false;
+$proto34["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto34);
 
-$proto30["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto30);
+$proto32["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto32);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2381,7 +2556,7 @@ $queryData_tb_usuarios = createSqlQuery_tb_usuarios();
 	
 		;
 
-												
+													
 
 $tdatatb_usuarios[".sqlquery"] = $queryData_tb_usuarios;
 

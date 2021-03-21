@@ -27,19 +27,19 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipstb_categorias_x_atividades["English"] = array();
 	$placeHolderstb_categorias_x_atividades["English"] = array();
 	$pageTitlestb_categorias_x_atividades["English"] = array();
-	$fieldLabelstb_categorias_x_atividades["English"]["caat_id"] = "Caat Id";
+	$fieldLabelstb_categorias_x_atividades["English"]["caat_id"] = "ID";
 	$fieldToolTipstb_categorias_x_atividades["English"]["caat_id"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["caat_id"] = "";
-	$fieldLabelstb_categorias_x_atividades["English"]["cate_id"] = "Cate Id";
+	$fieldLabelstb_categorias_x_atividades["English"]["cate_id"] = "Category";
 	$fieldToolTipstb_categorias_x_atividades["English"]["cate_id"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["cate_id"] = "";
-	$fieldLabelstb_categorias_x_atividades["English"]["ativ_id"] = "Ativ Id";
+	$fieldLabelstb_categorias_x_atividades["English"]["ativ_id"] = "Task";
 	$fieldToolTipstb_categorias_x_atividades["English"]["ativ_id"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["ativ_id"] = "";
-	$fieldLabelstb_categorias_x_atividades["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_categorias_x_atividades["English"]["inclu_login"] = "by";
 	$fieldToolTipstb_categorias_x_atividades["English"]["inclu_login"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["inclu_login"] = "";
-	$fieldLabelstb_categorias_x_atividades["English"]["inclu_dt"] = "Inclu Dt";
+	$fieldLabelstb_categorias_x_atividades["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_categorias_x_atividades["English"]["inclu_dt"] = "";
 	$placeHolderstb_categorias_x_atividades["English"]["inclu_dt"] = "";
 	if (count($fieldToolTipstb_categorias_x_atividades["English"]))
@@ -51,7 +51,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"] = array();
 	$placeHolderstb_categorias_x_atividades["Portuguese(Brazil)"] = array();
 	$pageTitlestb_categorias_x_atividades["Portuguese(Brazil)"] = array();
-	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["caat_id"] = "Id";
+	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["caat_id"] = "ID";
 	$fieldToolTipstb_categorias_x_atividades["Portuguese(Brazil)"]["caat_id"] = "";
 	$placeHolderstb_categorias_x_atividades["Portuguese(Brazil)"]["caat_id"] = "";
 	$fieldLabelstb_categorias_x_atividades["Portuguese(Brazil)"]["cate_id"] = "Categoria";
@@ -122,11 +122,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_categorias_x_atividades[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_categorias_x_atividades[".listAjax"] = false;
+	$tdatatb_categorias_x_atividades[".listAjax"] = true;
 //	temporary
 $tdatatb_categorias_x_atividades[".listAjax"] = false;
 
-	$tdatatb_categorias_x_atividades[".audit"] = false;
+	$tdatatb_categorias_x_atividades[".audit"] = true;
 
 	$tdatatb_categorias_x_atividades[".locking"] = false;
 
@@ -1051,22 +1051,6 @@ $masterTablesData["tb_categorias_x_atividades"] = array();
 
 
 	
-				$strOriginalDetailsTable="tb_atividade";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="tb_atividade";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "tb_atividade";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["tb_categorias_x_atividades"][0] = $masterParams;
-				$masterTablesData["tb_categorias_x_atividades"][0]["masterKeys"] = array();
-	$masterTablesData["tb_categorias_x_atividades"][0]["masterKeys"][]="ativ_id";
-				$masterTablesData["tb_categorias_x_atividades"][0]["detailKeys"] = array();
-	$masterTablesData["tb_categorias_x_atividades"][0]["detailKeys"][]="ativ_id";
-		
-	
 				$strOriginalDetailsTable="tb_categorias";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="tb_categorias";
@@ -1076,11 +1060,27 @@ $masterTablesData["tb_categorias_x_atividades"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["tb_categorias_x_atividades"][0] = $masterParams;
+				$masterTablesData["tb_categorias_x_atividades"][0]["masterKeys"] = array();
+	$masterTablesData["tb_categorias_x_atividades"][0]["masterKeys"][]="cate_id";
+				$masterTablesData["tb_categorias_x_atividades"][0]["detailKeys"] = array();
+	$masterTablesData["tb_categorias_x_atividades"][0]["detailKeys"][]="cate_id";
+		
+	
+				$strOriginalDetailsTable="tb_atividade";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="tb_atividade";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "tb_atividade";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["tb_categorias_x_atividades"][1] = $masterParams;
 				$masterTablesData["tb_categorias_x_atividades"][1]["masterKeys"] = array();
-	$masterTablesData["tb_categorias_x_atividades"][1]["masterKeys"][]="cate_id";
+	$masterTablesData["tb_categorias_x_atividades"][1]["masterKeys"][]="ativ_id";
 				$masterTablesData["tb_categorias_x_atividades"][1]["detailKeys"] = array();
-	$masterTablesData["tb_categorias_x_atividades"][1]["detailKeys"][]="cate_id";
+	$masterTablesData["tb_categorias_x_atividades"][1]["detailKeys"][]="ativ_id";
 		
 // -----------------end  prepare master-details data arrays ------------------------------//
 

@@ -21,7 +21,7 @@
 // dashboatd snippets function
 function event_Dashboard_Graficos_snippet( &$header )
 {
-	$header = "Quantidade de Tarefas";
+	$header = GetCustomLabel ("CL_quantidade_de_listas");
 
 $res = DB::query("select count(lista_id) as qtde FROM tb_lista_atividades");
 $data = $res->fetchAssoc();
@@ -29,7 +29,7 @@ $res = "<div class='info-box'>";
 //$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
 $res.= "<span class='info-img img_bgcolor_blue glyphicon glyphicon-tags'></span>";
 $res.= "<div class='dashtext'>";
-$res.= "Listas: ";
+$res.= GetCustomLabel ("CL_listas") . ": ";
 $res.= "<b>" . $data["qtde"] . "</b>";
 $res.= "</div>";
 $res.= "</div>";
@@ -39,7 +39,7 @@ echo $res;
 }
 function event_Dashboard_Graficos_snippet1( &$header )
 {
-	$header = "Quantidade de Tarefas";
+	$header = GetCustomLabel ("CL_quantidade_de_tarefas");
 
 $res = DB::query("select count(ativ_id) as qtde FROM tb_atividade");
 $data = $res->fetchAssoc();
@@ -47,7 +47,7 @@ $res = "<div class='info-box'>";
 //$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
 $res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-tags'></span>";
 $res.= "<div class='dashtext'>";
-$res.= "Tarefas: ";
+$res.= GetCustomLabel ("CL_tarefas") . ": ";
 $res.= "<b>" . $data["qtde"] . "</b>";
 $res.= "</div>";
 $res.= "</div>";
@@ -62,7 +62,7 @@ $query = "select datetime('now','localtime'), datetime('now','-30 day','localtim
 $query = "select count(*) as qtde from tb_atividade where ativ_dt_ini >= datetime('now','-30 day','localtime')";
 //echo $query; //Debug
 // Qtde de Tarefas iniciadas nos últimos 30 dias (ativ_dt_ini >= now()-30days???)
-$header = "Tarefas Iniciadas nos últimos 30 dias";
+$header = GetCustomLabel ("CL_tarefas_iniciadas_ultimos_30_dias"); //"Tarefas Iniciadas nos últimos 30 dias";
 
 $res = DB::query($query);
 $data = $res->fetchAssoc();
@@ -71,7 +71,7 @@ $res = "<div class='info-box'>";
 //$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
 $res.= "<span class='info-img img_bgcolor_green glyphicon glyphicon-share'></span>";
 $res.= "<div class='dashtext'>";
-$res.= "Iniciadas: ";
+$res.= GetCustomLabel ("CL_iniciadas") . ": ";
 $res.= "<b>" . $data["qtde"] . "</b>";
 $res.= "</div>";
 $res.= "</div>";
@@ -86,7 +86,7 @@ $query = "select datetime('now','localtime'), datetime('now','-30 day','localtim
 $query = "select count(*) as qtde from tb_atividade where ativ_dt_fim >= datetime('now','-30 day','localtime')";
 //echo $query; //Debug
 // Qtde de Tarefas iniciadas nos últimos 30 dias (ativ_dt_ini >= now()-30days???)
-$header = "Tarefas Encerradas nos últimos 30 dias";
+$header = GetCustomLabel ("CL_tarefas_encerradas_ultimos_30_dias");  //"Tarefas Encerradas nos últimos 30 dias";
 
 $res = DB::query($query);
 $data = $res->fetchAssoc();
@@ -95,7 +95,7 @@ $res = "<div class='info-box'>";
 //$res.= "<span class='info-img img_bgcolor_red glyphicon glyphicon-shopping-cart'></span>";
 $res.= "<span class='info-img img_bgcolor_blue glyphicon glyphicon-check'></span>";
 $res.= "<div class='dashtext'>";
-$res.= "Encerradas: ";
+$res.= GetCustomLabel ("CL_encerradas") . ": ";
 $res.= "<b>" . $data["qtde"] . "</b>";
 $res.= "</div>";
 $res.= "</div>";

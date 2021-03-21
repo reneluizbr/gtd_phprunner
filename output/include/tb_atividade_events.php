@@ -18,6 +18,8 @@
 
 		$this->events["BeforeShowList"]=true;
 
+		$this->events["IsRecordEditable"]=true;
+
 
 	}
 
@@ -62,8 +64,9 @@ echo '<br>-------------------';
 echo '<br>' . $values['ativ_concluida'];
 echo '<br>' . $values['ativ_dt_fim'];
 return false;
-*/
+
 echo $wlRetorno;
+*/
 
 return $wlRetorno;
 return true;
@@ -160,8 +163,9 @@ echo '<br>-------------------';
 echo '<br>' . $values['ativ_concluida'];
 echo '<br>' . $values['ativ_dt_fim'];
 return false;
-*/
+
 echo $wlRetorno;
+*/
 
 return $wlRetorno;
 
@@ -272,6 +276,80 @@ $pageObject->hideItem("cmd_cartoes");
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Is Record Editable
+function IsRecordEditable($values, $isEditable)
+{
+
+		
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// Rene: Habilita o DELETE e exibe o ícone Edit no Grid (para paginas que exibem somente os dados do proprio cliente!)
+$isEditable = true;
+
+return $isEditable;
+;		
+} // function IsRecordEditable
+
 		
 		
 		

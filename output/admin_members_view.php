@@ -19,7 +19,7 @@ if( !ViewPage::processEditPageSecurity( $strTableName ) )
 
 $layout = new TLayout("view_bootstrap_2col", "OfficeOffice", "MobileOffice");
 $layout->version = 3;
-	$layout->bootstrapTheme = "cerulean";
+	$layout->bootstrapTheme = "yeti";
 		$layout->customCssPageName = "admin_members_view";
 $layout->blocks["top"] = array();
 $layout->containers["viewpage"] = array();

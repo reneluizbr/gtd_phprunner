@@ -1,6 +1,6 @@
 <?php
-			$optionsArray = array( 'master' => array( 'tb_atividade' => array( 'preview' => false ),
-'tb_categorias' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'tb_categorias' => array( 'preview' => false ),
+'tb_atividade' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'cate_id',
 'ativ_id' ),

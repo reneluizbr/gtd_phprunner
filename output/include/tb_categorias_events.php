@@ -18,6 +18,11 @@
 
 		$this->events["BeforeEdit"]=true;
 
+		$this->events["GetTablePermissions"]=true;
+
+
+		$this->events["IsRecordEditable"]=true;
+
 
 	}
 
@@ -245,6 +250,213 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Get Table Permissions
+function GetTablePermissions($permissions)
+{
+
+		
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// RENE: Teste de permissões. Nao consegui fazer funcionar o DELETE em Categorias
+// $permissions = "AEDSP";
+
+return $permissions;
+;		
+} // function GetTablePermissions
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Is Record Editable
+function IsRecordEditable($values, $isEditable)
+{
+
+		
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// Rene: Habilita o DELETE e exibe o ícone Edit no Grid (para paginas que exibem somente os dados do proprio cliente!)
+$isEditable = true;
+
+return $isEditable;
+;		
+} // function IsRecordEditable
+
 		
 		
 		

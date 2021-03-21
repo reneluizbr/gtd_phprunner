@@ -66,6 +66,19 @@ PHPRad: Telas Atividade (12/05)
     [x] Identificar usuário logado
     [x] Renderizar Combo clientes se for usuário root
 
+# 2020-05-06 10:00, Wed
+PHPRad "GTD_PHPRad.ppm" é num formato binário!!!
+    O versionamento se dará nos fontes gerados pela ferramenta e não no arquivo do projeto em si
+    PHPRad com VueJs
+        (-) Tem algumas opções a menos no menu, como "Audit Trail Log"...
+        (-) Não tem "User Records Management" para cada usuário acessar apenas seus dados (clie_id)
+        (-) Não tem "Records Timestamp Management" Mas não é crítico
+        (-) Não tem "Page Events" no mesmo local da forma como é no PHPRad clássico ou como no PHPRunner
+        (+) Recurso "Nav Filter Menu" funciona Ok
+    PHPRad Classic
+        (-) Page Filter Components é um bom recurso mas mais trabalhoso de ser construído que no PHPRunner
+        (-) Recurso "Nav Filter Menu" não funciona como deveria, documentação é diferente...
+
 # 2020-05-06 10:00, Wed - GTD, Testes com ferramenta PHPRad:
 PHPRad: Início de testes (06/05)
     Iniciado testes em 2020-05-06, quarta

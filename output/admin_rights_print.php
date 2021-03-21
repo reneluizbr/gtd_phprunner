@@ -22,7 +22,7 @@ if( !Security::processPageSecurity( $strtablename, 'P' ) )
 
 $layout = new TLayout("print_bootstrap", "OfficeOffice", "MobileOffice");
 $layout->version = 3;
-	$layout->bootstrapTheme = "cerulean";
+	$layout->bootstrapTheme = "yeti";
 		$layout->customCssPageName = "admin_rights_print";
 $layout->blocks["top"] = array();
 $layout->containers["pdf"] = array();

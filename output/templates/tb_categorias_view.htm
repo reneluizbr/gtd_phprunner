@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -44,7 +47,7 @@
 	class=" r-ori-vert			col-md-12
 	">
 	 
-		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel tb_categorias view}</h2>
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" data-page="tb_categorias_view" >{$pagetitlelabel tb_categorias view}</h2>
 	</div>					</div>
 	</div>		
 {END top_block}
@@ -92,14 +95,14 @@
 {BEGIN cate_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_cate_id}  r-vertical-field" data-fieldname="cate_id" data-signal-error-for="cate_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="cate_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cate_id}  form-horizontal clearfix" data-fieldname="cate_id" data-signal-error-for="cate_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="cate_id" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_cate_id}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_cate_id}">
 		
 		{BEGIN cate_id_label}{$label tb_categorias cate_id }{END cate_id_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$cate_id_value}	</div>
 
 		
@@ -111,14 +114,14 @@
 {BEGIN clie_id_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  r-vertical-field" data-fieldname="clie_id" data-signal-error-for="clie_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clie_id}  form-horizontal clearfix" data-fieldname="clie_id" data-signal-error-for="clie_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="clie_id" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_clie_id}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_clie_id}">
 		
 		{BEGIN clie_id_label}{$label tb_categorias clie_id }{END clie_id_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$clie_id_value}	</div>
 
 		
@@ -130,14 +133,14 @@
 {BEGIN cate_nm_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_cate_nm}  r-vertical-field" data-fieldname="cate_nm" data-signal-error-for="cate_nm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="cate_nm" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cate_nm}  form-horizontal clearfix" data-fieldname="cate_nm" data-signal-error-for="cate_nm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="cate_nm" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_cate_nm}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_cate_nm}">
 		
 		{BEGIN cate_nm_label}{$label tb_categorias cate_nm }{END cate_nm_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$cate_nm_value}	</div>
 
 		
@@ -149,14 +152,14 @@
 {BEGIN inclu_login_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  r-vertical-field" data-fieldname="inclu_login" data-signal-error-for="inclu_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="inclu_login" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_login}  form-horizontal clearfix" data-fieldname="inclu_login" data-signal-error-for="inclu_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="inclu_login" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_inclu_login}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_inclu_login}">
 		
 		{BEGIN inclu_login_label}{$label tb_categorias inclu_login }{END inclu_login_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$inclu_login_value}	</div>
 
 		
@@ -168,14 +171,14 @@
 {BEGIN inclu_dt_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  r-vertical-field" data-fieldname="inclu_dt" data-signal-error-for="inclu_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="inclu_dt" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_inclu_dt}  form-horizontal clearfix" data-fieldname="inclu_dt" data-signal-error-for="inclu_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="inclu_dt" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_inclu_dt}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_inclu_dt}">
 		
 		{BEGIN inclu_dt_label}{$label tb_categorias inclu_dt }{END inclu_dt_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$inclu_dt_value}	</div>
 
 		
@@ -187,14 +190,14 @@
 {BEGIN alter_login_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  r-vertical-field" data-fieldname="alter_login" data-signal-error-for="alter_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="alter_login" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_login}  form-horizontal clearfix" data-fieldname="alter_login" data-signal-error-for="alter_login{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="alter_login" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_alter_login}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_alter_login}">
 		
 		{BEGIN alter_login_label}{$label tb_categorias alter_login }{END alter_login_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$alter_login_value}	</div>
 
 		
@@ -206,14 +209,14 @@
 {BEGIN alter_dt_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  r-vertical-field" data-fieldname="alter_dt" data-signal-error-for="alter_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="alter_dt" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_alter_dt}  form-horizontal clearfix" data-fieldname="alter_dt" data-signal-error-for="alter_dt{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="alter_dt" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_alter_dt}">
+	<label class="col-md-3 text-right bs-view-label" for="{$labelfor_alter_dt}">
 		
 		{BEGIN alter_dt_label}{$label tb_categorias alter_dt }{END alter_dt_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="col-md-6" >
 		{$alter_dt_value}	</div>
 
 		
@@ -291,7 +294,7 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$edit_page_button_attrs}  title="" >
 				
-		{mlang_message EDIT}		
+		{$custom EDIT}		
 		</a>
 	</li>
 {END edit_page_button}

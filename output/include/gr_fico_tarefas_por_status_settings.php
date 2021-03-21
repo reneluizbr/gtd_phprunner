@@ -27,16 +27,16 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsgr_fico_tarefas_por_status["English"] = array();
 	$placeHoldersgr_fico_tarefas_por_status["English"] = array();
 	$pageTitlesgr_fico_tarefas_por_status["English"] = array();
-	$fieldLabelsgr_fico_tarefas_por_status["English"]["stat_nm"] = "Stat Nm";
+	$fieldLabelsgr_fico_tarefas_por_status["English"]["stat_nm"] = "Status Name";
 	$fieldToolTipsgr_fico_tarefas_por_status["English"]["stat_nm"] = "";
 	$placeHoldersgr_fico_tarefas_por_status["English"]["stat_nm"] = "";
-	$fieldLabelsgr_fico_tarefas_por_status["English"]["qtde"] = "Qtde";
+	$fieldLabelsgr_fico_tarefas_por_status["English"]["qtde"] = "Qty";
 	$fieldToolTipsgr_fico_tarefas_por_status["English"]["qtde"] = "";
 	$placeHoldersgr_fico_tarefas_por_status["English"]["qtde"] = "";
-	$fieldLabelsgr_fico_tarefas_por_status["English"]["clie_id"] = "Clie Id";
+	$fieldLabelsgr_fico_tarefas_por_status["English"]["clie_id"] = "Customer";
 	$fieldToolTipsgr_fico_tarefas_por_status["English"]["clie_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_status["English"]["clie_id"] = "";
-	$fieldLabelsgr_fico_tarefas_por_status["English"]["stat_id"] = "Stat Id";
+	$fieldLabelsgr_fico_tarefas_por_status["English"]["stat_id"] = "Status Id";
 	$fieldToolTipsgr_fico_tarefas_por_status["English"]["stat_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_status["English"]["stat_id"] = "";
 	if (count($fieldToolTipsgr_fico_tarefas_por_status["English"]))
@@ -54,7 +54,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsgr_fico_tarefas_por_status["Portuguese(Brazil)"]["qtde"] = "Qtde";
 	$fieldToolTipsgr_fico_tarefas_por_status["Portuguese(Brazil)"]["qtde"] = "";
 	$placeHoldersgr_fico_tarefas_por_status["Portuguese(Brazil)"]["qtde"] = "";
-	$fieldLabelsgr_fico_tarefas_por_status["Portuguese(Brazil)"]["clie_id"] = "Clie Id";
+	$fieldLabelsgr_fico_tarefas_por_status["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipsgr_fico_tarefas_por_status["Portuguese(Brazil)"]["clie_id"] = "";
 	$placeHoldersgr_fico_tarefas_por_status["Portuguese(Brazil)"]["clie_id"] = "";
 	$fieldLabelsgr_fico_tarefas_por_status["Portuguese(Brazil)"]["stat_id"] = "Stat Id";
@@ -239,8 +239,8 @@ $tdatagr_fico_tarefas_por_status[".strOrderBy"] = $tstrOrderBy;
 
 $tdatagr_fico_tarefas_por_status[".orderindexes"] = array();
 
-$tdatagr_fico_tarefas_por_status[".sqlHead"] = "SELECT \"at\".clie_id,  \"at\".stat_id,  stat_nm,  COUNT(\"at\".ativ_id) AS qtde";
-$tdatagr_fico_tarefas_por_status[".sqlFrom"] = "FROM tb_atividade AS \"at\"  , tb_status_atividades AS st";
+$tdatagr_fico_tarefas_por_status[".sqlHead"] = "SELECT \"at\".clie_id, \"at\".stat_id, stat_nm, COUNT(\"at\".ativ_id) AS qtde";
+$tdatagr_fico_tarefas_por_status[".sqlFrom"] = "FROM tb_atividade AS \"at\" , tb_status_atividades AS st";
 $tdatagr_fico_tarefas_por_status[".sqlWhereExpr"] = "(\"at\".stat_id = st.stat_id)";
 $tdatagr_fico_tarefas_por_status[".sqlTail"] = "";
 
@@ -248,24 +248,24 @@ $tdatagr_fico_tarefas_por_status[".sqlTail"] = "";
 $arrGridTabs = array();
 $arrGridTabs[] = array(
 	'tabId' => "Todas",
-	'name' => "<img src=\"images/info.png\" alt=\"\" /> Todas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS2",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = ativ_concluida",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Nao_Concluidas",
-	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Não Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______N_O_CONCLU_DAS1",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 0",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Concluidas",
-	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______CONCLU_DAS1",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 1",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
@@ -925,8 +925,8 @@ $tdatagr_fico_tarefas_por_status[".hideMobileList"] = array();
 			<attr value="appearance">';
 
 
-	$tdatagr_fico_tarefas_por_status[".chartXml"] .= '<attr value="head">'.xmlencode("Tarefas por Status").'</attr>
-<attr value="foot">'.xmlencode("Quantidades por Status").'</attr>
+	$tdatagr_fico_tarefas_por_status[".chartXml"] .= '<attr value="head">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_POR_STATUS_HEADER")).'</attr>
+<attr value="foot">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_POR_STATUS_FOOTER")).'</attr>
 <attr value="y_axis_label">'.xmlencode("clie_id").'</attr>
 
 
@@ -1010,8 +1010,8 @@ function createSqlQuery_gr_fico_tarefas_por_status()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "\"at\".clie_id,  \"at\".stat_id,  stat_nm,  COUNT(\"at\".ativ_id) AS qtde";
-$proto0["m_strFrom"] = "FROM tb_atividade AS \"at\"  , tb_status_atividades AS st";
+$proto0["m_strFieldList"] = "\"at\".clie_id, \"at\".stat_id, stat_nm, COUNT(\"at\".ativ_id) AS qtde";
+$proto0["m_strFrom"] = "FROM tb_atividade AS \"at\" , tb_status_atividades AS st";
 $proto0["m_strWhere"] = "(\"at\".stat_id = st.stat_id)";
 $proto0["m_strOrderBy"] = "";
 	

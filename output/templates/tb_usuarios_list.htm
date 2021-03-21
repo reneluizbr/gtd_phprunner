@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -117,19 +120,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_alter_dt}</span>
 						</div>
 		{END searchCtrlBlock_alter_dt}
-																{BEGIN searchCtrlBlock_wlSituacao}
+																{BEGIN searchCtrlBlock_usua_idioma_ulti}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_wlSituacao}" {$filterRow_attrs_wlSituacao}>
-			<label>{$label tb_usuarios wlSituacao }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_usua_idioma_ulti}" {$filterRow_attrs_usua_idioma_ulti}>
+			<label>{$label tb_usuarios usua_idioma_ulti }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_wlSituacao}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_wlSituacao}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_wlSituacao}</span>
+								<span class="rnr-searchtype">{$searchtype_usua_idioma_ulti}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_usua_idioma_ulti}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_usua_idioma_ulti}</span>
 						</div>
-		{END searchCtrlBlock_wlSituacao}
+		{END searchCtrlBlock_usua_idioma_ulti}
+																{BEGIN searchCtrlBlock_usua_senha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_usua_senha}" {$filterRow_attrs_usua_senha}>
+			<label>{$label tb_usuarios usua_senha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_usua_senha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_usua_senha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_usua_senha}</span>
+						</div>
+		{END searchCtrlBlock_usua_senha}
 																{BEGIN searchCtrlBlock_alter_login}
 
 
@@ -284,7 +300,7 @@
 		{BEGIN filter_control_usua_domi_status}
 		<div class="panel panel-info filter-field filter-usua_domi_status-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
 							<input class="filter-selectAll-usua_domi_status" type="checkbox" name="selectAll" {$selectAll_attrs_usua_domi_status} />
 			
@@ -300,6 +316,10 @@
 				<li class="list-group-item filter-values filter-values-usua_domi_status {$collapsedClass_usua_domi_status} {$visibilityClass_usua_domi_status}">
 					{$usua_domi_status_filter}
 								
+			
+			
+			
+			
 			
 			
 			
@@ -341,10 +361,133 @@
 
 		 	
 
+		{BEGIN filter_control_usua_idioma_ulti}
+		<div class="panel panel-info filter-field filter-usua_idioma_ulti-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+							<input class="filter-selectAll-usua_idioma_ulti" type="checkbox" name="selectAll" {$selectAll_attrs_usua_idioma_ulti} />
+			
+				<label>{$label tb_usuarios usua_idioma_ulti }</label>
+
+				{BEGIN clearLink_usua_idioma_ulti}
+				<a href="#" class="filter-clear filter-clear-usua_idioma_ulti">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_usua_idioma_ulti}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_usua_idioma_ulti}
+				<li class="list-group-item filter-values filter-values-usua_idioma_ulti {$collapsedClass_usua_idioma_ulti} {$visibilityClass_usua_idioma_ulti}">
+					{$usua_idioma_ulti_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_usua_idioma_ulti}
+
+							{BEGIN filter_button_showmore_usua_idioma_ulti}
+				<li class="list-group-item filter-show-more {$collapsedClass_usua_idioma_ulti} {$showMoreBtnClass_usua_idioma_ulti}">
+					<a class="filter-show-more-link filterShowMore_usua_idioma_ulti" href="#">{$show_n_more_usua_idioma_ulti}</a>
+				</li>
+				{END filter_button_showmore_usua_idioma_ulti}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_usua_idioma_ulti}
+				<li class="list-group-item filter-field-btn {$collapsedClass_usua_idioma_ulti}">
+					<a href="#" class="rnr-button filter-usua_idioma_ulti-btn-multiselect filter-apply-usua_idioma_ulti" {$filterbutton_attrs_usua_idioma_ulti}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_usua_idioma_ulti}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_usua_idioma_ulti}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_wlSituacao}
+		<div class="panel panel-info filter-field filter-wlSituacao-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
+
+			
+				<label>{$label tb_usuarios wlSituacao }</label>
+
+				{BEGIN clearLink_wlSituacao}
+				<a href="#" class="filter-clear filter-clear-wlSituacao">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_wlSituacao}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_wlSituacao}
+				<li class="list-group-item filter-values filter-values-wlSituacao {$collapsedClass_wlSituacao} {$visibilityClass_wlSituacao}">
+					{$wlSituacao_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_wlSituacao}
+
+							{BEGIN filter_button_showmore_wlSituacao}
+				<li class="list-group-item filter-show-more {$collapsedClass_wlSituacao} {$showMoreBtnClass_wlSituacao}">
+					<a class="filter-show-more-link filterShowMore_wlSituacao" href="#">{$show_n_more_wlSituacao}</a>
+				</li>
+				{END filter_button_showmore_wlSituacao}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_wlSituacao}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
 		{BEGIN filter_control_clie_id}
 		<div class="panel panel-info filter-field filter-clie_id-container">
 			<div class="panel-heading filter-expander">
-																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
 
 							<input class="filter-selectAll-clie_id" type="checkbox" name="selectAll" {$selectAll_attrs_clie_id} />
 			
@@ -360,6 +503,10 @@
 				<li class="list-group-item filter-values filter-values-clie_id {$collapsedClass_clie_id} {$visibilityClass_clie_id}">
 					{$clie_id_filter}
 								
+			
+			
+			
+			
 			
 			
 			
@@ -428,6 +575,10 @@
 			
 			
 			
+			
+			
+			
+			
 				</li>				
 				{END filterCtrlBlock_inclu_login}
 
@@ -480,6 +631,10 @@
 				<li class="list-group-item filter-values filter-values-alter_login {$collapsedClass_alter_login} {$visibilityClass_alter_login}">
 					{$alter_login_filter}
 								
+			
+			
+			
+			
 			
 			
 			
@@ -552,6 +707,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -733,14 +894,14 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="tb_usuarios_add.php" data-popup >
+	" {$addlink_attrs} href="tb_usuarios_add.php" >
 							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
+	<a type="button" title="" class="btn btn-danger   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
 							{mlang_message DELETE}			</a>
 </span>
@@ -833,6 +994,24 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+		 
+		<div class="form-inline sortby-ctrl" data-itemtype="sort_dropdown" data-itemid="sort_dropdown" {$item_sort_dropdown} data-pageid="{$pageid}">
+{mlang_message SORT_BY}&nbsp;{$sortByDropdown}
+</div>		</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -877,6 +1056,10 @@
 	
 	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="usua_login_ulti"]:before {
 		content: "{$label tb_usuarios usua_login_ulti}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="usua_idioma_ulti"]:before {
+		content: "{$label tb_usuarios usua_idioma_ulti}";
 	}
 	
 	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="inclu_login"]:before {
@@ -968,7 +1151,7 @@
 	 
 		{BEGIN usua_id_fieldheadercolumn}
 	{BEGIN usua_id_fieldheader}
-	<SPAN {$usua_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_id">
+	<SPAN {$usua_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_id">
 	{$label tb_usuarios usua_id }	{$arrow_icon_usua_id}
 	</SPAN>
 	{END usua_id_fieldheader}
@@ -984,22 +1167,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$clie_id_class}
+		 r-ori-vert				{$usua_username_class}
 			"
 
-			data-field="clie_id"
+			data-field="usua_username"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN clie_id_fieldheadercolumn}
-	{BEGIN clie_id_fieldheader}
-	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
-	{$label tb_usuarios clie_id }	{$arrow_icon_clie_id}
+		{BEGIN usua_username_fieldheadercolumn}
+	{BEGIN usua_username_fieldheader}
+	<SPAN {$usua_username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_username">
+	{$label tb_usuarios usua_username }	{$arrow_icon_usua_username}
 	</SPAN>
-	{END clie_id_fieldheader}
-{END clie_id_fieldheadercolumn}
+	{END usua_username_fieldheader}
+{END usua_username_fieldheadercolumn}
 
 	
 	</th>
@@ -1011,22 +1194,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$usua_username_class}
+		 r-ori-vert				{$wlSituacao_class}
 			"
 
-			data-field="usua_username"
+			data-field="wlSituacao"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN usua_username_fieldheadercolumn}
-	{BEGIN usua_username_fieldheader}
-	<SPAN {$usua_username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_username">
-	{$label tb_usuarios usua_username }	{$arrow_icon_usua_username}
+		{BEGIN wlSituacao_fieldheadercolumn}
+	{BEGIN wlSituacao_fieldheader}
+	<SPAN {$wlSituacao_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="wlSituacao">
+	{$label tb_usuarios wlSituacao }	{$arrow_icon_wlSituacao}
 	</SPAN>
-	{END usua_username_fieldheader}
-{END usua_username_fieldheadercolumn}
+	{END wlSituacao_fieldheader}
+{END wlSituacao_fieldheadercolumn}
 
 	
 	</th>
@@ -1038,22 +1221,22 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		r-align-center r-ori-vert				{$wlSituacao_class}
+		 r-ori-vert				{$usua_domi_status_class}
 			"
 
-			data-field="wlSituacao"
+			data-field="usua_domi_status"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN wlSituacao_fieldheadercolumn}
-	{BEGIN wlSituacao_fieldheader}
-	<SPAN {$wlSituacao_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="wlSituacao">
-	{$label tb_usuarios wlSituacao }	{$arrow_icon_wlSituacao}
+		{BEGIN usua_domi_status_fieldheadercolumn}
+	{BEGIN usua_domi_status_fieldheader}
+	<SPAN {$usua_domi_status_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_domi_status">
+	{$label tb_usuarios usua_domi_status }	{$arrow_icon_usua_domi_status}
 	</SPAN>
-	{END wlSituacao_fieldheader}
-{END wlSituacao_fieldheadercolumn}
+	{END usua_domi_status_fieldheader}
+{END usua_domi_status_fieldheadercolumn}
 
 	
 	</th>
@@ -1065,22 +1248,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$usua_domi_status_class}
+		 r-ori-vert				{$usua_email_class}
 			"
 
-			data-field="usua_domi_status"
+			data-field="usua_email"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN usua_domi_status_fieldheadercolumn}
-	{BEGIN usua_domi_status_fieldheader}
-	<SPAN {$usua_domi_status_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_domi_status">
-	{$label tb_usuarios usua_domi_status }	{$arrow_icon_usua_domi_status}
+		{BEGIN usua_email_fieldheadercolumn}
+	{BEGIN usua_email_fieldheader}
+	<SPAN {$usua_email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_email">
+	{$label tb_usuarios usua_email }	{$arrow_icon_usua_email}
 	</SPAN>
-	{END usua_domi_status_fieldheader}
-{END usua_domi_status_fieldheadercolumn}
+	{END usua_email_fieldheader}
+{END usua_email_fieldheadercolumn}
 
 	
 	</th>
@@ -1092,22 +1275,22 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$usua_email_class}
+		 r-ori-vert				{$usua_idioma_ulti_class}
 			"
 
-			data-field="usua_email"
+			data-field="usua_idioma_ulti"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN usua_email_fieldheadercolumn}
-	{BEGIN usua_email_fieldheader}
-	<SPAN {$usua_email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_email">
-	{$label tb_usuarios usua_email }	{$arrow_icon_usua_email}
+		{BEGIN usua_idioma_ulti_fieldheadercolumn}
+	{BEGIN usua_idioma_ulti_fieldheader}
+	<SPAN {$usua_idioma_ulti_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_idioma_ulti">
+	{$label tb_usuarios usua_idioma_ulti }	{$arrow_icon_usua_idioma_ulti}
 	</SPAN>
-	{END usua_email_fieldheader}
-{END usua_email_fieldheadercolumn}
+	{END usua_idioma_ulti_fieldheader}
+{END usua_idioma_ulti_fieldheadercolumn}
 
 	
 	</th>
@@ -1130,7 +1313,7 @@
 	 
 		{BEGIN usua_login_ulti_fieldheadercolumn}
 	{BEGIN usua_login_ulti_fieldheader}
-	<SPAN {$usua_login_ulti_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_login_ulti">
+	<SPAN {$usua_login_ulti_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_login_ulti">
 	{$label tb_usuarios usua_login_ulti }	{$arrow_icon_usua_login_ulti}
 	</SPAN>
 	{END usua_login_ulti_fieldheader}
@@ -1146,53 +1329,26 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$inclu_login_class}
+		 r-ori-vert				{$clie_id_class}
 			"
 
-			data-field="inclu_login"
+			data-field="clie_id"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN inclu_login_fieldheadercolumn}
-	{BEGIN inclu_login_fieldheader}
-	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
-	{$label tb_usuarios inclu_login }	{$arrow_icon_inclu_login}
+		{BEGIN clie_id_fieldheadercolumn}
+	{BEGIN clie_id_fieldheader}
+	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
+	{$label tb_usuarios clie_id }	{$arrow_icon_clie_id}
 	</SPAN>
-	{END inclu_login_fieldheader}
-{END inclu_login_fieldheadercolumn}
+	{END clie_id_fieldheader}
+{END clie_id_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field7}
-				 
-					{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_dt_class}
-			"
-
-			data-field="inclu_dt"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_dt_fieldheadercolumn}
-	{BEGIN inclu_dt_fieldheader}
-	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
-	{$label tb_usuarios inclu_dt }	{$arrow_icon_inclu_dt}
-	</SPAN>
-	{END inclu_dt_fieldheader}
-{END inclu_dt_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
 							</tr>
 					 
 					 
@@ -1227,7 +1383,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="tb_usuarios_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" data-popup >		
+	 glyphicon glyphicon-pencil" href="tb_usuarios_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
 				
 								</a>
 </span>
@@ -1238,7 +1394,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
-	 glyphicon glyphicon-search" href="tb_usuarios_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" data-popup >		
+	 glyphicon glyphicon-search" href="tb_usuarios_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
 				
 								</a>
 </span>
@@ -1301,35 +1457,12 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$clie_id_class}
-			"
-
-			data-field="clie_id"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN clie_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id" data-default-width >
-{$clie_id_value}
-</span>
-{END clie_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-				 
-					{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$usua_username_class}
 			"
 
 			data-field="usua_username"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1339,20 +1472,20 @@
 </span>
 {END usua_username_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 				 
-					{BEGIN cellblock_grid_cell_field3}
+					{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		r-align-center r-ori-vert				{$wlSituacao_class}
+		 r-ori-vert				{$wlSituacao_class}
 			"
 
 			data-field="wlSituacao"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1362,12 +1495,12 @@
 </span>
 {END wlSituacao_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field4}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$usua_domi_status_class}
@@ -1375,7 +1508,7 @@
 
 			data-field="usua_domi_status"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1385,12 +1518,12 @@
 </span>
 {END usua_domi_status_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 				 
-					{BEGIN cellblock_grid_cell_field5}
+					{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$usua_email_class}
@@ -1398,7 +1531,7 @@
 
 			data-field="usua_email"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1407,6 +1540,29 @@
 {$usua_email_value}
 </span>
 {END usua_email_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$usua_idioma_ulti_class}
+			"
+
+			data-field="usua_idioma_ulti"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN usua_idioma_ulti_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_idioma_ulti" data-default-width >
+{$usua_idioma_ulti_value}
+</span>
+{END usua_idioma_ulti_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 				 
@@ -1439,45 +1595,22 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$inclu_login_class}
+		 r-ori-vert				{$clie_id_class}
 			"
 
-			data-field="inclu_login"
+			data-field="clie_id"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN inclu_login_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login" data-default-width >
-{$inclu_login_value}
+		{BEGIN clie_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id" data-default-width >
+{$clie_id_value}
 </span>
-{END inclu_login_fieldcolumn}	
+{END clie_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
-				 
-					{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$inclu_dt_class}
-			"
-
-			data-field="inclu_dt"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN inclu_dt_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
-{$inclu_dt_value}
-</span>
-{END inclu_dt_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
 							</tr>
 					 
 					
@@ -1653,22 +1786,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field7}
-				 
-					{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_usuarios_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
 							</tr>
 					
 					</tfoot>

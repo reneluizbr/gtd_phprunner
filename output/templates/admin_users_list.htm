@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -117,6 +120,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_alter_dt}</span>
 						</div>
 		{END searchCtrlBlock_alter_dt}
+																{BEGIN searchCtrlBlock_usua_idioma_ulti}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_usua_idioma_ulti}" {$filterRow_attrs_usua_idioma_ulti}>
+			<label>{$label admin_users usua_idioma_ulti }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_usua_idioma_ulti}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_usua_idioma_ulti}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_usua_idioma_ulti}</span>
+						</div>
+		{END searchCtrlBlock_usua_idioma_ulti}
 																{BEGIN searchCtrlBlock_alter_login}
 
 
@@ -296,6 +312,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -469,7 +491,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="admin_users_add.php" >
+	" {$addlink_attrs} href="admin_users_add.php" data-popup >
 							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
@@ -569,6 +591,24 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+		 
+		<div class="form-inline sortby-ctrl" data-itemtype="sort_dropdown" data-itemid="sort_dropdown" {$item_sort_dropdown} data-pageid="{$pageid}">
+{mlang_message SORT_BY}&nbsp;{$sortByDropdown}
+</div>		</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -625,6 +665,10 @@
 	
 	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="alter_dt"]:before {
 		content: "{$label admin_users alter_dt}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="usua_idioma_ulti"]:before {
+		content: "{$label admin_users usua_idioma_ulti}";
 	}
 	
 }
@@ -700,7 +744,7 @@
 	 
 		{BEGIN usua_id_fieldheadercolumn}
 	{BEGIN usua_id_fieldheader}
-	<SPAN {$usua_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_id">
+	<SPAN {$usua_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_id">
 	{$label admin_users usua_id }	{$arrow_icon_usua_id}
 	</SPAN>
 	{END usua_id_fieldheader}
@@ -727,7 +771,7 @@
 	 
 		{BEGIN clie_id_fieldheadercolumn}
 	{BEGIN clie_id_fieldheader}
-	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
+	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
 	{$label admin_users clie_id }	{$arrow_icon_clie_id}
 	</SPAN>
 	{END clie_id_fieldheader}
@@ -754,7 +798,7 @@
 	 
 		{BEGIN usua_domi_status_fieldheadercolumn}
 	{BEGIN usua_domi_status_fieldheader}
-	<SPAN {$usua_domi_status_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_domi_status">
+	<SPAN {$usua_domi_status_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_domi_status">
 	{$label admin_users usua_domi_status }	{$arrow_icon_usua_domi_status}
 	</SPAN>
 	{END usua_domi_status_fieldheader}
@@ -781,7 +825,7 @@
 	 
 		{BEGIN usua_email_fieldheadercolumn}
 	{BEGIN usua_email_fieldheader}
-	<SPAN {$usua_email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_email">
+	<SPAN {$usua_email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_email">
 	{$label admin_users usua_email }	{$arrow_icon_usua_email}
 	</SPAN>
 	{END usua_email_fieldheader}
@@ -808,7 +852,7 @@
 	 
 		{BEGIN usua_username_fieldheadercolumn}
 	{BEGIN usua_username_fieldheader}
-	<SPAN {$usua_username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_username">
+	<SPAN {$usua_username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_username">
 	{$label admin_users usua_username }	{$arrow_icon_usua_username}
 	</SPAN>
 	{END usua_username_fieldheader}
@@ -835,7 +879,7 @@
 	 
 		{BEGIN usua_senha_fieldheadercolumn}
 	{BEGIN usua_senha_fieldheader}
-	<SPAN {$usua_senha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_senha">
+	<SPAN {$usua_senha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_senha">
 	{$label admin_users usua_senha }	{$arrow_icon_usua_senha}
 	</SPAN>
 	{END usua_senha_fieldheader}
@@ -862,7 +906,7 @@
 	 
 		{BEGIN usua_login_ulti_fieldheadercolumn}
 	{BEGIN usua_login_ulti_fieldheader}
-	<SPAN {$usua_login_ulti_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_login_ulti">
+	<SPAN {$usua_login_ulti_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_login_ulti">
 	{$label admin_users usua_login_ulti }	{$arrow_icon_usua_login_ulti}
 	</SPAN>
 	{END usua_login_ulti_fieldheader}
@@ -889,7 +933,7 @@
 	 
 		{BEGIN inclu_dt_fieldheadercolumn}
 	{BEGIN inclu_dt_fieldheader}
-	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
 	{$label admin_users inclu_dt }	{$arrow_icon_inclu_dt}
 	</SPAN>
 	{END inclu_dt_fieldheader}
@@ -916,7 +960,7 @@
 	 
 		{BEGIN alter_dt_fieldheadercolumn}
 	{BEGIN alter_dt_fieldheader}
-	<SPAN {$alter_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_dt">
+	<SPAN {$alter_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_dt">
 	{$label admin_users alter_dt }	{$arrow_icon_alter_dt}
 	</SPAN>
 	{END alter_dt_fieldheader}
@@ -943,7 +987,7 @@
 	 
 		{BEGIN inclu_login_fieldheadercolumn}
 	{BEGIN inclu_login_fieldheader}
-	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
+	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
 	{$label admin_users inclu_login }	{$arrow_icon_inclu_login}
 	</SPAN>
 	{END inclu_login_fieldheader}
@@ -970,7 +1014,7 @@
 	 
 		{BEGIN alter_login_fieldheadercolumn}
 	{BEGIN alter_login_fieldheader}
-	<SPAN {$alter_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_login">
+	<SPAN {$alter_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="alter_login">
 	{$label admin_users alter_login }	{$arrow_icon_alter_login}
 	</SPAN>
 	{END alter_login_fieldheader}
@@ -979,6 +1023,33 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$usua_idioma_ulti_class}
+			"
+
+			data-field="usua_idioma_ulti"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN usua_idioma_ulti_fieldheadercolumn}
+	{BEGIN usua_idioma_ulti_fieldheader}
+	<SPAN {$usua_idioma_ulti_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_idioma_ulti">
+	{$label admin_users usua_idioma_ulti }	{$arrow_icon_usua_idioma_ulti}
+	</SPAN>
+	{END usua_idioma_ulti_fieldheader}
+{END usua_idioma_ulti_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
 							</tr>
 					 
 					 
@@ -1013,7 +1084,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="admin_users_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
+	 glyphicon glyphicon-pencil" href="admin_users_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" data-popup >		
 				
 								</a>
 </span>
@@ -1299,6 +1370,29 @@
 {END alter_login_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$usua_idioma_ulti_class}
+			"
+
+			data-field="usua_idioma_ulti"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN usua_idioma_ulti_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usua_idioma_ulti" data-default-width >
+{$usua_idioma_ulti_value}
+</span>
+{END usua_idioma_ulti_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
 							</tr>
 					 
 					
@@ -1522,6 +1616,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="admin_users_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
 							</tr>
 					
 					</tfoot>

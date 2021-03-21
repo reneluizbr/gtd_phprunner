@@ -5,7 +5,15 @@
   width: 66.66666667%;
 }
 [data-cellid="superbottom_c1"][data-page=".global_login"][data-cellid="superbottom_c1"][data-page=".global_login"][data-cellid="superbottom_c1"][data-page=".global_login"] {
-  background-color: #edff61;
+  background-color: #acdff2;
+}
+[data-page=".global_login"][data-itemid="loginform_register_link"] > .btn {
+  text-shadow: none;
+  color: #ffffff;
+}
+[data-page=".global_login"][data-itemid="login_remind"] > .btn {
+  text-shadow: none;
+  color: #ffffff;
 }
 
 

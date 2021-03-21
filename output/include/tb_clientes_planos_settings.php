@@ -30,10 +30,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_clientes_planos["English"]["clipla_id"] = "ID";
 	$fieldToolTipstb_clientes_planos["English"]["clipla_id"] = "";
 	$placeHolderstb_clientes_planos["English"]["clipla_id"] = "";
-	$fieldLabelstb_clientes_planos["English"]["clie_id"] = "Customer ID";
+	$fieldLabelstb_clientes_planos["English"]["clie_id"] = "Customer";
 	$fieldToolTipstb_clientes_planos["English"]["clie_id"] = "";
 	$placeHolderstb_clientes_planos["English"]["clie_id"] = "";
-	$fieldLabelstb_clientes_planos["English"]["plan_id"] = "Flat ID";
+	$fieldLabelstb_clientes_planos["English"]["plan_id"] = "Plan";
 	$fieldToolTipstb_clientes_planos["English"]["plan_id"] = "";
 	$placeHolderstb_clientes_planos["English"]["plan_id"] = "";
 	$fieldLabelstb_clientes_planos["English"]["clipla_dt_vigenc_ini"] = "Effective Date Start";
@@ -42,19 +42,19 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_clientes_planos["English"]["clipla_dt_vigenc_fim"] = "Final Effective Date";
 	$fieldToolTipstb_clientes_planos["English"]["clipla_dt_vigenc_fim"] = "";
 	$placeHolderstb_clientes_planos["English"]["clipla_dt_vigenc_fim"] = "";
-	$fieldLabelstb_clientes_planos["English"]["clipla_vl"] = "Plan Amount";
+	$fieldLabelstb_clientes_planos["English"]["clipla_vl"] = "Month Value";
 	$fieldToolTipstb_clientes_planos["English"]["clipla_vl"] = "";
-	$placeHolderstb_clientes_planos["English"]["clipla_vl"] = "";
-	$fieldLabelstb_clientes_planos["English"]["inclu_dt"] = "Included in";
+	$placeHolderstb_clientes_planos["English"]["clipla_vl"] = "Monthly Plan's Value";
+	$fieldLabelstb_clientes_planos["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_clientes_planos["English"]["inclu_dt"] = "";
 	$placeHolderstb_clientes_planos["English"]["inclu_dt"] = "";
 	$fieldLabelstb_clientes_planos["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_clientes_planos["English"]["alter_dt"] = "";
 	$placeHolderstb_clientes_planos["English"]["alter_dt"] = "";
-	$fieldLabelstb_clientes_planos["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_clientes_planos["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_clientes_planos["English"]["inclu_login"] = "";
 	$placeHolderstb_clientes_planos["English"]["inclu_login"] = "";
-	$fieldLabelstb_clientes_planos["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_clientes_planos["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_clientes_planos["English"]["alter_login"] = "";
 	$placeHolderstb_clientes_planos["English"]["alter_login"] = "";
 	if (count($fieldToolTipstb_clientes_planos["English"]))
@@ -83,7 +83,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["clipla_dt_vigenc_fim"] = "";
 	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["clipla_vl"] = "Valor Mensal";
 	$fieldToolTipstb_clientes_planos["Portuguese(Brazil)"]["clipla_vl"] = "";
-	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["clipla_vl"] = "";
+	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["clipla_vl"] = "Valor mensal do plano";
 	$fieldLabelstb_clientes_planos["Portuguese(Brazil)"]["inclu_dt"] = "Incluído em";
 	$fieldToolTipstb_clientes_planos["Portuguese(Brazil)"]["inclu_dt"] = "";
 	$placeHolderstb_clientes_planos["Portuguese(Brazil)"]["inclu_dt"] = "";
@@ -122,7 +122,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$placeHolderstb_clientes_planos["Spanish"]["clipla_dt_vigenc_fim"] = "";
 	$fieldLabelstb_clientes_planos["Spanish"]["clipla_vl"] = "Cantidad del plan";
 	$fieldToolTipstb_clientes_planos["Spanish"]["clipla_vl"] = "";
-	$placeHolderstb_clientes_planos["Spanish"]["clipla_vl"] = "";
+	$placeHolderstb_clientes_planos["Spanish"]["clipla_vl"] = "(es) Valor mensal do plano";
 	$fieldLabelstb_clientes_planos["Spanish"]["inclu_dt"] = "Incluido en";
 	$fieldToolTipstb_clientes_planos["Spanish"]["inclu_dt"] = "";
 	$placeHolderstb_clientes_planos["Spanish"]["inclu_dt"] = "";
@@ -167,11 +167,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_clientes_planos[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_clientes_planos[".listAjax"] = false;
+	$tdatatb_clientes_planos[".listAjax"] = true;
 //	temporary
 $tdatatb_clientes_planos[".listAjax"] = false;
 
-	$tdatatb_clientes_planos[".audit"] = false;
+	$tdatatb_clientes_planos[".audit"] = true;
 
 	$tdatatb_clientes_planos[".locking"] = false;
 
@@ -305,7 +305,7 @@ $tdatatb_clientes_planos[".orderindexes"] = array();
 	$tdatatb_clientes_planos[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "clie_id");
 
 
-$tdatatb_clientes_planos[".sqlHead"] = "SELECT clipla_id,  clie_id,  plan_id,  clipla_dt_vigenc_ini,  clipla_dt_vigenc_fim,  clipla_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
+$tdatatb_clientes_planos[".sqlHead"] = "SELECT clipla_id, clie_id, plan_id, clipla_dt_vigenc_ini, clipla_dt_vigenc_fim, clipla_vl, inclu_login, inclu_dt, alter_login, alter_dt";
 $tdatatb_clientes_planos[".sqlFrom"] = "FROM tb_clientes_planos";
 $tdatatb_clientes_planos[".sqlWhereExpr"] = "";
 $tdatatb_clientes_planos[".sqlTail"] = "";
@@ -738,7 +738,8 @@ $tdatatb_clientes_planos[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["AllowToAdd"] = true;
+		
 	
 
 	
@@ -1831,7 +1832,7 @@ function createSqlQuery_tb_clientes_planos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "clipla_id,  clie_id,  plan_id,  clipla_dt_vigenc_ini,  clipla_dt_vigenc_fim,  clipla_vl,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
+$proto0["m_strFieldList"] = "clipla_id, clie_id, plan_id, clipla_dt_vigenc_ini, clipla_dt_vigenc_fim, clipla_vl, inclu_login, inclu_dt, alter_login, alter_dt";
 $proto0["m_strFrom"] = "FROM tb_clientes_planos";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY plan_id, clie_id";

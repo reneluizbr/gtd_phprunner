@@ -27,27 +27,28 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipstb_categorias["English"] = array();
 	$placeHolderstb_categorias["English"] = array();
 	$pageTitlestb_categorias["English"] = array();
-	$fieldLabelstb_categorias["English"]["cate_id"] = "Cate Id";
+	$fieldLabelstb_categorias["English"]["cate_id"] = "ID";
 	$fieldToolTipstb_categorias["English"]["cate_id"] = "";
 	$placeHolderstb_categorias["English"]["cate_id"] = "";
-	$fieldLabelstb_categorias["English"]["clie_id"] = "Clie Id";
+	$fieldLabelstb_categorias["English"]["clie_id"] = "Customer";
 	$fieldToolTipstb_categorias["English"]["clie_id"] = "";
 	$placeHolderstb_categorias["English"]["clie_id"] = "";
-	$fieldLabelstb_categorias["English"]["cate_nm"] = "Cate Nm";
+	$fieldLabelstb_categorias["English"]["cate_nm"] = "Category";
 	$fieldToolTipstb_categorias["English"]["cate_nm"] = "";
 	$placeHolderstb_categorias["English"]["cate_nm"] = "";
-	$fieldLabelstb_categorias["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_categorias["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_categorias["English"]["inclu_login"] = "";
 	$placeHolderstb_categorias["English"]["inclu_login"] = "";
-	$fieldLabelstb_categorias["English"]["inclu_dt"] = "Inclu Dt";
+	$fieldLabelstb_categorias["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_categorias["English"]["inclu_dt"] = "";
 	$placeHolderstb_categorias["English"]["inclu_dt"] = "";
-	$fieldLabelstb_categorias["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_categorias["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_categorias["English"]["alter_login"] = "";
 	$placeHolderstb_categorias["English"]["alter_login"] = "";
-	$fieldLabelstb_categorias["English"]["alter_dt"] = "Alter Dt";
+	$fieldLabelstb_categorias["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_categorias["English"]["alter_dt"] = "";
 	$placeHolderstb_categorias["English"]["alter_dt"] = "";
+	$pageTitlestb_categorias["English"]["view"] = "Categories [{%cate_id} - {%cate_nm}]";
 	if (count($fieldToolTipstb_categorias["English"]))
 		$tdatatb_categorias[".isUseToolTips"] = true;
 }
@@ -57,7 +58,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"] = array();
 	$placeHolderstb_categorias["Portuguese(Brazil)"] = array();
 	$pageTitlestb_categorias["Portuguese(Brazil)"] = array();
-	$fieldLabelstb_categorias["Portuguese(Brazil)"]["cate_id"] = "Id";
+	$fieldLabelstb_categorias["Portuguese(Brazil)"]["cate_id"] = "ID";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["cate_id"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["cate_id"] = "";
 	$fieldLabelstb_categorias["Portuguese(Brazil)"]["clie_id"] = "Cliente";
@@ -78,6 +79,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "Alterado em";
 	$fieldToolTipstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "";
 	$placeHolderstb_categorias["Portuguese(Brazil)"]["alter_dt"] = "";
+	$pageTitlestb_categorias["Portuguese(Brazil)"]["view"] = "Categorias [{%cate_id} - {%cate_nm}]";
 	if (count($fieldToolTipstb_categorias["Portuguese(Brazil)"]))
 		$tdatatb_categorias[".isUseToolTips"] = true;
 }
@@ -108,6 +110,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstb_categorias["Spanish"]["alter_dt"] = "Alter Dt";
 	$fieldToolTipstb_categorias["Spanish"]["alter_dt"] = "";
 	$placeHolderstb_categorias["Spanish"]["alter_dt"] = "";
+	$pageTitlestb_categorias["Spanish"]["view"] = "Categorias [{%cate_id} - {%cate_nm}]";
 	if (count($fieldToolTipstb_categorias["Spanish"]))
 		$tdatatb_categorias[".isUseToolTips"] = true;
 }
@@ -140,11 +143,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_categorias[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_categorias[".listAjax"] = false;
+	$tdatatb_categorias[".listAjax"] = true;
 //	temporary
 $tdatatb_categorias[".listAjax"] = false;
 
-	$tdatatb_categorias[".audit"] = false;
+	$tdatatb_categorias[".audit"] = true;
 
 	$tdatatb_categorias[".locking"] = false;
 
@@ -1566,4 +1569,25 @@ include_once(getabspath("include/tb_categorias_events.php"));
 $tableEvents["tb_categorias"] = new eventclass_tb_categorias;
 $tdatatb_categorias[".hasEvents"] = true;
 
+$query = &$queryData_tb_categorias;
+$table = "tb_categorias";
+// here goes EVENT_INIT_TABLE event
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// Rene: Restringe dados somente do mesmo cliente do usuário logado 
+//      ou ALGUMA OUTRA CONDICAO ESPECIAL, se for necessario
+// $_SESSION["clie_id"] 
+// $_SESSION["usua_id"]
+if ($_SESSION["usua_id"] != 0) {
+	// OK, limita a visualizacao dos registros
+	// $query->addWhere("clie_id='" . $_SESSION["clie_id"] . "'");
+}
+// echo "<script>alert('Funcao AfterTableInit(), $query: " . $query . "');</script>";
+// echo "<script>alert('Funcao AfterTableInit(), query: " . $_SESSION["clie_id"] . "');</script>";
+
+;
+unset($query);
 ?>

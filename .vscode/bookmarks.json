@@ -18,12 +18,12 @@
 		"path": "$ROOTPATH$\\_queries\\gtd_202102_dados.sql",
 		"bookmarks": [
 			{
-				"line": 36,
+				"line": 37,
 				"column": 10,
 				"label": "INTO tb_usuarios"
 			},
 			{
-				"line": 105,
+				"line": 107,
 				"column": 24,
 				"label": "INTO tb_atividade"
 			}
@@ -38,7 +38,12 @@
 				"label": "fontes modernas"
 			},
 			{
-				"line": 1944,
+				"line": 1733,
+				"column": 87,
+				"label": "\"revisionmarks.gutterIconPath\": \"C://Temp//icones_revisionmarks//kiss.png\","
+			},
+			{
+				"line": 1948,
 				"column": 20,
 				"label": "\"codemap.sql\": ["
 			}
@@ -48,14 +53,19 @@
 		"path": "$ROOTPATH$\\output\\include\\appsettings.php",
 		"bookmarks": [
 			{
-				"line": 1,
+				"line": 3,
 				"column": 0,
 				"label": "$dDebug = false;"
 			},
 			{
-				"line": 720,
+				"line": 722,
 				"column": 0,
 				"label": "$projectBuildKey = \"796_1614893600\";"
+			},
+			{
+				"line": 863,
+				"column": 0,
+				"label": "$projectBuildNumber = \"893\""
 			}
 		]
 	},
@@ -66,6 +76,86 @@
 				"line": 142,
 				"column": 0,
 				"label": "Acessos do GTD via FTP"
+			}
+		]
+	},
+	{
+		"path": "c:\\Fontes\\AutoHotkey\\Fontes AHK\\Diversos\\CopiaSelecionado-e-Alterna.ahk",
+		"bookmarks": [
+			{
+				"line": 38,
+				"column": 0,
+				"label": "clipboard := wlDataHora"
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\_Notas.md",
+		"bookmarks": [
+			{
+				"line": 77,
+				"column": 1,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\files\\funcoes_rene.php",
+		"bookmarks": [
+			{
+				"line": 129,
+				"column": 73,
+				"label": "GetCustomLabel('livros_a_serem_lidos_neste_ano')"
+			},
+			{
+				"line": 260,
+				"column": 28,
+				"label": "Strings de Carga Inicial:"
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\output\\include\\languages.php",
+		"bookmarks": [
+			{
+				"line": 5,
+				"column": 0,
+				"label": "if(mlang_getcurrentlang() == \"Portuguese(Brazil)\")"
+			},
+			{
+				"line": 6,
+				"column": 1,
+				"label": "$langfile=\"Portuguese.php\";"
+			}
+		]
+	},
+	{
+		"path": "c:\\DevTools\\PHPRunner10.3.33761\\wizard\\nodeapps\\pd\\main.bundle.js",
+		"bookmarks": [
+			{
+				"line": 15074,
+				"column": 4,
+				"label": "['Portuguese_Brazil', 'Português(Brasil)'],"
+			}
+		]
+	},
+	{
+		"path": "c:\\DevTools\\PHPRunner10.3.33761\\lang\\languages.cfg",
+		"bookmarks": [
+			{
+				"line": 29,
+				"column": 60,
+				"label": "filename=\"Portuguese.lng\" name=\"Portuguese_Brazil\""
+			}
+		]
+	},
+	{
+		"path": "c:\\DevTools\\PHPRunner10.3.33761\\wizard\\nodeapps\\server.js",
+		"bookmarks": [
+			{
+				"line": 81468,
+				"column": 367,
+				"label": "['Portuguese_Brazil', 'Português(Brasil)']"
 			}
 		]
 	}

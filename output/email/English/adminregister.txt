@@ -3,13 +3,14 @@ Notification on registering
 User registered at %url%
 
 ID: %usua_id_value%
-Customer ID: %clie_id_value%
-Domi Status: %usua_domi_status_value%
-Wl Situacao: %wlSituacao_value%
+Customer: %clie_id_value%
+Status: %usua_domi_status_value%
+Condition: %wlSituacao_value%
 Email: %usua_email_value%
 Username: %usua_username_value%
 Last Login: %usua_login_ulti_value%
-Inclu Login: %inclu_login_value%
-Included in: %inclu_dt_value%
-Alter Login: %alter_login_value%
+Language: %usua_idioma_ulti_value%
+Included by: %inclu_login_value%
+Included on: %inclu_dt_value%
+Changed by: %alter_login_value%
 Changed on: %alter_dt_value%

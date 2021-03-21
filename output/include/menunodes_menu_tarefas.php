@@ -135,31 +135,5 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "6";
-	$menuNode["name"] = "Categorias X Atividades";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "tb_categorias_x_atividades";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "glyphicon-star";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Categorias X Atividades";
-
-
-
-	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 }
 ?>

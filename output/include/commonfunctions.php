@@ -1590,6 +1590,7 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 		$_SESSION["_admin_members_OwnerID"] = $data["clie_id"];
 		$_SESSION["_admin_users_OwnerID"] = $data["clie_id"];
 		$_SESSION["_tb_categorias_OwnerID"] = $data["clie_id"];
+		$_SESSION["_tb_categorias_x_atividades_OwnerID"] = $data["alter_dt"];
 		$_SESSION["_vw_tarefas_categorias_OwnerID"] = $data["clie_id"];
 
 	$_SESSION["UserData"] = $data;
@@ -3779,7 +3780,66 @@ function getBingMapsLang()
 
 function getDefaultLanguage()
 {
-	return "Portuguese(Brazil)";
+	if( strlen($_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
+	{
+		$arrWizardLang = array();
+		$arrWizardLang[] = "English";
+		$arrWizardLang[] = "Portuguese(Brazil)";
+		$arrWizardLang[] = "Spanish";
+		$arrLang = array();
+		$arrLang["af"] = "Afrikaans";
+		$arrLang["ar"] = "Arabic";
+		$arrLang["bs"] = "Bosnian"; //?
+		$arrLang["bg"] = "Bulgarian";
+		$arrLang["ca"] = "Catalan";
+		$arrLang["zh"] = "Chinese";// 1
+		$arrLang["hr"] = "Croatian";
+		$arrLang["cs"] = "Czech";
+		$arrLang["da"] = "Danish";
+		$arrLang["nl"] = "Dutch";
+		$arrLang["en"] = "English";
+		$arrLang["fa"] = "Farsi"; //?
+		$arrLang["fr"] = "French";
+		$arrLang["ka"] = "Georgian";
+		$arrLang["de"] = "German";
+		$arrLang["el"] = "Greek";
+		$arrLang["he"] = "Hebrew";//?
+		$arrLang["hk"] = "Hongkong";// 1
+		$arrLang["hu"] = "Hungarian";
+		$arrLang["id"] = "Indonesian";//?
+		$arrLang["it"] = "Italian";
+		$arrLang["ja"] = "Japanese";
+		$arrLang["ms"] = "Malay";
+		$arrLang["no"] = "Norwegian";
+		$arrLang["fl"] = "Phillipines";//?
+		$arrLang["pl"] = "Polish";
+		$arrLang["pt"] = "Portugal"; // 2
+		$arrLang["br"] = "Portuguese"; // 2
+		$arrLang["ro"] = "Romanian";
+		$arrLang["ru"] = "Russian";
+		$arrLang["sk"] = "Slovak";
+		$arrLang["es"] = "Spanish";
+		$arrLang["sv"] = "Swedish";
+		$arrLang["tw"] = "Taiwan";//??
+		$arrLang["th"] = "Thai";
+		$arrLang["tr"] = "Turkish";
+		$arrLang["ur"] = "Urdu";
+		$arrLang["cy"] = "Welsh";
+
+		$http_lang = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']); //return string ex.:fr-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4
+		$http_lang = str_replace(";",",",$http_lang);
+		$http_lang = str_replace("-",",",$http_lang);
+
+		$langcode = array();
+		$langcode = explode(",", $http_lang);
+
+		foreach($langcode as $lang)
+		{
+			if( in_array($arrLang[$lang], $arrWizardLang) )
+				return $arrLang[$lang];
+		}
+	}
+	return "English";
 }
 
 

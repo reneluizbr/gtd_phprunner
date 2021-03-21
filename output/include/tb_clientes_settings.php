@@ -39,28 +39,28 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_clientes["English"]["clie_endereco"] = "Address";
 	$fieldToolTipstb_clientes["English"]["clie_endereco"] = "";
 	$placeHolderstb_clientes["English"]["clie_endereco"] = "";
-	$fieldLabelstb_clientes["English"]["clie_pais"] = "Parents";
+	$fieldLabelstb_clientes["English"]["clie_pais"] = "Country";
 	$fieldToolTipstb_clientes["English"]["clie_pais"] = "";
 	$placeHolderstb_clientes["English"]["clie_pais"] = "";
-	$fieldLabelstb_clientes["English"]["clie_domi_status"] = "Domain Status";
+	$fieldLabelstb_clientes["English"]["clie_domi_status"] = "Status";
 	$fieldToolTipstb_clientes["English"]["clie_domi_status"] = "";
 	$placeHolderstb_clientes["English"]["clie_domi_status"] = "";
 	$fieldLabelstb_clientes["English"]["clie_nm_completo"] = "Full name";
 	$fieldToolTipstb_clientes["English"]["clie_nm_completo"] = "";
 	$placeHolderstb_clientes["English"]["clie_nm_completo"] = "";
-	$fieldLabelstb_clientes["English"]["clie_fones_contato"] = "Contact Headphones";
+	$fieldLabelstb_clientes["English"]["clie_fones_contato"] = "Contact Phones";
 	$fieldToolTipstb_clientes["English"]["clie_fones_contato"] = "";
 	$placeHolderstb_clientes["English"]["clie_fones_contato"] = "";
-	$fieldLabelstb_clientes["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_clientes["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_clientes["English"]["inclu_dt"] = "";
 	$placeHolderstb_clientes["English"]["inclu_dt"] = "";
 	$fieldLabelstb_clientes["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_clientes["English"]["alter_dt"] = "";
 	$placeHolderstb_clientes["English"]["alter_dt"] = "";
-	$fieldLabelstb_clientes["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_clientes["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_clientes["English"]["inclu_login"] = "";
 	$placeHolderstb_clientes["English"]["inclu_login"] = "";
-	$fieldLabelstb_clientes["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_clientes["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_clientes["English"]["alter_login"] = "";
 	$placeHolderstb_clientes["English"]["alter_login"] = "";
 	if (count($fieldToolTipstb_clientes["English"]))
@@ -185,7 +185,7 @@ $popupPagesLayoutNames = array();
 $tdatatb_clientes[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_clientes[".listAjax"] = false;
+	$tdatatb_clientes[".listAjax"] = true;
 //	temporary
 $tdatatb_clientes[".listAjax"] = false;
 
@@ -1188,8 +1188,9 @@ $tdatatb_clientes[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["filterTotalFields"] = "clie_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1728,7 +1729,7 @@ $tdatatb_clientes[".hideMobileList"] = array();
 		$fdata["filterMultiSelect"] = 0;
 		$fdata["filterTotalFields"] = "clie_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;

@@ -1,2 +1,21 @@
+[data-page="tb_atividade_add"][data-itemid="integrated_edit_field1"][data-page="tb_atividade_add"][data-itemid="integrated_edit_field1"][data-page="tb_atividade_add"][data-itemid="integrated_edit_field1"][data-page="tb_atividade_add"][data-itemid="integrated_edit_field1"] {
+  width: 60%;
+}
+[data-page="tb_atividade_add"][data-itemid="integrated_edit_field6"][data-page="tb_atividade_add"][data-itemid="integrated_edit_field6"][data-page="tb_atividade_add"][data-itemid="integrated_edit_field6"][data-page="tb_atividade_add"][data-itemid="integrated_edit_field6"] {
+  width: 60%;
+}
 
 
+[data-page="tb_atividade_add"][data-itemid="integrated_edit_field1"] {
+  /* color: red; */
+  text-align: right;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="tb_atividade_add"][data-itemid="integrated_edit_field6"] {
+  color: red;
+/*  text-align: right; */
+
+    text-align:right;
+}

@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -183,28 +186,28 @@
 
 {END usua_username_fieldblock}
 											
-{BEGIN usua_senha_fieldblock}
+{BEGIN usua_idioma_ulti_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_senha}  r-horizontal-field form-horizontal" 
-	data-fieldname="usua_senha" 
-	data-signal-error-for="usua_senha{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="usua_senha" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_idioma_ulti}  r-horizontal-field form-horizontal" 
+	data-fieldname="usua_idioma_ulti" 
+	data-signal-error-for="usua_idioma_ulti{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="usua_idioma_ulti" >
 
 
-	<label class="r-edit-label control-label" for="{$labelfor_usua_senha}">
-		{BEGIN usua_senha_label}{$label tb_usuarios usua_senha }{END usua_senha_label}
+	<label class="r-edit-label control-label" for="{$labelfor_usua_idioma_ulti}">
+		{BEGIN usua_idioma_ulti_label}{$label tb_usuarios usua_idioma_ulti }{END usua_idioma_ulti_label}
 	</label>
 	<div class="r-edit-field">
-		{$usua_senha_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="usua_senha">
+		{$usua_idioma_ulti_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="usua_idioma_ulti">
 		<div class="text-muted" >
-		{$tooltip tb_usuarios usua_senha }		</div>
+		{$tooltip tb_usuarios usua_idioma_ulti }		</div>
 	</div>
 </div>
 
 
-{END usua_senha_fieldblock}
+{END usua_idioma_ulti_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

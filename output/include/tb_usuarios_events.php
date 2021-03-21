@@ -16,6 +16,10 @@
 
 		$this->events["BeforeAdd"]=true;
 
+		$this->events["AfterEdit"]=true;
+
+		$this->events["IsRecordEditable"]=true;
+
 
 	}
 
@@ -153,6 +157,168 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record updated
+function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, &$pageObject)
+{
+
+		
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// RENE: Troca o idioma escolhido se for o mesmo usuario
+$wlIdiomaAlterado  = $values["usua_idioma_ulti"];
+$wlUsuarioAlterado = $values["usua_id"];
+if (($wlIdiomaAlterado  == "English") 
+	|| ($wlIdiomaAlterado == "Spanish") 
+	|| ($wlIdiomaAlterado == "Portuguese(Brazil)"))
+{
+	if ($wlUsuarioAlterado == $_SESSION["usua_id"]) {
+		$_SESSION["language"] = $wlIdiomaAlterado;
+
+		//echo "<script>location.reload();</script>";
+
+		//Redireciona para o menu, para poder acionar a rotina de troca de idioma
+		 header("Location:menu.php");
+		// header("Location: order_details_list.php?mastertable=orders&masterkey1=" . $values["OrderID"]);
+		// exit();
+	}
+}
+;		
+} // function AfterEdit
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Is Record Editable
+function IsRecordEditable($values, $isEditable)
+{
+
+		
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// Rene: Habilita o DELETE e exibe o ícone Edit no Grid (para paginas que exibem somente os dados do proprio cliente!)
+$isEditable = true;
+
+return $isEditable;
+;		
+} // function IsRecordEditable
+
 		
 		
 		

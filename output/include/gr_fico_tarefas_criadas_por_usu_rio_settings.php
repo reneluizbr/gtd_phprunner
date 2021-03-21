@@ -27,13 +27,13 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsgr_fico_tarefas_criadas_por_usu_rio["English"] = array();
 	$placeHoldersgr_fico_tarefas_criadas_por_usu_rio["English"] = array();
 	$pageTitlesgr_fico_tarefas_criadas_por_usu_rio["English"] = array();
-	$fieldLabelsgr_fico_tarefas_criadas_por_usu_rio["English"]["qtde"] = "Qtde";
+	$fieldLabelsgr_fico_tarefas_criadas_por_usu_rio["English"]["qtde"] = "Status Qty";
 	$fieldToolTipsgr_fico_tarefas_criadas_por_usu_rio["English"]["qtde"] = "";
 	$placeHoldersgr_fico_tarefas_criadas_por_usu_rio["English"]["qtde"] = "";
-	$fieldLabelsgr_fico_tarefas_criadas_por_usu_rio["English"]["clie_id"] = "Clie Id";
+	$fieldLabelsgr_fico_tarefas_criadas_por_usu_rio["English"]["clie_id"] = "Dashboard with Charts";
 	$fieldToolTipsgr_fico_tarefas_criadas_por_usu_rio["English"]["clie_id"] = "";
 	$placeHoldersgr_fico_tarefas_criadas_por_usu_rio["English"]["clie_id"] = "";
-	$fieldLabelsgr_fico_tarefas_criadas_por_usu_rio["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelsgr_fico_tarefas_criadas_por_usu_rio["English"]["inclu_login"] = "Status Customer ID";
 	$fieldToolTipsgr_fico_tarefas_criadas_por_usu_rio["English"]["inclu_login"] = "";
 	$placeHoldersgr_fico_tarefas_criadas_por_usu_rio["English"]["inclu_login"] = "";
 	if (count($fieldToolTipsgr_fico_tarefas_criadas_por_usu_rio["English"]))
@@ -229,7 +229,7 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".strOrderBy"] = $tstrOrderBy;
 
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".orderindexes"] = array();
 
-$tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlHead"] = "SELECT clie_id,  inclu_login,  COUNT(ativ_id) AS qtde";
+$tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlHead"] = "SELECT clie_id, inclu_login, COUNT(ativ_id) AS qtde";
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlFrom"] = "FROM tb_atividade AS \"at\"";
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlWhereExpr"] = "(1 =1)";
 $tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlTail"] = "";
@@ -238,24 +238,24 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".sqlTail"] = "";
 $arrGridTabs = array();
 $arrGridTabs[] = array(
 	'tabId' => "Todas",
-	'name' => "<img src=\"images/info.png\" alt=\"\" /> Todas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = ativ_concluida",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Nao_Concluidas",
-	'name' => "<img src=\"images/circle_yellow_16.png\" alt=\"\" /> Não Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______NOT_FINISHED",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 0",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
 $arrGridTabs[] = array(
 	'tabId' => "Concluidas",
-	'name' => "<img src=\"images/circle_green_16.png\" alt=\"\" /> Concluídas",
-	'nameType' => 'Text',
+	'name' => "_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______ENCERRADAS",
+	'nameType' => 'CustomID',
 	'where' => "ativ_concluida = 1",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
@@ -753,8 +753,8 @@ $tdatagr_fico_tarefas_criadas_por_usu_rio[".hideMobileList"] = array();
 			<attr value="appearance">';
 
 
-	$tdatagr_fico_tarefas_criadas_por_usu_rio[".chartXml"] .= '<attr value="head">'.xmlencode("Tarefas criadas por Usuário").'</attr>
-<attr value="foot">'.xmlencode("Quantidades por Usuário").'</attr>
+	$tdatagr_fico_tarefas_criadas_por_usu_rio[".chartXml"] .= '<attr value="head">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_CRIADAS_POR_USU_RIO_HEADER")).'</attr>
+<attr value="foot">'.xmlencode(GetCustomLabel("GR_FICO_TAREFAS_CRIADAS_POR_USU_RIO_FOOTER")).'</attr>
 <attr value="y_axis_label">'.xmlencode("clie_id").'</attr>
 
 
@@ -833,7 +833,7 @@ function createSqlQuery_gr_fico_tarefas_criadas_por_usu_rio()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "clie_id,  inclu_login,  COUNT(ativ_id) AS qtde";
+$proto0["m_strFieldList"] = "clie_id, inclu_login, COUNT(ativ_id) AS qtde";
 $proto0["m_strFrom"] = "FROM tb_atividade AS \"at\"";
 $proto0["m_strWhere"] = "(1 =1)";
 $proto0["m_strOrderBy"] = "";

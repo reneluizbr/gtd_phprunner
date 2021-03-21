@@ -27,28 +27,28 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipstb_parametros["English"] = array();
 	$placeHolderstb_parametros["English"] = array();
 	$pageTitlestb_parametros["English"] = array();
-	$fieldLabelstb_parametros["English"]["para_id"] = "Para Id";
+	$fieldLabelstb_parametros["English"]["para_id"] = "ID";
 	$fieldToolTipstb_parametros["English"]["para_id"] = "";
 	$placeHolderstb_parametros["English"]["para_id"] = "";
-	$fieldLabelstb_parametros["English"]["para_nome"] = "Para Nome";
+	$fieldLabelstb_parametros["English"]["para_nome"] = "Name";
 	$fieldToolTipstb_parametros["English"]["para_nome"] = "";
 	$placeHolderstb_parametros["English"]["para_nome"] = "";
-	$fieldLabelstb_parametros["English"]["para_valor"] = "Para Valor";
+	$fieldLabelstb_parametros["English"]["para_valor"] = "Value";
 	$fieldToolTipstb_parametros["English"]["para_valor"] = "";
 	$placeHolderstb_parametros["English"]["para_valor"] = "";
-	$fieldLabelstb_parametros["English"]["para_ativo"] = "Para Ativo";
+	$fieldLabelstb_parametros["English"]["para_ativo"] = "Active";
 	$fieldToolTipstb_parametros["English"]["para_ativo"] = "";
 	$placeHolderstb_parametros["English"]["para_ativo"] = "";
-	$fieldLabelstb_parametros["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_parametros["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_parametros["English"]["inclu_login"] = "";
 	$placeHolderstb_parametros["English"]["inclu_login"] = "";
-	$fieldLabelstb_parametros["English"]["inclu_dt"] = "Inclu Dt";
+	$fieldLabelstb_parametros["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_parametros["English"]["inclu_dt"] = "";
 	$placeHolderstb_parametros["English"]["inclu_dt"] = "";
-	$fieldLabelstb_parametros["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_parametros["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_parametros["English"]["alter_login"] = "";
 	$placeHolderstb_parametros["English"]["alter_login"] = "";
-	$fieldLabelstb_parametros["English"]["alter_dt"] = "Alter Dt";
+	$fieldLabelstb_parametros["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_parametros["English"]["alter_dt"] = "";
 	$placeHolderstb_parametros["English"]["alter_dt"] = "";
 	if (count($fieldToolTipstb_parametros["English"]))
@@ -149,11 +149,11 @@ $popupPagesLayoutNames = array();
 $tdatatb_parametros[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_parametros[".listAjax"] = false;
+	$tdatatb_parametros[".listAjax"] = true;
 //	temporary
 $tdatatb_parametros[".listAjax"] = false;
 
-	$tdatatb_parametros[".audit"] = false;
+	$tdatatb_parametros[".audit"] = true;
 
 	$tdatatb_parametros[".locking"] = false;
 

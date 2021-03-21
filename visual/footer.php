@@ -26,7 +26,7 @@
 		echo ' - ';
 		echo strftime("%Y-%m-%d %H:%M:%S"); //strftime('Y-m-d H:i:S'); Ex: '2020-05-19 19:19:19'
 		echo '</br>';
-		echo '<div style="color:#42ace9">' . GetCustomLabel ("VERSAO_SISTEMA") . '</div>';
+		echo '<div style="color:#616161">' . GetCustomLabel ("VERSAO_SISTEMA") . '</div>';
 
 		//phpinfo();
 

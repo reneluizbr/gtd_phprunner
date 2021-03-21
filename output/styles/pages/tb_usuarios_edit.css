@@ -1,2 +1,17 @@
+[data-page="tb_usuarios_edit"][data-itemid="text"] {
+  color: #ff0000;
+  font-style: italic;
+}
 
+/* Put  your custom CSS code here */
+
+[data-page="tb_usuarios_edit"][data-itemid="integrated_edit_field6"] {
+  margin-bottom: 0px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="tb_usuarios_edit"][data-itemid="text"] {
+  margin-top: 0px;
+}
 

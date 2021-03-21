@@ -3,13 +3,16 @@
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{$pagetitle}</title>
+	<title>GTDTasks: {$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<!-- Rene: Adicionado um favicon.png em todas as paginas -->
-	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
 	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
 		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
@@ -363,6 +366,31 @@
 </div>
 
 {END alter_login_fieldblock}
+											
+{BEGIN usua_idioma_ulti_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usua_idioma_ulti}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="usua_idioma_ulti" 
+	
+	data-signal-error-for="usua_idioma_ulti{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="usua_idioma_ulti" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_usua_idioma_ulti}">
+		{$label admin_members usua_idioma_ulti }	</label>
+	<div class="r-search-option">
+		{$searchtype_usua_idioma_ulti}
+	</div>
+	<div class="r-search-field">
+		{$usua_idioma_ulti_editcontrol}	</div>
+	<div class="r-search-field">
+		{$usua_idioma_ulti_editcontrol1}
+	</div>
+	
+</div>
+
+{END usua_idioma_ulti_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

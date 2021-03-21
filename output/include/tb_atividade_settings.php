@@ -9,10 +9,10 @@ $tdatatb_atividade[".OwnerID"] = "clie_id";
 $tdatatb_atividade[".OriginalTable"] = "tb_atividade";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 
-$tdatatb_atividade[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
-$tdatatb_atividade[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatatb_atividade[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\",\"view_original\"]}" );
+$tdatatb_atividade[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\",\"list2_cartoes\",\"lista_simples\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\",\"view_original\"]}" ) );
 $tdatatb_atividade[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -32,16 +32,16 @@ if(mlang_getcurrentlang()=="English")
 	$placeHolderstb_atividade["English"]["ativ_id"] = "";
 	$fieldLabelstb_atividade["English"]["clie_id"] = "Client";
 	$fieldToolTipstb_atividade["English"]["clie_id"] = "";
-	$placeHolderstb_atividade["English"]["clie_id"] = "";
+	$placeHolderstb_atividade["English"]["clie_id"] = "Name without spaces. eg: TIPO_NAT";
 	$fieldLabelstb_atividade["English"]["ativ_nm"] = "Name";
 	$fieldToolTipstb_atividade["English"]["ativ_nm"] = "";
-	$placeHolderstb_atividade["English"]["ativ_nm"] = "Task Name...";
+	$placeHolderstb_atividade["English"]["ativ_nm"] = "Order number";
 	$fieldLabelstb_atividade["English"]["ativ_ds"] = "Description";
 	$fieldToolTipstb_atividade["English"]["ativ_ds"] = "";
-	$placeHolderstb_atividade["English"]["ativ_ds"] = "Task details...";
+	$placeHolderstb_atividade["English"]["ativ_ds"] = "String without spaces (en)";
 	$fieldLabelstb_atividade["English"]["lista_id"] = "List";
 	$fieldToolTipstb_atividade["English"]["lista_id"] = "";
-	$placeHolderstb_atividade["English"]["lista_id"] = "";
+	$placeHolderstb_atividade["English"]["lista_id"] = "Display name";
 	$fieldLabelstb_atividade["English"]["stat_id"] = "Status";
 	$fieldToolTipstb_atividade["English"]["stat_id"] = "";
 	$placeHolderstb_atividade["English"]["stat_id"] = "";
@@ -60,27 +60,28 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelstb_atividade["English"]["ativ_dt_fim"] = "End Date";
 	$fieldToolTipstb_atividade["English"]["ativ_dt_fim"] = "";
 	$placeHolderstb_atividade["English"]["ativ_dt_fim"] = "";
-	$fieldLabelstb_atividade["English"]["inclu_dt"] = "Included in";
+	$fieldLabelstb_atividade["English"]["inclu_dt"] = "Included on";
 	$fieldToolTipstb_atividade["English"]["inclu_dt"] = "";
 	$placeHolderstb_atividade["English"]["inclu_dt"] = "";
 	$fieldLabelstb_atividade["English"]["alter_dt"] = "Changed on";
 	$fieldToolTipstb_atividade["English"]["alter_dt"] = "";
 	$placeHolderstb_atividade["English"]["alter_dt"] = "";
-	$fieldLabelstb_atividade["English"]["inclu_login"] = "Inclu Login";
+	$fieldLabelstb_atividade["English"]["inclu_login"] = "Included by";
 	$fieldToolTipstb_atividade["English"]["inclu_login"] = "";
 	$placeHolderstb_atividade["English"]["inclu_login"] = "";
-	$fieldLabelstb_atividade["English"]["alter_login"] = "Alter Login";
+	$fieldLabelstb_atividade["English"]["alter_login"] = "Changed by";
 	$fieldToolTipstb_atividade["English"]["alter_login"] = "";
 	$placeHolderstb_atividade["English"]["alter_login"] = "";
-	$fieldLabelstb_atividade["English"]["ativ_domi_unid_tempo"] = "Ativ Domi Unid Tempo";
+	$fieldLabelstb_atividade["English"]["ativ_domi_unid_tempo"] = "Time Unit";
 	$fieldToolTipstb_atividade["English"]["ativ_domi_unid_tempo"] = "";
 	$placeHolderstb_atividade["English"]["ativ_domi_unid_tempo"] = "";
-	$fieldLabelstb_atividade["English"]["ativ_tempo_estimado"] = "Ativ Tempo Estimado";
+	$fieldLabelstb_atividade["English"]["ativ_tempo_estimado"] = "Estimated Time";
 	$fieldToolTipstb_atividade["English"]["ativ_tempo_estimado"] = "";
 	$placeHolderstb_atividade["English"]["ativ_tempo_estimado"] = "";
-	$fieldLabelstb_atividade["English"]["ativ_tempo_real"] = "Ativ Tempo Real";
+	$fieldLabelstb_atividade["English"]["ativ_tempo_real"] = "Time Spent";
 	$fieldToolTipstb_atividade["English"]["ativ_tempo_real"] = "";
 	$placeHolderstb_atividade["English"]["ativ_tempo_real"] = "";
+	$pageTitlestb_atividade["English"]["view"] = "Task [{%ativ_id} - {%ativ_nm}]";
 	if (count($fieldToolTipstb_atividade["English"]))
 		$tdatatb_atividade[".isUseToolTips"] = true;
 }
@@ -95,16 +96,16 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$placeHolderstb_atividade["Portuguese(Brazil)"]["ativ_id"] = "";
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["clie_id"] = "Cliente";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["clie_id"] = "";
-	$placeHolderstb_atividade["Portuguese(Brazil)"]["clie_id"] = "";
+	$placeHolderstb_atividade["Portuguese(Brazil)"]["clie_id"] = "Nome sem espaços. ex: TIPO_NAT";
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["ativ_nm"] = "Nome";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["ativ_nm"] = "";
-	$placeHolderstb_atividade["Portuguese(Brazil)"]["ativ_nm"] = "Nome da Tarefa...";
+	$placeHolderstb_atividade["Portuguese(Brazil)"]["ativ_nm"] = "Ordem Sequencial";
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["ativ_ds"] = "Descrição";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["ativ_ds"] = "";
-	$placeHolderstb_atividade["Portuguese(Brazil)"]["ativ_ds"] = "Detalhes da Atividade...";
+	$placeHolderstb_atividade["Portuguese(Brazil)"]["ativ_ds"] = "Nome sem espaços. ex: ATIVA";
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["lista_id"] = "Lista";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["lista_id"] = "";
-	$placeHolderstb_atividade["Portuguese(Brazil)"]["lista_id"] = "";
+	$placeHolderstb_atividade["Portuguese(Brazil)"]["lista_id"] = "Nome de exibição: ex: Ativo Ok";
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["stat_id"] = "Status";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["stat_id"] = "";
 	$placeHolderstb_atividade["Portuguese(Brazil)"]["stat_id"] = "";
@@ -144,6 +145,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelstb_atividade["Portuguese(Brazil)"]["ativ_tempo_real"] = "Tempo Real";
 	$fieldToolTipstb_atividade["Portuguese(Brazil)"]["ativ_tempo_real"] = "";
 	$placeHolderstb_atividade["Portuguese(Brazil)"]["ativ_tempo_real"] = "";
+	$pageTitlestb_atividade["Portuguese(Brazil)"]["view"] = "Tarefa [{%ativ_id} - {%ativ_nm}]";
 	if (count($fieldToolTipstb_atividade["Portuguese(Brazil)"]))
 		$tdatatb_atividade[".isUseToolTips"] = true;
 }
@@ -207,6 +209,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstb_atividade["Spanish"]["ativ_tempo_real"] = "Ativ Tempo Real";
 	$fieldToolTipstb_atividade["Spanish"]["ativ_tempo_real"] = "";
 	$placeHolderstb_atividade["Spanish"]["ativ_tempo_real"] = "";
+	$pageTitlestb_atividade["Spanish"]["view"] = "Tareas [{%ativ_id} - {%ativ_nm}]";
 	if (count($fieldToolTipstb_atividade["Spanish"]))
 		$tdatatb_atividade[".isUseToolTips"] = true;
 }
@@ -239,7 +242,7 @@ $popupPagesLayoutNames = array();
 $tdatatb_atividade[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
-$tdatatb_atividade[".listAjax"] = false;
+	$tdatatb_atividade[".listAjax"] = true;
 //	temporary
 $tdatatb_atividade[".listAjax"] = false;
 
@@ -261,7 +264,7 @@ if( $pages[PAGE_ADD] ) {
 $tdatatb_atividade[".add"] = true;
 $tdatatb_atividade[".afterAddAction"] = 0;
 $tdatatb_atividade[".closePopupAfterAdd"] = 1;
-$tdatatb_atividade[".afterAddActionDetTable"] = "";
+$tdatatb_atividade[".afterAddActionDetTable"] = "tb_categorias_x_atividades";
 }
 
 if( $pages[PAGE_LIST] ) {
@@ -270,9 +273,9 @@ if( $pages[PAGE_LIST] ) {
 
 
 
-$tdatatb_atividade[".strSortControlSettingsJSON"] = "";
+$tdatatb_atividade[".strSortControlSettingsJSON"] = "[{\"fields\":[{\"desc\":false,\"field\":\"ativ_id\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"clie_id\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"ativ_nm\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"lista_id\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"stat_id\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"ativ_prioridade\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"ativ_concluida\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"ativ_dt_ini\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"ativ_dt_fim\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"ativ_domi_unid_tempo\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"inclu_login\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"inclu_dt\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"alter_login\"}],\"label\":\"\"},{\"fields\":[{\"desc\":false,\"field\":\"alter_dt\"}],\"label\":\"\"}]";
 
-$tdatatb_atividade[".strClickActionJSON"] = "{\"fields\":{\"alter_dt\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"alter_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_concluida\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_ds\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_dt_fim\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_dt_ini\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_fl_ativo\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_id\":{\"action\":\"noaction\",\"codeData\":{},\"gridData\":{\"action\":\"checkbox\",\"table\":null},\"openData\":{\"how\":\"goto\",\"page\":\"view\",\"table\":null,\"url\":\"\"}},\"ativ_nm\":{\"action\":\"open\",\"codeData\":{},\"gridData\":{\"action\":\"checkbox\",\"table\":null},\"openData\":{\"how\":\"popup\",\"page\":\"edit\",\"table\":null,\"url\":\"\"}},\"ativ_prioridade\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"clie_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"inclu_dt\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"inclu_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"lista_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"stat_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}}},\"row\":{\"action\":\"noaction\",\"codeData\":{},\"gridData\":{\"action\":\"checkbox\",\"table\":null},\"openData\":{\"how\":\"goto\",\"page\":\"view\",\"table\":null,\"url\":\"\"}}}";
+$tdatatb_atividade[".strClickActionJSON"] = "{\"fields\":{\"alter_dt\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"alter_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_concluida\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_ds\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_dt_fim\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_dt_ini\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_fl_ativo\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"ativ_id\":{\"action\":\"open\",\"codeData\":{},\"gridData\":{\"action\":\"checkbox\",\"table\":\"tb_categorias_x_atividades\"},\"openData\":{\"how\":\"goto\",\"page\":\"edit\",\"table\":\"tb_categorias_x_atividades\",\"url\":\"\"}},\"ativ_nm\":{\"action\":\"open\",\"codeData\":{},\"gridData\":{\"action\":\"checkbox\",\"table\":\"tb_categorias_x_atividades\"},\"openData\":{\"how\":\"popup\",\"page\":\"view\",\"table\":\"tb_categorias_x_atividades\",\"url\":\"\"}},\"ativ_prioridade\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"clie_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"inclu_dt\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"inclu_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"lista_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"stat_id\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}}},\"row\":{\"action\":\"noaction\",\"codeData\":{},\"gridData\":{\"action\":\"checkbox\",\"table\":\"tb_categorias_x_atividades\"},\"openData\":{\"how\":\"goto\",\"page\":\"view\",\"table\":\"tb_categorias_x_atividades\",\"url\":\"\"}}}";
 
 
 
@@ -375,14 +378,16 @@ $tdatatb_atividade[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY ativ_id DESC";
 if(strlen($tstrOrderBy) && strtolower(substr($tstrOrderBy,0,8))!="order by")
 	$tstrOrderBy = "order by ".$tstrOrderBy;
 $tdatatb_atividade[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatb_atividade[".orderindexes"] = array();
+	$tdatatb_atividade[".orderindexes"][] = array(1, (0 ? "ASC" : "DESC"), "ativ_id");
 
-$tdatatb_atividade[".sqlHead"] = "SELECT ativ_id,  	clie_id,  	ativ_nm,  	ativ_ds,  	lista_id,  	stat_id,  	ativ_fl_ativo,  	ativ_prioridade,  	ativ_concluida,  	ativ_dt_ini,  	ativ_dt_fim,  	ativ_domi_unid_tempo,  	ativ_tempo_estimado,  	ativ_tempo_real,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+
+$tdatatb_atividade[".sqlHead"] = "SELECT ativ_id,  clie_id,  ativ_nm,  ativ_ds,  lista_id,  stat_id,  ativ_fl_ativo,  ativ_prioridade,  ativ_concluida,  ativ_dt_ini,  ativ_dt_fim,  ativ_domi_unid_tempo,  ativ_tempo_estimado,  ativ_tempo_real,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $tdatatb_atividade[".sqlFrom"] = "FROM tb_atividade";
 $tdatatb_atividade[".sqlWhereExpr"] = "";
 $tdatatb_atividade[".sqlTail"] = "";
@@ -712,7 +717,8 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "clie_nm_reduzido";
 
-	
+				$edata["LookupWhere"] = "clie_id = 3";
+
 
 	
 	$edata["LookupOrderBy"] = "clie_nm_reduzido";
@@ -961,7 +967,7 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "HTML");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -975,7 +981,8 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 	
 	
 	
-	
+		$vdata["NeedEncode"] = true;
+
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 60;
@@ -1152,7 +1159,8 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 	
 	
-	
+		$edata["AllowToAdd"] = true;
+		
 	
 
 	
@@ -1210,9 +1218,10 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "ativ_id";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1312,7 +1321,8 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 	
 	
-	
+		$edata["AllowToAdd"] = true;
+		
 	
 
 	
@@ -1372,10 +1382,11 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "ativ_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -1666,10 +1677,11 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
+		$fdata["filterTotalFields"] = "ativ_id";
+		$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -2228,11 +2240,11 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "ativ_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -2365,11 +2377,11 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
+	$fdata["filterTotals"] = 1;
+		$fdata["filterMultiSelect"] = 1;
 		$fdata["filterTotalFields"] = "ativ_id";
 		$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
+		$fdata["showCollapsed"] = true;
 
 		$fdata["sortValueType"] = 0;
 		$fdata["numberOfVisibleItems"] = 10;
@@ -3145,10 +3157,10 @@ function createSqlQuery_tb_atividade()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ativ_id,  	clie_id,  	ativ_nm,  	ativ_ds,  	lista_id,  	stat_id,  	ativ_fl_ativo,  	ativ_prioridade,  	ativ_concluida,  	ativ_dt_ini,  	ativ_dt_fim,  	ativ_domi_unid_tempo,  	ativ_tempo_estimado,  	ativ_tempo_real,  	inclu_login,  	inclu_dt,  	alter_login,  	alter_dt";
+$proto0["m_strFieldList"] = "ativ_id,  clie_id,  ativ_nm,  ativ_ds,  lista_id,  stat_id,  ativ_fl_ativo,  ativ_prioridade,  ativ_concluida,  ativ_dt_ini,  ativ_dt_fim,  ativ_domi_unid_tempo,  ativ_tempo_estimado,  ativ_tempo_real,  inclu_login,  inclu_dt,  alter_login,  alter_dt";
 $proto0["m_strFrom"] = "FROM tb_atividade";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY ativ_id DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -3489,6 +3501,19 @@ $obj = new SQLFromListItem($proto42);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto46=array();
+						$obj = new SQLField(array(
+	"m_strName" => "ativ_id",
+	"m_strTable" => "tb_atividade",
+	"m_srcTableName" => "tb_atividade"
+));
+
+$proto46["m_column"]=$obj;
+$proto46["m_bAsc"] = 0;
+$proto46["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto46);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="tb_atividade";		
 $obj = new SQLQuery($proto0);
 

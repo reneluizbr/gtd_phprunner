@@ -100,6 +100,7 @@ CREATE TABLE tb_usuarios
    ,usua_username     VARCHAR (50)  not null             --comment 'Nome do Usuario', ACHO MELHOR usar o email
    ,usua_senha        VARCHAR (255) not null             --comment 'Senha do usuario criptografada com password_hash'
    ,usua_login_ulti   DATETIME                           --comment 'Data e Hora do último acesso'
+   ,usua_idioma_ulti  VARCHAR (30)                       --comment 'Ultimo idioma utilizado'
    ,inclu_login       VARCHAR (50) NOT NULL DEFAULT '0'         --comment 'ID do usuario que realizou a inclusao'
    ,inclu_dt          DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
    ,alter_login       VARCHAR (50)                        --comment 'ID do usuario que realizou a alteracao'
@@ -237,7 +238,7 @@ CREATE TABLE tb_atividade
    ,stat_id              INTEGER      not null             --comment 'Status da atividade'
    ,ativ_fl_ativo        INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_fl_ativo IN (0, 1))'
    ,ativ_prioridade      VARCHAR (1)  not null DEFAULT "BAIXA" --comment 'CHECK (ativ_prioridade IN ("BAIXA","MEDIA","ALTA"))'
-   ,ativ_concluida       INTEGER      not null DEFAULT 1   --comment 'CHECK (ativ_concluida IN (0, 1))'
+   ,ativ_concluida       INTEGER      not null DEFAULT 0   --comment 'CHECK (ativ_concluida IN (0, 1))'
    ,ativ_dt_ini          DATETIME                          --comment 'Data início da atividade'
    ,ativ_dt_fim          DATETIME                          --comment 'Data fim da atividade'
    ,ativ_domi_unid_tempo VARCHAR (60)       --comment 'Valor para o Dominio/Grupo "TEMPO_UNIDADE"'
@@ -356,4 +357,45 @@ AS
       ORDER BY c.cate_nm
    ) AS tb
    GROUP BY ativ_id
+;
+
+DROP VIEW IF EXISTS vw_dominio_tempo;
+CREATE VIEW vw_dominio_tempo
+AS
+   SELECT * FROM (
+      SELECT domi_grupo,domi_ordem,domi_valor,domi_exibe
+      ,"Portuguese(Brazil)" AS IDIOMA
+      FROM tb_dominios WHERE domi_grupo = "TEMPO_UNIDADE"
+      UNION
+         SELECT domi_grupo,domi_ordem,domi_valor,
+         CASE domi_valor
+         WHEN "MINUTOS" THEN "Minutes"
+         WHEN "HORAS"   THEN "Hours"
+         WHEN "DIAS"    THEN "Days"
+         WHEN "SEMANAS" THEN "Weeks"
+         WHEN "MESES"   THEN "Months"
+         END AS domi_exibe
+         ,"English" AS IDIOMA
+         FROM tb_dominios WHERE domi_grupo = "TEMPO_UNIDADE"
+      UNION
+         SELECT domi_grupo,domi_ordem,domi_valor,
+         CASE domi_valor
+         WHEN "MINUTOS" THEN "(es) Minutos"
+         WHEN "HORAS"   THEN "(es) Horas"
+         WHEN "DIAS"    THEN "(es) Dias"
+         WHEN "SEMANAS" THEN "(es) Semanas"
+         WHEN "MESES"   THEN "(es) Meses"
+         END AS domi_exibe
+         ,"Spanish" AS IDIOMA
+         FROM tb_dominios WHERE domi_grupo = "TEMPO_UNIDADE"
+   )
+   --WHERE idioma = $_SESSION["language"]
+   ORDER BY IDIOMA, domi_ordem
+
+   /*
+   Não funciona ainda no Edit da página tb_atividade.ativ_domi_unid_tempo
+      Editar como "LOOKUP", Campo "WHERE"
+         idioma=<?php  echo mlang_getcurrentlang(); ?>
+   */
+
 ;
