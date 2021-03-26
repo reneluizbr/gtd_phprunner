@@ -1,0 +1,62 @@
+[data-cellid="grid_footcell_field"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field1"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field1"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field1"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field2"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field2"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field2"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field3"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field3"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field3"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field4"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field4"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field4"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field5"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field5"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field5"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field6"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field6"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field6"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field7"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field7"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field7"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field8"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field8"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field8"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field9"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field9"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field9"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field10"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field10"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field10"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field11"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field11"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field11"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field12"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field12"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field12"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field13"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field13"][data-page="tb_tarefa1_list"][data-cellid="grid_footcell_field13"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_headcell_icons"][data-page="tb_tarefa1_list"][data-cellid="grid_headcell_icons"][data-page="tb_tarefa1_list"][data-cellid="grid_headcell_icons"][data-page="tb_tarefa1_list"] {
+  width: 30px;
+}
+[data-cellid="grid_cell_icons"][data-page="tb_tarefa1_list"][data-cellid="grid_cell_icons"][data-page="tb_tarefa1_list"][data-cellid="grid_cell_icons"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_cell_details"][data-page="tb_tarefa1_list"][data-cellid="grid_cell_details"][data-page="tb_tarefa1_list"][data-cellid="grid_cell_details"][data-page="tb_tarefa1_list"] {
+  white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="tb_tarefa1_list"][data-itemid="cmd_cartoes"] {
+  color: red;
+  display: none;
+}
+
+
+
+

@@ -1,0 +1,2364 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GTDTasks: {$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo1" {$item_logo1}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo1" {$item_logo1} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu menu_tarefas}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
+
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_ativ_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_id}" {$filterRow_attrs_ativ_id}>
+			<label>{$label tb_tarefa ativ_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_id}</span>
+						</div>
+		{END searchCtrlBlock_ativ_id}
+																{BEGIN searchCtrlBlock_ativ_fl_ativo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_fl_ativo}" {$filterRow_attrs_ativ_fl_ativo}>
+			<label>{$label tb_tarefa ativ_fl_ativo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_fl_ativo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_fl_ativo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_fl_ativo}</span>
+						</div>
+		{END searchCtrlBlock_ativ_fl_ativo}
+																{BEGIN searchCtrlBlock_alter_dt}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_alter_dt}" {$filterRow_attrs_alter_dt}>
+			<label>{$label tb_tarefa alter_dt }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_alter_dt}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_alter_dt}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_alter_dt}</span>
+						</div>
+		{END searchCtrlBlock_alter_dt}
+																{BEGIN searchCtrlBlock_ativ_tempo_real}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_tempo_real}" {$filterRow_attrs_ativ_tempo_real}>
+			<label>{$label tb_tarefa ativ_tempo_real }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_tempo_real}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_tempo_real}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_tempo_real}</span>
+						</div>
+		{END searchCtrlBlock_ativ_tempo_real}
+																{BEGIN searchCtrlBlock_ativ_tempo_estimado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_tempo_estimado}" {$filterRow_attrs_ativ_tempo_estimado}>
+			<label>{$label tb_tarefa ativ_tempo_estimado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_tempo_estimado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_tempo_estimado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_tempo_estimado}</span>
+						</div>
+		{END searchCtrlBlock_ativ_tempo_estimado}
+																{BEGIN searchCtrlBlock_ativ_domi_unid_tempo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_domi_unid_tempo}" {$filterRow_attrs_ativ_domi_unid_tempo}>
+			<label>{$label tb_tarefa ativ_domi_unid_tempo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_domi_unid_tempo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_domi_unid_tempo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_domi_unid_tempo}</span>
+						</div>
+		{END searchCtrlBlock_ativ_domi_unid_tempo}
+																{BEGIN searchCtrlBlock_alter_login}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_alter_login}" {$filterRow_attrs_alter_login}>
+			<label>{$label tb_tarefa alter_login }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_alter_login}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_alter_login}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_alter_login}</span>
+						</div>
+		{END searchCtrlBlock_alter_login}
+																{BEGIN searchCtrlBlock_inclu_login}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_inclu_login}" {$filterRow_attrs_inclu_login}>
+			<label>{$label tb_tarefa inclu_login }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_inclu_login}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_inclu_login}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_inclu_login}</span>
+						</div>
+		{END searchCtrlBlock_inclu_login}
+																{BEGIN searchCtrlBlock_stat_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_stat_id}" {$filterRow_attrs_stat_id}>
+			<label>{$label tb_tarefa stat_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_stat_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_stat_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_stat_id}</span>
+						</div>
+		{END searchCtrlBlock_stat_id}
+																{BEGIN searchCtrlBlock_lista_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_lista_id}" {$filterRow_attrs_lista_id}>
+			<label>{$label tb_tarefa lista_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_lista_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_lista_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_lista_id}</span>
+						</div>
+		{END searchCtrlBlock_lista_id}
+																{BEGIN searchCtrlBlock_inclu_dt}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_inclu_dt}" {$filterRow_attrs_inclu_dt}>
+			<label>{$label tb_tarefa inclu_dt }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_inclu_dt}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_inclu_dt}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_inclu_dt}</span>
+						</div>
+		{END searchCtrlBlock_inclu_dt}
+																{BEGIN searchCtrlBlock_clie_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_clie_id}" {$filterRow_attrs_clie_id}>
+			<label>{$label tb_tarefa clie_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_clie_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_clie_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_clie_id}</span>
+						</div>
+		{END searchCtrlBlock_clie_id}
+																{BEGIN searchCtrlBlock_ativ_prioridade}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_prioridade}" {$filterRow_attrs_ativ_prioridade}>
+			<label>{$label tb_tarefa ativ_prioridade }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_prioridade}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_prioridade}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_prioridade}</span>
+						</div>
+		{END searchCtrlBlock_ativ_prioridade}
+																{BEGIN searchCtrlBlock_ativ_nm}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_nm}" {$filterRow_attrs_ativ_nm}>
+			<label>{$label tb_tarefa ativ_nm }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_nm}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_nm}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_nm}</span>
+						</div>
+		{END searchCtrlBlock_ativ_nm}
+																{BEGIN searchCtrlBlock_ativ_dt_ini}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_dt_ini}" {$filterRow_attrs_ativ_dt_ini}>
+			<label>{$label tb_tarefa ativ_dt_ini }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_dt_ini}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_dt_ini}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_dt_ini}</span>
+						</div>
+		{END searchCtrlBlock_ativ_dt_ini}
+																{BEGIN searchCtrlBlock_ativ_dt_fim}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_dt_fim}" {$filterRow_attrs_ativ_dt_fim}>
+			<label>{$label tb_tarefa ativ_dt_fim }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_dt_fim}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_dt_fim}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_dt_fim}</span>
+						</div>
+		{END searchCtrlBlock_ativ_dt_fim}
+																{BEGIN searchCtrlBlock_ativ_ds}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_ds}" {$filterRow_attrs_ativ_ds}>
+			<label>{$label tb_tarefa ativ_ds }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_ds}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_ds}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_ds}</span>
+						</div>
+		{END searchCtrlBlock_ativ_ds}
+																{BEGIN searchCtrlBlock_ativ_concluida}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ativ_concluida}" {$filterRow_attrs_ativ_concluida}>
+			<label>{$label tb_tarefa ativ_concluida }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ativ_concluida}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ativ_concluida}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ativ_concluida}</span>
+						</div>
+		{END searchCtrlBlock_ativ_concluida}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+<!--
+	<button type="button" class="btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
+		<span class="glyphicon glyphicon-filter"><span> Filter	
+	</button>
+-->	
+	<div class="filterPanelContainer {$filterPanelStateClass}">
+
+
+
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_lista_id}
+		<div class="panel panel-info filter-field filter-lista_id-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+							<input class="filter-selectAll-lista_id" type="checkbox" name="selectAll" {$selectAll_attrs_lista_id} />
+			
+				<label>{$label tb_tarefa lista_id }</label>
+
+				{BEGIN clearLink_lista_id}
+				<a href="#" class="filter-clear filter-clear-lista_id">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_lista_id}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_lista_id}
+				<li class="list-group-item filter-values filter-values-lista_id {$collapsedClass_lista_id} {$visibilityClass_lista_id}">
+					{$lista_id_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_lista_id}
+
+							{BEGIN filter_button_showmore_lista_id}
+				<li class="list-group-item filter-show-more {$collapsedClass_lista_id} {$showMoreBtnClass_lista_id}">
+					<a class="filter-show-more-link filterShowMore_lista_id" href="#">{$show_n_more_lista_id}</a>
+				</li>
+				{END filter_button_showmore_lista_id}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_lista_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_lista_id}">
+					<a href="#" class="rnr-button filter-lista_id-btn-multiselect filter-apply-lista_id" {$filterbutton_attrs_lista_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_lista_id}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_lista_id}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_stat_id}
+		<div class="panel panel-info filter-field filter-stat_id-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
+
+							<input class="filter-selectAll-stat_id" type="checkbox" name="selectAll" {$selectAll_attrs_stat_id} />
+			
+				<label>{$label tb_tarefa stat_id }</label>
+
+				{BEGIN clearLink_stat_id}
+				<a href="#" class="filter-clear filter-clear-stat_id">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_stat_id}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_stat_id}
+				<li class="list-group-item filter-values filter-values-stat_id {$collapsedClass_stat_id} {$visibilityClass_stat_id}">
+					{$stat_id_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_stat_id}
+
+							{BEGIN filter_button_showmore_stat_id}
+				<li class="list-group-item filter-show-more {$collapsedClass_stat_id} {$showMoreBtnClass_stat_id}">
+					<a class="filter-show-more-link filterShowMore_stat_id" href="#">{$show_n_more_stat_id}</a>
+				</li>
+				{END filter_button_showmore_stat_id}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_stat_id}
+				<li class="list-group-item filter-field-btn {$collapsedClass_stat_id}">
+					<a href="#" class="rnr-button filter-stat_id-btn-multiselect filter-apply-stat_id" {$filterbutton_attrs_stat_id}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_stat_id}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_stat_id}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_ativ_domi_unid_tempo}
+		<div class="panel panel-info filter-field filter-ativ_domi_unid_tempo-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
+
+							<input class="filter-selectAll-ativ_domi_unid_tempo" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_domi_unid_tempo} />
+			
+				<label>{$label tb_tarefa ativ_domi_unid_tempo }</label>
+
+				{BEGIN clearLink_ativ_domi_unid_tempo}
+				<a href="#" class="filter-clear filter-clear-ativ_domi_unid_tempo">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_domi_unid_tempo}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_domi_unid_tempo}
+				<li class="list-group-item filter-values filter-values-ativ_domi_unid_tempo {$collapsedClass_ativ_domi_unid_tempo} {$visibilityClass_ativ_domi_unid_tempo}">
+					{$ativ_domi_unid_tempo_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_domi_unid_tempo}
+
+							{BEGIN filter_button_showmore_ativ_domi_unid_tempo}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_domi_unid_tempo} {$showMoreBtnClass_ativ_domi_unid_tempo}">
+					<a class="filter-show-more-link filterShowMore_ativ_domi_unid_tempo" href="#">{$show_n_more_ativ_domi_unid_tempo}</a>
+				</li>
+				{END filter_button_showmore_ativ_domi_unid_tempo}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_ativ_domi_unid_tempo}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_domi_unid_tempo}">
+					<a href="#" class="rnr-button filter-ativ_domi_unid_tempo-btn-multiselect filter-apply-ativ_domi_unid_tempo" {$filterbutton_attrs_ativ_domi_unid_tempo}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_domi_unid_tempo}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_domi_unid_tempo}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_ativ_tempo_real}
+		<div class="panel panel-info filter-field filter-ativ_tempo_real-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>	
+
+			
+				<label>{$label tb_tarefa ativ_tempo_real }</label>
+
+				{BEGIN clearLink_ativ_tempo_real}
+				<a href="#" class="filter-clear filter-clear-ativ_tempo_real">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_tempo_real}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_tempo_real}
+				<li class="list-group-item filter-values filter-values-ativ_tempo_real {$collapsedClass_ativ_tempo_real} {$visibilityClass_ativ_tempo_real}">
+					{$ativ_tempo_real_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_tempo_real}
+
+							{BEGIN filter_button_showmore_ativ_tempo_real}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_tempo_real} {$showMoreBtnClass_ativ_tempo_real}">
+					<a class="filter-show-more-link filterShowMore_ativ_tempo_real" href="#">{$show_n_more_ativ_tempo_real}</a>
+				</li>
+				{END filter_button_showmore_ativ_tempo_real}			
+			
+
+
+			
+
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_tempo_real}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_ativ_tempo_estimado}
+		<div class="panel panel-info filter-field filter-ativ_tempo_estimado-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
+
+							<input class="filter-selectAll-ativ_tempo_estimado" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_tempo_estimado} />
+			
+				<label>{$label tb_tarefa ativ_tempo_estimado }</label>
+
+				{BEGIN clearLink_ativ_tempo_estimado}
+				<a href="#" class="filter-clear filter-clear-ativ_tempo_estimado">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_tempo_estimado}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_tempo_estimado}
+				<li class="list-group-item filter-values filter-values-ativ_tempo_estimado {$collapsedClass_ativ_tempo_estimado} {$visibilityClass_ativ_tempo_estimado}">
+					{$ativ_tempo_estimado_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_tempo_estimado}
+
+							{BEGIN filter_button_showmore_ativ_tempo_estimado}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_tempo_estimado} {$showMoreBtnClass_ativ_tempo_estimado}">
+					<a class="filter-show-more-link filterShowMore_ativ_tempo_estimado" href="#">{$show_n_more_ativ_tempo_estimado}</a>
+				</li>
+				{END filter_button_showmore_ativ_tempo_estimado}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_ativ_tempo_estimado}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_tempo_estimado}">
+					<a href="#" class="rnr-button filter-ativ_tempo_estimado-btn-multiselect filter-apply-ativ_tempo_estimado" {$filterbutton_attrs_ativ_tempo_estimado}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_tempo_estimado}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_tempo_estimado}
+	 
+			
+	 	
+
+		
+		 
+		 
+
+		 	
+
+		{BEGIN filter_control_ativ_prioridade}
+		<div class="panel panel-info filter-field filter-ativ_prioridade-container">
+			<div class="panel-heading filter-expander">
+																	<span class="filter-indicator glyphicon glyphicon-triangle-top"></span>	
+
+							<input class="filter-selectAll-ativ_prioridade" type="checkbox" name="selectAll" {$selectAll_attrs_ativ_prioridade} />
+			
+				<label>{$label tb_tarefa ativ_prioridade }</label>
+
+				{BEGIN clearLink_ativ_prioridade}
+				<a href="#" class="filter-clear filter-clear-ativ_prioridade">{mlang_message FILTER_CLEAR}</a>
+				{END clearLink_ativ_prioridade}				
+			</div>
+
+			<ul class="list-group">
+				{BEGIN filterCtrlBlock_ativ_prioridade}
+				<li class="list-group-item filter-values filter-values-ativ_prioridade {$collapsedClass_ativ_prioridade} {$visibilityClass_ativ_prioridade}">
+					{$ativ_prioridade_filter}
+								
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				</li>				
+				{END filterCtrlBlock_ativ_prioridade}
+
+							{BEGIN filter_button_showmore_ativ_prioridade}
+				<li class="list-group-item filter-show-more {$collapsedClass_ativ_prioridade} {$showMoreBtnClass_ativ_prioridade}">
+					<a class="filter-show-more-link filterShowMore_ativ_prioridade" href="#">{$show_n_more_ativ_prioridade}</a>
+				</li>
+				{END filter_button_showmore_ativ_prioridade}			
+			
+
+
+			
+
+			 
+				{BEGIN filter_button_multiselect_ativ_prioridade}
+				<li class="list-group-item filter-field-btn {$collapsedClass_ativ_prioridade}">
+					<a href="#" class="rnr-button filter-ativ_prioridade-btn-multiselect filter-apply-ativ_prioridade" {$filterbutton_attrs_ativ_prioridade}>{mlang_message FILTER_MULTISELECT}</a>
+				</li>
+				{END filter_button_multiselect_ativ_prioridade}					
+				
+	
+			</ul>			
+		</div>
+		{END filter_control_ativ_prioridade}
+	 
+	</div>
+</div>			</div>
+		
+    {END left_block}
+</div>				</div>	
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-cog"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		{mlang_message EXPORT_SELECTED}		
+		</a>
+	</li>
+{END exportselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="tb_tarefa1_search.php" {$advsearchlink_attrs}  title="" >
+				
+		{mlang_message ADVANCED_SEARCH}		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		{mlang_message SHOW_SEARCH_PANEL}		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		{mlang_message HIDE_SEARCH_PANEL}		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		{mlang_message EXPORT_RESULTS}		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN Portuguese(Brazil)LANGLINK}
+	<li><a href="#" data-lang="Portuguese(Brazil)" class="rnr-langlink">
+		{BEGIN Portuguese(Brazil)LANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END Portuguese(Brazil)LANGLINK_ACTIVE}
+		Português(Brasil)</a></li>
+	{END Portuguese(Brazil)LANGLINK}
+	{BEGIN SpanishLANGLINK}
+	<li><a href="#" data-lang="Spanish" class="rnr-langlink">
+		{BEGIN SpanishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END SpanishLANGLINK_ACTIVE}
+		Español</a></li>
+	{END SpanishLANGLINK}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-user"></span>
+						{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		{mlang_message CHANGE_PASSWORD}		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>	
+				<div class="r-body" data-resize-top="topbar" data-body-width="full">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+	</div>		
+{END top_block}
+						</div>
+					<div class="r-above">
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		{BEGIN add_link}
+<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$addlink_attrs} href="tb_tarefa1_add.php" data-popup >
+							{mlang_message ADD_NEW}			</a>
+</span>
+{END add_link}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							{mlang_message INLINE_ADD}			</a>
+</span>
+{END inlineadd_link}
+	 
+		<span data-itemtype="custom_button" data-itemid="cmd_cartoes" {$item_cmd_cartoes} data-pageid="{$pageid}" data-page="tb_tarefa1_list" data-small data-button-item>
+	<a type="button" title="" class="btn btn-info   
+	" id="New_Button" href="javascript:void(0)" typeid="ib" >
+					<span class="glyphicon glyphicon-blackboard"></span>
+							Cartões HTML Fixo			</a>
+</span>
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$details_found_labeldetails_found}
+</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			{mlang_message PPANEL_SCOPE}		</div>
+
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="tb_tarefa1_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+									{mlang_message PPANEL_ALL_PAGES}							</label>
+		</div>
+		{END print_friendly_all}
+	</div>
+	<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="tb_tarefa1_print.php?{$crosstable_attrs}">
+				{mlang_message PPANEL_THIS_PAGE}			</label>
+		</div>
+	</div>
+	
+	</div>				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		{mlang_message PPANEL_DETAILS}	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_tb_categorias_x_atividades}
+			<div>
+				<label for="printDetailstb_categorias_x_atividades{$id}">
+					<input type="checkbox" value="tb_categorias_x_atividades" id="printDetailstb_categorias_x_atividades{$id}" checked>
+					Task's Categories				</label>
+			</div>
+			{END print_details_tb_categorias_x_atividades}
+						</div>
+</div>
+{END print_details}
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					{mlang_message RECORDS_PP}							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							{mlang_message PPANEL_PRINT}			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+		 
+		<div class="form-inline sortby-ctrl" data-itemtype="sort_dropdown" data-itemid="sort_dropdown" {$item_sort_dropdown} data-pageid="{$pageid}">
+{mlang_message SORT_BY}&nbsp;{$sortByDropdown}
+</div>		</div>					</div>
+	</div>		
+{END above-grid_block}
+						</div>
+					<div class="r-grid">
+										{BEGIN grid_block}
+{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_id"]:before {
+		content: "{$label tb_tarefa ativ_id}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="clie_id"]:before {
+		content: "{$label tb_tarefa clie_id}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_nm"]:before {
+		content: "{$label tb_tarefa ativ_nm}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_ds"]:before {
+		content: "{$label tb_tarefa ativ_ds}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="lista_id"]:before {
+		content: "{$label tb_tarefa lista_id}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="stat_id"]:before {
+		content: "{$label tb_tarefa stat_id}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_fl_ativo"]:before {
+		content: "{$label tb_tarefa ativ_fl_ativo}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_prioridade"]:before {
+		content: "{$label tb_tarefa ativ_prioridade}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_concluida"]:before {
+		content: "{$label tb_tarefa ativ_concluida}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_dt_ini"]:before {
+		content: "{$label tb_tarefa ativ_dt_ini}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_dt_fim"]:before {
+		content: "{$label tb_tarefa ativ_dt_fim}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_domi_unid_tempo"]:before {
+		content: "{$label tb_tarefa ativ_domi_unid_tempo}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_tempo_estimado"]:before {
+		content: "{$label tb_tarefa ativ_tempo_estimado}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ativ_tempo_real"]:before {
+		content: "{$label tb_tarefa ativ_tempo_real}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="inclu_login"]:before {
+		content: "{$label tb_tarefa inclu_login}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="inclu_dt"]:before {
+		content: "{$label tb_tarefa inclu_dt}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="alter_login"]:before {
+		content: "{$label tb_tarefa alter_login}";
+	}
+	
+	[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="alter_dt"]:before {
+		content: "{$label tb_tarefa alter_dt}";
+	}
+	
+}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
+	cellpadding="0" 
+	data-body-height="2"
+>
+						<thead>
+			{BEGIN grid_header}
+					
+		 
+						<tr {$rowattrs} {$row_grid_0} class="{$rowclass} 
+									{$gridHeader_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
+				 
+					{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	{$custom CAT_}</span>
+	
+	</th>
+	{END cellblock_grid_headcell_details}
+				 
+					{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_id_class}
+			"
+
+			data-field="ativ_id"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_id_fieldheadercolumn}
+	{BEGIN ativ_id_fieldheader}
+	<SPAN {$ativ_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id">
+	{$label tb_tarefa ativ_id }	{$arrow_icon_ativ_id}
+	</SPAN>
+	{END ativ_id_fieldheader}
+{END ativ_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+				 
+					{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$clie_id_class}
+			"
+
+			data-field="clie_id"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN clie_id_fieldheadercolumn}
+	{BEGIN clie_id_fieldheader}
+	<SPAN {$clie_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id">
+	{$label tb_tarefa clie_id }	{$arrow_icon_clie_id}
+	</SPAN>
+	{END clie_id_fieldheader}
+{END clie_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+				 
+					{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_nm_class}
+			"
+
+			data-field="ativ_nm"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_nm_fieldheadercolumn}
+	{BEGIN ativ_nm_fieldheader}
+	<SPAN {$ativ_nm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm">
+	{$label tb_tarefa ativ_nm }	{$arrow_icon_ativ_nm}
+	</SPAN>
+	{END ativ_nm_fieldheader}
+{END ativ_nm_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+				 
+					{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lista_id_class}
+			"
+
+			data-field="lista_id"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lista_id_fieldheadercolumn}
+	{BEGIN lista_id_fieldheader}
+	<SPAN {$lista_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lista_id">
+	{$label tb_tarefa lista_id }	{$arrow_icon_lista_id}
+	</SPAN>
+	{END lista_id_fieldheader}
+{END lista_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+				 
+					{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$stat_id_class}
+			"
+
+			data-field="stat_id"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN stat_id_fieldheadercolumn}
+	{BEGIN stat_id_fieldheader}
+	<SPAN {$stat_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="stat_id">
+	{$label tb_tarefa stat_id }	{$arrow_icon_stat_id}
+	</SPAN>
+	{END stat_id_fieldheader}
+{END stat_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+				 
+					{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_prioridade_class}
+			"
+
+			data-field="ativ_prioridade"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_prioridade_fieldheadercolumn}
+	{BEGIN ativ_prioridade_fieldheader}
+	<SPAN {$ativ_prioridade_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade">
+	{$label tb_tarefa ativ_prioridade }	{$arrow_icon_ativ_prioridade}
+	</SPAN>
+	{END ativ_prioridade_fieldheader}
+{END ativ_prioridade_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+				 
+					{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_concluida_class}
+			"
+
+			data-field="ativ_concluida"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_concluida_fieldheadercolumn}
+	{BEGIN ativ_concluida_fieldheader}
+	<SPAN {$ativ_concluida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida">
+	{$label tb_tarefa ativ_concluida }	{$arrow_icon_ativ_concluida}
+	</SPAN>
+	{END ativ_concluida_fieldheader}
+{END ativ_concluida_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+				 
+					{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_dt_ini_class}
+			"
+
+			data-field="ativ_dt_ini"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_dt_ini_fieldheadercolumn}
+	{BEGIN ativ_dt_ini_fieldheader}
+	<SPAN {$ativ_dt_ini_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini">
+	{$label tb_tarefa ativ_dt_ini }	{$arrow_icon_ativ_dt_ini}
+	</SPAN>
+	{END ativ_dt_ini_fieldheader}
+{END ativ_dt_ini_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+				 
+					{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_dt_fim_class}
+			"
+
+			data-field="ativ_dt_fim"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_dt_fim_fieldheadercolumn}
+	{BEGIN ativ_dt_fim_fieldheader}
+	<SPAN {$ativ_dt_fim_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim">
+	{$label tb_tarefa ativ_dt_fim }	{$arrow_icon_ativ_dt_fim}
+	</SPAN>
+	{END ativ_dt_fim_fieldheader}
+{END ativ_dt_fim_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_domi_unid_tempo_class}
+			"
+
+			data-field="ativ_domi_unid_tempo"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_domi_unid_tempo_fieldheadercolumn}
+	{BEGIN ativ_domi_unid_tempo_fieldheader}
+	<SPAN {$ativ_domi_unid_tempo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_domi_unid_tempo">
+	{$label tb_tarefa ativ_domi_unid_tempo }	{$arrow_icon_ativ_domi_unid_tempo}
+	</SPAN>
+	{END ativ_domi_unid_tempo_fieldheader}
+{END ativ_domi_unid_tempo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+				 
+					{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_estimado_class}
+			"
+
+			data-field="ativ_tempo_estimado"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_estimado_fieldheadercolumn}
+	{BEGIN ativ_tempo_estimado_fieldheader}
+	<SPAN {$ativ_tempo_estimado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_estimado">
+	{$label tb_tarefa ativ_tempo_estimado }	{$arrow_icon_ativ_tempo_estimado}
+	</SPAN>
+	{END ativ_tempo_estimado_fieldheader}
+{END ativ_tempo_estimado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_real_class}
+			"
+
+			data-field="ativ_tempo_real"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_real_fieldheadercolumn}
+	{BEGIN ativ_tempo_real_fieldheader}
+	<SPAN {$ativ_tempo_real_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_real">
+	{$label tb_tarefa ativ_tempo_real }	{$arrow_icon_ativ_tempo_real}
+	</SPAN>
+	{END ativ_tempo_real_fieldheader}
+{END ativ_tempo_real_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+				 
+					{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_dt_class}
+			"
+
+			data-field="inclu_dt"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_dt_fieldheadercolumn}
+	{BEGIN inclu_dt_fieldheader}
+	<SPAN {$inclu_dt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt">
+	{$label tb_tarefa inclu_dt }	{$arrow_icon_inclu_dt}
+	</SPAN>
+	{END inclu_dt_fieldheader}
+{END inclu_dt_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+				 
+					{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_login_class}
+			"
+
+			data-field="inclu_login"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_login_fieldheadercolumn}
+	{BEGIN inclu_login_fieldheader}
+	<SPAN {$inclu_login_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login">
+	{$label tb_tarefa inclu_login }	{$arrow_icon_inclu_login}
+	</SPAN>
+	{END inclu_login_fieldheader}
+{END inclu_login_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+							</tr>
+					 
+					 
+					 
+					
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+									
+		 
+					 
+						<tr {$rowattrs} {$row_grid_1} class="{$rowclass} 
+								
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_cell_icons}
+	<td
+	
+	{$cell_grid_cell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	
+	</td>
+	{END cellblock_grid_cell_icons}
+				 
+					{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"		data-control-cell
+	
+	>
+
+	 
+		
+		
+	{BEGIN tb_categorias_x_atividades_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$tb_categorias_x_atividades_link_attrs} data-short-details="tb_categorias_x_atividades"
+		class="{$tb_categorias_x_atividades_dlink_class}" 
+		title="{$caption tb_categorias_x_atividades }"	>
+							<span class="glyphicon glyphicon-star-empty"></span>
+								
+									{BEGIN tb_categorias_x_atividades_childcount}
+				<span class="details-badge badge tb_categorias_x_atividades_badge" {$tb_categorias_x_atividades_childnumber_attr}>
+					{$tb_categorias_x_atividades_childnumber}				
+				</span>
+				{END tb_categorias_x_atividades_childcount}
+						</a>
+	</span>
+	{END tb_categorias_x_atividades_dtable_link}
+
+
+	
+	</td>
+	{END cellblock_grid_cell_details}
+				 
+					{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_id_class}
+			"
+
+			data-field="ativ_id"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_id" data-default-width >
+{$ativ_id_value}
+</span>
+{END ativ_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+				 
+					{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$clie_id_class}
+			"
+
+			data-field="clie_id"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN clie_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="clie_id" data-default-width >
+{$clie_id_value}
+</span>
+{END clie_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_nm_class}
+			"
+
+			data-field="ativ_nm"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_nm_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_nm" data-default-width >
+{$ativ_nm_value}
+</span>
+{END ativ_nm_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+				 
+					{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lista_id_class}
+			"
+
+			data-field="lista_id"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lista_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lista_id" data-default-width >
+{$lista_id_value}
+</span>
+{END lista_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+				 
+					{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$stat_id_class}
+			"
+
+			data-field="stat_id"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN stat_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="stat_id" data-default-width >
+{$stat_id_value}
+</span>
+{END stat_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_prioridade_class}
+			"
+
+			data-field="ativ_prioridade"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_prioridade_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_prioridade" data-default-width >
+{$ativ_prioridade_value}
+</span>
+{END ativ_prioridade_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+				 
+					{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_concluida_class}
+			"
+
+			data-field="ativ_concluida"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_concluida_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_concluida" data-default-width >
+{$ativ_concluida_value}
+</span>
+{END ativ_concluida_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+				 
+					{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_dt_ini_class}
+			"
+
+			data-field="ativ_dt_ini"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_dt_ini_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_ini" data-default-width >
+{$ativ_dt_ini_value}
+</span>
+{END ativ_dt_ini_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+				 
+					{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_dt_fim_class}
+			"
+
+			data-field="ativ_dt_fim"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_dt_fim_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_dt_fim" data-default-width >
+{$ativ_dt_fim_value}
+</span>
+{END ativ_dt_fim_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_domi_unid_tempo_class}
+			"
+
+			data-field="ativ_domi_unid_tempo"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_domi_unid_tempo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_domi_unid_tempo" data-default-width >
+{$ativ_domi_unid_tempo_value}
+</span>
+{END ativ_domi_unid_tempo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_estimado_class}
+			"
+
+			data-field="ativ_tempo_estimado"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_estimado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_estimado" data-default-width >
+{$ativ_tempo_estimado_value}
+</span>
+{END ativ_tempo_estimado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ativ_tempo_real_class}
+			"
+
+			data-field="ativ_tempo_real"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ativ_tempo_real_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_real" data-default-width >
+{$ativ_tempo_real_value}
+</span>
+{END ativ_tempo_real_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+				 
+					{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_dt_class}
+			"
+
+			data-field="inclu_dt"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_dt_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_dt" data-default-width >
+{$inclu_dt_value}
+</span>
+{END inclu_dt_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+				 
+					{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$inclu_login_class}
+			"
+
+			data-field="inclu_login"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN inclu_login_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inclu_login" data-default-width >
+{$inclu_login_value}
+</span>
+{END inclu_login_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+							</tr>
+					 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+								
+							">
+				 
+					{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders=""
+	>
+		<div data-details-preview>
+	</div>
+</div>
+	
+	</td>
+	{END cellblock_grid_cell_dpreview}
+							</tr>
+					 
+					
+											{END grid_row}
+					</tbody>
+													<tfoot>
+					
+		 
+					 
+					 
+					 
+						<tr {$rowattrs} {$row_grid_3} class="{$rowclass} 
+									{$gridFooter_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_footcell_icons}
+	<td
+	
+	{$cell_grid_footcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_icons}
+				 
+					{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
+				 
+					{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+				 
+					{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+				 
+					{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+				 
+					{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+				 
+					{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+				 
+					{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+				 
+					{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+				 
+					{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+				 
+					{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+				 
+					{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+				 
+					{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+				 
+					{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_tarefa1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+						</div>
+					<div class="r-below">
+										{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+	</div>		
+{END below-grid_block}
+						</div>
+					{$footer}
+				</div>	
+			</div>	
+		</div>
+	{END body}
+	</body>
+</html>

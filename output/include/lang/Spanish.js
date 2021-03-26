@@ -308,5 +308,15 @@ Runner.lang.customlabels = {
 	CUSTOM_LABEL_CAT_: 'Cat.',
 	CUSTOM_LABEL_DELETE: '(es) Borrar',
 	CUSTOM_LABEL_EDIT: 'Editar',
-	CUSTOM_LABEL___USUA_IDIOMA_ULT__ONLY_CHANGES_AFTER_A_NEW_LOGIN: '(es) Idioma somente será alterado após um novo login'
+	CUSTOM_LABEL___USUA_IDIOMA_ULT__ONLY_CHANGES_AFTER_A_NEW_LOGIN: '(es) Idioma somente será alterado após um novo login',
+	CUSTOM_LABEL_MONITORAMENTO_DE_ACESSOS_DO_SISTEMA: 'Monitoramento de acessos do sistema',
+	CUSTOM_LABEL_EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA: 'Exibe um gráfico de Atividades por Lista',
+	CUSTOM_LABEL_GRAICO: 'Graico',
+	CUSTOM_LABEL_VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_: 'Visão gráfica das Tarefas por Status onde se tem uma visualização da distribuição dos dados de forma amigável.',
+	CUSTOM_LABEL_E: 'e',
+	CUSTOM_LABEL_DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_: 'Dashsboard que contém uma página agrupadora das Listas e suas tarefas associadas.',
+	CUSTOM_LABEL_P_GINAS_QUE_EST_O_EM_TESTES_E_DESENVOLVIMENTOS: 'Páginas que estão em testes e desenvolvimentos',
+	CUSTOM_LABEL_P_GINAS_EM_DESENVOLVIMENTO: 'Páginas em Desenvolvimento',
+	CUSTOM_LABEL_ROTINA_DI_RIA: '(es) Rotina Diária',
+	CUSTOM_LABEL_P_GINAS_E_M_DULOS_ACESSADOS_FREQUENTEMENTE: 'Páginas e módulos acessados frequentemente'
 };

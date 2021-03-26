@@ -1,4 +1,6 @@
 Pendências, Notas e Itens a Fazer:
+    ✘ Trocar nome da tabela tb_atividades para tb_tarefa @started(2021-03-25 17:07) @cancelled (2021-03-26 14:42) @wasted(21:35)
+
     ✔ Recuperar último idioma selecionado por usuário (2021-03-20 17:29, Sat) @tagMelhoria @started(2021-03-21 01:05) @done(2021-03-21 03:20) @lasted(2h15m56s)
         Criar mais uma coluna em tb_usuarios
             usua_idioma_ulti  VARCHAR (30)  --comment 'Ultimo idioma utilizado'

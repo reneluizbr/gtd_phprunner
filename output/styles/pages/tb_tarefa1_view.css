@@ -1,0 +1,15 @@
+[data-page="tb_tarefa1_view"][data-itemid="view_header"] {
+  font-weight: bold;
+}
+
+/* Put  your custom CSS code here */
+
+/* Rene: CSS para quebrar um texto grande em duas colunas */
+[data-page="tb_tarefa1_view"][data-itemid="integrated_edit_field3"] {
+    column-count: 2;
+    width: 100% !important;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+}
+

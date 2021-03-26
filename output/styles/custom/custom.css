@@ -166,3 +166,62 @@ body > div.bs-popup.modal.in > div > div
 }
 */
 
+
+/* Rene: Estilizacao dos "cartoes" do menu principal */
+.xxx-bs-welcome-content, 
+.bs-welcome-header {
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgb(0 0 0);
+}
+div.bs-welcome-item {
+		border-radius: 10px !important;
+		box-shadow: 0 0 10px rgb(0 0 0);
+		/* margin-bottom: 20px; */ /* Usa a margem padrao do tema */ 
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Rene: Configuracoes separadas para os grupos de cartoes (sem usar SASS, LESS, Mixin) */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wlCssCartaoMargens {
+  /* Rene: Margens e espacamentos em comum para os grupos de cartoes */
+  margin-left: 15px;
+  margin-bottom: 17px;
+  border-bottom-width: 10px;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+.wlCssCartaoCantos {
+  /* Rene: Cantos arredondados em {n}pixels */
+  border-radius: 5px;
+}
+.wlCssCartaoSombra {
+  /* Rene: Sombreamento */
+  box-shadow: 0 0 2px rgb(0 0 0); /*10px -> 2px menos sombra */
+}
+.wlCssCartaoFundoAzul {
+  background: #77c9d4; /* Cor Correta para publicacao */
+}
+.wlCssCartaoFundoVerde {
+  background: #77d586; /* Cor Correta para publicacao */
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Rene: Estas configuracoes devem ser apliacadas a todos os grupos de cartoes: wlCssReneFundoCartoesGrupo1 ,2, 3, ...*/
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wlCssReneFundoCartoesTodosGrupos-NAO-USADA {
+  /* Para nao subir por engano ate que esteja com o layout totalmente finalizado */
+  /* background: #77d586;  */ /* Cor para o Editor (visual) do PHPRunner poder visualizar */
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+
+  border-bottom-width: 10px;
+  margin-left: 15px;
+  margin-bottom: 17px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgb(0 0 0); /*10px -> 2px menos sombra */
+}
+/* Final */

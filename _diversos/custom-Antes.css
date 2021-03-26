@@ -1,0 +1,231 @@
+.titulo_login {
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 6.00rem !important;
+    font-display: swap !important;
+    color: #616161 !important;
+    font-weight: 800 !important;
+		font-style: bold;
+		margin-right: 30px;
+		text-align: center;
+}
+
+
+body.function-login {
+	height:100%;
+	background-image: url("../../images/background.jpg");  /* Rene: Estilo CSS para imagem de fundo */
+
+	/* Rene: CSS Repete a imagem somente horizontal e poe um cor de fundo compatível com a imagem para esconder o fundo branco */
+  /* background-repeat: no-repeat center center fixed; */
+  background-repeat: repeat-x;
+  background-color: white; #433238;
+	background-size:cover;
+	opacity: 1.0;
+
+
+  float: right;
+  margin-right: 5%;}
+
+.rodape {
+	text-shadow: #474747 3px 5px 2px, 1px 1px 4px rgba(82,120,152,0);
+	color: #FFFFFF;
+	text-align: center;
+	background: #527898;
+}
+
+.rodape_centralizado {
+	text-align: center;
+	color: blue;
+}
+
+/* Estilo para o Dashboard Painel Principal, como na ajuda do PHPRunner */
+.panel-heading{
+   --display:none;
+}
+.panel-body{
+   padding:0px !important;
+}
+.panel-primary {
+ border-color: white !important;
+}
+.panel {
+  margin-bottom: 0px !important;
+   border: 0px !important;
+}
+.info-box{
+      display: block;
+    min-height: 90px;
+    width: 100%;
+    border-radius: 2px;
+}
+.info-img{
+    display: block;
+    float: left;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 70px;
+      color:white;
+}
+.img_bgcolor_red{
+   background-color:#dd4b39 !important;
+}
+.img_bgcolor_green{
+   background-color:#19a15f !important;
+}
+.img_bgcolor_black{
+   background-color:#3e3f3a !important;
+}
+.img_bgcolor_blue{
+   background-color:#0000ff !important;
+}
+.dashtext{
+    border-radius: 2px;
+    border: 1px solid #e6e6e6;
+    min-height: 91px;
+    padding:7px;
+    padding-left:97px;
+    line-height: 1.6em;
+    background-color:#f5f5f5;
+	  font-size:28px;
+}
+
+/* Rene: Estilo CSS para tela de login */
+.login-cartao-container {
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+/* Rene: CSS Cor degrade na div do MENU LATERAL a esquerda */
+.r-leftl-DESABILITADO {
+  height: 800px;
+  background-color: blue; /* For browsers that do not support gradients */
+  /* background-image: linear-gradient(#6ebfed, white); */
+  /* background-image: linear-gradient(cyan, white); */
+	background-image: linear-gradient(darkcyan, white);
+}
+
+/* Rene: CSS Fundo da div do PAINEL DA DIREITA, incluindo os FORMS */
+.r-content-col, .r-small-page {
+  height: 800px;
+  background-color: cyan; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#ccccee, white);
+
+	/* Rene: CSS Repete a imagem somente horizontal e poe um cor de fundo compatível com a imagem para esconder o fundo branco */
+	/* background-image: url("../../images/Textura-cinza-claro-100x100.jpg");  */ /* Rene: Estilo CSS para imagem de fundo */
+  /* background-repeat: no-repeat center center fixed; */
+	/* background-repeat: repeat; */
+}
+
+/* Rene: CSS cor de fundo do LOGOTIPO que fica sobre os menus laterais da esquerda */
+#form_left_1l-DESABILITADO > div:nth-child(1) {
+	background-color: darkcyan;
+}
+
+/* Rene: CSS Cabecalho dos Grids das páginas de List */
+#form_grid_1 > thead > tr {
+    background-color: darkgray;
+    /* text-decoration-color: yellow; */
+    color: white;
+}
+#form_grid_1 > thead > tr {
+    background-color: darkcyan;
+    /* text-decoration-color: yellow; */
+    color: white;
+}
+
+
+/* Rene: CSS do Botão triangulo para contrair/expandir o menu lateral esquerdo.. */
+#form_supertop_1l-DESABILITADO > span.navbar-form.navbar-header > span > a {
+	color: #00ff00;
+	font-weight: bolder;
+	font-size: larger;
+}
+
+/* Rene: CSS Sombreamento nos modais Add/Edit/View */
+body > div.bs-popup.modal.in > div > div
+{
+	/* width: 800px; */
+	/* border-radius: 30px; */
+	box-shadow: 0 0 30px rgb(0 0 0);
+}
+
+/* RENE: CSS tentativa de deixar o botao DELETE vermelho nas ListPage. Desisti, Setando diretamente no Designer
+#delete_selected1 {
+	background-color: green;
+}
+#delete_selected1[enabled],
+#delete_selected1:enabled {
+	background-color: red !important;
+}
+#delete_selected1[disabled],
+#delete_selected1:disabled {
+	background-color: yellow !important;
+}
+*/
+
+
+/* Rene: Estilizacao dos "cartoes" do menu principal */
+.xxx-bs-welcome-content, 
+.bs-welcome-header {
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgb(0 0 0);
+}
+div.bs-welcome-item {
+		border-radius: 10px !important;
+		box-shadow: 0 0 10px rgb(0 0 0);
+		/* margin-bottom: 20px; */ /* Usa a margem padrao do tema */ 
+}
+
+
+/* Rene: Estas configuracoes devem ser apliacadas a todos os grupos de cartoes: wlCssReneFundoCartoesGrupo1 ,2, 3, ...*/
+.wlCssReneFundoCartoesTodosGrupos {
+	/* Para nao subir por engano ate que esteja com o layout totalmente finalizado */
+  /* background: #77d586;  */ /* Cor para o Editor (visual) do PHPRunner poder visualizar */
+  padding-left: 0px;
+  padding-top: 15px;
+	padding-bottom: 0px;
+
+  border-bottom-width: 10px;
+  margin-left: 15px;
+  margin-bottom: 17px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 2px rgb(0 0 0); /*10px -> 2px menos sombra */
+}
+.wlCssReneFundoCartoesGrupo1 {
+	/*background: green;*/
+  background: #77c9d470; /* Cor Correta para publicacao */
+
+	/* Para nao subir por engano ate que esteja com o layout totalmente finalizado */
+  background: #77c9d4; /*  */ /* Cor para o Editor (visual) do PHPRunner poder visualizar */
+  padding-left: 0px;
+  padding-top: 15px;
+	padding-bottom: 0px;
+
+  border-bottom-width: 10px;
+  margin-left: 15px;
+  margin-bottom: 16px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 2px rgb(0 0 0); /*10px -> 2px menos sombra */
+}
+.wlCssReneFundoCartoesGrupo2 {
+	/*background: green;*/
+  background: #77c9d470; /* Cor Correta para publicacao */
+
+	/* Para nao subir por engano ate que esteja com o layout totalmente finalizado */
+  background: #77d586; /*  */ /* Cor para o Editor (visual) do PHPRunner poder visualizar */
+  padding-left: 0px;
+  padding-top: 15px;
+	padding-bottom: 0px;
+
+  border-bottom-width: 10px;
+  margin-left: 15px;
+  margin-bottom: 16px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 2px rgb(0 0 0); /*10px -> 2px menos sombra */
+}

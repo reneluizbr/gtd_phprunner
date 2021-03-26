@@ -1,0 +1,1033 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GTDTasks: {$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="8"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel tb_tarefa add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="8"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		
+		data-v-width="8"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c4}
+<td
+	{$cell_grid_c4}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c4" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_nm_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_nm{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="ativ_nm">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_nm}">
+			{BEGIN ativ_nm_label}{$label tb_tarefa ativ_nm }{END ativ_nm_label}
+		</label>
+	</div>
+{END ativ_nm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c4}
+			 
+																
+
+{BEGIN cellblock_grid_c2}
+<td
+	{$cell_grid_c2}
+	class=" r-ori-vert"
+	
+			data-single
+			
+	ocolspan="4"		data-cellId="grid_c2" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_nm_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_nm{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="ativ_nm" >
+		{$ativ_nm_editcontrol}	</div>
+{END ativ_nm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c2}
+			 
+																
+
+{BEGIN cellblock_grid_c34}
+<td
+	{$cell_grid_c34}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c34" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_nm_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_nm{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="ativ_nm" >
+		<div data-helpfor="ativ_nm">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_nm }</div>
+		</div>
+	</div>
+{END ativ_nm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c34}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_ds_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_ds{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="ativ_ds">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_ds}">
+			{BEGIN ativ_ds_label}{$label tb_tarefa ativ_ds }{END ativ_ds_label}
+		</label>
+	</div>
+{END ativ_ds_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c5}
+			 
+																
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+	ocolspan="4"		data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_ds_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_ds{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="ativ_ds" >
+		{$ativ_ds_editcontrol}	</div>
+{END ativ_ds_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c35}
+<td
+	{$cell_grid_c35}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c35" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_ds_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_ds{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="ativ_ds" >
+		<div data-helpfor="ativ_ds">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_ds }</div>
+		</div>
+	</div>
+{END ativ_ds_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c35}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_grid_c7}
+<td
+	{$cell_grid_c7}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c7" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN lista_id_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="lista_id{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="lista_id">
+		<label class="r-edit-label control-label" for="{$labelfor_lista_id}">
+			{BEGIN lista_id_label}{$label tb_tarefa lista_id }{END lista_id_label}
+		</label>
+	</div>
+{END lista_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c7}
+			 
+																
+
+{BEGIN cellblock_grid_c8}
+<td
+	{$cell_grid_c8}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c8" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN lista_id_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="lista_id{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="lista_id" >
+		{$lista_id_editcontrol}	</div>
+{END lista_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c8}
+			 
+																
+
+{BEGIN cellblock_grid_c9}
+<td
+	{$cell_grid_c9}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c9" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN lista_id_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="lista_id{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="lista_id" >
+		<div data-helpfor="lista_id">
+			<div class="text-muted">{$tooltip tb_tarefa lista_id }</div>
+		</div>
+	</div>
+{END lista_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c9}
+			 
+																
+
+{BEGIN cellblock_grid_c48}
+<td
+	{$cell_grid_c48}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c48" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN stat_id_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="stat_id{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="stat_id">
+		<label class="r-edit-label control-label" for="{$labelfor_stat_id}">
+			{BEGIN stat_id_label}{$label tb_tarefa stat_id }{END stat_id_label}
+		</label>
+	</div>
+{END stat_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c48}
+			 
+																
+
+{BEGIN cellblock_grid_c46}
+<td
+	{$cell_grid_c46}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c46" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN stat_id_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="stat_id{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="stat_id" >
+		{$stat_id_editcontrol}	</div>
+{END stat_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c46}
+			 
+																
+
+{BEGIN cellblock_grid_c36}
+<td
+	{$cell_grid_c36}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c36" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN stat_id_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="stat_id{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="stat_id" >
+		<div data-helpfor="stat_id">
+			<div class="text-muted">{$tooltip tb_tarefa stat_id }</div>
+		</div>
+	</div>
+{END stat_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c36}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_grid_c13}
+<td
+	{$cell_grid_c13}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c13" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_prioridade_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_prioridade{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="ativ_prioridade">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_prioridade}">
+			{BEGIN ativ_prioridade_label}{$label tb_tarefa ativ_prioridade }{END ativ_prioridade_label}
+		</label>
+	</div>
+{END ativ_prioridade_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c13}
+			 
+																
+
+{BEGIN cellblock_grid_c14}
+<td
+	{$cell_grid_c14}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c14" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_prioridade_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_prioridade{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="ativ_prioridade" >
+		{$ativ_prioridade_editcontrol}	</div>
+{END ativ_prioridade_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c14}
+			 
+																
+
+{BEGIN cellblock_grid_c15}
+<td
+	{$cell_grid_c15}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c15" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_prioridade_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_prioridade{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="ativ_prioridade" >
+		<div data-helpfor="ativ_prioridade">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_prioridade }</div>
+		</div>
+	</div>
+{END ativ_prioridade_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c15}
+			 
+																
+
+{BEGIN cellblock_grid_c50}
+<td
+	{$cell_grid_c50}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c50" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_concluida_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_concluida{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="ativ_concluida">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_concluida}">
+			{BEGIN ativ_concluida_label}{$label tb_tarefa ativ_concluida }{END ativ_concluida_label}
+		</label>
+	</div>
+{END ativ_concluida_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c50}
+			 
+																
+
+{BEGIN cellblock_grid_c58}
+<td
+	{$cell_grid_c58}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c58" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_concluida_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_concluida{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="ativ_concluida" >
+		{$ativ_concluida_editcontrol}	</div>
+{END ativ_concluida_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c58}
+			 
+																
+
+{BEGIN cellblock_grid_c38}
+<td
+	{$cell_grid_c38}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c38" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_concluida_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_concluida{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="ativ_concluida" >
+		<div data-helpfor="ativ_concluida">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_concluida }</div>
+		</div>
+	</div>
+{END ativ_concluida_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c38}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_grid_c19}
+<td
+	{$cell_grid_c19}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c19" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_dt_ini_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_dt_ini{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="ativ_dt_ini">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_dt_ini}">
+			{BEGIN ativ_dt_ini_label}{$label tb_tarefa ativ_dt_ini }{END ativ_dt_ini_label}
+		</label>
+	</div>
+{END ativ_dt_ini_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c19}
+			 
+																
+
+{BEGIN cellblock_grid_c20}
+<td
+	{$cell_grid_c20}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c20" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_dt_ini_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_dt_ini{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="ativ_dt_ini" >
+		{$ativ_dt_ini_editcontrol}	</div>
+{END ativ_dt_ini_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c20}
+			 
+																
+
+{BEGIN cellblock_grid_c21}
+<td
+	{$cell_grid_c21}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c21" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_dt_ini_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_dt_ini{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="ativ_dt_ini" >
+		<div data-helpfor="ativ_dt_ini">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_dt_ini }</div>
+		</div>
+	</div>
+{END ativ_dt_ini_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c21}
+			 
+																
+
+{BEGIN cellblock_grid_c52}
+<td
+	{$cell_grid_c52}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c52" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_dt_fim_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_dt_fim{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="ativ_dt_fim">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_dt_fim}">
+			{BEGIN ativ_dt_fim_label}{$label tb_tarefa ativ_dt_fim }{END ativ_dt_fim_label}
+		</label>
+	</div>
+{END ativ_dt_fim_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c52}
+			 
+																
+
+{BEGIN cellblock_grid_c60}
+<td
+	{$cell_grid_c60}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c60" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_dt_fim_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_dt_fim{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="ativ_dt_fim" >
+		{$ativ_dt_fim_editcontrol}	</div>
+{END ativ_dt_fim_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c60}
+			 
+																
+
+{BEGIN cellblock_grid_c40}
+<td
+	{$cell_grid_c40}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c40" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_dt_fim_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_dt_fim{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="ativ_dt_fim" >
+		<div data-helpfor="ativ_dt_fim">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_dt_fim }</div>
+		</div>
+	</div>
+{END ativ_dt_fim_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c40}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_grid_c25}
+<td
+	{$cell_grid_c25}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c25" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_domi_unid_tempo_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_domi_unid_tempo{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="ativ_domi_unid_tempo">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_domi_unid_tempo}">
+			{BEGIN ativ_domi_unid_tempo_label}{$label tb_tarefa ativ_domi_unid_tempo }{END ativ_domi_unid_tempo_label}
+		</label>
+	</div>
+{END ativ_domi_unid_tempo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c25}
+			 
+																
+
+{BEGIN cellblock_grid_c26}
+<td
+	{$cell_grid_c26}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c26" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_domi_unid_tempo_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_domi_unid_tempo{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="ativ_domi_unid_tempo" >
+		{$ativ_domi_unid_tempo_editcontrol}	</div>
+{END ativ_domi_unid_tempo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c26}
+			 
+																
+
+{BEGIN cellblock_grid_c27}
+<td
+	{$cell_grid_c27}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c27" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_domi_unid_tempo_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_domi_unid_tempo{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="ativ_domi_unid_tempo" >
+		<div data-helpfor="ativ_domi_unid_tempo">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_domi_unid_tempo }</div>
+		</div>
+	</div>
+{END ativ_domi_unid_tempo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c27}
+			 
+																
+
+{BEGIN cellblock_grid_c54}
+<td
+	{$cell_grid_c54}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c54" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_tempo_estimado_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_tempo_estimado{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="ativ_tempo_estimado">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_tempo_estimado}">
+			{BEGIN ativ_tempo_estimado_label}{$label tb_tarefa ativ_tempo_estimado }{END ativ_tempo_estimado_label}
+		</label>
+	</div>
+{END ativ_tempo_estimado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c54}
+			 
+																
+
+{BEGIN cellblock_grid_c62}
+<td
+	{$cell_grid_c62}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c62" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_tempo_estimado_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_tempo_estimado{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-page="tb_tarefa1_add" data-field="ativ_tempo_estimado" >
+		{$ativ_tempo_estimado_editcontrol}	</div>
+{END ativ_tempo_estimado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c62}
+			 
+																
+
+{BEGIN cellblock_grid_c42}
+<td
+	{$cell_grid_c42}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c42" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_tempo_estimado_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_tempo_estimado{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="ativ_tempo_estimado" >
+		<div data-helpfor="ativ_tempo_estimado">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_tempo_estimado }</div>
+		</div>
+	</div>
+{END ativ_tempo_estimado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c42}
+								</tr>
+	 
+	 
+		
+						<tr>
+						
+
+{BEGIN cellblock_grid_c31}
+<td
+	{$cell_grid_c31}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c31" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c31}
+			 
+		
+							
+
+{BEGIN cellblock_grid_c32}
+<td
+	{$cell_grid_c32}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c32" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c32}
+			 
+		
+							
+
+{BEGIN cellblock_grid_c33}
+<td
+	{$cell_grid_c33}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c33" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c33}
+			 
+																
+
+{BEGIN cellblock_grid_c56}
+<td
+	{$cell_grid_c56}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c56" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_tempo_real_fieldblock}
+	<div class="r-edit-label" data-signal-error-for="ativ_tempo_real{$id}" data-itemtype="edit_field_label" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="ativ_tempo_real">
+		<label class="r-edit-label control-label" for="{$labelfor_ativ_tempo_real}">
+			{BEGIN ativ_tempo_real_label}{$label tb_tarefa ativ_tempo_real }{END ativ_tempo_real_label}
+		</label>
+	</div>
+{END ativ_tempo_real_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c56}
+			 
+																
+
+{BEGIN cellblock_grid_c64}
+<td
+	{$cell_grid_c64}
+	class="r-align-right r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c64" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_tempo_real_fieldblock}
+	<div class="r-edit-field" data-signal-error-for="ativ_tempo_real{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-page="tb_tarefa1_add" data-field="ativ_tempo_real" >
+		{$ativ_tempo_real_editcontrol}	</div>
+{END ativ_tempo_real_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c64}
+			 
+																
+
+{BEGIN cellblock_grid_c44}
+<td
+	{$cell_grid_c44}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c44" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN ativ_tempo_real_fieldblock}
+	<div class="r-edit-tooltip" data-signal-error-for="ativ_tempo_real{$id}" data-itemtype="edit_field_tooltip" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="ativ_tempo_real" >
+		<div data-helpfor="ativ_tempo_real">
+			<div class="text-muted">{$tooltip tb_tarefa ativ_tempo_real }</div>
+		</div>
+	</div>
+{END ativ_tempo_real_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c44}
+								</tr>
+	 
+	 
+																</tbody></table>
+				
+{BEGIN details_tb_categorias_x_atividades}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption tb_categorias_x_atividades }				
+							<span>
+					{$detailslButtons_tb_categorias_x_atividades}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_tb_categorias_x_atividades}
+		</div>
+	</div>
+</div>
+{END details_tb_categorias_x_atividades}
+	
+				{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="8"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							{mlang_message SAVE}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

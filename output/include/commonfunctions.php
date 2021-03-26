@@ -3839,7 +3839,7 @@ function getDefaultLanguage()
 				return $arrLang[$lang];
 		}
 	}
-	return "English";
+	return "Portuguese(Brazil)";
 }
 
 

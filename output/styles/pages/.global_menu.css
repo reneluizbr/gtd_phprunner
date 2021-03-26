@@ -1,5 +1,5 @@
 [data-page=".global_menu"][data-itemid="welcome_item"] > .bs-welcome-header {
-  background-color: #3b9ff7;
+  background-color: #015249;
 }
 [data-page=".global_menu"][data-itemid="welcome_item1"] > .bs-welcome-header {
   background-color: #CD853F;
@@ -11,7 +11,7 @@
   background-color: #DB7093;
 }
 [data-page=".global_menu"][data-itemid="welcome_item4"] > .bs-welcome-header {
-  background-color: #8FBC8B;
+  background-color: #578c90;
 }
 [data-page=".global_menu"][data-itemid="welcome_item5"] > .bs-welcome-header {
   background-color: #778899;
@@ -32,7 +32,7 @@
   background-color: #2ae017;
 }
 [data-page=".global_menu"][data-itemid="welcome_item11"] > .bs-welcome-header {
-  background-color: #CD853F;
+  background-color: #ff2ad3;
 }
 [data-page=".global_menu"][data-itemid="welcome_item12"] > .bs-welcome-header {
   background-color: #BC8F8F;
@@ -53,18 +53,59 @@
   background-color: #9ACD32;
 }
 [data-page=".global_menu"][data-itemid="welcome_item18"] > .bs-welcome-header {
-  background-color: #D2AF80;
+  background-color: #a5a5af;
 }
 [data-page=".global_menu"][data-itemid="welcome_item19"] > .bs-welcome-header {
   background-color: #4682B4;
 }
 [data-page=".global_menu"][data-itemid="welcome_item20"] > .bs-welcome-header {
-  background-color: #CD853F;
+  background-color: #ff2ad3;
+}
+[data-page=".global_menu"][data-itemid="welcome_group"] {
+  background-color: #ff2ad3;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: bold;
+}
+[data-page=".global_menu"][data-itemid="welcome_group1"] {
+  background-color: #77c9d4;
+}
+[data-page=".global_menu"][data-itemid="welcome_group2"] {
+  background-color: #77d586;
 }
 
 /* Put  your custom CSS code here */
 
 [data-cellid="left_c1"][data-page=".global_menu"][data-cellid="left_c1"][data-page=".global_menu"][data-cellid="left_c1"][data-page=".global_menu"] {
   color: red;
+}
+/* Put  your custom CSS code here */
+
+[data-page=".global_menu"][data-itemid="welcome_group"] {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    height: 70px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page=".global_menu"][data-itemid="welcome_group1"] {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page=".global_menu"][data-itemid="welcome_group2"] {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    height: 60px;
 }
 

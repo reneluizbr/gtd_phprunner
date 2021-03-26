@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./idiomas.js" />
+</head>
+  <script lang="javascript">
+    //variável que vai retornar uma string com language preferida do usuario
+    var lang = navigator.language ;
+    //verificamos o momento do click no botao
+    $("#lang").on('click',function () {
+        //identificamos a language
+        if(lang === 'en-US'){
+            //apresentamos uma mensagem ao usuario
+            alert("Your language is:"+lang);
+        }
+    });
+  </script>
+
+<body>
+<h1>Pagina de teste de identificação de Idioma</h1>
+<span	id="lang" class="translate">Clique aqui</span>
+<input type="button" class="translate" value="Tradução...">
+</body>
+
+</html>
