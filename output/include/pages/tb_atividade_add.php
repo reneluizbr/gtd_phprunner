@@ -1,6 +1,8 @@
 <?php
-			$optionsArray = array( 'details' => array( 'tb_categorias_x_atividades' => array( 'displayPreview' => 1,
-'previewPageId' => 'list' ) ),
+			$optionsArray = array( 'details' => array( 'tb_tarefas_x_rotulos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'tb_tarefas_ocorrencias' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'master' => array( 'tb_lista_atividades' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'ativ_tempo_estimado',

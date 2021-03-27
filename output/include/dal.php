@@ -54,8 +54,6 @@ class tDAL
 	var $tblgtd_20200511_db3__seguranca_ugmembers;
 	var $tblgtd_20200511_db3__seguranca_ugrights;
 	var $tblgtd_20200511_db3__tb_atividade;
-	var $tblgtd_20200511_db3__tb_categorias;
-	var $tblgtd_20200511_db3__tb_categorias_x_atividades;
 	var $tblgtd_20200511_db3__tb_clientes;
 	var $tblgtd_20200511_db3__tb_clientes_planos;
 	var $tblgtd_20200511_db3__tb_dominios;
@@ -63,9 +61,14 @@ class tDAL
 	var $tblgtd_20200511_db3__tb_parametros;
 	var $tblgtd_20200511_db3__tb_planos;
 	var $tblgtd_20200511_db3__tb_planos_valores;
+	var $tblgtd_20200511_db3__tb_rotulos;
 	var $tblgtd_20200511_db3__tb_status_atividades;
+	var $tblgtd_20200511_db3__tb_tarefas_ocorrencias;
+	var $tblgtd_20200511_db3__tb_tarefas_x_rotulos;
 	var $tblgtd_20200511_db3__tb_usuarios;
-	var $tblgtd_20200511_db3__vw_tarefas_categorias;
+	var $tblgtd_20200511_db3__vw_dominio_prioridade;
+	var $tblgtd_20200511_db3__vw_dominio_tempo;
+	var $tblgtd_20200511_db3__vw_tarefas_rotulos;
 	var $lstTables;
 	var $Table = array();
 
@@ -80,8 +83,6 @@ class tDAL
 		$this->lstTables[] = array("name" => "seguranca_ugmembers", "varname" => "gtd_20200511_db3__seguranca_ugmembers", "altvarname" => "seguranca_ugmembers", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "seguranca_ugrights", "varname" => "gtd_20200511_db3__seguranca_ugrights", "altvarname" => "seguranca_ugrights", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_atividade", "varname" => "gtd_20200511_db3__tb_atividade", "altvarname" => "tb_atividade", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
-		$this->lstTables[] = array("name" => "tb_categorias", "varname" => "gtd_20200511_db3__tb_categorias", "altvarname" => "tb_categorias", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
-		$this->lstTables[] = array("name" => "tb_categorias_x_atividades", "varname" => "gtd_20200511_db3__tb_categorias_x_atividades", "altvarname" => "tb_categorias_x_atividades", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_clientes", "varname" => "gtd_20200511_db3__tb_clientes", "altvarname" => "tb_clientes", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_clientes_planos", "varname" => "gtd_20200511_db3__tb_clientes_planos", "altvarname" => "tb_clientes_planos", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_dominios", "varname" => "gtd_20200511_db3__tb_dominios", "altvarname" => "tb_dominios", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
@@ -89,9 +90,14 @@ class tDAL
 		$this->lstTables[] = array("name" => "tb_parametros", "varname" => "gtd_20200511_db3__tb_parametros", "altvarname" => "tb_parametros", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_planos", "varname" => "gtd_20200511_db3__tb_planos", "altvarname" => "tb_planos", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_planos_valores", "varname" => "gtd_20200511_db3__tb_planos_valores", "altvarname" => "tb_planos_valores", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "tb_rotulos", "varname" => "gtd_20200511_db3__tb_rotulos", "altvarname" => "tb_rotulos", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_status_atividades", "varname" => "gtd_20200511_db3__tb_status_atividades", "altvarname" => "tb_status_atividades", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "tb_tarefas_ocorrencias", "varname" => "gtd_20200511_db3__tb_tarefas_ocorrencias", "altvarname" => "tb_tarefas_ocorrencias", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "tb_tarefas_x_rotulos", "varname" => "gtd_20200511_db3__tb_tarefas_x_rotulos", "altvarname" => "tb_tarefas_x_rotulos", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 		$this->lstTables[] = array("name" => "tb_usuarios", "varname" => "gtd_20200511_db3__tb_usuarios", "altvarname" => "tb_usuarios", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
-		$this->lstTables[] = array("name" => "vw_tarefas_categorias", "varname" => "gtd_20200511_db3__vw_tarefas_categorias", "altvarname" => "vw_tarefas_categorias", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "vw_dominio_prioridade", "varname" => "gtd_20200511_db3__vw_dominio_prioridade", "altvarname" => "vw_dominio_prioridade", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "vw_dominio_tempo", "varname" => "gtd_20200511_db3__vw_dominio_tempo", "altvarname" => "vw_dominio_tempo", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
+		$this->lstTables[] = array("name" => "vw_tarefas_rotulos", "varname" => "gtd_20200511_db3__vw_tarefas_rotulos", "altvarname" => "vw_tarefas_rotulos", "connId" => "gtd_20200511_db3", "schema" => "", "connName" => "gtd_20200511.db3");
 	}
 
 	/**

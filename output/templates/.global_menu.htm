@@ -1,527 +1,537 @@
 <!doctype html>
 <html  {$html_attrs}>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      GTDTasks:{$pagetitle}
-    </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <base href="{$projectPath}">
-    <!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
-    <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="./images/gtd_128x128.png">
-    <!-- Rene: Final das customizacoes -->
-    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
-    {BEGIN rtlCSS}
-      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
-    {END rtlCSS}
-    {BEGIN styleCSSFiles}
-      <link REL="stylesheet" href="{$stylepath}" type="text/css">
-    {END styleCSSFiles}
-  </head>
-  <BODY class="{$stylename} function-menu" {$bodyattrs}>
-    {BEGIN body}
-      <style>
-        {$containerCss}
-      </style>
-      <DIV class="r-vbar-page">
-        <DIV data-width data-fixed class="r-left clearfix {$leftbar_class}">
-          <div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
-            {BEGIN left_block}
-              <DIV data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix r-ori-vert" data-itemid="logo" {$item_logo}>
-                {BEGIN logo_block}
-                  <A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
-                    {$logo}
-                  </A>
-                {END logo_block}
-                <BUTTON data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">
-                  <SPAN class="sr-only">
-                    Toggle navigation
-                  </span>
-                  <SPAN class="icon-bar">
-                  </span>
-                </button>
-              </div>
-              <DIV data-cellId="left_c1" data-pageid="{$pageid}" data-page=".global_menu" class="clearfix r-ori-vert" data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-                {$menu main}
-              </div>
-            {END left_block}
-          </div>
-        </div>
-        <DIV class="r-content-col" data-resize-left="leftbar">
-          <DIV class="r-topheader" data-resize-name="topbar">
-            {BEGIN supertop_block}
-              <NAV class="navbar navbar-default" data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}">
-                <SPAN class="navbar-form r-align-left r-ori-vert navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button">
-                  <span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-                    <A type="button" title="Collapse" class="btn-link glyphicon glyphicon-triangle-left" href="#">
-                    </a>
-                  </span>
-                </span>
-                <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options">
-                  <span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-                    <SPAN class="dropdown">
-                      <BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <SPAN class="glyphicon glyphicon-cog">
-                        </span>
-                        <SPAN class="caret">
-                        </span>
-                      </button>
-                      <UL class="dropdown-menu">
-                        {BEGIN EnglishLANGLINK}
-                          <li>
-                            <A href="#" data-lang="English" class="rnr-langlink">
-                              {BEGIN EnglishLANGLINK_ACTIVE}
-                                <SPAN class="glyphicon glyphicon-ok">
-                                  &nbsp;
-                                </span>
-                              {END EnglishLANGLINK_ACTIVE}
-                              English
-                            </a>
-                          </li>
-                        {END EnglishLANGLINK}
-                        {BEGIN Portuguese(Brazil)LANGLINK}
-                          <li>
-                            <A href="#" data-lang="Portuguese(Brazil)" class="rnr-langlink">
-                              {BEGIN Portuguese(Brazil)LANGLINK_ACTIVE}
-                                <SPAN class="glyphicon glyphicon-ok">
-                                  &nbsp;
-                                </span>
-                              {END Portuguese(Brazil)LANGLINK_ACTIVE}
-                              Português(Brasil)
-                            </a>
-                          </li>
-                        {END Portuguese(Brazil)LANGLINK}
-                        {BEGIN SpanishLANGLINK}
-                          <li>
-                            <A href="#" data-lang="Spanish" class="rnr-langlink">
-                              {BEGIN SpanishLANGLINK_ACTIVE}
-                                <SPAN class="glyphicon glyphicon-ok">
-                                  &nbsp;
-                                </span>
-                              {END SpanishLANGLINK_ACTIVE}
-                              Español
-                            </a>
-                          </li>
-                        {END SpanishLANGLINK}
-                      </ul>
-                    </span>
-                  </span>
-                </span>
-                <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button">
-                  {BEGIN loggedas_message}
-                    <span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
-                      <SPAN class="dropdown">
-                        <BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <SPAN class="glyphicon glyphicon-user">
-                          </span>
-                          {$username}
-                          <SPAN class="caret">
-                          </span>
-                        </button>
-                        <UL class="dropdown-menu">
-                          {BEGIN logoutbutton}
-                            <li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
-                              <a  href="#" {$logoutlink_attrs}  title="" >
-                                {mlang_message LOG_OUT}
-                              </a>
-                            </li>
-                          {END logoutbutton}
-                          {BEGIN adminarea_link}
-                            <li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
-                              <a  href="admin_rights_list.php"  title="" >
-                                {mlang_message AA_ADMINAREA}
-                              </a>
-                            </li>
-                          {END adminarea_link}
-                          {BEGIN changepwd_link}
-                            <li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
-                              <a  href="#" {$changepwdlink_attrs}  title="" >
-                                {mlang_message CHANGE_PASSWORD}
-                              </a>
-                            </li>
-                          {END changepwd_link}
-                        </ul>
-                      </span>
-                    </span>
-                  {END loggedas_message}
-                </span>
-                <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login">
-                  {BEGIN guestloginbutton}
-                    <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
-                      <A type="button" title class="btn btn-primary" href="#" {$guestloginlink_attrs}>
-                        {mlang_message LOGIN}
-                      </a>
-                    </span>
-                  {END guestloginbutton}
-                </span>
-              </nav>
-            {END supertop_block}
-            {$locking}
-          </div>
-          <DIV class="r-body" data-resize-top="topbar" data-body-width="standard">
-            {$header}
-            <DIV class="r-top">
-            </div>
-            <DIV class="r-above">
-              {BEGIN above-grid_block}
-                <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}">
-                  <DIV class="row">
-                    <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-12">
-                      {BEGIN firstAboveGridCell}
-                        {BEGIN breadcrumb}
-                          <OL class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
-                            <li >
-                              <a href="{$crumb_home_link}">
-                                <SPAN class="glyphicon glyphicon-home">
-                                </span>
-                              </a>
-                              {$crumb_dropdown}
-                            </li>
-                            {BEGIN crumb}
-                              <LI class="{$crumb_item_class}">
-                                {BEGIN crumb_title_link}
-                                  <a {$crumb_attrs}>
-                                    {$crumb_title}
-                                  </a>
-                                {END crumb_title_link}
-                                {BEGIN crumb_title_span}
-                                  <span {$crumb_attrs}>
-                                    {$crumb_title}
-                                  </span>
-                                {END crumb_title_span}
-                                {$crumb_dropdown}
-                              </li>
-                            {END crumb}
-                          </ol>
-                        {END breadcrumb}
-                      {END firstAboveGridCell}
-                    </div>
-                  </div>
-                </div>
-              {END above-grid_block}
-            </div>
-            <DIV class="r-grid">
-              {BEGIN grid_block}
-                <TABLE class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}">
-                  <tbody>
-                    <tr>
-                      <TD class=" " data-cellId="grid_c1" data-pageid="{$pageid}">
-                        <DIV class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group1" {$item_welcome_group1} data-pageid="{$pageid}" data-page=".global_menu">
-                          <h2>
-                            <SPAN class="glyphicon glyphicon-star">
-                            </span>
-                            {$custom ROTINA_DI_RIA}
-                          </h2>
-                          <DIV class="bs-welcome-group-comments">
-                            {$custom P_GINAS_E_M_DULOS_ACESSADOS_FREQUENTEMENTE}
-                          </div>
-                        </div>
-                        <!-- Rene: Inicio do bloco de cartoes do grupo 1 -->
-                        <DIV class="wlCssCartaoFundoAzul wlCssCartaoMargens wlCssCartaoCantos wlCssCartaoSombra col-lg-12 col-md-12 col-sm-12">
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_atividade_list.php">
-                                <SPAN class="glyphicon glyphicon-leaf">
-                                </span>
-                                {$caption tb_atividade}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_ATIVIDADE_DESCRIPTION}">
-                              {$custom TB_ATIVIDADE_DESCRIPTION}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_lista_atividades_list.php">
-                                <SPAN class="glyphicon glyphicon-shopping-cart">
-                                </span>
-                                {$caption tb_lista_atividades}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_LISTA_ATIVIDADES_DESCRIPTION}">
-                              {$custom TB_LISTA_ATIVIDADES_DESCRIPTION}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_categorias_list.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption tb_categorias}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="119">
-                              Cadastro de Categorias ou também conhecida como rótulos ou etiquetas, é uma forma não rígida de agrupamento de tarefas.
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_status_atividades_list.php">
-                                <SPAN class="glyphicon glyphicon-th-list">
-                                </span>
-                                {$caption tb_status_atividades}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM2}">
-                              {$custom CUSTOM2}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_categorias_x_atividades_list.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption tb_categorias_x_atividades}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="83">
-                              Associação entre as Tarefas e suas possíveis categorizações ou rótulos (etiquetas).
-                            </div>
-                          </div>
-                        </DIV>
-                        <!-- Rene: Final do bloco de cartoes do grupo 1 -->
-                        <DIV class="clearfix">
-                        </DIV>
-                        <DIV class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group2" {$item_welcome_group2} data-pageid="{$pageid}" data-page=".global_menu">
-                          <h2>
-                            <SPAN class="glyphicon glyphicon-signal">
-                            </span>
-                            Consultas e Gráficos
-                          </h2>
-                          <DIV class="bs-welcome-group-comments">
-                            Dashboards, Painéls de Operação e Gráficos
-                          </div>
-                        </div>
-                        <!-- Rene: Inicio do bloco de cartoes do grupo 2 -->
-                        <DIV class="wlCssCartaoFundoVerde wlCssCartaoMargens wlCssCartaoCantos wlCssCartaoSombra col-lg-12 col-md-12 col-sm-12">
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="dashboard_lista_e_tarefas_dashboard.php">
-                                <SPAN class="glyphicon glyphicon-list-alt">
-                                </span>
-                                {$caption Dashboard_Lista_e_Tarefas}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="81">
-                              Dashsboard que contém uma página agrupadora das Listas e suas tarefas associadas.
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="dashboard_graficos_dashboard.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Dashboard_Graficos}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}">
-                              {$custom DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="gr_fico_tarefas_criadas_por_usu_rio_chart.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Gr_fico_Tarefas_criadas_por_Usu_rio}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length E}">
-                              {$custom E}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="gr_fico_tarefas_por_prioridade_chart.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Gr_fico_Tarefas_por_Prioridade}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}">
-                              {$custom VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="gr_fico_tarefas_por_status_chart.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Gr_fico_Tarefas_por_Status}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length GRAICO}">
-                              {$custom GRAICO}
-                            </div>
-                          </div>
-                        </DIV>
-                        <!-- Rene: Final do bloco de cartoes do grupo 2 -->
-                        <DIV class="clearfix">
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_dominios_list.php">
-                              <SPAN class="glyphicon glyphicon-hand-right">
-                              </span>
-                              {$caption tb_dominios}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_DOMINIOS_DESCRIPTION}">
-                            {$custom TB_DOMINIOS_DESCRIPTION}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_planos_list.php">
-                              <SPAN class="fa fa-universal-access">
-                              </span>
-                              {$caption tb_planos}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM}">
-                            {$custom CUSTOM}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_planos_valores_list.php">
-                              <SPAN class="glyphicon glyphicon-briefcase">
-                              </span>
-                              {$caption tb_planos_valores}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM1}">
-                            {$custom CUSTOM1}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_clientes_planos_list.php">
-                              <SPAN class="fa fa-user-circle-o">
-                              </span>
-                              {$caption tb_clientes_planos}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_CLIENTES_PLANOS_DESCRIPTION}">
-                            {$custom TB_CLIENTES_PLANOS_DESCRIPTION}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_usuarios_list.php">
-                              <SPAN class="glyphicon glyphicon-user">
-                              </span>
-                              {$caption tb_usuarios}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM3}">
-                            {$custom CUSTOM3}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_clientes_list.php">
-                              <SPAN class="fa fa-users">
-                              </span>
-                              {$caption tb_clientes}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_CLIENTES_DESCRIPTION}">
-                            {$custom TB_CLIENTES_DESCRIPTION}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="log_audit_list.php">
-                              <SPAN class="glyphicon glyphicon-eye-close">
-                              </span>
-                              {$caption log_audit}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length MONITORAMENTO_DE_ACESSOS_DO_SISTEMA}">
-                            {$custom MONITORAMENTO_DE_ACESSOS_DO_SISTEMA}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="gr_fico_tarefas_por_lista_chart.php">
-                              <SPAN class="glyphicon glyphicon-signal">
-                              </span>
-                              Atividades por Lista
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}">
-                            {$custom EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_parametros_list.php">
-                              <SPAN class="fa fa-gear">
-                              </span>
-                              {$caption tb_parametros}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="78">
-                            Parâmetros e configurações do sistema que orientam a forma do mesmo funcionar.
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <TD class="r-ori-vert" data-cellId="grid_c" data-pageid="{$pageid}">
-                        <DIV class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group" {$item_welcome_group} data-pageid="{$pageid}" data-page=".global_menu">
-                          <h2>
-                            {$custom P_GINAS_EM_DESENVOLVIMENTO}
-                          </h2>
-                          <DIV class="bs-welcome-group-comments">
-                            Páginas que estão em testes e desenvolvimentos
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item20" {$item_welcome_item20} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="vw_tarefas_categorias_list.php">
-                              <img src="{$file_url images/menuicons/User%20Group%201%2024%20n%20p.png}" />
-                              {$caption vw_tarefas_categorias}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="50">
-                            View criada para testes... Não deve ser utilizada.
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="proc_limpar_tarefas_de_lista_list.php">
-                              <img src="{$file_url images/menuicons/User%20Group%201%2024%20n%20p.png}" />
-                              {$caption proc_limpar_tarefas_de_lista}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="82">
-                            Procedimento interno que esta sendo desenvolvido. Está em fase de teste/avaliação.
-                          </div>
-                        </div>
-                        <DIV class="clearfix">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <TD class="r-ori-vert" data-cellId="grid_c2" data-pageid="{$pageid}">
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              {END grid_block}
-            </div>
-            <DIV class="r-below">
-            </div>
-            {$footer}
-          </div>
-        </div>
-      </div>
-    {END body}
-  </body>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GTDTasks: {$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+
+	<!-- Rene: Adicionado um favicon.png em todas as paginas em "projeto/header.html" -->
+	<link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="./images/gtd_128x128.png">
+	<!-- Rene: Final das customizacoes -->
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-menu" {$bodyattrs}>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" data-page=".global_menu" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+    {END left_block}
+</div>				</div>	
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form r-align-left r-ori-vert navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-cog"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN Portuguese(Brazil)LANGLINK}
+	<li><a href="#" data-lang="Portuguese(Brazil)" class="rnr-langlink">
+		{BEGIN Portuguese(Brazil)LANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END Portuguese(Brazil)LANGLINK_ACTIVE}
+		Português(Brasil)</a></li>
+	{END Portuguese(Brazil)LANGLINK}
+	{BEGIN SpanishLANGLINK}
+	<li><a href="#" data-lang="Spanish" class="rnr-langlink">
+		{BEGIN SpanishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END SpanishLANGLINK_ACTIVE}
+		Español</a></li>
+	{END SpanishLANGLINK}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-user"></span>
+						{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		{mlang_message CHANGE_PASSWORD}		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>	
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+												</div>
+					<div class="r-above">
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			{END firstAboveGridCell}	
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+						</div>
+					<div class="r-grid">
+										{BEGIN grid_block}
+<table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr>
+									<td 
+	class="			"
+			 
+	data-cellId="grid_c1" data-pageid="{$pageid}">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group1" {$item_welcome_group1} data-pageid="{$pageid}" data-page=".global_menu">
+	<h2>
+					<span class="glyphicon glyphicon-star"></span>{$custom ROTINA_DI_RIA}			</h2>
+	 
+		<div class="bs-welcome-group-comments">
+		{$custom P_GINAS_E_M_DULOS_ACESSADOS_FREQUENTEMENTE}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_atividade_list.php">
+							<span class="glyphicon glyphicon-leaf"></span>{$caption tb_atividade}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length TB_ATIVIDADE_DESCRIPTION}">
+		{$custom TB_ATIVIDADE_DESCRIPTION}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item21" {$item_welcome_item21} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_tarefas_ocorrencias_list.php">
+							{$custom OCORR_NCIAS_DE_TAREFAS}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length REGISTRO_DE_OCORR_NCIAS__APONTAMENTOS_DIVERSOS_OU_MESMO_NOTAS_PARA_DE_UMA_TAREFA}">
+		{$custom REGISTRO_DE_OCORR_NCIAS__APONTAMENTOS_DIVERSOS_OU_MESMO_NOTAS_PARA_DE_UMA_TAREFA}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_lista_atividades_list.php">
+							<span class="glyphicon glyphicon-shopping-cart"></span>{$caption tb_lista_atividades}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length TB_LISTA_ATIVIDADES_DESCRIPTION}">
+		{$custom TB_LISTA_ATIVIDADES_DESCRIPTION}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_rotulos_list.php">
+							<span class="glyphicon glyphicon-minus"></span>{$custom R_TULOS2}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length CADASTRO_DE_CATEGORIAS_OU_TAMB_M_CONHECIDA_COMO_R_TULOS_OU_ETIQUETAS____UMA_FORMA_N_O_R_GIDA_DE_AGRUPAMENTO_DE_TAREFAS_}">
+		{$custom CADASTRO_DE_CATEGORIAS_OU_TAMB_M_CONHECIDA_COMO_R_TULOS_OU_ETIQUETAS____UMA_FORMA_N_O_R_GIDA_DE_AGRUPAMENTO_DE_TAREFAS_}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_status_atividades_list.php">
+							<span class="glyphicon glyphicon-th-list"></span>{$custom STATUS_DE_TAREFAS1}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM2}">
+		{$custom CUSTOM2}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_tarefas_x_rotulos_list.php">
+							<span class="glyphicon glyphicon-minus"></span>{$caption tb_tarefas_x_rotulos}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length ASSOCIA__O_ENTRE_AS_TAREFAS_E_SUAS_POSS_VEIS_CATEGORIZA__ES_OU_R_TULOS__ETIQUETAS__}">
+		{$custom ASSOCIA__O_ENTRE_AS_TAREFAS_E_SUAS_POSS_VEIS_CATEGORIZA__ES_OU_R_TULOS__ETIQUETAS__}	</div>
+	</div>
+
+<div class="clearfix"></div>
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group2" {$item_welcome_group2} data-pageid="{$pageid}" data-page=".global_menu">
+	<h2>
+					<span class="glyphicon glyphicon-signal"></span>{$custom CONSULTAS_E_GR_FICOS}			</h2>
+	 
+		<div class="bs-welcome-group-comments">
+		{$custom DASHBOARDS__PAIN_LS_DE_OPERA__O_E_GR_FICOS}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dashboard_lista_e_tarefas_dashboard.php">
+							<span class="glyphicon glyphicon-list-alt"></span>{$caption Dashboard_Lista_e_Tarefas}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_1}">
+		{$custom DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_1}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="dashboard_graficos_dashboard.php">
+							<span class="glyphicon glyphicon-minus"></span>{$caption Dashboard_Graficos}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}">
+		{$custom DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="gr_fico_tarefas_por_lista_chart.php">
+							<span class="glyphicon glyphicon-signal"></span> Atividades por Lista					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}">
+		{$custom EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="gr_fico_tarefas_criadas_por_usu_rio_chart.php">
+							<span class="glyphicon glyphicon-minus"></span>{$caption Gr_fico_Tarefas_criadas_por_Usu_rio}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length E}">
+		{$custom E}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="gr_fico_tarefas_por_prioridade_chart.php">
+							<span class="glyphicon glyphicon-minus"></span>{$caption Gr_fico_Tarefas_por_Prioridade}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}">
+		{$custom VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="gr_fico_tarefas_por_status_chart.php">
+							<span class="glyphicon glyphicon-minus"></span>{$caption Gr_fico_Tarefas_por_Status}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length GRAICO}">
+		{$custom GRAICO}	</div>
+	</div>
+
+<div class="clearfix"></div>
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group3" {$item_welcome_group3} data-pageid="{$pageid}" data-page=".global_menu">
+	<h2>
+					<span class="glyphicon glyphicon-inbox"></span>{$custom DEMAIS_P_GINAS}			</h2>
+	 
+		<div class="bs-welcome-group-comments">
+		{$custom DEMAIS_P_GINAS_DO_SISTEMA}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_usuarios_list.php">
+							<span class="glyphicon glyphicon-user"></span>{$caption tb_usuarios}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM3}">
+		{$custom CUSTOM3}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_clientes_list.php">
+							<span class="fa fa-users"></span>{$caption tb_clientes}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length TB_CLIENTES_DESCRIPTION}">
+		{$custom TB_CLIENTES_DESCRIPTION}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_planos_list.php">
+							<span class="fa fa-universal-access"></span>{$caption tb_planos}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM}">
+		{$custom CUSTOM}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_planos_valores_list.php">
+							<span class="glyphicon glyphicon-briefcase"></span>{$caption tb_planos_valores}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM1}">
+		{$custom CUSTOM1}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_clientes_planos_list.php">
+							<span class="fa fa-user-circle-o"></span>{$caption tb_clientes_planos}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length TB_CLIENTES_PLANOS_DESCRIPTION}">
+		{$custom TB_CLIENTES_PLANOS_DESCRIPTION}	</div>
+	</div>
+
+<div class="clearfix"></div>
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group4" {$item_welcome_group4} data-pageid="{$pageid}" data-page=".global_menu">
+	<h2>
+					{$custom P_GINAS_DO_SISTEMA}		
+			</h2>
+	 
+		<div class="bs-welcome-group-comments">
+		{$custom P_GINAS_DO_SISTEMA_COM_CONFIGURA__ES_E_PARAMETROS}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_dominios_list.php">
+							<span class="glyphicon glyphicon-hand-right"></span>{$caption tb_dominios}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length TB_DOMINIOS_DESCRIPTION}">
+		{$custom TB_DOMINIOS_DESCRIPTION}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="tb_parametros_list.php">
+							<span class="fa fa-gear"></span>{$caption tb_parametros}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length PAR_METROS_E_CONFIGURA__ES_DO_SISTEMA_QUE_ORIENTAM_A_FORMA_DO_MESMO_FUNCIONAR_}">
+		{$custom PAR_METROS_E_CONFIGURA__ES_DO_SISTEMA_QUE_ORIENTAM_A_FORMA_DO_MESMO_FUNCIONAR_}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="log_audit_list.php">
+							<span class="glyphicon glyphicon-eye-close"></span>{$caption log_audit}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length MONITORAMENTO_DE_ACESSOS_DO_SISTEMA}">
+		{$custom MONITORAMENTO_DE_ACESSOS_DO_SISTEMA}	</div>
+	</div>
+
+<div class="clearfix"></div>
+</td>
+							</tr>
+											<tr>
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c" data-pageid="{$pageid}">
+ 
+<div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group" {$item_welcome_group} data-pageid="{$pageid}" data-page=".global_menu">
+	<h2>
+					{$custom P_GINAS_EM_DESENVOLVIMENTO}		
+			</h2>
+	 
+		<div class="bs-welcome-group-comments">
+		{$custom P_GINAS_QUE_EST_O_EM_TESTES_E_DESENVOLVIMENTOS}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item20" {$item_welcome_item20} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="vw_tarefas_rotulos_list.php">
+							<img src="{$file_url images/menuicons/User%20Group%201%2024%20n%20p.png}" />{$custom VW_TAREFAS_ROTULOS}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="{$cl_length VIEW_CRIADA_PARA_TESTES____N_O_DEVE_SER_UTILIZADA_}">
+		{$custom VIEW_CRIADA_PARA_TESTES____N_O_DEVE_SER_UTILIZADA_}	</div>
+	</div>
+
+	<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="proc_limpar_tarefas_de_lista_add.php">
+							<img src="{$file_url images/menuicons/User%20Group%201%2024%20n%20p.png}" />{$caption proc_limpar_tarefas_de_lista}					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="82">
+		Procedimento interno que esta sendo desenvolvido. Está em fase de teste/avaliação.	</div>
+	</div>
+
+<div class="clearfix"></div>
+</td>
+							</tr>
+											<tr>
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_c2" data-pageid="{$pageid}">
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END grid_block}
+						</div>
+					<div class="r-below">
+													</div>
+					{$footer}
+				</div>	
+			</div>	
+		</div>
+	{END body}
+	</body>
 </html>

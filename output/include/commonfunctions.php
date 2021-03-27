@@ -247,11 +247,17 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("dashboard_graficos" == $shortTName && ($type===false || ($type!==false && $type == 4)))
 		return true;
-	if ("tb_categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+	if ("tb_rotulos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
-	if ("tb_categorias_x_atividades" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+	if ("tb_tarefas_x_rotulos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
-	if ("vw_tarefas_categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+	if ("vw_dominio_tempo" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("vw_dominio_prioridade" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("vw_tarefas_rotulos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("tb_tarefas_ocorrencias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	return false;
 }
@@ -494,30 +500,57 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("tb_categorias");
+		$strPerm = GetUserPermissions("tb_rotulos");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="tb_categorias";
+		$arr[]="tb_rotulos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("tb_categorias_x_atividades");
+		$strPerm = GetUserPermissions("tb_tarefas_x_rotulos");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="tb_categorias_x_atividades";
+		$arr[]="tb_tarefas_x_rotulos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("vw_tarefas_categorias");
+		$strPerm = GetUserPermissions("vw_dominio_tempo");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="vw_tarefas_categorias";
+		$arr[]="vw_dominio_tempo";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("vw_dominio_prioridade");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="vw_dominio_prioridade";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("vw_tarefas_rotulos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="vw_tarefas_rotulos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("tb_tarefas_ocorrencias");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="tb_tarefas_ocorrencias";
 	}
 	return $arr;
 }
@@ -549,9 +582,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Gráfico Tarefas por Prioridade";
 	$arr[]="Gráfico Tarefas criadas por Usuário";
 	$arr[]="Dashboard_Graficos";
-	$arr[]="tb_categorias";
-	$arr[]="tb_categorias_x_atividades";
-	$arr[]="vw_tarefas_categorias";
+	$arr[]="tb_rotulos";
+	$arr[]="tb_tarefas_x_rotulos";
+	$arr[]="vw_dominio_tempo";
+	$arr[]="vw_dominio_prioridade";
+	$arr[]="vw_tarefas_rotulos";
+	$arr[]="tb_tarefas_ocorrencias";
 	return $arr;
 }
 
@@ -1447,19 +1483,37 @@ function GetUserPermissionsStatic( $table )
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="tb_categorias" )
+	if( $table=="tb_rotulos" )
 	{
 //	default permissions
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="tb_categorias_x_atividades" )
+	if( $table=="tb_tarefas_x_rotulos" )
 	{
 //	default permissions
 		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="vw_tarefas_categorias" )
+	if( $table=="vw_dominio_tempo" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="vw_dominio_prioridade" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="vw_tarefas_rotulos" )
+	{
+//	default permissions
+		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="tb_tarefas_ocorrencias" )
 	{
 //	default permissions
 		// grant all by default
@@ -1589,9 +1643,8 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 		$_SESSION["_tb_usuarios_OwnerID"] = $data["clie_id"];
 		$_SESSION["_admin_members_OwnerID"] = $data["clie_id"];
 		$_SESSION["_admin_users_OwnerID"] = $data["clie_id"];
-		$_SESSION["_tb_categorias_OwnerID"] = $data["clie_id"];
-		$_SESSION["_tb_categorias_x_atividades_OwnerID"] = $data["alter_dt"];
-		$_SESSION["_vw_tarefas_categorias_OwnerID"] = $data["clie_id"];
+		$_SESSION["_tb_rotulos_OwnerID"] = $data["clie_id"];
+		$_SESSION["_tb_tarefas_x_rotulos_OwnerID"] = $data["alter_dt"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1701,13 +1754,7 @@ function CheckSecurity($strValue, $strAction, $table = "")
 				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
-		if($table=="tb_categorias")
-		{
-
-				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
-				return false;
-		}
-		if($table=="vw_tarefas_categorias")
+		if($table=="tb_rotulos")
 		{
 
 				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
@@ -1817,11 +1864,7 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 				if($strAction == "Edit" || $strAction == "Delete")
 				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
-		if($table=="tb_categorias")
-		{
-				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
-		}
-		if($table=="vw_tarefas_categorias")
+		if($table=="tb_rotulos")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}

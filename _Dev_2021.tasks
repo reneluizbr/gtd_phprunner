@@ -1,4 +1,23 @@
 Pendências, Notas e Itens a Fazer:
+    ✔ Renomear tabela tb_categorias -> tb_rotulos @@started(2021-03-26 21:46) @done (2021-03-26 23:14) @lasted(1:28)
+        Itens trocados: 
+            Query base; Rótulos e Labels nas páginas; Labels em multi idiomas; Revisão de código em eventos
+    ✘ Tentativa de traduzir prioridade "Baixa, Media, Alta" no Lookup @started(2021-03-26 23:15) @cancelled (2021-03-26 23:38) @wasted(0:23)
+    ✔ Tentativa de traduzir prioridade "Baixa, Media, Alta" no Lookup @started @st(2021-03-27 11:15) @done (2021-03-27 11:57)
+        1- Criada a View: vw_dominio_prioridade
+        2- Usando no Lookup (domi_grupo = 'PRIORIDADE_ATIVIDADE' AND idioma = ':session.language')
+    ✔ Criar tabela "tb_Ocorrencias"/"tb_Apontamentos"/"Notas" (filha de tb_tarefas) @started(2021-03-27 16:40) @done (2021-03-27 17:19) @lasted(0:39)
+        ID_Ocorencia     NUMBER
+        Ativ_ID          NUMBER
+        Data_Hora        DATETIME
+        Nota             VARCHAR2(200)
+        Concluida        NUMBER (0/1)
+    ✔ Importar tabela recem criada no PHPRunner e criar páginas @started(2021-03-27 17:25) @done (2021-03-27 17:55) @lasted(0:30)
+        ✔ Colocar no menu @started(2021-03-27 17:46) @done (2021-03-27 17:55) @lasted(0:09)
+        ✔ Testes inciais @@started(2021-03-27 17:55) @done (2021-03-27 18:56) @lasted(1:01)
+        ☐ Testes operacionais com utilização real
+    ☐ Revisar inclusao automatica no auto-cadastrar do usuario (tb_rotulos, tb_tarefas_x_rotulos)
+
     ✘ Trocar nome da tabela tb_atividades para tb_tarefa @started(2021-03-25 17:07) @cancelled (2021-03-26 14:42) @wasted(21:35)
 
     ✔ Recuperar último idioma selecionado por usuário (2021-03-20 17:29, Sat) @tagMelhoria @started(2021-03-21 01:05) @done(2021-03-21 03:20) @lasted(2h15m56s)

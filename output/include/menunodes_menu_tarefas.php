@@ -36,32 +36,6 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "tb_atividade";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "glyphicon-tags";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "#"."DAA520";
-
-	$menuNode["title"] = GetTableCaption("tb_atividade");
-
-
-
-	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "3";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "tb_lista_atividades";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
@@ -84,7 +58,59 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 	$menuNode = array();
+	$menuNode["id"] = "3";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "tb_atividade";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-tasks";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "#"."DAA520";
+
+	$menuNode["title"] = GetTableCaption("tb_atividade");
+
+
+
+	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
+	$menuNode = array();
 	$menuNode["id"] = "4";
+	$menuNode["name"] = "Ocorrências de Tarefas";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "tb_tarefas_ocorrencias";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-edit";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Ocorrências de Tarefas";
+
+
+
+	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "5";
 	$menuNode["name"] = "Status de Tarefas";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -110,27 +136,27 @@ function getMenuNodes_menu_tarefas($menuNodesObject)
 
 	$menuNodesObject->menuNodes["menu_tarefas"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "5";
-	$menuNode["name"] = "";
+	$menuNode["id"] = "6";
+	$menuNode["name"] = "R_TULOS1";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "tb_categorias";
+	$menuNode["table"] = "tb_rotulos";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
+	$menuNode["nameType"] = "CustomID";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-star-empty";
+	$menuNode["icon"] = "glyphicon-tags";
 	$menuNode["iconType"] = "2";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetTableCaption("tb_categorias");
+	$menuNode["title"] = GetCustomLabel("R_TULOS1");
 
 
 

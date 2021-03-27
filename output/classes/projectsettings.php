@@ -3093,12 +3093,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "gr_fico_tarefas_criadas_por_usu_rio" ] = "Gráfico Tarefas criadas por Usuário";
 	$projectEntities[ "Dashboard_Graficos" ] = array( "url" => "dashboard_graficos", "type" => 4 );
 	$projectEntitiesReverse[ "dashboard_graficos" ] = "Dashboard_Graficos";
-	$projectEntities[ "tb_categorias" ] = array( "url" => "tb_categorias", "type" => 0 );
-	$projectEntitiesReverse[ "tb_categorias" ] = "tb_categorias";
-	$projectEntities[ "tb_categorias_x_atividades" ] = array( "url" => "tb_categorias_x_atividades", "type" => 0 );
-	$projectEntitiesReverse[ "tb_categorias_x_atividades" ] = "tb_categorias_x_atividades";
-	$projectEntities[ "vw_tarefas_categorias" ] = array( "url" => "vw_tarefas_categorias", "type" => 0 );
-	$projectEntitiesReverse[ "vw_tarefas_categorias" ] = "vw_tarefas_categorias";
+	$projectEntities[ "tb_rotulos" ] = array( "url" => "tb_rotulos", "type" => 0 );
+	$projectEntitiesReverse[ "tb_rotulos" ] = "tb_rotulos";
+	$projectEntities[ "tb_tarefas_x_rotulos" ] = array( "url" => "tb_tarefas_x_rotulos", "type" => 0 );
+	$projectEntitiesReverse[ "tb_tarefas_x_rotulos" ] = "tb_tarefas_x_rotulos";
+	$projectEntities[ "vw_dominio_tempo" ] = array( "url" => "vw_dominio_tempo", "type" => 0 );
+	$projectEntitiesReverse[ "vw_dominio_tempo" ] = "vw_dominio_tempo";
+	$projectEntities[ "vw_dominio_prioridade" ] = array( "url" => "vw_dominio_prioridade", "type" => 0 );
+	$projectEntitiesReverse[ "vw_dominio_prioridade" ] = "vw_dominio_prioridade";
+	$projectEntities[ "vw_tarefas_rotulos" ] = array( "url" => "vw_tarefas_rotulos", "type" => 0 );
+	$projectEntitiesReverse[ "vw_tarefas_rotulos" ] = "vw_tarefas_rotulos";
+	$projectEntities[ "tb_tarefas_ocorrencias" ] = array( "url" => "tb_tarefas_ocorrencias", "type" => 0 );
+	$projectEntitiesReverse[ "tb_tarefas_ocorrencias" ] = "tb_tarefas_ocorrencias";
 }
 
 function findTable( $table ) {

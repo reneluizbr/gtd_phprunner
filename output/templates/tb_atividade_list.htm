@@ -988,7 +988,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="tb_atividade_add.php" data-popup >
+	" {$addlink_attrs} href="tb_atividade_add.php" >
 							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
@@ -1101,13 +1101,20 @@
 		<input type="checkbox" id="printDetailsToggler{$id}">
 		{mlang_message PPANEL_DETAILS}	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
-											{BEGIN print_details_tb_categorias_x_atividades}
+																			{BEGIN print_details_tb_tarefas_x_rotulos}
 			<div>
-				<label for="printDetailstb_categorias_x_atividades{$id}">
-					<input type="checkbox" value="tb_categorias_x_atividades" id="printDetailstb_categorias_x_atividades{$id}" checked>
-					Categorias por Atividades				</label>
+				<label for="printDetailstb_tarefas_x_rotulos{$id}">
+					<input type="checkbox" value="tb_tarefas_x_rotulos" id="printDetailstb_tarefas_x_rotulos{$id}" checked>
+					Rótulos de Tarefas				</label>
 			</div>
-			{END print_details_tb_categorias_x_atividades}
+			{END print_details_tb_tarefas_x_rotulos}
+														{BEGIN print_details_tb_tarefas_ocorrencias}
+			<div>
+				<label for="printDetailstb_tarefas_ocorrencias{$id}">
+					<input type="checkbox" value="tb_tarefas_ocorrencias" id="printDetailstb_tarefas_ocorrencias{$id}" checked>
+					Tb Tarefas Ocorrencias				</label>
+			</div>
+			{END print_details_tb_tarefas_ocorrencias}
 						</div>
 </div>
 {END print_details}
@@ -1320,6 +1327,25 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
+				 
+					{BEGIN cellblock_grid_headcell_details1}
+	<th
+	
+	{$cell_grid_headcell_details1}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	{$custom NOTAS}</span>
+	
+	</th>
+	{END cellblock_grid_headcell_details1}
 				 
 					{BEGIN cellblock_grid_headcell_field}
 	<th
@@ -1564,87 +1590,6 @@
 	</th>
 	{END cellblock_grid_headcell_field8}
 				 
-					{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_domi_unid_tempo_class}
-			"
-
-			data-field="ativ_domi_unid_tempo"
-	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_domi_unid_tempo_fieldheadercolumn}
-	{BEGIN ativ_domi_unid_tempo_fieldheader}
-	<SPAN {$ativ_domi_unid_tempo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_domi_unid_tempo">
-	{$label tb_atividade ativ_domi_unid_tempo }	{$arrow_icon_ativ_domi_unid_tempo}
-	</SPAN>
-	{END ativ_domi_unid_tempo_fieldheader}
-{END ativ_domi_unid_tempo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field9}
-				 
-					{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_tempo_estimado_class}
-			"
-
-			data-field="ativ_tempo_estimado"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_tempo_estimado_fieldheadercolumn}
-	{BEGIN ativ_tempo_estimado_fieldheader}
-	<SPAN {$ativ_tempo_estimado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_estimado">
-	{$label tb_atividade ativ_tempo_estimado }	{$arrow_icon_ativ_tempo_estimado}
-	</SPAN>
-	{END ativ_tempo_estimado_fieldheader}
-{END ativ_tempo_estimado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
-				 
-					{BEGIN cellblock_grid_headcell_field11}
-	<th
-	
-	{$cell_grid_headcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_tempo_real_class}
-			"
-
-			data-field="ativ_tempo_real"
-	
-	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_tempo_real_fieldheadercolumn}
-	{BEGIN ativ_tempo_real_fieldheader}
-	<SPAN {$ativ_tempo_real_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_real">
-	{$label tb_atividade ativ_tempo_real }	{$arrow_icon_ativ_tempo_real}
-	</SPAN>
-	{END ativ_tempo_real_fieldheader}
-{END ativ_tempo_real_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field11}
-				 
 					{BEGIN cellblock_grid_headcell_field12}
 	<th
 	
@@ -1733,7 +1678,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="tb_atividade_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" data-popup >		
+	 glyphicon glyphicon-pencil" href="tb_atividade_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
 				
 								</a>
 </span>
@@ -1773,7 +1718,7 @@
 {BEGIN copy_link}
 <span data-itemtype="grid_copy" data-itemid="grid_copy" {$item_grid_copy} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="{mlang_message COPY}" class="btn-link   
-	 glyphicon glyphicon-duplicate" href="tb_atividade_add.php?{$copylink}" {$copylink_attrs} title="{mlang_message COPY}" data-popup >		
+	 glyphicon glyphicon-duplicate" href="tb_atividade_add.php?{$copylink}" {$copylink_attrs} title="{mlang_message COPY}" >		
 				
 								</a>
 </span>
@@ -1824,7 +1769,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"		data-control-cell
@@ -1834,26 +1779,83 @@
 	 
 		
 		
-	{BEGIN tb_categorias_x_atividades_dtable_link}
+	{BEGIN _dtable_link}
 	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$tb_categorias_x_atividades_link_attrs} data-short-details="tb_categorias_x_atividades"
-		class="{$tb_categorias_x_atividades_dlink_class}" 
+	<a  {$_link_attrs} data-short-details=""
+		class="{$_dlink_class}" 
 		title="{$caption tb_categorias_x_atividades }"	>
 							<span class="glyphicon glyphicon-star-empty"></span>
 								
-									{BEGIN tb_categorias_x_atividades_childcount}
-				<span class="details-badge badge tb_categorias_x_atividades_badge" {$tb_categorias_x_atividades_childnumber_attr}>
-					{$tb_categorias_x_atividades_childnumber}				
+									{BEGIN _childcount}
+				<span class="details-badge badge _badge" {$_childnumber_attr}>
+					{$_childnumber}				
 				</span>
-				{END tb_categorias_x_atividades_childcount}
+				{END _childcount}
 						</a>
 	</span>
-	{END tb_categorias_x_atividades_dtable_link}
+	{END _dtable_link}
+
+
+	 
+		
+		
+	{BEGIN tb_tarefas_x_rotulos_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$tb_tarefas_x_rotulos_link_attrs} data-short-details="tb_tarefas_x_rotulos"
+		class="{$tb_tarefas_x_rotulos_dlink_class}" 
+		title="{$caption tb_tarefas_x_rotulos }"	>
+							<span class="glyphicon glyphicon-star-empty"></span>
+								
+									{BEGIN tb_tarefas_x_rotulos_childcount}
+				<span class="details-badge badge tb_tarefas_x_rotulos_badge" {$tb_tarefas_x_rotulos_childnumber_attr}>
+					{$tb_tarefas_x_rotulos_childnumber}				
+				</span>
+				{END tb_tarefas_x_rotulos_childcount}
+						</a>
+	</span>
+	{END tb_tarefas_x_rotulos_dtable_link}
 
 
 	
 	</td>
 	{END cellblock_grid_cell_details}
+				 
+					{BEGIN cellblock_grid_cell_details1}
+	<td
+	
+	{$cell_grid_cell_details1}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_details1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"		data-control-cell
+	
+	>
+
+	 
+		
+		
+	{BEGIN tb_tarefas_ocorrencias_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$tb_tarefas_ocorrencias_link_attrs} data-short-details="tb_tarefas_ocorrencias"
+		class="{$tb_tarefas_ocorrencias_dlink_class}" 
+		title="{$caption tb_tarefas_ocorrencias }"	>
+							<span class="glyphicon glyphicon-edit"></span>
+								
+									{BEGIN tb_tarefas_ocorrencias_childcount}
+				<span class="details-badge badge tb_tarefas_ocorrencias_badge" {$tb_tarefas_ocorrencias_childnumber_attr}>
+					{$tb_tarefas_ocorrencias_childnumber}				
+				</span>
+				{END tb_tarefas_ocorrencias_childcount}
+						</a>
+	</span>
+	{END tb_tarefas_ocorrencias_dtable_link}
+
+
+	
+	</td>
+	{END cellblock_grid_cell_details1}
 				 
 					{BEGIN cellblock_grid_cell_field}
 	<td
@@ -2062,75 +2064,6 @@
 	</td>
 	{END cellblock_grid_cell_field8}
 				 
-					{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_domi_unid_tempo_class}
-			"
-
-			data-field="ativ_domi_unid_tempo"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_domi_unid_tempo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_domi_unid_tempo" data-default-width >
-{$ativ_domi_unid_tempo_value}
-</span>
-{END ativ_domi_unid_tempo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
-				 
-					{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_tempo_estimado_class}
-			"
-
-			data-field="ativ_tempo_estimado"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_tempo_estimado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_estimado" data-default-width >
-{$ativ_tempo_estimado_value}
-</span>
-{END ativ_tempo_estimado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
-				 
-					{BEGIN cellblock_grid_cell_field11}
-	<td
-	
-	{$cell_grid_cell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ativ_tempo_real_class}
-			"
-
-			data-field="ativ_tempo_real"
-	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ativ_tempo_real_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ativ_tempo_real" data-default-width >
-{$ativ_tempo_real_value}
-</span>
-{END ativ_tempo_real_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field11}
-				 
 					{BEGIN cellblock_grid_cell_field12}
 	<td
 	
@@ -2188,20 +2121,25 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders=""
-	>
+				<div data-itemtype="details_preview" data-itemid="details_rotulos" {$item_details_rotulos} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="tb_tarefas_x_rotulos,tb_tarefas_ocorrencias"
+			data-details-tb_tarefas_x_rotulos			data-details-tb_tarefas_ocorrencias	>
+		<span data-details-inside data-short-table="tb_tarefas_x_rotulos">
+			</span>
+		<span data-details-inside data-short-table="tb_tarefas_ocorrencias">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>
@@ -2412,54 +2350,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
-				 
-					{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
-				 
-					{BEGIN cellblock_grid_footcell_field10}
-	<td
-	
-	{$cell_grid_footcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field10}
-				 
-					{BEGIN cellblock_grid_footcell_field11}
-	<td
-	
-	{$cell_grid_footcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tb_atividade_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field11}
 				 
 					{BEGIN cellblock_grid_footcell_field12}
 	<td

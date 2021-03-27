@@ -210,18 +210,21 @@ div.bs-welcome-item {
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Rene: Estas configuracoes devem ser apliacadas a todos os grupos de cartoes: wlCssReneFundoCartoesGrupo1 ,2, 3, ...*/
 /* ------------------------------------------------------------------------------------------------------------------ */
-.wlCssReneFundoCartoesTodosGrupos-NAO-USADA {
+.wlCssReneFundoCartoesTodosGrupos-NAO-USADA,
+.welcome-group {
   /* Para nao subir por engano ate que esteja com o layout totalmente finalizado */
   /* background: #77d586;  */ /* Cor para o Editor (visual) do PHPRunner poder visualizar */
-  padding-left: 0px;
-  padding-top: 15px;
+  padding-left: 10px;
+  padding-top: 4px;
   padding-bottom: 0px;
 
+	height: 65px;
   border-bottom-width: 10px;
   margin-left: 15px;
-  margin-bottom: 17px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   border-radius: 5px;
-  box-shadow: 0 0 2px rgb(0 0 0); /*10px -> 2px menos sombra */
+  box-shadow: 0 0 10px rgb(0 0 0); /*10px -> 2px menos sombra */
 }
 /* Final */

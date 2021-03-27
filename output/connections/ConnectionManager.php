@@ -335,9 +335,12 @@ class ConnectionManager
 		$connectionsIds["Gráfico Tarefas por Status"] = "gtd_20200511_db3";
 		$connectionsIds["Gráfico Tarefas por Prioridade"] = "gtd_20200511_db3";
 		$connectionsIds["Gráfico Tarefas criadas por Usuário"] = "gtd_20200511_db3";
-		$connectionsIds["tb_categorias"] = "gtd_20200511_db3";
-		$connectionsIds["tb_categorias_x_atividades"] = "gtd_20200511_db3";
-		$connectionsIds["vw_tarefas_categorias"] = "gtd_20200511_db3";
+		$connectionsIds["tb_rotulos"] = "gtd_20200511_db3";
+		$connectionsIds["tb_tarefas_x_rotulos"] = "gtd_20200511_db3";
+		$connectionsIds["vw_dominio_tempo"] = "gtd_20200511_db3";
+		$connectionsIds["vw_dominio_prioridade"] = "gtd_20200511_db3";
+		$connectionsIds["vw_tarefas_rotulos"] = "gtd_20200511_db3";
+		$connectionsIds["tb_tarefas_ocorrencias"] = "gtd_20200511_db3";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

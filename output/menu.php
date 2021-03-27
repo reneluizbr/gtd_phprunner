@@ -53,10 +53,10 @@ include_once(getabspath("include/proc_limpar_tarefas_de_lista_events.php"));
 $tableEvents["proc_limpar_tarefas_de_lista"] = new eventclass_proc_limpar_tarefas_de_lista;
 include_once(getabspath("include/tb_parametros_events.php"));
 $tableEvents["tb_parametros"] = new eventclass_tb_parametros;
-include_once(getabspath("include/tb_categorias_events.php"));
-$tableEvents["tb_categorias"] = new eventclass_tb_categorias;
-include_once(getabspath("include/tb_categorias_x_atividades_events.php"));
-$tableEvents["tb_categorias_x_atividades"] = new eventclass_tb_categorias_x_atividades;
+include_once(getabspath("include/tb_rotulos_events.php"));
+$tableEvents["tb_rotulos"] = new eventclass_tb_rotulos;
+include_once(getabspath("include/tb_tarefas_x_rotulos_events.php"));
+$tableEvents["tb_tarefas_x_rotulos"] = new eventclass_tb_tarefas_x_rotulos;
 
 $xt = new Xtempl();
 

@@ -285,7 +285,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("dashboard_graficos", " " . GetTableCaption("Dashboard_Graficos"));
-$table = "tb_categorias";
+$table = "tb_rotulos";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -302,8 +302,8 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 $mask .= "M";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("tb_categorias", " " . GetTableCaption("tb_categorias"));
-$table = "tb_categorias_x_atividades";
+$tables[$table] = array("tb_rotulos", " " . GetTableCaption("tb_rotulos"));
+$table = "tb_tarefas_x_rotulos";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -319,8 +319,8 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("tb_categorias_x_atividades", " " . GetTableCaption("tb_categorias_x_atividades"));
-$table = "vw_tarefas_categorias";
+$tables[$table] = array("tb_tarefas_x_rotulos", " " . GetTableCaption("tb_tarefas_x_rotulos"));
+$table = "vw_dominio_tempo";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -334,10 +334,60 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 	$mask .= "S";
 if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
 	$mask .= "P";
-$mask .= "M";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("vw_tarefas_categorias", " " . GetTableCaption("vw_tarefas_categorias"));
+$tables[$table] = array("vw_dominio_tempo", " " . GetTableCaption("vw_dominio_tempo"));
+$table = "vw_dominio_prioridade";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("vw_dominio_prioridade", " " . GetTableCaption("vw_dominio_prioridade"));
+$table = "vw_tarefas_rotulos";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("vw_tarefas_rotulos", " " . GetTableCaption("vw_tarefas_rotulos"));
+$table = "tb_tarefas_ocorrencias";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("tb_tarefas_ocorrencias", " " . GetTableCaption("tb_tarefas_ocorrencias"));
 
 require_once('include/xtempl.php');
 require_once('classes/listpage.php');

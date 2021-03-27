@@ -33,9 +33,12 @@ $nonAdminTablesArr[] = "Gráfico Tarefas por Status";
 $nonAdminTablesArr[] = "Gráfico Tarefas por Prioridade";
 $nonAdminTablesArr[] = "Gráfico Tarefas criadas por Usuário";
 $nonAdminTablesArr[] = "Dashboard_Graficos";
-$nonAdminTablesArr[] = "tb_categorias";
-$nonAdminTablesArr[] = "tb_categorias_x_atividades";
-$nonAdminTablesArr[] = "vw_tarefas_categorias";
+$nonAdminTablesArr[] = "tb_rotulos";
+$nonAdminTablesArr[] = "tb_tarefas_x_rotulos";
+$nonAdminTablesArr[] = "vw_dominio_tempo";
+$nonAdminTablesArr[] = "vw_dominio_prioridade";
+$nonAdminTablesArr[] = "vw_tarefas_rotulos";
+$nonAdminTablesArr[] = "tb_tarefas_ocorrencias";
 
 $ug_connection = $cman->getForUserGroups();
 

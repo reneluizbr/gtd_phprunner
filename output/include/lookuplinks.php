@@ -61,20 +61,20 @@ function InitLookupLinks()
 			$lookupTableLinks["tb_status_atividades"]["tb_atividade.stat_id"] = array();
 		}
 		$lookupTableLinks["tb_status_atividades"]["tb_atividade.stat_id"]["edit"] = array("table" => "tb_atividade", "field" => "stat_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["tb_dominios"] ) ) {
-			$lookupTableLinks["tb_dominios"] = array();
+		if( !isset( $lookupTableLinks["vw_dominio_prioridade"] ) ) {
+			$lookupTableLinks["vw_dominio_prioridade"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_dominios"]["tb_atividade.ativ_prioridade"] )) {
-			$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_prioridade"] = array();
+		if( !isset( $lookupTableLinks["vw_dominio_prioridade"]["tb_atividade.ativ_prioridade"] )) {
+			$lookupTableLinks["vw_dominio_prioridade"]["tb_atividade.ativ_prioridade"] = array();
 		}
-		$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_prioridade"]["edit"] = array("table" => "tb_atividade", "field" => "ativ_prioridade", "page" => "edit");
-		if( !isset( $lookupTableLinks["tb_dominios"] ) ) {
-			$lookupTableLinks["tb_dominios"] = array();
+		$lookupTableLinks["vw_dominio_prioridade"]["tb_atividade.ativ_prioridade"]["edit"] = array("table" => "tb_atividade", "field" => "ativ_prioridade", "page" => "edit");
+		if( !isset( $lookupTableLinks["vw_dominio_tempo"] ) ) {
+			$lookupTableLinks["vw_dominio_tempo"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_dominios"]["tb_atividade.ativ_domi_unid_tempo"] )) {
-			$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_domi_unid_tempo"] = array();
+		if( !isset( $lookupTableLinks["vw_dominio_tempo"]["tb_atividade.ativ_domi_unid_tempo"] )) {
+			$lookupTableLinks["vw_dominio_tempo"]["tb_atividade.ativ_domi_unid_tempo"] = array();
 		}
-		$lookupTableLinks["tb_dominios"]["tb_atividade.ativ_domi_unid_tempo"]["edit"] = array("table" => "tb_atividade", "field" => "ativ_domi_unid_tempo", "page" => "edit");
+		$lookupTableLinks["vw_dominio_tempo"]["tb_atividade.ativ_domi_unid_tempo"]["edit"] = array("table" => "tb_atividade", "field" => "ativ_domi_unid_tempo", "page" => "edit");
 		if( !isset( $lookupTableLinks["tb_dominios"] ) ) {
 			$lookupTableLinks["tb_dominios"] = array();
 		}
@@ -197,24 +197,38 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
 			$lookupTableLinks["tb_clientes"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_clientes"]["tb_categorias.clie_id"] )) {
-			$lookupTableLinks["tb_clientes"]["tb_categorias.clie_id"] = array();
+		if( !isset( $lookupTableLinks["tb_clientes"]["tb_rotulos.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["tb_rotulos.clie_id"] = array();
 		}
-		$lookupTableLinks["tb_clientes"]["tb_categorias.clie_id"]["edit"] = array("table" => "tb_categorias", "field" => "clie_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["tb_categorias"] ) ) {
-			$lookupTableLinks["tb_categorias"] = array();
+		$lookupTableLinks["tb_clientes"]["tb_rotulos.clie_id"]["edit"] = array("table" => "tb_rotulos", "field" => "clie_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_rotulos"] ) ) {
+			$lookupTableLinks["tb_rotulos"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_categorias"]["tb_categorias_x_atividades.cate_id"] )) {
-			$lookupTableLinks["tb_categorias"]["tb_categorias_x_atividades.cate_id"] = array();
+		if( !isset( $lookupTableLinks["tb_rotulos"]["tb_tarefas_x_rotulos.cate_id"] )) {
+			$lookupTableLinks["tb_rotulos"]["tb_tarefas_x_rotulos.cate_id"] = array();
 		}
-		$lookupTableLinks["tb_categorias"]["tb_categorias_x_atividades.cate_id"]["edit"] = array("table" => "tb_categorias_x_atividades", "field" => "cate_id", "page" => "edit");
+		$lookupTableLinks["tb_rotulos"]["tb_tarefas_x_rotulos.cate_id"]["edit"] = array("table" => "tb_tarefas_x_rotulos", "field" => "cate_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["tb_atividade"] ) ) {
 			$lookupTableLinks["tb_atividade"] = array();
 		}
-		if( !isset( $lookupTableLinks["tb_atividade"]["tb_categorias_x_atividades.ativ_id"] )) {
-			$lookupTableLinks["tb_atividade"]["tb_categorias_x_atividades.ativ_id"] = array();
+		if( !isset( $lookupTableLinks["tb_atividade"]["tb_tarefas_x_rotulos.ativ_id"] )) {
+			$lookupTableLinks["tb_atividade"]["tb_tarefas_x_rotulos.ativ_id"] = array();
 		}
-		$lookupTableLinks["tb_atividade"]["tb_categorias_x_atividades.ativ_id"]["edit"] = array("table" => "tb_categorias_x_atividades", "field" => "ativ_id", "page" => "edit");
+		$lookupTableLinks["tb_atividade"]["tb_tarefas_x_rotulos.ativ_id"]["edit"] = array("table" => "tb_tarefas_x_rotulos", "field" => "ativ_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_atividade"] ) ) {
+			$lookupTableLinks["tb_atividade"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_atividade"]["tb_tarefas_ocorrencias.ativ_id"] )) {
+			$lookupTableLinks["tb_atividade"]["tb_tarefas_ocorrencias.ativ_id"] = array();
+		}
+		$lookupTableLinks["tb_atividade"]["tb_tarefas_ocorrencias.ativ_id"]["edit"] = array("table" => "tb_tarefas_ocorrencias", "field" => "ativ_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["tb_clientes"] ) ) {
+			$lookupTableLinks["tb_clientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["tb_clientes"]["tb_tarefas_ocorrencias.clie_id"] )) {
+			$lookupTableLinks["tb_clientes"]["tb_tarefas_ocorrencias.clie_id"] = array();
+		}
+		$lookupTableLinks["tb_clientes"]["tb_tarefas_ocorrencias.clie_id"]["edit"] = array("table" => "tb_tarefas_ocorrencias", "field" => "clie_id", "page" => "edit");
 }
 
 ?>

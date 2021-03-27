@@ -73,7 +73,7 @@
 -- (Grupo 01) Implementar tabela basicas Autenticação e Autorização
 -- --------------------------------------------------------------------------------
 -- Clientes. Podem abrigar N usuarios (no caso de contas compatilhadas)
-.print Criando tabela 01/12
+.print Criando tabela 01/13
 CREATE TABLE tb_clientes
    (clie_id            INTEGER       primary key AUTOINCREMENT not null  --comment 'Identificador global do cliente, que pode ter 1 ou N users.'
    ,clie_nm_reduzido   VARCHAR (20)  not null              --comment 'Nome reduzido, apelido, ou nome fantasia (no caso de empresa)'
@@ -91,7 +91,7 @@ CREATE TABLE tb_clientes
    CREATE UNIQUE INDEX ux_clie_email ON tb_clientes (clie_email);
 
 -- Usuarios. Logins que acessam o sistema pelo email
-.print Criando tabela 02/12
+.print Criando tabela 02/13
 CREATE TABLE tb_usuarios
    (usua_id           INTEGER       primary key AUTOINCREMENT not null --comment 'ID do usuario'
    ,clie_id           INTEGER      NOT NULL DEFAULT '0'    --comment 'Identificador global do cliente, 0-Cliente auto cadastrado'
@@ -116,7 +116,7 @@ CREATE TABLE tb_usuarios
 -- (Grupo 02) Criacao das tabelas de Valores e Faturamento
 -- --------------------------------------------------------------------------------
 -- Tipos de Planos (ex: "Free", "Pessoal", "Colaborativo", "Empresas")
-.print Criando tabela 03/12
+.print Criando tabela 03/13
 CREATE TABLE tb_planos
    (plan_id         INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT  --comment 'PK da tabela'
    ,plan_domi_tipo  VARCHAR (60) NOT NULL DEFAULT 'GRATIS'  --comment 'Valor para o Dominio/Grupo "TIPO_PLANO"'
@@ -129,7 +129,7 @@ CREATE TABLE tb_planos
    );
 
 -- Valores de cada Plano com datas de vigência do valor de cada plano
-.print Criando tabela 04/12
+.print Criando tabela 04/13
 CREATE TABLE tb_planos_valores
    (plva_id            INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT
    ,plan_id            INTEGER  NOT NULL
@@ -144,7 +144,7 @@ CREATE TABLE tb_planos_valores
    );
 
 -- Plano que o Cliente tem (ou ja teve) com datas de vigência de cada plano
-.print Criando tabela 05/12
+.print Criando tabela 05/13
 CREATE TABLE tb_clientes_planos
    (clipla_id            INTEGER  not null primary key AUTOINCREMENT   --comment 'PK da tabela'
    ,clie_id              INTEGER  not null               --comment 'Identificador global do cliente'
@@ -164,7 +164,7 @@ CREATE TABLE tb_clientes_planos
 -- (Grupo 03) Criacao das tabelas de Dominios
 -- --------------------------------------------------------------------------------
 -- Códigos de Listas Gerais para uso no sistema. Ex: Status de Clientes, Status de Usuarios, etc
-.print Criando tabela 06/12
+.print Criando tabela 06/13
 CREATE TABLE tb_dominios
    (domi_id     INTEGER      NOT NULL PRIMARY KEY AUTOINCREMENT --comment 'PK da tabela'
    ,domi_grupo  VARCHAR(100) NOT NULL             --comment 'Sigla de Agrupador do Dominio'
@@ -180,7 +180,7 @@ CREATE TABLE tb_dominios
    CREATE UNIQUE INDEX ux_domi_grupovalor ON tb_dominios (domi_grupo, domi_valor);
 
 -- Parametros e Configuracoes para uso no sistema. Ex: Limites, etc
-.print Criando tabela 07/12
+.print Criando tabela 07/13
 
 CREATE TABLE tb_parametros
     (para_id     INTEGER      NOT NULL PRIMARY KEY AUTOINCREMENT --comment 'PK da tabela'
@@ -197,7 +197,7 @@ CREATE TABLE tb_parametros
 
 -- Tabela de Status "mais flexível". Para clientes pagantes configurarem seus status personalizados.
 -- Se cliente "Free" (não pagante) o sistema usara as linhas com "clie_id = -1"
-.print Criando tabela 08/12
+.print Criando tabela 08/13
 CREATE TABLE tb_status_atividades
    (stat_id            INTEGER      primary key AUTOINCREMENT not null --comment 'PK da tabela'
    ,clie_id            INTEGER      not null             --comment 'Identificador global do cliente'
@@ -216,7 +216,7 @@ CREATE TABLE tb_status_atividades
 -- --------------------------------------------------------------------------------
 -- (Grupo 04) Criacao das tabelas de negócio
 -- --------------------------------------------------------------------------------
-.print Criando tabela 09/12
+.print Criando tabela 09/13
 CREATE TABLE tb_lista_atividades
    (lista_id           INTEGER      primary key AUTOINCREMENT not null
    ,clie_id            INTEGER      not null --comment 'Identificador global do cliente'
@@ -228,7 +228,7 @@ CREATE TABLE tb_lista_atividades
    ,foreign key (clie_id) references tb_clientes (clie_id) ON UPDATE RESTRICT ON DELETE RESTRICT
 );
 
-.print Criando tabela 10/12
+.print Criando tabela 10/13
 CREATE TABLE tb_atividade
    (ativ_id              INTEGER      primary key AUTOINCREMENT not null
    ,clie_id              INTEGER      not null             --comment 'Identificador global do cliente'
@@ -257,8 +257,8 @@ CREATE TABLE tb_atividade
    CREATE INDEX ix_ativlista_idx ON tb_atividade (lista_id);
 
 
-.print Criando tabela 11/12
-CREATE TABLE tb_categorias
+.print Criando tabela 11/13
+CREATE TABLE tb_rotulos
    (cate_id         INTEGER      primary key AUTOINCREMENT not null
    ,clie_id         INTEGER      not null             --comment 'Identificador global do cliente'
    ,cate_nm         VARCHAR (50) not null             --comment 'Nome'
@@ -269,19 +269,42 @@ CREATE TABLE tb_categorias
    ,foreign key (clie_id)  references tb_clientes (clie_id) ON UPDATE RESTRICT ON DELETE RESTRICT
 );
 
-.print Criando tabela 12/12
-CREATE TABLE tb_categorias_x_atividades
+.print Criando tabela 12/13
+CREATE TABLE tb_tarefas_x_rotulos
    (caat_id         INTEGER      primary key AUTOINCREMENT not null
    ,cate_id         INTEGER      not null             --comment 'Identificador global da Categoria'
    ,ativ_id         INTEGER      not null             --comment 'Identificador global da Tarefa'
    ,inclu_login     VARCHAR (50) NOT NULL DEFAULT '0'         --comment 'ID do usuario que realizou a inclusao'
    ,inclu_dt        DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
    ,foreign key (ativ_id)  references tb_atividade  (ativ_id) ON UPDATE RESTRICT ON DELETE CASCADE
-   ,foreign key (cate_id)  references tb_categorias (cate_id) ON UPDATE RESTRICT ON DELETE CASCADE
+   ,foreign key (cate_id)  references tb_rotulos (cate_id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
 -- Criacao de Indices Unicos e Gerais
-   CREATE INDEX ix_caat_cate_idx ON tb_categorias (cate_id);
+   CREATE INDEX ix_caat_cate_idx ON tb_rotulos (cate_id);
    CREATE INDEX ix_caat_ativ_idx ON tb_atividade  (ativ_id);
+-- --------------------------------------------------------------------------------
+
+.print Criando tabela 13/13
+DROP TABLE IF EXISTS tb_tarefas_ocorrencias;
+CREATE TABLE tb_tarefas_ocorrencias
+   -- Criando com nomes de coluna fora do padrao Oracle para testes de praticidade
+   (ID_Ocorrencia   INTEGER      primary key AUTOINCREMENT not null
+   ,ativ_id         INTEGER       NOT NULL   --comment 'Identificador global da Tarefa'
+   ,clie_id         INTEGER       NOT NULL   --comment 'Identificador global do cliente'
+   ,Data_Hora       DATETIME      NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now'))
+   ,Comentario      VARCHAR2(500) NOT NULL
+   ,Concluida       NUMBER(1)     NOT NULL DEFAULT '0'         --Ocorrencia marcada como finalizada (0/1)
+   ,inclu_login     VARCHAR (50)  NOT NULL DEFAULT '0'         --comment 'ID do usuario que realizou a inclusao'
+   ,inclu_dt        DATETIME      NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%S','now')) --comment 'Data e hora em que foi realizada a inclusao'
+   ,alter_login     VARCHAR (50)                        --comment 'ID do usuario que realizou a alteracao'
+   ,alter_dt        DATETIME                            --comment 'Data e hora em que foi realizada a alteracao'
+   ,foreign key (ativ_id)  references tb_atividade  (ativ_id) ON UPDATE RESTRICT ON DELETE CASCADE
+   ,foreign key (clie_id)  references tb_rotulos (clie_id)    ON UPDATE RESTRICT ON DELETE CASCADE
+);
+-- Criacao de Indices Unicos e Gerais
+   CREATE INDEX ix_ocor_clie_idx ON tb_tarefas_ocorrencias (clie_id);
+   CREATE INDEX ix_ocor_ativ_idx ON tb_tarefas_ocorrencias (ativ_id);
+   CREATE INDEX ix_ocor_data_idx ON tb_tarefas_ocorrencias (data_hora);
 -- --------------------------------------------------------------------------------
 
 -- --------------------------------------------------------------------------------
@@ -289,9 +312,9 @@ CREATE TABLE tb_categorias_x_atividades
 -- --------------------------------------------------------------------------------
 -- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-DROP VIEW IF EXISTS vw_tarefas_categorias_v1;
+DROP VIEW IF EXISTS vw_tarefas_rotulos_v1;
 /*
-   CREATE VIEW vw_tarefas_categorias_v1
+   CREATE VIEW vw_tarefas_rotulos_v1
    AS
       SELECT a.ativ_id
          ,a.clie_id
@@ -310,29 +333,28 @@ DROP VIEW IF EXISTS vw_tarefas_categorias_v1;
          ,a.inclu_dt
          ,a.alter_login
          ,a.alter_dt
-      , GROUP_CONCAT(cate_nm,', ') as Categorias
+      , GROUP_CONCAT(cate_nm,', ') as Rotulos
       FROM tb_atividade a
-      LEFT JOIN tb_categorias_x_atividades ca ON a.ativ_id = ca.ativ_id
-      LEFT JOIN tb_categorias c               ON c.cate_id = ca.cate_id
+      LEFT JOIN tb_tarefas_x_rotulos ca ON a.ativ_id = ca.ativ_id
+      LEFT JOIN tb_rotulos c               ON c.cate_id = ca.cate_id
       LEFT JOIN tb_lista_atividades l         ON a.lista_id = l.lista_id
       LEFT JOIN tb_status_atividades s        ON a.stat_id = s.stat_id
       GROUP BY a.ativ_id
    ;
 */
-DROP VIEW IF EXISTS vw_tarefas_categorias_v1;
+DROP VIEW IF EXISTS vw_tarefas_rotulos_v1;
 
 
-
-DROP VIEW IF EXISTS vw_tarefas_categorias;
-CREATE VIEW vw_tarefas_categorias
+DROP VIEW "main"."vw_tarefas_rotulos";
+CREATE VIEW vw_tarefas_rotulos
 AS
-   SELECT CAST(GROUP_CONCAT(cate_nm,', ') AS VARCHAR(200)) as Categorias
+   SELECT CAST(GROUP_CONCAT(cate_nm,', ') AS VARCHAR(200)) as Rotulos
       , tb.*
    FROM ( /* Necessario criar subquery para seguir ordem de cate_nm*/
       SELECT a.ativ_id
          ,a.clie_id
          ,a.ativ_nm
-         ,c.cate_nm
+         ,r.cate_nm
          ,a.ativ_ds
          ,a.lista_id
          ,l.lista_nm
@@ -347,15 +369,15 @@ AS
          ,a.inclu_dt
          ,a.alter_login
          ,a.alter_dt
-      -- , GROUP_CONCAT(cate_nm,', ') as Categorias
+      -- , GROUP_CONCAT(cate_nm,', ') as Rotulos
       FROM tb_atividade a
-      LEFT JOIN tb_categorias_x_atividades ca ON a.ativ_id = ca.ativ_id
-      LEFT JOIN tb_categorias c               ON c.cate_id = ca.cate_id
+      LEFT JOIN tb_tarefas_x_rotulos tr       ON a.ativ_id = tr.ativ_id
+      LEFT JOIN tb_rotulos r                  ON r.cate_id = tr.cate_id
       LEFT JOIN tb_lista_atividades l         ON a.lista_id = l.lista_id
       LEFT JOIN tb_status_atividades s        ON a.stat_id = s.stat_id
       -- GROUP BY a.ativ_id
-      ORDER BY c.cate_nm
-   ) AS tb
+      ORDER BY r.cate_nm
+     ) AS tb
    GROUP BY ativ_id
 ;
 
@@ -388,6 +410,36 @@ AS
          END AS domi_exibe
          ,"Spanish" AS IDIOMA
          FROM tb_dominios WHERE domi_grupo = "TEMPO_UNIDADE"
+   )
+   --WHERE idioma = $_SESSION["language"]
+   ORDER BY IDIOMA, domi_ordem
+
+
+DROP VIEW IF EXISTS vw_dominio_prioridade;
+CREATE VIEW vw_dominio_prioridade
+AS
+   SELECT * FROM (
+      SELECT domi_grupo,domi_ordem,domi_valor,domi_exibe
+      ,"Portuguese(Brazil)" AS IDIOMA
+      FROM tb_dominios WHERE domi_grupo = "PRIORIDADE_ATIVIDADE"
+      UNION
+         SELECT domi_grupo,domi_ordem,domi_valor,
+         CASE domi_valor
+         WHEN "ALTA"    THEN "1-High"
+         WHEN "MEDIA"   THEN "2-Medium"
+         WHEN "BAIXA"   THEN "3-Low"
+         END AS domi_exibe
+         ,"English" AS IDIOMA
+         FROM tb_dominios WHERE domi_grupo = "PRIORIDADE_ATIVIDADE"
+      UNION
+         SELECT domi_grupo,domi_ordem,domi_valor,
+         CASE domi_valor
+         WHEN "ALTA"    THEN "1-Alto"
+         WHEN "MEDIA"   THEN "2-Promedio"
+         WHEN "BAIXA"   THEN "3-Bajo"
+         END AS domi_exibe
+         ,"Spanish" AS IDIOMA
+         FROM tb_dominios WHERE domi_grupo = "PRIORIDADE_ATIVIDADE"
    )
    --WHERE idioma = $_SESSION["language"]
    ORDER BY IDIOMA, domi_ordem

@@ -239,9 +239,9 @@ $tdatagr_fico_tarefas_por_prioridade[".strOrderBy"] = $tstrOrderBy;
 
 $tdatagr_fico_tarefas_por_prioridade[".orderindexes"] = array();
 
-$tdatagr_fico_tarefas_por_prioridade[".sqlHead"] = "SELECT A.clie_id, domi_valor, domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade, COUNT(A.ativ_id) AS Qtde";
-$tdatagr_fico_tarefas_por_prioridade[".sqlFrom"] = "FROM tb_atividade AS A , tb_dominios AS D";
-$tdatagr_fico_tarefas_por_prioridade[".sqlWhereExpr"] = "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+$tdatagr_fico_tarefas_por_prioridade[".sqlHead"] = "SELECT A.clie_id,  domi_valor,  domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade,  COUNT(A.ativ_id) AS Qtde";
+$tdatagr_fico_tarefas_por_prioridade[".sqlFrom"] = "FROM tb_atividade AS A  , tb_dominios AS D";
+$tdatagr_fico_tarefas_por_prioridade[".sqlWhereExpr"] = "(A.ativ_prioridade = D.domi_valor) AND (D.domi_grupo = 'PRIORIDADE_ATIVIDADE')";
 $tdatagr_fico_tarefas_por_prioridade[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -982,18 +982,18 @@ function createSqlQuery_gr_fico_tarefas_por_prioridade()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "A.clie_id, domi_valor, domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade, COUNT(A.ativ_id) AS Qtde";
-$proto0["m_strFrom"] = "FROM tb_atividade AS A , tb_dominios AS D";
-$proto0["m_strWhere"] = "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+$proto0["m_strFieldList"] = "A.clie_id,  domi_valor,  domi_exibe || ' (' || COUNT(A.ativ_id) || ')' AS Prioridade,  COUNT(A.ativ_id) AS Qtde";
+$proto0["m_strFrom"] = "FROM tb_atividade AS A  , tb_dominios AS D";
+$proto0["m_strWhere"] = "(A.ativ_prioridade = D.domi_valor) AND (D.domi_grupo = 'PRIORIDADE_ATIVIDADE')";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+$proto2["m_sql"] = "(A.ativ_prioridade = D.domi_valor) AND (D.domi_grupo = 'PRIORIDADE_ATIVIDADE')";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "(A.ativ_prioridade = D.domi_valor) AND D.domi_grupo = 'PRIORIDADE_ATIVIDADE'"
+	"m_sql" => "(A.ativ_prioridade = D.domi_valor) AND (D.domi_grupo = 'PRIORIDADE_ATIVIDADE')"
 ));
 
 $proto2["m_column"]=$obj;
@@ -1029,7 +1029,7 @@ $proto6["m_column"]=$obj;
 $proto6["m_contained"] = array();
 $proto6["m_strCase"] = "= 'PRIORIDADE_ATIVIDADE'";
 $proto6["m_havingmode"] = false;
-$proto6["m_inBrackets"] = false;
+$proto6["m_inBrackets"] = true;
 $proto6["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto6);
 

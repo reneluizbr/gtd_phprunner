@@ -44,13 +44,13 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Dashboard_Graficos_snippet3"] = true;
 		$this->events["Dashboard_Graficos_snippet1"] = true;
 
-		$this->events["GetTablePermissions"]["tb_categorias"] = true;
+		$this->events["GetTablePermissions"]["tb_rotulos"] = true;
 
 		$this->events["IsRecordEditable"]["tb_atividade"] = true;
 		$this->events["IsRecordEditable"]["tb_lista_atividades"] = true;
 		$this->events["IsRecordEditable"]["tb_status_atividades"] = true;
 		$this->events["IsRecordEditable"]["tb_usuarios"] = true;
-		$this->events["IsRecordEditable"]["tb_categorias"] = true;
+		$this->events["IsRecordEditable"]["tb_rotulos"] = true;
 
 		}
 
@@ -562,7 +562,7 @@ echo $res;
 		global $strTableName;
 		if($table == "")
 			$table = $strTableName;
-		if($table == "tb_categorias")
+		if($table == "tb_rotulos")
 		{
 			
 
@@ -629,7 +629,7 @@ $isEditable = true;
 
 return $isEditable;;
 		}
-		if($table == "tb_categorias")
+		if($table == "tb_rotulos")
 		{
 			
 

@@ -58,9 +58,6 @@
 [data-page=".global_menu"][data-itemid="welcome_item19"] > .bs-welcome-header {
   background-color: #4682B4;
 }
-[data-page=".global_menu"][data-itemid="welcome_item20"] > .bs-welcome-header {
-  background-color: #ff2ad3;
-}
 [data-page=".global_menu"][data-itemid="welcome_group"] {
   background-color: #ff2ad3;
   color: #ffffff;
@@ -72,6 +69,19 @@
 }
 [data-page=".global_menu"][data-itemid="welcome_group2"] {
   background-color: #77d586;
+}
+[data-page=".global_menu"][data-itemid="welcome_item20"] > .bs-welcome-header {
+  background-color: #ff2ad3;
+}
+[data-page=".global_menu"][data-itemid="welcome_group3"] {
+  background-color: #ffbc00;
+}
+[data-page=".global_menu"][data-itemid="welcome_group4"] {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+[data-page=".global_menu"][data-itemid="welcome_item21"] > .bs-welcome-header {
+  background-color: #DB7093;
 }
 
 /* Put  your custom CSS code here */

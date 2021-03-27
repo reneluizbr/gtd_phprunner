@@ -136,6 +136,31 @@ pdfDocument = {
 		[
 												
 {
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+											],
+								
+		[
+												
+{
 	cellId: 'c2',
 	col:0,
 	row:0,
@@ -1171,9 +1196,19 @@ pdfDocument = {
 			"stack": [
 		
 				
-			 {BEGIN details_tb_categorias_x_atividades}
-			{$displayDetailTable_tb_categorias_x_atividades }
-		{END details_tb_categorias_x_atividades},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
+				
+			 {BEGIN details_tb_tarefas_x_rotulos}
+			{$displayDetailTable_tb_tarefas_x_rotulos }
+		{END details_tb_tarefas_x_rotulos},
+				
+				
+			 {BEGIN details_tb_tarefas_ocorrencias}
+			{$displayDetailTable_tb_tarefas_ocorrencias }
+		{END details_tb_tarefas_ocorrencias},
 				
 		  ],
   "border": [ true, true, true, true ],

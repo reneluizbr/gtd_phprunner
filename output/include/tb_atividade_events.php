@@ -21,6 +21,7 @@
 		$this->events["IsRecordEditable"]=true;
 
 
+
 	}
 
 //	handlers
@@ -350,6 +351,65 @@ return $isEditable;
 ;		
 } // function IsRecordEditable
 
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

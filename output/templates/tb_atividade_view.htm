@@ -788,23 +788,65 @@
 				 
 	 
 												
-{BEGIN details_tb_categorias_x_atividades}
+{BEGIN details_}
 <div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
 	<div class="panel panel-info details-grid">
 		<div class="panel-heading">
 			<h4 class="panel-title">
 							{$caption tb_categorias_x_atividades }				
 							<span>
-					{$detailslButtons_tb_categorias_x_atividades}
+					{$detailslButtons_}
 																				</span>
 			</h4>
 		</div>
 		<div class="panel-body">
-			{$displayDetailTable_tb_categorias_x_atividades}
+			{$displayDetailTable_}
 		</div>
 	</div>
 </div>
-{END details_tb_categorias_x_atividades}
+{END details_}
+	
+				 
+	 
+												
+{BEGIN details_tb_tarefas_x_rotulos}
+<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption tb_tarefas_x_rotulos }				
+							<span>
+					{$detailslButtons_tb_tarefas_x_rotulos}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_tb_tarefas_x_rotulos}
+		</div>
+	</div>
+</div>
+{END details_tb_tarefas_x_rotulos}
+	
+				 
+	 
+												
+{BEGIN details_tb_tarefas_ocorrencias}
+<div data-itemtype="details_preview" data-itemid="details_preview2" {$item_details_preview2} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption tb_tarefas_ocorrencias }				
+							<span>
+					{$detailslButtons_tb_tarefas_ocorrencias}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_tb_tarefas_ocorrencias}
+		</div>
+	</div>
+</div>
+{END details_tb_tarefas_ocorrencias}
 	
 				{END grid_block}
 									{BEGIN below-grid_block}
@@ -857,6 +899,20 @@
 		</a>
 	</li>
 {END edit_page_button}
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Tarefas.pdf" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		{mlang_message PDF_VIEW}		
+		</a>
+	</li>
 					</ul>
 	</span>
 </span>

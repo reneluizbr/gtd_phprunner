@@ -164,7 +164,7 @@ tb_parametros;inclu_login;"Included by";"Incluído por";"Inclu Login";;;;;;
 tb_parametros;inclu_dt;"Included on";"Incluído em";"Inclu Dt";;;;;;
 tb_parametros;alter_login;"Changed by";"Alterado por";"Alter Login";;;;;;
 tb_parametros;alter_dt;"Changed on";"Alterado em";"Alter Dt";;;;;;
-Dashboard_Lista_e_Tarefas;;"Dashboard Lista E Tarefas";"Dashboard Lista e Tarefas";"Dashboard Lista E Tarefas";;;;;;
+Dashboard_Lista_e_Tarefas;;"Dashboard Lista E Tarefas";"Dashboard Lista E Tarefas";"Dashboard Lista E Tarefas";;;;;;
 Dashboard_Lista_e_Tarefas;tb_lista_atividades_lista_id;"Tb Lista Atividades Lista Id";"Tb Lista Atividades Lista Id";"Tb Lista Atividades Lista Id";;;;;;
 Dashboard_Lista_e_Tarefas;tb_lista_atividades_clie_id;"Tb Lista Atividades Clie Id";"Tb Lista Atividades Clie Id";"Tb Lista Atividades Clie Id";;;;;;
 Dashboard_Lista_e_Tarefas;tb_lista_atividades_lista_nm;"Tb Lista Atividades Lista Nm";"Tb Lista Atividades Lista Nm";"Tb Lista Atividades Lista Nm";;;;;;
@@ -217,45 +217,198 @@ Dashboard_Graficos;Gr_fico_Tarefas_por_Prioridade_Qtde;"Gr Fico Tarefas Por Prio
 Dashboard_Graficos;Gr_fico_Tarefas_criadas_por_Usu_rio_clie_id;"Gr Fico Tarefas Criadas Por Usu Rio Clie Id";"Gr Fico Tarefas Criadas Por Usu Rio Clie Id";"Gr Fico Tarefas Criadas Por Usu Rio Clie Id";;;;;;
 Dashboard_Graficos;Gr_fico_Tarefas_criadas_por_Usu_rio_inclu_login;"Gr Fico Tarefas Criadas Por Usu Rio Inclu Login";"Gr Fico Tarefas Criadas Por Usu Rio Inclu Login";"Gr Fico Tarefas Criadas Por Usu Rio Inclu Login";;;;;;
 Dashboard_Graficos;Gr_fico_Tarefas_criadas_por_Usu_rio_qtde;"Gr Fico Tarefas Criadas Por Usu Rio Qtde";"Gr Fico Tarefas Criadas Por Usu Rio Qtde";"Gr Fico Tarefas Criadas Por Usu Rio Qtde";;;;;;
-tb_categorias;;Categories;Categorias;Categorias;;;;;;
-tb_categorias;cate_id;ID;ID;"Cate Id";;;;;;
-tb_categorias;clie_id;Customer;Cliente;"Clie Id";;;;;;
-tb_categorias;cate_nm;Category;Categoria;"Cate Nm";;;;;;
-tb_categorias;inclu_login;"Included by";"Incluído por";"Inclu Login";;;;;;
-tb_categorias;inclu_dt;"Included on";"Incluído em";"Inclu Dt";;;;;;
-tb_categorias;alter_login;"Changed by";"Alterado por";"Alter Login";;;;;;
-tb_categorias;alter_dt;"Changed on";"Alterado em";"Alter Dt";;;;;;
-tb_categorias_x_atividades;;"Task's Categories";"Categorias por Atividades";"Categorias X Atividades";;;;;;
-tb_categorias_x_atividades;caat_id;ID;ID;"Caat Id";;;;;;
-tb_categorias_x_atividades;cate_id;Category;Categoria;"Cate Id";;;;;;
-tb_categorias_x_atividades;ativ_id;Task;Atividade;"Ativ Id";;;;;;
-tb_categorias_x_atividades;inclu_login;by;por;"Inclu Login";;;;;;
-tb_categorias_x_atividades;inclu_dt;"Included on";"Incluído em";"Inclu Dt";;;;;;
-vw_tarefas_categorias;;"Vw Tasks and Categories";"Vw Tarefas Categorias";"Vw Tarefas Categorias";;;;;;
-vw_tarefas_categorias;Categorias;Categories;Categorias;Categorias;;;;;;
-vw_tarefas_categorias;ativ_id;"Task Id";"Ativ Id";"Ativ Id";;;;;;
-vw_tarefas_categorias;clie_id;Customer;Cliente;"Clie Id";;;;;;
-vw_tarefas_categorias;ativ_nm;"Task Name";"Ativ Nm";"Ativ Nm";;;;;;
-vw_tarefas_categorias;cate_nm;Categoria;Categoria;"Cate Nm";;;;;;
-vw_tarefas_categorias;ativ_ds;"Task Descr.";"Ativ Ds";"Ativ Ds";;;;;;
-vw_tarefas_categorias;lista_id;"List ID";"Lista Id";"Lista Id";;;;;;
-vw_tarefas_categorias;lista_nm;"List Name";"Lista Nm";"Lista Nm";;;;;;
-vw_tarefas_categorias;stat_id;"Status ID";"Status ID";"Stat Id";;;;;;
-vw_tarefas_categorias;stat_nm;"Status Name";"Nome Status";"Stat Nm";;;;;;
-vw_tarefas_categorias;ativ_fl_ativo;Active;"Ativ Fl Ativo";"Ativ Fl Ativo";;;;;;
-vw_tarefas_categorias;ativ_prioridade;"Task Priority";"Ativ Prioridade";"Ativ Prioridade";;;;;;
-vw_tarefas_categorias;ativ_concluida;Concluded;Concluída;"Ativ Concluida";;;;;;
-vw_tarefas_categorias;ativ_dt_ini;"Start Date";"Ativ Dt Ini";"Ativ Dt Ini";;;;;;
-vw_tarefas_categorias;ativ_dt_fim;"End Date";"Ativ Dt Fim";"Ativ Dt Fim";;;;;;
-vw_tarefas_categorias;inclu_login;"Included by";"Incluído por";"Inclu Login";;;;;;
-vw_tarefas_categorias;inclu_dt;"Included on";"Incluído em";"Inclu Dt";;;;;;
-vw_tarefas_categorias;alter_login;"Changed by";"Alterado por";"Alter Login";;;;;;
-vw_tarefas_categorias;alter_dt;"Changed on";"Alterado em";"Alter Dt";;;;;;
+tb_rotulos;;Categories;Categorias;Categorias;;;;;;
+tb_rotulos;cate_id;ID;ID;"Cate Id";;;;;;
+tb_rotulos;clie_id;Customer;Cliente;"Clie Id";;;;;;
+tb_rotulos;cate_nm;"Label, Tag";"Rótulo, Etiqueta";"(es) Rótulo, Etiqueta";;;;;;
+tb_rotulos;inclu_login;"Included by";"Incluído por";"Inclu Login";;;;;;
+tb_rotulos;inclu_dt;"Included on";"Incluído em";"Inclu Dt";;;;;;
+tb_rotulos;alter_login;"Changed by";"Alterado por";"Alter Login";;;;;;
+tb_rotulos;alter_dt;"Changed on";"Alterado em";"Alter Dt";;;;;;
+tb_tarefas_x_rotulos;;"Tags for Tasks";"Rótulos de Tarefas";"Rótulos de Tarefas";;;;;;
+tb_tarefas_x_rotulos;caat_id;ID;ID;"Caat Id";;;;;;
+tb_tarefas_x_rotulos;cate_id;"Tag ID";"Rótulo, Etiqueta";"(es) Rótulo ID";;;;;;
+tb_tarefas_x_rotulos;ativ_id;Task;Atividade;"Ativ Id";;;;;;
+tb_tarefas_x_rotulos;inclu_login;by;por;"Inclu Login";;;;;;
+tb_tarefas_x_rotulos;inclu_dt;"Included on";"Incluído em";"Inclu Dt";;;;;;
+vw_dominio_tempo;;"Vw Dominio Tempo";"Vw Dominio Tempo";"Vw Dominio Tempo";;;;;;
+vw_dominio_tempo;domi_grupo;"Domi Grupo";"Domi Grupo";"Domi Grupo";;;;;;
+vw_dominio_tempo;domi_ordem;"Domi Ordem";"Domi Ordem";"Domi Ordem";;;;;;
+vw_dominio_tempo;domi_valor;"Domi Valor";"Domi Valor";"Domi Valor";;;;;;
+vw_dominio_tempo;domi_exibe;"Domi Exibe";"Domi Exibe";"Domi Exibe";;;;;;
+vw_dominio_tempo;IDIOMA;IDIOMA;IDIOMA;IDIOMA;;;;;;
+vw_dominio_prioridade;;"Vw Dominio Prioridade";"Vw Dominio Prioridade";"Vw Dominio Prioridade";;;;;;
+vw_dominio_prioridade;domi_grupo;"Domi Grupo";"Domi Grupo";"Domi Grupo";;;;;;
+vw_dominio_prioridade;domi_ordem;"Domi Ordem";"Domi Ordem";"Domi Ordem";;;;;;
+vw_dominio_prioridade;domi_valor;"Domi Valor";"Domi Valor";"Domi Valor";;;;;;
+vw_dominio_prioridade;domi_exibe;"Domi Exibe";"Domi Exibe";"Domi Exibe";;;;;;
+vw_dominio_prioridade;IDIOMA;IDIOMA;IDIOMA;IDIOMA;;;;;;
+vw_tarefas_rotulos;;"Vw Tarefas Rotulos";"Vw Tarefas Rotulos";"Vw Tarefas Rotulos";;;;;;
+vw_tarefas_rotulos;Rotulos;Rotulos;Rotulos;Rotulos;;;;;;
+vw_tarefas_rotulos;ativ_id;"Ativ Id";"Ativ Id";"Ativ Id";;;;;;
+vw_tarefas_rotulos;clie_id;"Clie Id";"Clie Id";"Clie Id";;;;;;
+vw_tarefas_rotulos;ativ_nm;"Ativ Nm";"Ativ Nm";"Ativ Nm";;;;;;
+vw_tarefas_rotulos;cate_nm;"Cate Nm";"Cate Nm";"Cate Nm";;;;;;
+vw_tarefas_rotulos;ativ_ds;"Ativ Ds";"Ativ Ds";"Ativ Ds";;;;;;
+vw_tarefas_rotulos;lista_id;"Lista Id";"Lista Id";"Lista Id";;;;;;
+vw_tarefas_rotulos;lista_nm;"Lista Nm";"Lista Nm";"Lista Nm";;;;;;
+vw_tarefas_rotulos;stat_id;"Stat Id";"Stat Id";"Stat Id";;;;;;
+vw_tarefas_rotulos;stat_nm;"Stat Nm";"Stat Nm";"Stat Nm";;;;;;
+vw_tarefas_rotulos;ativ_fl_ativo;"Ativ Fl Ativo";"Ativ Fl Ativo";"Ativ Fl Ativo";;;;;;
+vw_tarefas_rotulos;ativ_prioridade;"Ativ Prioridade";"Ativ Prioridade";"Ativ Prioridade";;;;;;
+vw_tarefas_rotulos;ativ_concluida;"Ativ Concluida";"Ativ Concluida";"Ativ Concluida";;;;;;
+vw_tarefas_rotulos;ativ_dt_ini;"Ativ Dt Ini";"Ativ Dt Ini";"Ativ Dt Ini";;;;;;
+vw_tarefas_rotulos;ativ_dt_fim;"Ativ Dt Fim";"Ativ Dt Fim";"Ativ Dt Fim";;;;;;
+vw_tarefas_rotulos;inclu_login;"Inclu Login";"Inclu Login";"Inclu Login";;;;;;
+vw_tarefas_rotulos;inclu_dt;"Inclu Dt";"Inclu Dt";"Inclu Dt";;;;;;
+vw_tarefas_rotulos;alter_login;"Alter Login";"Alter Login";"Alter Login";;;;;;
+vw_tarefas_rotulos;alter_dt;"Alter Dt";"Alter Dt";"Alter Dt";;;;;;
+;ASSOCIA__O_ENTRE_AS_TAREFAS_E_SUAS_POSS_VEIS_CATEGORIZA__ES_OU_R_TULOS__ETIQUETAS__;"Association between Tasks and their possible categorizations or labels (tags)";"Associação entre as Tarefas e suas possíveis categorizações ou rótulos (etiquetas)";"Asociación entre Tareas y sus posibles categorizaciones o etiquetas (etiquetas)"
+;CADASTRO_DE_CATEGORIAS_OU_TAMB_M_CONHECIDA_COMO_R_TULOS_OU_ETIQUETAS____UMA_FORMA_N_O_R_GIDA_DE_AGRUPAMENTO_DE_TAREFAS_;"Registering Categories or also known as labels or tags, is a non-rigid form of grouping tasks";"Cadastro de Categorias ou também conhecida como rótulos ou etiquetas, é uma forma não rígida de agrupamento de tarefas";"El registro de categorías o también conocido como etiquetas o etiquetas, es una forma no rígida de agrupación de tareas"
+;CATEGORIAS_DE_ATIVIDADES;"Tasks Categories";"Categorias por Atividades";"(es) Categorias X Atividades"
+;CATEGORIAS_POR_ATIVIDADES;"Tasks's Tags";;"(es) Rótulos por Atividades"
+;CATEGORIES;Tags;Rótulos;"(es) Rótulos"
+;CAT_;Tags;Rótulos;Rótulos
+;CHART_TASKS_BY_PRIORITY;"Chart Tasks by Priority";"Gráfico Tarefas por Prioridade";"(es) Gráfico Tarefas por Prioridade"
+;CHART_TASKS_BY_STATUS;"Chart Tasks by Status";"Gráfico Tarefas por Status";"(es) Gráfico Tarefas por Status"
+;CHART_TASKS_CREATED_BY_USER;"Chart Tasks created by User";"Gráfico Tarefas criadas por Usuário";"(es) Gráfico Tarefas criadas por Usuário"
+;CLIENTES_E_PLANOS;"Customer's Plans";"Clientes e Planos";"(es) Clientes e Planos"
+;CLIENTES___DETALHES;"Customer - Detais";"Clientes - Detalhes";"(es) Clientes - Detalhes"
+;CLIENTES___GERAL;"Customers - General";"Clientes Geral";"(es) Clientes Geral"
+;CL_encerradas;Finished;Encerradas;"(es) Encerradas"
+;CL_iniciadas;Started;Iniciadas;"(es) Iniciadas"
+;CL_listas;Lists;Listas;"(es) Listas"
+;CL_quantidade_de_listas;"List's Quantity";"Quantidade de Listas";"(es) Quantidade de Listas"
+;CL_quantidade_de_tarefas;"Tasks's Quantity";"Quantidade de Tarefas";"(es) Quantidade de Tarefas"
+;CL_tab_nao_concluidas;"<img src=""images/circle_yellow.png"" alt="""" /> Not Finished";"<img src=""images/circle_yellow.png"" alt="""" /> Não Encerradas";"<img src=""images/circle_yellow.png"" alt="""" /> (es) Não Encerradas"
+;CL_tab_todas;"<img src=""images/info.png"" alt="""" /> All Tasks";"<img src=""images/info.png"" alt="""" /> Todas";"<img src=""images/info.png"" alt="""" /> (es) Todas"
+;CL_tarefas;Tasks;Tarefas;"(es) Tarefas"
+;CL_tarefas_encerradas_ultimos_30_dias;"Finished Tasks in last 30 dias";"Tarefas Encerradas nos últimos 30 dias";"(es) Tarefas Encerradas nos últimos 30 dias"
+;CL_tarefas_iniciadas_ultimos_30_dias;"Started Tasks in last 30 days";"Tarefas Iniciadas nos últimos 30 dias";"(es) Tarefas Iniciadas nos últimos 30 dias"
+;CONSULTAS_E_GR_FICOS;"Consultas e Gráficos";"Consultas e Gráficos";"Consultas e Gráficos"
+;CUSTOM;"Registration of Access Plans, which are the options available in the system to access the functionalities";"Cadastramento de Planos de Acesso, que são as opções disponíveis no sistema para acesso às funcionalidades";"Registro de Planes de Acceso, que son las opciones disponibles en el sistema para acceder a las funcionalidades"
+;CUSTOM1;"Registration of Plan Values. Place where monthly values for functionality plans are recorded";"Cadastramento de Valores de Planos. Local onde são registrados os valores mensais para os planos de funcionalidades";"Registro de valores del plan. Lugar donde se registran los valores mensuales de los planes de funcionalidad"
+;CUSTOM2;"Registering the Status of Activities, which are the situations, positioning, in which each activity is found. Can be seen with the Kanban view";"Cadastramento de Status de Atividades que são as situações, posicionamento, em que se encontra cada atividade. Pode ser vista com a visão do Kanban";"Registro de Estado de Actividad que son las situaciones, posicionamiento, donde se encuentra cada actividad. Se puede ver con la vista Kanban"
+;CUSTOM3;"User Registration";"Cadastramento de Usuários que possuem acesso ao sistema. Os usuários que estão abaixo de um mesmo cliente, compartilham dados entre si.";"Registro de usuario"
+;DASHBOARDS__PAIN_LS_DE_OPERA__O_E_GR_FICOS;"Dashboards, Painéls de Operação e Gráficos";"Dashboards, Painéls de Operação e Gráficos";"Dashboards, Painéls de Operação e Gráficos"
+;DASHBOARD_GRAFICOS;"Dashboard of Charts";"Dashboard Graficos";"(es) Dashboard Graficos"
+;DASHBOARD_LISTAS_E_TAREFAS;"Dashboard Tasks and Lists";"Dashboard Lista E Tarefas";"(es) Dashboard Lista E Tarefas"
+;DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_;"Dashboard containing a grouping page with various graphics of your tasks";"Dashsboard que contém uma página agrupadora com diversos gráficos de suas tarefas";"Panel que contiene una página de agrupación con varios gráficos de sus tareas"
+;DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_1;"Dashsboard that contains a grouping page of the Lists and their associated tasks";"Dashsboard que contém uma página agrupadora das Listas e suas tarefas associadas";"Tablero que contiene una página de agrupación de las Listas y sus tareas asociadas"
+;DELETE;Edi;Excluir;"(es) Borrar"
+;DEMAIS_P_GINAS;"Other pages";"Demais páginas";"Otras paginas"
+;DEMAIS_P_GINAS_DO_SISTEMA;"Other system pages";"Demais páginas do sistema";"Otras páginas del sistema"
+;DETAILS_FOUND;"Records found";"Itens Achados";
+;DOMAINS;Domains;Domínios;"(es) Dominios"
+;E;"Graphical view of Tasks by User where you have a visualization of the distribution of data in a friendly way";"Visão gráfica das Tarefas por Usuário onde se tem uma visualização da distribuição dos dados de forma amigável";"Vista gráfica de Tareas por Usuario donde tienes una visualización de la distribución de datos de forma amigable"
+;EDIT;Edit;Editar;Editar
+;EMAIL__VALUE__J__CADASTRADO;"Email %value% already exists";"Email %value% já cadastrado";"Email %value% já cadastrado"
+;EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA;"Displays a chart of Activities by List where you have a view of the distribution of data in a friendly way";"Exibe um gráfico de Atividades por Lista onde se tem uma visão da distribuição dos dados de forma amigável";"Muestra un gráfico de Actividades por Lista donde tiene una vista de la distribución de datos de una manera amigable"
+;GRAICO;"Graphical view of Tasks by Status where you have a visualization of the distribution of data in a friendly way";"Visão gráfica das Tarefas por Status onde se tem uma visualização da distribuição dos dados de forma amigável";"Vista gráfica de Tareas por Estado donde tienes una visualización de la distribución de datos de forma amigable"
+;GR_FICOS;Charts;Gráficos;"(es) Gráficos"
+;GR_FICO_TAREFAS_CRIADAS_POR_USU_RIO_FOOTER;"Quantity by User";"Quantidades por Usuário";"Quantidades por Usuário"
+;GR_FICO_TAREFAS_CRIADAS_POR_USU_RIO_HEADER;"Created tasks by user";"Tarefas criadas por Usuário";"(es) Tarefas criadas por Usuário"
+;GR_FICO_TAREFAS_POR_LISTA_FOOTER;"Quantity by List";"Quantidades por Lista";"(es) Quantidades por Lista"
+;GR_FICO_TAREFAS_POR_LISTA_HEADER;"Tasks by List";"Tarefas por Lista";"(es) Tarefas por Lista"
+;GR_FICO_TAREFAS_POR_PRIORIDADE_FOOTER;"Quantity by Priority";"Quantidades por Prioridade";"(es) Quantidades por Prioridade"
+;GR_FICO_TAREFAS_POR_PRIORIDADE_HEADER;"Tasks by Priority";"Tarefas por Prioridade";"(es) Tarefas por Prioridade"
+;GR_FICO_TAREFAS_POR_STATUS_FOOTER;"Quantity by Status";"Quantidades por Status";"(es) Quantidades por Status"
+;GR_FICO_TAREFAS_POR_STATUS_HEADER;"Tasks by Status";"Tarefas por Status";"(es) Tarefas por Status"
+;MARCA_REGISTRADA;"Copyright, 2020 © GTDTasks";"Direitos Autorais, 2020 © GTDTasks ";"Copyright, 2020 © GTDTasks"
+;MENU_PRINCIPAL;"Main Menu";"Menu Principal";"Main Menu"
+;MODO_ADMIN_BR__TODOS_OS_REGISTROS_;"Admin Mode<br>(all records)";"Modo Admin<br>(todos os registros)";"(es) Modo Admin<br>(todos os registros)"
+;MONITORAMENTO_DE_ACESSOS_DO_SISTEMA;"Monitoring of system accesses. Here are recorded all the important changes in the data as well as the accesses of the users";"Monitoramento de acessos do sistema. Aqui são registrados todas as alterações importantes nos dados bem como os acessos dos usuários";"Seguimiento de accesos al sistema. Aquí se registran todos los cambios importantes en los datos así como los accesos de los usuarios"
+;PARAMETROS;"System Parameters";"Parametros do Sistema";"(es) Parametros"
+;PAR_METROS_E_CONFIGURA__ES_DO_SISTEMA_QUE_ORIENTAM_A_FORMA_DO_MESMO_FUNCIONAR_;"System parameters and settings that guide how it works";"Parâmetros e configurações do sistema que orientam a forma do mesmo funcionar";"Parámetros y configuraciones del sistema que guían su funcionamiento"
+;PLANOS_DE_ACESSO_DO_SISTEMA;"System Access Plans";"Planos de Acesso";"(es) Planes de acceso"
+;PLANOS_DO_CLIENTE__REVER_;"Customer's Plans (REVER)";"Planos de Clientes";"(es) Planes de clientes"
+;P_GINAS_DO_SISTEMA;"System Pages";"Páginas do Sistema";"Páginas del sistema"
+;P_GINAS_DO_SISTEMA_COM_CONFIGURA__ES_E_PARAMETROS;"System Pages with Settings and Parameters";"Páginas do Sistema com Configurações e Parametros";"Páginas del sistema con configuraciones y parámetros"
+;P_GINAS_EM_DESENVOLVIMENTO;"Páginas em Desenvolvimento";"Páginas em Desenvolvimento";"Páginas em Desenvolvimento"
+;P_GINAS_E_M_DULOS_ACESSADOS_FREQUENTEMENTE;"Páginas e módulos acessados frequentemente";"Páginas e módulos acessados frequentemente";"Páginas e módulos acessados frequentemente"
+;P_GINAS_QUE_EST_O_EM_TESTES_E_DESENVOLVIMENTOS;"Páginas que estão em testes e desenvolvimentos";"Páginas que estão em testes e desenvolvimentos";"Páginas que estão em testes e desenvolvimentos"
+;ROTINA_DI_RIA;"Daily Routine";"Rotina Diária";"(es) Rotina Diária"
+;R_TULOS;Tags;;"(es) Rótulos"
+;R_TULOS1;Tags;Rótulos;Rótulos
+;R_TULOS2;"Tags, Labels";"Rótulos, Etiquetas";"Rótulos, Etiquetas"
+;SEGURAN_A_E_MONITORAMENTO;"Log Audit and Security";"Log de Auditoria";"(es) Log Audit"
+;SIGN_UP;"Sign Up";Registrar-se;Registrarse
+;SISTEMA_E_CONFIGURA__O;"System and Settings";"Sistema e Configuração";"(es) Sistema e Configuração"
+;STATUS_DE_TAREFAS;"Tasks Status";"Status de Atividades";"(es) Estado de actividad"
+;STATUS_DE_TAREFAS1;"Tasks's Status";"Status de Tarefas";"Status de Tarefas"
+;TASKS;Tasks;Tarefas;Actividades
+;TASKS1;Tasks;Tarefas;"(es) Tareas"
+;TASKS_BY_LIST_CHART;"Tasks by List Chart";"Gráfico Tarefas por Lista";"(es) Gráfico Tarefas por Lista"
+;TASK_S_LIST;"Task's List";"Lista de Tarefas";"(es) Lista de Tareas"
+;TB_ATIVIDADE_DESCRIPTION;"Registering your Activities or Tasks in your routine";"Cadastramento das suas de Atividades ou Tarefas de sua rotina";"Registrando sus Actividades o Tareas en su rutina"
+;TB_CLIENTES_DESCRIPTION;"Customer Registration";"Cadastramento de Clientes que poderá ter vários usuários vinculados";"Registro de cliente"
+;TB_CLIENTES_PLANOS_DESCRIPTION;"Registration of Customer Plans that have the chosen benefits option";"Cadastramento de Planos de Clientes que tem a opção escolhida de benefícios";"Registro de Planes de Cliente que tienen la opción de beneficios elegida"
+;TB_DOMINIOS_DESCRIPTION;"Registration of Domains that serve to assemble the list of system options";"Cadastramento de Domínios que servem para a montagem de lista de opções do sistema";"Registro de Dominios que sirven para armar la lista de opciones del sistema"
+;TB_LISTA_ATIVIDADES_DESCRIPTION;"Register of Activities List that group activities that are associated with the same subject";"Cadastramento de Lista de Atividades que agrupam atividades que estão associadas a um mesmo assunto";"Registro de actividades Lista que agrupa las actividades que están asociadas a la misma asignatura"
+;THE_VALUE_IS_INVALID;"The value is invalid";"O valor é inválido (espaços?)";"The value is invalid"
+;USERS;Users;Usuários;"(es) Los usuarios"
+;VALORES_BASE_DOS_PLANOS;"Initial Plans Values";"Valores de Planos";"(es) Plan de valores"
+;VERSAO_SISTEMA;"GTDTasks © - Build 2021.03.21 (en) ""lang revision...""";"GTDTasks © - Build 2021.03.21 (pt-br)";"GTDTasks © - Build 2021.03.21a (es) ""pendente de revisão"""
+;VERSAO_SISTEMA02;"GTDTasks © - Build 2020.09.07.(10.3)";"GTDTasks © - Build 2020.09.07.(10.3)";"GTDTasks © - Build 2020.09.07.(10.3)"
+;VIEW_CRIADA_PARA_TESTES____N_O_DEVE_SER_UTILIZADA_;"(en) View criada para testes... Não deve ser utilizada.";"View criada para testes... Não deve ser utilizada.";"(es) View criada para testes... Não deve ser utilizada."
+;VIEW_TAREFAS_CATEGORIAS;"Categories Taks's Vw";"Vw Tarefas Categorias";"(es) Vw Tarefas Categorias"
+;VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_;"Graphical view of Tasks by Priority where you have a visualization of the distribution of data in a friendly way";"Visão gráfica das Tarefas por Prioridade onde se tem uma visualização da distribuição dos dados de forma amigável";"Vista gráfica de Tareas por Prioridad donde tienes una visualización de la distribución de datos de forma amigable"
+;VW_TAREFAS_ROTULOS;"VW Tags for Tasks";"VW Tarefas Rotulos";"(es) vw Tarefas Rotulos"
+;VW_TAREFAS_ROTULOS1;"Vw Tags for Tasks";"Vw Tarefas Rotulos";"(es) Vw Tarefas Rotulos"
+;Valida_atividade_concluida_nao;"End date can only be informed if task is completed.";"Data fim só pode ser informada se atividade estiver concluída.";"(es) Data fim só pode ser informada se atividade estiver concluída."
+;Valida_atividade_concluida_sim;"End date must be informed for completed task.";"Data fim deve ser informada para atividade concluída.";"(es) Data fim deve ser informada para atividade concluída."
+;_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______CONCLU_DAS;"<img src=""images/circle_green_16.png"" alt="""" /> Finished";"<img src=""images/circle_green_16.png"" alt="""" /> Concluídas";"<img src=""images/circle_green_16.png"" alt="""" /> (es) Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______CONCLU_DAS1;"<img src=""images/circle_green_16.png"" alt="""" /> Finished";"<img src=""images/circle_green_16.png"" alt="""" /> Concluídas";"<img src=""images/circle_green_16.png"" alt="""" /> (es) Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______CONCLU_DAS2;"<img src=""images/circle_green_16.png"" alt="""" /> Finished";"<img src=""images/circle_green_16.png"" alt="""" /> Concluídas";"<img src=""images/circle_green_16.png"" alt="""" /> (es) Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_GREEN_16_PNG__ALT_______ENCERRADAS;"<img src=""images/circle_green_16.png"" alt="""" /> Finished";"<img src=""images/circle_green_16.png"" alt="""" /> Concluídas";"<img src=""images/circle_green_16.png"" alt="""" /> (es) Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______NOT_FINISHED;"<img src=""images/circle_yellow_16.png"" alt="""" /> Not Finished";"<img src=""images/circle_yellow_16.png"" alt="""" /> Não Concluídas";"<img src=""images/circle_yellow_16.png"" alt="""" /> (es) Não Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______N_O_CONCLU_DAS;"<img src=""images/circle_yellow_16.png"" alt="""" /> Not Finished";"<img src=""images/circle_yellow_16.png"" alt="""" /> Não Concluídas";"<img src=""images/circle_yellow_16.png"" alt="""" /> (es) Não Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______N_O_CONCLU_DAS1;"<img src=""images/circle_yellow_16.png"" alt="""" /> Not Finished";"<img src=""images/circle_yellow_16.png"" alt="""" /> Não Concluídas";"<img src=""images/circle_yellow_16.png"" alt="""" /> (es) Não Concluídas"
+;_IMG_SRC__IMAGES_CIRCLE_YELLOW_16_PNG__ALT_______N_O_CONCLU_DAS2;"<img src=""images/circle_yellow_16.png"" alt="""" /> Not Finished";"<img src=""images/circle_yellow_16.png"" alt="""" /> Não Concluídas";"<img src=""images/circle_yellow_16.png"" alt="""" /> (es) Não Concluídas"
+;_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS;"<img src=""images/info.png"" alt="""" /> All Tasks";"<img src=""images/info.png"" alt="""" /> Todas";"<img src=""images/info.png"" alt="""" /> (es) Todas"
+;_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS1;"<img src=""images/info.png"" alt="""" /> All Tasks";"<img src=""images/info.png"" alt="""" /> Todas";"<img src=""images/info.png"" alt="""" /> (es) Todas"
+;_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS2;"<img src=""images/info.png"" alt="""" /> All Tasks";"<img src=""images/info.png"" alt="""" /> Todas";"<img src=""images/info.png"" alt="""" /> (es) Todas"
+;_IMG_SRC__IMAGES_INFO_PNG__ALT_______TODAS3;"<img src=""images/info.png"" alt="""" /> All Tasks";"<img src=""images/info.png"" alt="""" /> Todas";"<img src=""images/info.png"" alt="""" /> (es) Todas"
+;__USUA_IDIOMA_ULT__ONLY_CHANGES_AFTER_A_NEW_LOGIN;"Language only changes after a new login";"Idioma somente será alterado após um novo login";"(es) Idioma somente será alterado após um novo login"
+;carga_inicial_categoria_1;Books;Livros;"(es) Libros"
+;carga_inicial_categoria_2;Personal;Pessoal;"(es) Personal"
+;carga_inicial_cliente_endereco;"Registered on the Internet";"Cadastrado pela Internet";"(es) Registrado por Internet"
+;carga_inicial_cliente_endereco_completo;"Registered by user ID";"Cadastrado pelo usuário ID";"(es) Registrado por ID de usuario"
+;carga_inicial_cliente_nome;Customer;Cliente;"(es) Cliente"
+;carga_inicial_cliente_pais;To_define;A_definir;"(es) A definir"
+;carga_inicial_ler_livro_1;"Read the book 'Hamlet (Sheakspeare)'";"Ler o livro 'O Pequeno Príncipe'";"(es) Leer el libro 'Pablo Neruda'"
+;carga_inicial_ler_livro_1_detalhe;"'Hamlet (Sheakspeare)' is a classic that never read ... Until now.";"'O Pequeno Príncipe' é um clássico que nunca li... Até agora.";"(es) 'Pablo Neruda' es un clásico que nunca había leído ... hasta ahora."
+;carga_inicial_ler_livro_2;"Read the book 'Rich Dad, Poor Dad'";"Ler o livro 'Pai Rico, Pai Pobre'";"(es) Lea el libro 'Padre rico, papá pobre'"
+;carga_inicial_ler_livro_2_detalhe;"Book that helps in financial education.";"Livro que ajuda na educação financeira.";"(es) Libro que ayuda en educación financiera."
+;carga_inicial_lista_nome_1;"Books to be read this year";"Livros a serem lidos neste ano";"(es) Libros para leer este año"
+;carga_inicial_lista_nome_2;"Maintenance of my car";"Manutenções do meu carro";"(es) Mantenimiento de mi auto"
+;carga_inicial_status_1;Register;Cadastrada;"(es) Registrarse"
+;carga_inicial_status_1_detalhe;"Task only registered but not started";"Tarefa apenas cadastrada mas não iniciada";"(es) Tarea solo registrada pero no iniciada"
+;carga_inicial_status_2;"In progress";"Em Andamento";"(es) En proceso"
+;carga_inicial_status_2_detalhe;"Task that has already started and is in progress";"Tarefa que já foi iniciada e está em andamento";"(es) Tarea que ya ha comenzado y está en curso"
+;carga_inicial_status_3;Completed;Concluída;"(es) Terminado"
+;carga_inicial_status_3_detalhe;"Task that has already been completed";"Tarefa que já foi concluída";"(es) Tarea que ya se completó"
 proc_limpar_tarefas_de_lista;page:add;"Procedure for cleaning up tasks from a list";"Procedimento para Limpeza de Tarefas de uma Lista";"Proc Limpar Tarefas De Lista, Añadir nuevo"
 tb_atividade;page:view;"Task [{%ativ_id} - {%ativ_nm}]";"Tarefa [{%ativ_id} - {%ativ_nm}]";"Tareas [{%ativ_id} - {%ativ_nm}]"
-tb_categorias;page:view;"Categories [{%cate_id} - {%cate_nm}]";"Categorias [{%cate_id} - {%cate_nm}]";"Categorias [{%cate_id} - {%cate_nm}]"
 tb_dominios;page:edit;"Domain, Edit [{%domi_id} - {%domi_grupo}, {%domi_valor}]";"Domínio, Editar [{%domi_id} - {%domi_grupo} => {%domi_valor}]";"Domínio, Editar [{%domi_id} - {%domi_grupo}, {%domi_valor}]"
 tb_dominios;page:view;"Domain {%domi_id} - {$domi_grupo}, {%domi_valor}";"Domínio {%domi_id} - {%domi_grupo} => {%domi_valor}";"Domínio {%domi_id} - {$domi_grupo}, {%domi_valor}"
 tb_lista_atividades;page:remover_tarefas_da_lista;"Task's List [{%lista_id}]";"Remover atividades da lista {%lista_id} - {%lista_nm}";"Lista de actividades [{%lista_id}]"
+tb_rotulos;page:add;"Tags, Add new";"Rótulos, Adicionar Novo";"Rótulos, Añadir nuevo"
+tb_rotulos;page:edit;"Tags, Edit [{%cate_id}]";"Rótulos, Editar [{%cate_id}]";"Rótulos, Editar [{%cate_id}]"
+tb_rotulos;page:import;"Tags, Import";"Rótulos, Importar";"Rótulos, Importar"
+tb_rotulos;page:list;Tags;Rótulos;Rótulos
+tb_rotulos;page:masterlist;"Tags [{%cate_id} - {%cate_nm}]";"Rótulos [{%cate_id} - {%cate_nm}]";"Rótulos [{%cate_id} - {%cate_nm}]"
+tb_rotulos;page:masterprint;"Tags [{%cate_id}]";"Rótulos [{%cate_id}]";"Rótulos [{%cate_id}]"
+tb_rotulos;page:print;Tags;Rótulos;Rótulos
+tb_rotulos;page:search;"Tags - Advanced search";"Rótulos - Busca Avancada";"Rótulos - Búsqueda avanzada"
+tb_rotulos;page:view;"Tags [{%cate_id} - {%cate_nm}]";"Rótulos [{%cate_id} - {%cate_nm}]";"Rótulos [{%cate_id} - {%cate_nm}]"
+tb_tarefas_x_rotulos;page:add;"Tags for Tasks, Add new";"Rótulos por Tarefas, Adicionar Novo";"Rótulos X Tarefas, Añadir nuevo"
+tb_tarefas_x_rotulos;page:import;"Tags for Tasks, Import";"Rótulos por Tarefas, Importar";"Rótulos por Tarefas, Importar"
+tb_tarefas_x_rotulos;page:list;"Tags for Tasks";"Rótulos por Tarefas";"Rótulos por Tarefas"
+tb_tarefas_x_rotulos;page:lista_simples_rotulos;"Tags for Tasks";"Rótulos por Tarefas";"Rótulos por Tarefas"
+tb_tarefas_x_rotulos;page:lista_simples_tarefas;"Tags for Tasks";"Rótulos por Tarefas";"Rótulos por Tarefas"
+tb_tarefas_x_rotulos;page:print;"Tags for Tasks";"Rótulos por Tarefas";"Rótulos por Tarefas"
+tb_tarefas_x_rotulos;page:search;"Tags for Tasks - Advanced search";"Rótulos por Tarefas - Busca Avancada";"Rótulos por Tarefas - Búsqueda avanzada"
+tb_tarefas_x_rotulos;page:view;"Tags for Tasks [{%caat_id}]";"Rótulos por Tarefas [{%caat_id}]";"Rótulos por Tarefas [{%caat_id}]"
 ;;"<img src=""../images/app_logo_gtd3.png"" alt=""GTD 2021"">";GTD_PHPRunner;"<img src=""../images/app_logo_gtd3.png"" alt=""GTD 2021"">";"<img src=""../images/app_logo_gtd3.png"" alt=""GTD 2021"">"
 ;cookie_banner:;"Este sitio web utiliza cookies para mejorar la experiencia del usuario";"Diese Website benutzt Cookies Benutzerfreundlichkeit zu verbessern";"Diese Website benutzt Cookies Benutzerfreundlichkeit zu verbessern";"Este site usa cookies para melhorar a experiência do usuário"

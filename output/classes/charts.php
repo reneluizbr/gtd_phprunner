@@ -532,11 +532,17 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("tb_categorias" == $this->chrt_array['tables'][0])
+		if("tb_rotulos" == $this->chrt_array['tables'][0])
 			return true;
-		if("tb_categorias_x_atividades" == $this->chrt_array['tables'][0])
+		if("tb_tarefas_x_rotulos" == $this->chrt_array['tables'][0])
 			return true;
-		if("vw_tarefas_categorias" == $this->chrt_array['tables'][0])
+		if("vw_dominio_tempo" == $this->chrt_array['tables'][0])
+			return true;
+		if("vw_dominio_prioridade" == $this->chrt_array['tables'][0])
+			return true;
+		if("vw_tarefas_rotulos" == $this->chrt_array['tables'][0])
+			return true;
+		if("tb_tarefas_ocorrencias" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

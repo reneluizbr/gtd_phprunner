@@ -209,7 +209,7 @@
                 <TABLE class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}">
                   <tbody>
                     <tr>
-                      <TD class=" " data-cellId="grid_c1" data-pageid="{$pageid}">
+                      <TD class="	" data-cellId="grid_c1" data-pageid="{$pageid}">
                         <DIV class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group1" {$item_welcome_group1} data-pageid="{$pageid}" data-page=".global_menu">
                           <h2>
                             <SPAN class="glyphicon glyphicon-star">
@@ -220,158 +220,184 @@
                             {$custom P_GINAS_E_M_DULOS_ACESSADOS_FREQUENTEMENTE}
                           </div>
                         </div>
-                        <!-- Rene: Inicio do bloco de cartoes do grupo 1 -->
-                        <DIV class="wlCssCartaoFundoAzul wlCssCartaoMargens wlCssCartaoCantos wlCssCartaoSombra col-lg-12 col-md-12 col-sm-12">
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_atividade_list.php">
-                                <SPAN class="glyphicon glyphicon-leaf">
-                                </span>
-                                {$caption tb_atividade}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_ATIVIDADE_DESCRIPTION}">
-                              {$custom TB_ATIVIDADE_DESCRIPTION}
-                            </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_atividade_list.php">
+                              <SPAN class="glyphicon glyphicon-leaf">
+                              </span>
+                              {$caption tb_atividade}
+                            </a>
                           </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_lista_atividades_list.php">
-                                <SPAN class="glyphicon glyphicon-shopping-cart">
-                                </span>
-                                {$caption tb_lista_atividades}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_LISTA_ATIVIDADES_DESCRIPTION}">
-                              {$custom TB_LISTA_ATIVIDADES_DESCRIPTION}
-                            </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_ATIVIDADE_DESCRIPTION}">
+                            {$custom TB_ATIVIDADE_DESCRIPTION}
                           </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_categorias_list.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption tb_categorias}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="119">
-                              Cadastro de Categorias ou também conhecida como rótulos ou etiquetas, é uma forma não rígida de agrupamento de tarefas.
-                            </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_lista_atividades_list.php">
+                              <SPAN class="glyphicon glyphicon-shopping-cart">
+                              </span>
+                              {$caption tb_lista_atividades}
+                            </a>
                           </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_status_atividades_list.php">
-                                <SPAN class="glyphicon glyphicon-th-list">
-                                </span>
-                                {$caption tb_status_atividades}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM2}">
-                              {$custom CUSTOM2}
-                            </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_LISTA_ATIVIDADES_DESCRIPTION}">
+                            {$custom TB_LISTA_ATIVIDADES_DESCRIPTION}
                           </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="tb_categorias_x_atividades_list.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption tb_categorias_x_atividades}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="83">
-                              Associação entre as Tarefas e suas possíveis categorizações ou rótulos (etiquetas).
-                            </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_rotulos_list.php">
+                              <SPAN class="glyphicon glyphicon-minus">
+                              </span>
+                              {$custom R_TULOS2}
+                            </a>
                           </div>
-                        </DIV>
-                        <!-- Rene: Final do bloco de cartoes do grupo 1 -->
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CADASTRO_DE_CATEGORIAS_OU_TAMB_M_CONHECIDA_COMO_R_TULOS_OU_ETIQUETAS____UMA_FORMA_N_O_R_GIDA_DE_AGRUPAMENTO_DE_TAREFAS_}">
+                            {$custom CADASTRO_DE_CATEGORIAS_OU_TAMB_M_CONHECIDA_COMO_R_TULOS_OU_ETIQUETAS____UMA_FORMA_N_O_R_GIDA_DE_AGRUPAMENTO_DE_TAREFAS_}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_status_atividades_list.php">
+                              <SPAN class="glyphicon glyphicon-th-list">
+                              </span>
+                              {$custom STATUS_DE_TAREFAS1}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM2}">
+                            {$custom CUSTOM2}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_tarefas_x_rotulos_list.php">
+                              <SPAN class="glyphicon glyphicon-minus">
+                              </span>
+                              {$caption tb_tarefas_x_rotulos}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length ASSOCIA__O_ENTRE_AS_TAREFAS_E_SUAS_POSS_VEIS_CATEGORIZA__ES_OU_R_TULOS__ETIQUETAS__}">
+                            {$custom ASSOCIA__O_ENTRE_AS_TAREFAS_E_SUAS_POSS_VEIS_CATEGORIZA__ES_OU_R_TULOS__ETIQUETAS__}
+                          </div>
+                        </div>
                         <DIV class="clearfix">
-                        </DIV>
+                        </div>
                         <DIV class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group2" {$item_welcome_group2} data-pageid="{$pageid}" data-page=".global_menu">
                           <h2>
                             <SPAN class="glyphicon glyphicon-signal">
                             </span>
-                            Consultas e Gráficos
+                            {$custom CONSULTAS_E_GR_FICOS} <!-- Consultas e Gráficos -->
                           </h2>
                           <DIV class="bs-welcome-group-comments">
-                            Dashboards, Painéls de Operação e Gráficos
+                            {$custom DASHBOARDS__PAIN_LS_DE_OPERA__O_E_GR_FICOS} <!-- Consultas e Gráficos -->
                           </div>
                         </div>
-                        <!-- Rene: Inicio do bloco de cartoes do grupo 2 -->
-                        <DIV class="wlCssCartaoFundoVerde wlCssCartaoMargens wlCssCartaoCantos wlCssCartaoSombra col-lg-12 col-md-12 col-sm-12">
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="dashboard_lista_e_tarefas_dashboard.php">
-                                <SPAN class="glyphicon glyphicon-list-alt">
-                                </span>
-                                {$caption Dashboard_Lista_e_Tarefas}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="81">
-                              Dashsboard que contém uma página agrupadora das Listas e suas tarefas associadas.
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="dashboard_graficos_dashboard.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Dashboard_Graficos}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}">
-                              {$custom DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="gr_fico_tarefas_criadas_por_usu_rio_chart.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Gr_fico_Tarefas_criadas_por_Usu_rio}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length E}">
-                              {$custom E}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="gr_fico_tarefas_por_prioridade_chart.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Gr_fico_Tarefas_por_Prioridade}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}">
-                              {$custom VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}
-                            </div>
-                          </div>
-                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu">
-                            <DIV class="bs-welcome-header">
-                              <a id="itemlink" href="gr_fico_tarefas_por_status_chart.php">
-                                <SPAN class="glyphicon glyphicon-minus">
-                                </span>
-                                {$caption Gr_fico_Tarefas_por_Status}
-                              </a>
-                            </div>
-                            <DIV class="bs-welcome-content" data-comment-len="{$cl_length GRAICO}">
-                              {$custom GRAICO}
-                            </div>
-                          </div>
-                        </DIV>
-                        <!-- Rene: Final do bloco de cartoes do grupo 2 -->
-                        <DIV class="clearfix">
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu">
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page=".global_menu">
                           <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_dominios_list.php">
-                              <SPAN class="glyphicon glyphicon-hand-right">
+                            <a id="itemlink" href="dashboard_lista_e_tarefas_dashboard.php">
+                              <SPAN class="glyphicon glyphicon-list-alt">
                               </span>
-                              {$caption tb_dominios}
+                              {$caption Dashboard_Lista_e_Tarefas}
                             </a>
                           </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_DOMINIOS_DESCRIPTION}">
-                            {$custom TB_DOMINIOS_DESCRIPTION}
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_1}">
+                            {$custom DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_1}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="dashboard_graficos_dashboard.php">
+                              <SPAN class="glyphicon glyphicon-minus">
+                              </span>
+                              {$caption Dashboard_Graficos}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}">
+                            {$custom DASHSBOARD_QUE_CONT_M_UMA_P_GINA_AGRUPADORA_DAS_LISTAS_E_SUAS_TAREFAS_ASSOCIADAS_}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="gr_fico_tarefas_por_lista_chart.php">
+                              <SPAN class="glyphicon glyphicon-signal">
+                              </span>
+                              Atividades por Lista
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}">
+                            {$custom EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="gr_fico_tarefas_criadas_por_usu_rio_chart.php">
+                              <SPAN class="glyphicon glyphicon-minus">
+                              </span>
+                              {$caption Gr_fico_Tarefas_criadas_por_Usu_rio}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length E}">
+                            {$custom E}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="gr_fico_tarefas_por_prioridade_chart.php">
+                              <SPAN class="glyphicon glyphicon-minus">
+                              </span>
+                              {$caption Gr_fico_Tarefas_por_Prioridade}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}">
+                            {$custom VIS_O_GR_FICA_DAS_TAREFAS_POR_STATUS_ONDE_SE_TEM_UMA_VISUALIZA__O_DA_DISTRIBUI__O_DOS_DADOS_DE_FORMA_AMIG_VEL_}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="gr_fico_tarefas_por_status_chart.php">
+                              <SPAN class="glyphicon glyphicon-minus">
+                              </span>
+                              {$caption Gr_fico_Tarefas_por_Status}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length GRAICO}">
+                            {$custom GRAICO}
+                          </div>
+                        </div>
+                        <DIV class="clearfix">
+                        </div>
+                        <DIV class="clearfix wlCssCartaoMargens wlCssCartaoCantos wlCssCartaoSombra col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group3" {$item_welcome_group3} data-pageid="{$pageid}" data-page=".global_menu">
+                          <h2>
+                            <SPAN class="glyphicon glyphicon-inbox">
+                            </span>
+                            {$custom DEMAIS_P_GINAS}
+                          </h2>
+                          <DIV class="bs-welcome-group-comments">
+                            {$custom DEMAIS_P_GINAS_DO_SISTEMA} <!-- Demais páginas do sistema -->
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_usuarios_list.php">
+                              <SPAN class="glyphicon glyphicon-user">
+                              </span>
+                              {$caption tb_usuarios}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM3}">
+                            {$custom CUSTOM3}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_clientes_list.php">
+                              <SPAN class="fa fa-users">
+                              </span>
+                              {$caption tb_clientes}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_CLIENTES_DESCRIPTION}">
+                            {$custom TB_CLIENTES_DESCRIPTION}
                           </div>
                         </div>
                         <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu">
@@ -410,28 +436,38 @@
                             {$custom TB_CLIENTES_PLANOS_DESCRIPTION}
                           </div>
                         </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_usuarios_list.php">
-                              <SPAN class="glyphicon glyphicon-user">
-                              </span>
-                              {$caption tb_usuarios}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length CUSTOM3}">
-                            {$custom CUSTOM3}
+                        <DIV class="clearfix">
+                        </div>
+                        <DIV class="clearfix wlCssCartaoMargens wlCssCartaoCantos wlCssCartaoSombra col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group4" {$item_welcome_group4} data-pageid="{$pageid}" data-page=".global_menu">
+                          <h2>
+                            {$custom P_GINAS_DO_SISTEMA}
+                          </h2>
+                          <DIV class="bs-welcome-group-comments">
+                            {$custom P_GINAS_DO_SISTEMA_COM_CONFIGURA__ES_E_PARAMETROS}
                           </div>
                         </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu">
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu">
                           <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_clientes_list.php">
-                              <SPAN class="fa fa-users">
+                            <a id="itemlink" href="tb_dominios_list.php">
+                              <SPAN class="glyphicon glyphicon-hand-right">
                               </span>
-                              {$caption tb_clientes}
+                              {$caption tb_dominios}
                             </a>
                           </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_CLIENTES_DESCRIPTION}">
-                            {$custom TB_CLIENTES_DESCRIPTION}
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length TB_DOMINIOS_DESCRIPTION}">
+                            {$custom TB_DOMINIOS_DESCRIPTION}
+                          </div>
+                        </div>
+                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu">
+                          <DIV class="bs-welcome-header">
+                            <a id="itemlink" href="tb_parametros_list.php">
+                              <SPAN class="fa fa-gear">
+                              </span>
+                              {$caption tb_parametros}
+                            </a>
+                          </div>
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length PAR_METROS_E_CONFIGURA__ES_DO_SISTEMA_QUE_ORIENTAM_A_FORMA_DO_MESMO_FUNCIONAR_}">
+                            {$custom PAR_METROS_E_CONFIGURA__ES_DO_SISTEMA_QUE_ORIENTAM_A_FORMA_DO_MESMO_FUNCIONAR_}
                           </div>
                         </div>
                         <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page=".global_menu">
@@ -446,29 +482,7 @@
                             {$custom MONITORAMENTO_DE_ACESSOS_DO_SISTEMA}
                           </div>
                         </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="gr_fico_tarefas_por_lista_chart.php">
-                              <SPAN class="glyphicon glyphicon-signal">
-                              </span>
-                              Atividades por Lista
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}">
-                            {$custom EXIBE_UM_GR_FICO_DE_ATIVIDADES_POR_LISTA}
-                          </div>
-                        </div>
-                        <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page=".global_menu">
-                          <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="tb_parametros_list.php">
-                              <SPAN class="fa fa-gear">
-                              </span>
-                              {$caption tb_parametros}
-                            </a>
-                          </div>
-                          <DIV class="bs-welcome-content" data-comment-len="78">
-                            Parâmetros e configurações do sistema que orientam a forma do mesmo funcionar.
-                          </div>
+                        <DIV class="clearfix">
                         </div>
                       </td>
                     </tr>
@@ -479,23 +493,23 @@
                             {$custom P_GINAS_EM_DESENVOLVIMENTO}
                           </h2>
                           <DIV class="bs-welcome-group-comments">
-                            Páginas que estão em testes e desenvolvimentos
+                            {$custom P_GINAS_QUE_EST_O_EM_TESTES_E_DESENVOLVIMENTOS}
                           </div>
                         </div>
                         <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item20" {$item_welcome_item20} data-pageid="{$pageid}" data-page=".global_menu">
                           <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="vw_tarefas_categorias_list.php">
+                            <a id="itemlink" href="vw_tarefas_rotulos_list.php">
                               <img src="{$file_url images/menuicons/User%20Group%201%2024%20n%20p.png}" />
-                              {$caption vw_tarefas_categorias}
+                              {$custom VW_TAREFAS_ROTULOS}
                             </a>
                           </div>
-                          <DIV class="bs-welcome-content" data-comment-len="50">
-                            View criada para testes... Não deve ser utilizada.
+                          <DIV class="bs-welcome-content" data-comment-len="{$cl_length VIEW_CRIADA_PARA_TESTES____N_O_DEVE_SER_UTILIZADA_}">
+                            {$custom VIEW_CRIADA_PARA_TESTES____N_O_DEVE_SER_UTILIZADA_}
                           </div>
                         </div>
                         <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page=".global_menu">
                           <DIV class="bs-welcome-header">
-                            <a id="itemlink" href="proc_limpar_tarefas_de_lista_list.php">
+                            <a id="itemlink" href="proc_limpar_tarefas_de_lista_add.php">
                               <img src="{$file_url images/menuicons/User%20Group%201%2024%20n%20p.png}" />
                               {$caption proc_limpar_tarefas_de_lista}
                             </a>

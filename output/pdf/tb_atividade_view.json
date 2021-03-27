@@ -930,9 +930,9 @@ pdfDocument = {
 			"stack": [
 		
 				
-			 {BEGIN details_tb_categorias_x_atividades}
-			{$displayDetailTable_tb_categorias_x_atividades }
-		{END details_tb_categorias_x_atividades},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -953,6 +953,100 @@ pdfDocument = {
 				},
 							],
 				{END row_grid_10}
+								{BEGIN row_grid_11}
+				
+		[
+												{BEGIN cellblock_grid_c}
+
+{
+	cellId: 'c',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c}
+			colSpan: {$colspan_grid_c},
+			{END colspan_grid_c}
+		
+			
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_tb_tarefas_x_rotulos}
+			{$displayDetailTable_tb_tarefas_x_rotulos }
+		{END details_tb_tarefas_x_rotulos},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c}
+																			{ 
+					cellId: 'c',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+															{ 
+					cellId: 'c',
+					row:  0,
+					col:  2,
+					text: ''
+				},
+							],
+				{END row_grid_11}
+								{BEGIN row_grid_12}
+				
+		[
+												{BEGIN cellblock_grid_c3}
+
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			style: 'undefinedcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c3}
+			colSpan: {$colspan_grid_c3},
+			{END colspan_grid_c3}
+		
+			
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_tb_tarefas_ocorrencias}
+			{$displayDetailTable_tb_tarefas_ocorrencias }
+		{END details_tb_tarefas_ocorrencias},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          },
+
+{END cellblock_grid_c3}
+																			{ 
+					cellId: 'c3',
+					row:  0,
+					col:  1,
+					text: ''
+				},
+															{ 
+					cellId: 'c3',
+					row:  0,
+					col:  2,
+					text: ''
+				},
+							],
+				{END row_grid_12}
 					]
 	}
 }

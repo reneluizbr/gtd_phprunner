@@ -439,15 +439,27 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="tb_categorias")
+		if($table=="tb_rotulos")
 		{
 			return true;
 		}
-		if($table=="tb_categorias_x_atividades")
+		if($table=="tb_tarefas_x_rotulos")
 		{
 			return true;
 		}
-		if($table=="vw_tarefas_categorias")
+		if($table=="vw_dominio_tempo")
+		{
+			return false;
+		}
+		if($table=="vw_dominio_prioridade")
+		{
+			return false;
+		}
+		if($table=="vw_tarefas_rotulos")
+		{
+			return false;
+		}
+		if($table=="tb_tarefas_ocorrencias")
 		{
 			return false;
 		}
@@ -896,15 +908,27 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="tb_categorias")
+		if($table=="tb_rotulos")
 		{
 			return true;
 		}
-		if($table=="tb_categorias_x_atividades")
+		if($table=="tb_tarefas_x_rotulos")
 		{
 			return true;
 		}
-		if($table=="vw_tarefas_categorias")
+		if($table=="vw_dominio_tempo")
+		{
+			return false;
+		}
+		if($table=="vw_dominio_prioridade")
+		{
+			return false;
+		}
+		if($table=="vw_tarefas_rotulos")
+		{
+			return false;
+		}
+		if($table=="tb_tarefas_ocorrencias")
 		{
 			return false;
 		}

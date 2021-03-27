@@ -1017,6 +1017,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return 0;
 	}
+				if($table=="tb_tarefas_ocorrencias" && $field=="Concluida")
+	{
+		return 1;
+	}
 	return "";
 }
 

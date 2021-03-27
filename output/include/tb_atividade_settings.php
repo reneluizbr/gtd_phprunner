@@ -1600,7 +1600,7 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "tb_dominios";
+	$edata["LookupTable"] = "vw_dominio_prioridade";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 4;
@@ -1609,13 +1609,14 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 		
 	$edata["LinkField"] = "domi_valor";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 202;
 	$edata["DisplayField"] = "domi_exibe";
 
-				$edata["LookupWhere"] = "domi_grupo = 'PRIORIDADE_ATIVIDADE'";
+				$edata["LookupWhere"] = "domi_grupo = 'PRIORIDADE_ATIVIDADE' AND idioma = ':session.language'";
 
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "domi_ordem";
 
 	
@@ -2163,7 +2164,7 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "tb_dominios";
+	$edata["LookupTable"] = "vw_dominio_tempo";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 4;
@@ -2172,13 +2173,14 @@ $tdatatb_atividade[".hideMobileList"][5]["clie_id"] = true;
 
 		
 	$edata["LinkField"] = "domi_valor";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 202;
 	$edata["DisplayField"] = "domi_exibe";
 
-				$edata["LookupWhere"] = "domi_grupo = \"TEMPO_UNIDADE\"";
+				$edata["LookupWhere"] = "domi_grupo = \"TEMPO_UNIDADE\" AND idioma = \":session.language\"";
 
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "domi_ordem";
 
 	
@@ -3088,20 +3090,49 @@ $page_titles["tb_atividade"] = &$pageTitlestb_atividade;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["tb_atividade"] = array();
-//	tb_categorias_x_atividades
+//	tb_tarefas_x_rotulos
 	
 	
 
 		$dIndex = 0;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="tb_categorias_x_atividades";
-		$detailsParam["dOriginalTable"] = "tb_categorias_x_atividades";
+	$detailsParam["dDataSourceTable"]="tb_tarefas_x_rotulos";
+		$detailsParam["dOriginalTable"] = "tb_tarefas_x_rotulos";
 
 
 
 				$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "tb_categorias_x_atividades";
-	$detailsParam["dCaptionTable"] = GetTableCaption("tb_categorias_x_atividades");
+	$detailsParam["dShortTable"] = "tb_tarefas_x_rotulos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_tarefas_x_rotulos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["tb_atividade"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tb_atividade"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tb_atividade"][$dIndex]["masterKeys"][]="ativ_id";
+
+				$detailsTablesData["tb_atividade"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tb_atividade"][$dIndex]["detailKeys"][]="ativ_id";
+//	tb_tarefas_ocorrencias
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tb_tarefas_ocorrencias";
+		$detailsParam["dOriginalTable"] = "tb_tarefas_ocorrencias";
+
+
+
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tb_tarefas_ocorrencias";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tb_tarefas_ocorrencias");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -3533,4 +3564,26 @@ include_once(getabspath("include/tb_atividade_events.php"));
 $tableEvents["tb_atividade"] = new eventclass_tb_atividade;
 $tdatatb_atividade[".hasEvents"] = true;
 
+$query = &$queryData_tb_atividade;
+$table = "tb_atividade";
+// here goes EVENT_INIT_TABLE event
+
+/* Documentação:
+SQLQuery class: addWhere
+	If the current SQL query does not include a WHERE clause, addWhere() adds it as where($condition).
+	Otherwise, the WHERE clause is added as a new condition: and($condition).
+*/
+
+//$tdata<tableName>[".pageSize"] = 10;
+//addWhere($condition)
+// Rene: Tentativa de deixar a lista de Prioridades multi idioma
+//$query->addWhere("id_sizes < 3 or id_sizes > 6");
+//$query->addWhere("idioma = '" . $_SESSION["language"] . "'");
+
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+unset($query);
 ?>
